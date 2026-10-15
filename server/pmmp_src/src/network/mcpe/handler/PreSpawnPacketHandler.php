@@ -86,12 +86,6 @@ class PreSpawnPacketHandler extends PacketHandler{
 			$this->session->getLogger()->debug("Sending jigsaw structure data");
 			$this->session->sendDataPacket(StaticPacketCache::getInstance()->getJigsawStructureData());
 
-			$this->session->getLogger()->debug("Sending dimension data");
-			$this->session->sendDataPacket(DimensionDataPacket::create([
-				DimensionNameIds::OVERWORLD => new DimensionData(320, -64, GeneratorType::OVERWORLD, 0),
-				DimensionNameIds::NETHER => new DimensionData(128, 0, GeneratorType::NETHER, 1),
-				DimensionNameIds::THE_END => new DimensionData(256, 0, GeneratorType::THE_END, 2)
-			]));
 
 			$this->session->getLogger()->debug("Preparing StartGamePacket");
 			$levelSettings = new LevelSettings();
