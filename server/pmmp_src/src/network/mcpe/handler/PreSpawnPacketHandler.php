@@ -133,7 +133,7 @@ class PreSpawnPacketHandler extends PacketHandler{
 				true,
 				null,
 				new ServerTelemetryData("", "", "", ""),
-				[],
+				$typeConverter->getBlockPaletteEntries(),
 				0,
 			));
 
