@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:canyon_des_tempetes_magnetiques"
+name: "§cCanyon des Tempêtes Magnétiques"
+category: "ELECTRIQUE"
+rarity: 7
+description: "Gorges rocheuses magnétisées où les armes métalliques crépitent d'éclairs de combat."
+
+climate:
+  temperature: 1.6
+  humidity: 0.1
+  downfall: 0.1
+
+colors:
+  sky_color: "#d50000"
+  fog_color: "#ff1744"
+  water_color: "#ff5252"
+  grass_color: "#ff8a80"
+
+blocks:
+  top_block: "red_sandstone"
+  sub_block: "iron_block"
+  deep_block: "raw_iron_block"
+
+effects:
+  aura_effect: "STRENGTH"
+  particle: "minecraft:lightning_bolt"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

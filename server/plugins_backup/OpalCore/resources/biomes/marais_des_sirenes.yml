@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:marais_des_sirenes"
+name: "§5Marais des Sirènes"
+category: "ABYSSAL"
+rarity: 5
+description: "Eaux saumâtres envoûtantes ornées de nénuphars géants où un chant mystérieux trouble l'esprit."
+
+climate:
+  temperature: 0.8
+  humidity: 0.9
+  downfall: 0.8
+
+colors:
+  sky_color: "#4a148c"
+  fog_color: "#6a1b9a"
+  water_color: "#8e24aa"
+  grass_color: "#ab47bc"
+
+blocks:
+  top_block: "mud"
+  sub_block: "packed_mud"
+  deep_block: "muddy_mangrove_roots"
+
+effects:
+  aura_effect: "NAUSEA"
+  particle: "minecraft:witch_spell"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

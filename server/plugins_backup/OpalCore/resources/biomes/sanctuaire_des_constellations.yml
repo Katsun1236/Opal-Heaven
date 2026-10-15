@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:sanctuaire_des_constellations"
+name: "§9Sanctuaire des Constellations"
+category: "ETHER"
+rarity: 8
+description: "Observatoire millénaire gravé dans la roche où les constellations doublent les enchantements."
+
+climate:
+  temperature: 0.2
+  humidity: 0.4
+  downfall: 0.1
+
+colors:
+  sky_color: "#1a237e"
+  fog_color: "#283593"
+  water_color: "#303f9f"
+  grass_color: "#3949ab"
+
+blocks:
+  top_block: "lapis_block"
+  sub_block: "deepslate"
+  deep_block: "bedrock"
+
+effects:
+  aura_effect: "CONDUIT_POWER"
+  particle: "minecraft:portal"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 6
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:plaine_de_sang_vampirique"
+name: "§4Plaine de Sang Vampirique"
+category: "CORROMPU"
+rarity: 7
+description: "Sanctuaire des guerriers de l'Ordre du Sang conférant un vol de vie naturel lors des duels."
+
+climate:
+  temperature: 1
+  humidity: 0.3
+  downfall: 0.1
+
+colors:
+  sky_color: "#880000"
+  fog_color: "#aa0000"
+  water_color: "#cc0000"
+  grass_color: "#ff1744"
+
+blocks:
+  top_block: "crimson_nylium"
+  sub_block: "nether_wart_block"
+  deep_block: "crimson_stem"
+
+effects:
+  aura_effect: "STRENGTH"
+  particle: "minecraft:damage_indicator"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

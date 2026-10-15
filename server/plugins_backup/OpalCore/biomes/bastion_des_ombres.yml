@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:bastion_des_ombres"
+name: "§0Bastion des Ombres"
+category: "CORROMPU"
+rarity: 7
+description: "Forteresse naturelle rocheuse absorbant la lumière, idéale pour bâtir des avant-postes secrets."
+
+climate:
+  temperature: 0.2
+  humidity: 0.1
+  downfall: 0
+
+colors:
+  sky_color: "#121212"
+  fog_color: "#1e1e1e"
+  water_color: "#2c2c2c"
+  grass_color: "#1f1f1f"
+
+blocks:
+  top_block: "chiseled_deepslate"
+  sub_block: "reinforced_deepslate"
+  deep_block: "bedrock"
+
+effects:
+  aura_effect: "INVISIBILITY"
+  particle: "minecraft:mob_spell"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

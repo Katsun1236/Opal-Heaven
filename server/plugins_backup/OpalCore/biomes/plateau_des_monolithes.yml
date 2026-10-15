@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:plateau_des_monolithes"
+name: "§7Plateau des Monolithes"
+category: "ELECTRIQUE"
+rarity: 5
+description: "Piliers de pierre taillée alignés selon des configurations cosmiques guidant les flux d'énergie."
+
+climate:
+  temperature: 1.1
+  humidity: 0.2
+  downfall: 0.1
+
+colors:
+  sky_color: "#546e7a"
+  fog_color: "#78909c"
+  water_color: "#90a4ae"
+  grass_color: "#b0bec5"
+
+blocks:
+  top_block: "chiseled_stone_bricks"
+  sub_block: "stone_bricks"
+  deep_block: "deepslate"
+
+effects:
+  aura_effect: "RESISTANCE"
+  particle: "minecraft:enchantment_table"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

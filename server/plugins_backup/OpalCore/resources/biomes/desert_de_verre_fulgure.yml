@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:desert_de_verre_fulgure"
+name: "§6Désert de Verre Fulguré"
+category: "ELECTRIQUE"
+rarity: 6
+description: "Désert vitrifié par des milliers d'impacts de foudre où la charge statique stimule le minage."
+
+climate:
+  temperature: 1.9
+  humidity: 0.05
+  downfall: 0
+
+colors:
+  sky_color: "#ffd600"
+  fog_color: "#ffee58"
+  water_color: "#fff59d"
+  grass_color: "#ffeb3b"
+
+blocks:
+  top_block: "tinted_glass"
+  sub_block: "sand"
+  deep_block: "sandstone"
+
+effects:
+  aura_effect: "HASTE"
+  particle: "minecraft:electric_spark"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

@@ -1,0 +1,16 @@
+# Logs & locks
+*.log
+*.lock
+**/LOCK
+crashdumps/
+server/crashdumps/
+
+# Temporary worlds
+server/worlds/test_flat/
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

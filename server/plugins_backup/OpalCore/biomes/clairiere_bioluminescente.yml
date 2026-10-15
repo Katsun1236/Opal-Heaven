@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:clairiere_bioluminescente"
+name: "§aClairière Bioluminescente"
+category: "BIOLOGIQUE"
+rarity: 6
+description: "Oasis végétale émettant une lumière verte éclatante idéale pour la floraison rapide des cultures."
+
+climate:
+  temperature: 0.7
+  humidity: 0.8
+  downfall: 0.6
+
+colors:
+  sky_color: "#00e676"
+  fog_color: "#69f0ae"
+  water_color: "#1de9b6"
+  grass_color: "#00c853"
+
+blocks:
+  top_block: "sculk_sensor"
+  sub_block: "moss_block"
+  deep_block: "calcite"
+
+effects:
+  aura_effect: "GLOWING"
+  particle: "minecraft:glow_particle"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

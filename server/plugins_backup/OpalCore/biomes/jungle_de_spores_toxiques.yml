@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:jungle_de_spores_toxiques"
+name: "§2Jungle de Spores Toxiques"
+category: "BIOLOGIQUE"
+rarity: 6
+description: "Végétation luxuriante mais venimeuse où les fleurs géantes projettent des toxines de siège."
+
+climate:
+  temperature: 1.1
+  humidity: 0.95
+  downfall: 0.9
+
+colors:
+  sky_color: "#1b5e20"
+  fog_color: "#2e7d32"
+  water_color: "#43a047"
+  grass_color: "#66bb6a"
+
+blocks:
+  top_block: "moss_block"
+  sub_block: "spore_blossom"
+  deep_block: "rooted_dirt"
+
+effects:
+  aura_effect: "POISON"
+  particle: "minecraft:spore_blossom_ambient"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:dunes_d_obsidienne"
+name: "§0Dunes d'Obsidienne"
+category: "VOLCANIQUE"
+rarity: 6
+description: "Désert de verre volcanique tranchant où chaque bloc résiste naturellement aux pires explosifs."
+
+climate:
+  temperature: 1.4
+  humidity: 0
+  downfall: 0
+
+colors:
+  sky_color: "#000000"
+  fog_color: "#212121"
+  water_color: "#37474f"
+  grass_color: "#263238"
+
+blocks:
+  top_block: "obsidian"
+  sub_block: "crying_obsidian"
+  deep_block: "bedrock"
+
+effects:
+  aura_effect: "RESISTANCE"
+  particle: "minecraft:portal"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

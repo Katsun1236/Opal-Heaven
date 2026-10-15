@@ -1,0 +1,28 @@
+name: OpalMod
+version: 1.0.0
+main: opalheaven\mod\OpalMod
+api: 5.0.0
+author: Opal Heaven Team
+description: Suite de modération ultra-poussée avec SQLite, freeze, vanish, automod et FormUI staff pour Opal Heaven.
+permissions:
+  opalmod.staff:
+    default: op
+    description: Accès général aux commandes de modération
+  opalmod.ban:
+    default: op
+    description: Bannir des joueurs
+  opalmod.mute:
+    default: op
+    description: Rendre muet des joueurs
+  opalmod.freeze:
+    default: op
+    description: Figer des suspects
+  opalmod.vanish:
+    default: op
+    description: Mode invisible staff
+  opalmod.invsee:
+    default: op
+    description: Inspecter les inventaires
+  opalmod.report:
+    default: true
+    description: Permet aux joueurs de signaler un joueur

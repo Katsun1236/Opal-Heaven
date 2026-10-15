@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:vallee_des_sables_mouvants"
+name: "§6Vallée des Sables Mouvants"
+category: "ELECTRIQUE"
+rarity: 6
+description: "Dunes instables aspirant lentement quiconque cesse de se déplacer."
+
+climate:
+  temperature: 2
+  humidity: 0
+  downfall: 0
+
+colors:
+  sky_color: "#ff6f00"
+  fog_color: "#ff8f00"
+  water_color: "#ffa000"
+  grass_color: "#ffb300"
+
+blocks:
+  top_block: "sand"
+  sub_block: "gravel"
+  deep_block: "sandstone"
+
+effects:
+  aura_effect: "SLOWNESS"
+  particle: "minecraft:dust"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

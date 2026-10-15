@@ -1,0 +1,31 @@
+#Properties Config file
+#Wed Oct 14 09:12:49 UTC 2026
+server-name=Opal Heaven | PvP-Faction Bedrock
+server-port=19132
+server-portv6=19133
+gamemode=0
+force-gamemode=off
+max-players=100
+spawn-protection=0
+white-list=off
+enable-query=on
+enable-rcon=off
+motd=§l§dOPAL HEAVEN §r§7» §fPvP-Faction Révolutionnaire Bedrock
+sub-motd=§eRejoins l'aventure - Play Your Way!
+server-authoritative-movement=server-auth
+server-authoritative-block-breaking=on
+auto-save=on
+view-distance=10
+difficulty=2
+pvp=on
+level-name=world
+level-type=opal
+level-seed=
+generator-settings=
+trust-player-permissions=off
+compression-level=6
+async-workers=2
+enable-ipv6=on
+hardcore=off
+xbox-auth=off
+language=eng

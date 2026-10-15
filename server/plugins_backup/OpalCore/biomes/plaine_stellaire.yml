@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:plaine_stellaire"
+name: "§5Plaine Stellaire"
+category: "CELESTE"
+rarity: 6
+description: "Étendue cosmique tapissée de poussière d'étoiles où la nuit révèle des secrets oubliés."
+
+climate:
+  temperature: 0.5
+  humidity: 0.4
+  downfall: 0.2
+
+colors:
+  sky_color: "#4a148c"
+  fog_color: "#7b1fa2"
+  water_color: "#6a1b9a"
+  grass_color: "#8e24aa"
+
+blocks:
+  top_block: "purpur_block"
+  sub_block: "obsidian"
+  deep_block: "end_stone"
+
+effects:
+  aura_effect: "NIGHT_VISION"
+  particle: "minecraft:portal"
+  gravity: 0.9
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

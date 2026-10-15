@@ -1,0 +1,7 @@
+# Configuration des Resource Packs PocketMine-MP 5 - OPAL HEAVEN
+
+# Ne pas forcer tant que les textures des items custom ne sont pas finalisées
+force_resources: false
+
+# Pile des packs chargés par UUID
+resource_stack: []

@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:caverne_des_blizzards"
+name: "§3Caverne des Blizzards"
+category: "GLACIAIRE"
+rarity: 7
+description: "Grottes balayées par des tourbillons polaires arrachant les torches posées."
+
+climate:
+  temperature: -1
+  humidity: 0.9
+  downfall: 1
+
+colors:
+  sky_color: "#006064"
+  fog_color: "#00838f"
+  water_color: "#0097a7"
+  grass_color: "#00acc1"
+
+blocks:
+  top_block: "packed_ice"
+  sub_block: "dripstone_block"
+  deep_block: "deepslate"
+
+effects:
+  aura_effect: "BLINDNESS"
+  particle: "minecraft:snow_dust"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

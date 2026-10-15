@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:abysse_luminescent"
+name: "§1Abysse Luminescent"
+category: "ABYSSAL"
+rarity: 6
+description: "Fonds marins baignés d'une lueur azur où les coraux vivants oxygènent naturellement les plongeurs."
+
+climate:
+  temperature: 0.4
+  humidity: 1
+  downfall: 1
+
+colors:
+  sky_color: "#01579b"
+  fog_color: "#0288d1"
+  water_color: "#00e5ff"
+  grass_color: "#0097a7"
+
+blocks:
+  top_block: "prismarine"
+  sub_block: "dark_prismarine"
+  deep_block: "sea_lantern"
+
+effects:
+  aura_effect: "WATER_BREATHING"
+  particle: "minecraft:water_bubble"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:recif_de_corail_fantome"
+name: "§bRécif de Corail Fantôme"
+category: "ABYSSAL"
+rarity: 5
+description: "Écosystème corallien spectral où nager procure une vitesse fulgurante équivalente aux dauphins."
+
+climate:
+  temperature: 0.7
+  humidity: 1
+  downfall: 1
+
+colors:
+  sky_color: "#80deea"
+  fog_color: "#b2ebf2"
+  water_color: "#26c6da"
+  grass_color: "#4dd0e1"
+
+blocks:
+  top_block: "pearlescent_froglight"
+  sub_block: "prismarine_bricks"
+  deep_block: "calcite"
+
+effects:
+  aura_effect: "DOLPHINS_GRACE"
+  particle: "minecraft:splash"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

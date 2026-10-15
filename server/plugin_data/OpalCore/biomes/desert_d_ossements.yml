@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:desert_d_ossements"
+name: "§fDésert d'Ossements"
+category: "CORROMPU"
+rarity: 5
+description: "Dunes de poudre blanche où le vent soulève une tempête d'ossements aveuglante."
+
+climate:
+  temperature: 1.7
+  humidity: 0
+  downfall: 0
+
+colors:
+  sky_color: "#cfd8dc"
+  fog_color: "#eceff1"
+  water_color: "#90a4ae"
+  grass_color: "#b0bec5"
+
+blocks:
+  top_block: "calcite"
+  sub_block: "bone_block"
+  deep_block: "white_concrete_powder"
+
+effects:
+  aura_effect: "WEAKNESS"
+  particle: "minecraft:white_smoke"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

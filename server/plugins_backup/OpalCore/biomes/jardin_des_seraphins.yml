@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:jardin_des_seraphins"
+name: "§eJardin des Séraphins"
+category: "CELESTE"
+rarity: 7
+description: "Prairies dorées fleuries dont le pollen divin rassasie continuellement les voyageurs."
+
+climate:
+  temperature: 0.8
+  humidity: 0.7
+  downfall: 0.3
+
+colors:
+  sky_color: "#fff59d"
+  fog_color: "#fff9c4"
+  water_color: "#ffd54f"
+  grass_color: "#ffe082"
+
+blocks:
+  top_block: "moss_block"
+  sub_block: "ochre_froglight"
+  deep_block: "calcite"
+
+effects:
+  aura_effect: "SATURATION"
+  particle: "minecraft:totem_particle"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

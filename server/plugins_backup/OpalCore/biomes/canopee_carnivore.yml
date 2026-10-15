@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:canopee_carnivore"
+name: "§2Canopée Carnivore"
+category: "BIOLOGIQUE"
+rarity: 5
+description: "Forêt vivante de racines géantes cherchant à capturer les intrus imprudents."
+
+climate:
+  temperature: 1.2
+  humidity: 0.85
+  downfall: 0.8
+
+colors:
+  sky_color: "#004d40"
+  fog_color: "#00695c"
+  water_color: "#00897b"
+  grass_color: "#00bfa5"
+
+blocks:
+  top_block: "mangrove_roots"
+  sub_block: "mangrove_wood"
+  deep_block: "packed_mud"
+
+effects:
+  aura_effect: "HUNGER"
+  particle: "minecraft:redstone_ore_dust"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

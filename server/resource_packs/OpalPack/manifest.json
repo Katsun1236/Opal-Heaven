@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§l§dOpal Heaven §r§7Resource Pack",
+    "description": "Pack de ressources officiel du serveur Opal Heaven Bedrock",
+    "uuid": "a1d97025-553a-45e7-b9e7-19f0d39bac38",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "a0a5f52e-7987-4836-8f1e-ff593c3897c9",
+      "version": [1, 0, 0]
+    }
+  ]
+}

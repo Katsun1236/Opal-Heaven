@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:faille_tellurique"
+name: "§6Faille Tellurique"
+category: "VOLCANIQUE"
+rarity: 7
+description: "Canyon sismique instable où les parois vibrent d'énergie métallique boostant la vitesse de pioche."
+
+climate:
+  temperature: 1.8
+  humidity: 0.1
+  downfall: 0
+
+colors:
+  sky_color: "#e65100"
+  fog_color: "#f57c00"
+  water_color: "#ff9800"
+  grass_color: "#fb8c00"
+
+blocks:
+  top_block: "terracotta"
+  sub_block: "red_sandstone"
+  deep_block: "smooth_basalt"
+
+effects:
+  aura_effect: "HASTE"
+  particle: "minecraft:crit"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:oasis_mirage_temporelle"
+name: "§aOasis Mirage Temporelle"
+category: "ELECTRIQUE"
+rarity: 8
+description: "Refuge d'eau claire et de palmiers célestes qui se déplace à chaque aurore."
+
+climate:
+  temperature: 1.3
+  humidity: 0.7
+  downfall: 0.4
+
+colors:
+  sky_color: "#a7ffeb"
+  fog_color: "#64ffda"
+  water_color: "#1de9b6"
+  grass_color: "#00bfa5"
+
+blocks:
+  top_block: "verdant_froglight"
+  sub_block: "mossy_cobblestone"
+  deep_block: "sand"
+
+effects:
+  aura_effect: "REGENERATION"
+  particle: "minecraft:happy_villager"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 6
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

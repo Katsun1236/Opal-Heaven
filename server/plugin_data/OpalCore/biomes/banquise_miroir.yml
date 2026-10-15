@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:banquise_miroir"
+name: "§fBanquise Miroir"
+category: "GLACIAIRE"
+rarity: 5
+description: "Surface parfaitement lisse réfléchissant le ciel comme un miroir argenté géant."
+
+climate:
+  temperature: -0.6
+  humidity: 0.6
+  downfall: 0.7
+
+colors:
+  sky_color: "#e1f5fe"
+  fog_color: "#ffffff"
+  water_color: "#b3e5fc"
+  grass_color: "#e0f7fa"
+
+blocks:
+  top_block: "ice"
+  sub_block: "packed_ice"
+  deep_block: "diorite"
+
+effects:
+  aura_effect: "SPEED"
+  particle: "minecraft:sparkler"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

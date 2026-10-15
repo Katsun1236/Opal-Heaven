@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:vallee_des_geysers_de_glace"
+name: "§bVallée des Geysers de Glace"
+category: "GLACIAIRE"
+rarity: 6
+description: "Fissures dans le permafrost propulsant des colonnes d'azote liquide projetant les joueurs en l'air."
+
+climate:
+  temperature: -0.4
+  humidity: 0.8
+  downfall: 0.5
+
+colors:
+  sky_color: "#4fc3f7"
+  fog_color: "#81d4fa"
+  water_color: "#29b6f6"
+  grass_color: "#039be5"
+
+blocks:
+  top_block: "snow"
+  sub_block: "blue_ice"
+  deep_block: "calcite"
+
+effects:
+  aura_effect: "LEVITATION"
+  particle: "minecraft:cloud"
+  gravity: 0.8
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:ruines_du_neant_obscur"
+name: "§8Ruines du Néant Obscur"
+category: "CORROMPU"
+rarity: 8
+description: "Cité antique engloutie sous une chape de sculk où chaque son résonne d'un écho menaçant."
+
+climate:
+  temperature: 0.1
+  humidity: 0.2
+  downfall: 0
+
+colors:
+  sky_color: "#000000"
+  fog_color: "#001e2b"
+  water_color: "#003344"
+  grass_color: "#002533"
+
+blocks:
+  top_block: "sculk"
+  sub_block: "sculk_shrieker"
+  deep_block: "deepslate_tiles"
+
+effects:
+  aura_effect: "BLINDNESS"
+  particle: "minecraft:sonic_explosion"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 6
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

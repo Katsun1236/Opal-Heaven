@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:glacier_des_ames_gelees"
+name: "§9Glacier des Âmes Gelées"
+category: "GLACIAIRE"
+rarity: 6
+description: "Cathédrale de glace bleue translucide renfermant des reliques de givre antique."
+
+climate:
+  temperature: -0.8
+  humidity: 0.7
+  downfall: 0.9
+
+colors:
+  sky_color: "#0277bd"
+  fog_color: "#29b6f6"
+  water_color: "#0288d1"
+  grass_color: "#03a9f4"
+
+blocks:
+  top_block: "blue_ice"
+  sub_block: "frosted_ice"
+  deep_block: "packed_ice"
+
+effects:
+  aura_effect: "RESISTANCE"
+  particle: "minecraft:blue_flame"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

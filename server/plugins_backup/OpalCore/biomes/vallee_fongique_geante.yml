@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:vallee_fongique_geante"
+name: "§dVallée Fongique Géante"
+category: "BIOLOGIQUE"
+rarity: 5
+description: "Forêt de champignons de 30 blocs de haut formant des ponts aériens naturels."
+
+climate:
+  temperature: 0.9
+  humidity: 0.9
+  downfall: 0.7
+
+colors:
+  sky_color: "#880e4f"
+  fog_color: "#ad1457"
+  water_color: "#c2185b"
+  grass_color: "#e91e63"
+
+blocks:
+  top_block: "mycelium"
+  sub_block: "mushroom_stem"
+  deep_block: "red_mushroom_block"
+
+effects:
+  aura_effect: "REGENERATION"
+  particle: "minecraft:heart"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

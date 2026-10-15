@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:jardin_de_nectar_dionysiaque"
+name: "§5Jardin de Nectar Dionysiaque"
+category: "ETHER"
+rarity: 7
+description: "Vignes divines produisant des nectars d'exaltation guerrière et d'inspiration alchimique."
+
+climate:
+  temperature: 0.9
+  humidity: 0.8
+  downfall: 0.5
+
+colors:
+  sky_color: "#880e4f"
+  fog_color: "#c2185b"
+  water_color: "#e91e63"
+  grass_color: "#ad1457"
+
+blocks:
+  top_block: "flowering_azalea"
+  sub_block: "rooted_dirt"
+  deep_block: "moss_block"
+
+effects:
+  aura_effect: "HASTE"
+  particle: "minecraft:heart"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

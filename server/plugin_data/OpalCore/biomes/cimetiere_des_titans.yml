@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:cimetiere_des_titans"
+name: "§7Cimetière des Titans"
+category: "CORROMPU"
+rarity: 6
+description: "Plaine hantée parsemée de cages thoraciques fossilisées de léviathans célestes anciens."
+
+climate:
+  temperature: 0.5
+  humidity: 0.3
+  downfall: 0.2
+
+colors:
+  sky_color: "#3e2723"
+  fog_color: "#4e342e"
+  water_color: "#5d4037"
+  grass_color: "#6d4c41"
+
+blocks:
+  top_block: "bone_block"
+  sub_block: "soul_sand"
+  deep_block: "soul_soil"
+
+effects:
+  aura_effect: "WITHER"
+  particle: "minecraft:soul"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

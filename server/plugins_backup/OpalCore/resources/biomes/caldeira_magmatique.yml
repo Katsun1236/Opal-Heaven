@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:caldeira_magmatique"
+name: "§cCaldeira Magmatique"
+category: "VOLCANIQUE"
+rarity: 6
+description: "Bassin bouillonnant géant au sommet d'un super-volcan abritant les forges naturelles."
+
+climate:
+  temperature: 2.5
+  humidity: 0
+  downfall: 0
+
+colors:
+  sky_color: "#bf360c"
+  fog_color: "#d84315"
+  water_color: "#ff5722"
+  grass_color: "#e64a19"
+
+blocks:
+  top_block: "magma_block"
+  sub_block: "netherrack"
+  deep_block: "obsidian"
+
+effects:
+  aura_effect: "FIRE_RESISTANCE"
+  particle: "minecraft:flame"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

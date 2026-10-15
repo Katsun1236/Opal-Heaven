@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:terres_brulees_d_onix"
+name: "§8Terres Brûlées d'Onix"
+category: "VOLCANIQUE"
+rarity: 7
+description: "Mines à ciel ouvert de minerai d'Onix pur traversées par des coulées de soufre en fusion."
+
+climate:
+  temperature: 2
+  humidity: 0
+  downfall: 0
+
+colors:
+  sky_color: "#212121"
+  fog_color: "#424242"
+  water_color: "#ff3d00"
+  grass_color: "#37474f"
+
+blocks:
+  top_block: "gilded_blackstone"
+  sub_block: "blackstone"
+  deep_block: "bedrock"
+
+effects:
+  aura_effect: "STRENGTH"
+  particle: "minecraft:smoke"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

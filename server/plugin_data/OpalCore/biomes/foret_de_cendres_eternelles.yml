@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:foret_de_cendres_eternelles"
+name: "§7Forêt de Cendres Éternelles"
+category: "VOLCANIQUE"
+rarity: 5
+description: "Arbres pétrifiés par un cataclysme séculaire où le sol est recouvert de suie volcanique meuble."
+
+climate:
+  temperature: 1.2
+  humidity: 0.1
+  downfall: 0
+
+colors:
+  sky_color: "#616161"
+  fog_color: "#9e9e9e"
+  water_color: "#757575"
+  grass_color: "#757575"
+
+blocks:
+  top_block: "basalt"
+  sub_block: "polished_basalt"
+  deep_block: "deepslate"
+
+effects:
+  aura_effect: "SLOWNESS"
+  particle: "minecraft:campfire_cosy_smoke"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

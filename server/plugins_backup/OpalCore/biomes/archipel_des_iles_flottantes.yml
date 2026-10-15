@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:archipel_des_iles_flottantes"
+name: "§bArchipel des Îles Flottantes"
+category: "ETHER"
+rarity: 8
+description: "Îles de pierre suspendues dans l'azur où les chutes sont ralenties par des courants ascendants."
+
+climate:
+  temperature: 0.4
+  humidity: 0.5
+  downfall: 0.2
+
+colors:
+  sky_color: "#80d8ff"
+  fog_color: "#b3e5fc"
+  water_color: "#40c4ff"
+  grass_color: "#00b0ff"
+
+blocks:
+  top_block: "grass_block"
+  sub_block: "diorite"
+  deep_block: "calcite"
+
+effects:
+  aura_effect: "SLOW_FALLING"
+  particle: "minecraft:end_rod"
+  gravity: 0.6
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 6
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

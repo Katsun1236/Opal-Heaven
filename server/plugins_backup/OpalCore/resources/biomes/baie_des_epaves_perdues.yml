@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:baie_des_epaves_perdues"
+name: "§6Baie des Épaves Perdues"
+category: "ABYSSAL"
+rarity: 6
+description: "Cimetière marin de navires anciens regorgeant d'huîtres célestes et de coffres de dragage."
+
+climate:
+  temperature: 0.9
+  humidity: 0.8
+  downfall: 0.5
+
+colors:
+  sky_color: "#ffb300"
+  fog_color: "#ffe082"
+  water_color: "#00acc1"
+  grass_color: "#ffa000"
+
+blocks:
+  top_block: "sand"
+  sub_block: "sandstone"
+  deep_block: "prismarine"
+
+effects:
+  aura_effect: "LUCK"
+  particle: "minecraft:villager_happy"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

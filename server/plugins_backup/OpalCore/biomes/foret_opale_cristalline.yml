@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:foret_opale_cristalline"
+name: "§dForêt d'Opale Cristalline"
+category: "CELESTE"
+rarity: 8
+description: "Une forêt sacrée où les troncs d'arbres sont faits d'améthyste et où l'air scintille de poussière d'Opale."
+
+climate:
+  temperature: 0.6
+  humidity: 0.8
+  downfall: 0.4
+
+colors:
+  sky_color: "#b388ff"
+  fog_color: "#e1bee7"
+  water_color: "#7c4dff"
+  grass_color: "#ce93d8"
+
+blocks:
+  top_block: "amethyst_block"
+  sub_block: "calcite"
+  deep_block: "smooth_basalt"
+
+effects:
+  aura_effect: "REGENERATION"
+  particle: "minecraft:enchantment_table"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 6
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

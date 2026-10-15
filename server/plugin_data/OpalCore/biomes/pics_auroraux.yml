@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:pics_auroraux"
+name: "§3Pics Auroraux"
+category: "CELESTE"
+rarity: 6
+description: "Aiguilles de glace bleue illuminées par des aurores boréales permanentes boostant le sprint."
+
+climate:
+  temperature: -0.2
+  humidity: 0.9
+  downfall: 0.8
+
+colors:
+  sky_color: "#00e5ff"
+  fog_color: "#84ffff"
+  water_color: "#00b4d8"
+  grass_color: "#48cae4"
+
+blocks:
+  top_block: "packed_ice"
+  sub_block: "blue_ice"
+  deep_block: "deepslate"
+
+effects:
+  aura_effect: "SPEED"
+  particle: "minecraft:glow_particle"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

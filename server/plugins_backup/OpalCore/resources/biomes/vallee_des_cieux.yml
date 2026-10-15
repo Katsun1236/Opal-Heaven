@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:vallee_des_cieux"
+name: "§bVallée des Cieux"
+category: "CELESTE"
+rarity: 7
+description: "Plateaux éthérés baignés dans la lumière d'altitude où la gravité est plus légère."
+
+climate:
+  temperature: 0.3
+  humidity: 0.5
+  downfall: 0.1
+
+colors:
+  sky_color: "#80d8ff"
+  fog_color: "#b3e5fc"
+  water_color: "#00b0ff"
+  grass_color: "#81d4fa"
+
+blocks:
+  top_block: "quartz_block"
+  sub_block: "white_concrete"
+  deep_block: "diorite"
+
+effects:
+  aura_effect: "JUMP_BOOST"
+  particle: "minecraft:end_rod"
+  gravity: 0.75
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

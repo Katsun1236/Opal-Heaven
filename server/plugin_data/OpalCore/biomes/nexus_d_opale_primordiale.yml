@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:nexus_d_opale_primordiale"
+name: "§l§dLE NEXUS D'OPALE PRIMORDIALE"
+category: "APEX"
+rarity: 10
+description: "LE SAINT DES SAINTS : Le biome mythique absolu d'Opal Heaven (0.1% de chance). La source de l'Opale sacrée, conférant une invulnérabilité partielle et des filons de richesses inestimables."
+
+climate:
+  temperature: 0.77
+  humidity: 0.77
+  downfall: 0.77
+
+colors:
+  sky_color: "#e040fb"
+  fog_color: "#ea80fc"
+  water_color: "#d500f9"
+  grass_color: "#aa00ff"
+
+blocks:
+  top_block: "amethyst_block"
+  sub_block: "diamond_block"
+  deep_block: "netherite_block"
+
+effects:
+  aura_effect: "HERO_OF_THE_VILLAGE"
+  particle: "minecraft:totem_particle"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 6
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

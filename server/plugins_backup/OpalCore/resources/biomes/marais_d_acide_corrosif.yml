@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:marais_d_acide_corrosif"
+name: "§aMarais d'Acide Corrosif"
+category: "BIOLOGIQUE"
+rarity: 7
+description: "Marécage acide capable de dissoudre les alliages basiques pour en extraire des essences de combat."
+
+climate:
+  temperature: 1
+  humidity: 0.9
+  downfall: 0.7
+
+colors:
+  sky_color: "#76ff03"
+  fog_color: "#b2ff59"
+  water_color: "#64dd17"
+  grass_color: "#76ff03"
+
+blocks:
+  top_block: "mud"
+  sub_block: "sculk_catalyst"
+  deep_block: "deepslate"
+
+effects:
+  aura_effect: "WEAKNESS"
+  particle: "minecraft:villager_angry"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

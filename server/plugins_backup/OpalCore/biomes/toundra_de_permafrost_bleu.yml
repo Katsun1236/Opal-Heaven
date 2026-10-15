@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:toundra_de_permafrost_bleu"
+name: "§bToundra de Permafrost Bleu"
+category: "GLACIAIRE"
+rarity: 5
+description: "Étendue glacée impénétrable où le sol ne dégèle jamais sous les pas des montures."
+
+climate:
+  temperature: -0.5
+  humidity: 0.5
+  downfall: 0.6
+
+colors:
+  sky_color: "#b2ebf2"
+  fog_color: "#e0f7fa"
+  water_color: "#4dd0e1"
+  grass_color: "#80deea"
+
+blocks:
+  top_block: "snow_block"
+  sub_block: "packed_ice"
+  deep_block: "stone"
+
+effects:
+  aura_effect: "SLOWNESS"
+  particle: "minecraft:snowflake"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16

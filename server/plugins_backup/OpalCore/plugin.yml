@@ -1,0 +1,52 @@
+name: OpalCore
+version: 1.0.0
+main: opalheaven\core\OpalCore
+api: 5.0.0
+author: Opal Heaven Team
+description: Le coeur systeme et gameplay d'Opal Heaven Bedrock
+permissions:
+  opalheaven.player:
+    default: true
+    description: "Permissions de base des joueurs d'Opal Heaven"
+  opalheaven.admin:
+    default: op
+    description: "Permissions administratives d'Opal Heaven"
+commands:
+  opal:
+    description: "Menu principal d'Opal Heaven"
+    permission: opalheaven.player
+    aliases: ["menu", "oh"]
+  ordres:
+    description: "Consulter et gerer son Ordre d'Ascension"
+    permission: opalheaven.player
+    aliases: ["ordre", "classe", "classes"]
+  f:
+    description: "Menu principal et gestion de Faction"
+    permission: opalheaven.player
+    aliases: ["faction", "factions"]
+  bloodshop:
+    description: "Boutique officielle du Sang"
+    permission: opalheaven.player
+    aliases: ["bs", "sangshop"]
+  skill:
+    description: "Activer la compétence spéciale de sa spécialisation"
+    permission: opalheaven.player
+    aliases: ["competence", "pouvoir"]
+  posture:
+    description: "Afficher l'etat de sa jauge de posture"
+    permission: opalheaven.player
+  biomes:
+    description: "Explorer et gerer les 40 biomes uniques d'Opal Heaven"
+    permission: opalheaven.player
+    aliases: ["biome", "royaumes", "royaume"]
+  combat:
+    description: "Système de combat, posture et parade parfaite"
+    permission: opalheaven.player
+  minage:
+    description: "Système de résonance tellurique et gemmes"
+    permission: opalheaven.player
+    aliases: ["resonance"]
+  agriculture:
+    description: "Système d'agriculture mystique et faune"
+    permission: opalheaven.player
+    aliases: ["faune", "metiers"]

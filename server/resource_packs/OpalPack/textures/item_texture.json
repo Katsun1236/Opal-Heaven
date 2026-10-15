@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "OpalPack",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "opal_gem": {
+      "textures": "textures/items/opal_gem"
+    },
+    "celestite_ingot": {
+      "textures": "textures/items/celestite_ingot"
+    },
+    "onix_shard": {
+      "textures": "textures/items/onix_shard"
+    }
+  }
+}

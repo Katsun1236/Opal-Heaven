@@ -1,0 +1,38 @@
+# Configuration de Biome Modde - OPAL HEAVEN
+# ID unique et Enregistrement dans le Moteur de Monde
+id: "opal:fosse_hydrothermale"
+name: "§4Fosse Hydrothermale"
+category: "ABYSSAL"
+rarity: 7
+description: "Cheminées sous-marines volcaniques crachant du magma noir et des vapeurs soufrées."
+
+climate:
+  temperature: 1.5
+  humidity: 1
+  downfall: 0.9
+
+colors:
+  sky_color: "#b71c1c"
+  fog_color: "#d32f2f"
+  water_color: "#e53935"
+  grass_color: "#c62828"
+
+blocks:
+  top_block: "magma_block"
+  sub_block: "blackstone"
+  deep_block: "crying_obsidian"
+
+effects:
+  aura_effect: "FIRE_RESISTANCE"
+  particle: "minecraft:lava"
+  gravity: 1
+
+ores:
+  - ore: "opal:opal_ore"
+    chance_per_chunk: 2
+    min_y: 5
+    max_y: 45
+  - ore: "diamond_ore"
+    chance_per_chunk: 8
+    min_y: -60
+    max_y: 16
