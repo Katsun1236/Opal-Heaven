@@ -1,4 +1,4 @@
-# Configuration d'OpalCore pour le Hub
-server-role: "hub"
-target-faction-host: "127.0.0.1"
-target-faction-port: 19132
+# Configuration d'OpalCore pour le Faction
+server-role: "faction"
+target-hub-host: "127.0.0.1"
+target-hub-port: 19135

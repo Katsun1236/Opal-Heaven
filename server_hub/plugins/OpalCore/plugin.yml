@@ -50,3 +50,13 @@ commands:
   spawn:
     description: "Retourner au point de réapparition du monde"
     permission: opal.player
+  pastehub:
+    description: "Importer et coller un schématique de Hub (.schem, .mcstructure)"
+    permission: opal.admin
+    aliases: ["schem"]
+  setrole:
+    description: "Définir le rôle d'un joueur (ADMIN, JOUEUR)"
+    permission: opal.admin
+  role:
+    description: "Consulter le rôle d'un joueur"
+    permission: opal.player
