@@ -79,6 +79,10 @@ class EconomyManager{
         return true;
     }
 
+    public function removeMoney(Player|string $player, int $amount) : bool{
+        return $this->reduceMoney($player, $amount);
+    }
+
     public function transfer(Player|string $from, Player|string $to, int $amount) : bool{
         if($amount <= 0) return false;
         if($this->getMoney($from) < $amount) return false;

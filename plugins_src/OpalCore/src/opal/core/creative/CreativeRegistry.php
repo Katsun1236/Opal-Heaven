@@ -5,17 +5,22 @@ declare(strict_types=1);
 namespace opal\core\creative;
 
 use pocketmine\block\VanillaBlocks;
+use pocketmine\entity\Location;
+use pocketmine\entity\Zombie;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\inventory\InventoryTransactionEvent;
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerItemUseEvent;
 use pocketmine\inventory\CreativeCategory;
 use pocketmine\inventory\CreativeGroup;
 use pocketmine\inventory\CreativeInventory;
 use pocketmine\item\Item;
 use pocketmine\item\VanillaItems;
 use pocketmine\lang\Translatable;
-use pocketmine\player\Player;
-use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerItemUseEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\network\mcpe\protocol\SpawnParticleEffectPacket;
+use pocketmine\player\Player;
 use opal\core\ui\FormManager;
 use opal\core\ui\SimpleForm;
 
@@ -45,110 +50,95 @@ class CreativeRegistry implements Listener{
     }
 
     private function initOpalBlocks() : void{
-        // 1. Minerais & Matériaux Célestes
-        $this->customBlocks["cobalt_ore"] = $this->createCustomItem(
-            VanillaBlocks::IRON_ORE()->asItem(),
-            "§b💎 Minerai de Cobalt",
-            ["§7Niveau T2 - Outil requis: Pioche Acier+", "§8Génère dans les failles rocheuses"],
+        // 1. Minerais & Matériaux Célestes (sans modèles 3D -> Barrière Block)
+        $this->customBlocks["cobalt_ore"] = $this->createUnimplementedBlock(
+            "Minerai de Cobalt",
+            ["Niveau T2 - Outil requis: Pioche Acier+", "Génère dans les failles rocheuses"],
             "opal:cobalt_ore"
         );
 
-        $this->customBlocks["titanium_ore"] = $this->createCustomItem(
-            VanillaBlocks::ANCIENT_DEBRIS()->asItem(),
-            "§7⚙ Minerai de Titane",
-            ["§7Niveau T3 - Outil requis: Pioche Titane+", "§8Génère sous y = 0"],
+        $this->customBlocks["titanium_ore"] = $this->createUnimplementedBlock(
+            "Minerai de Titane",
+            ["Niveau T3 - Outil requis: Pioche Titane+", "Génère sous y = 0"],
             "opal:titanium_ore"
         );
 
-        $this->customBlocks["aetherite_ore"] = $this->createCustomItem(
-            VanillaBlocks::DIAMOND_ORE()->asItem(),
-            "§d✨ Minerai d'Aetherite",
-            ["§7Niveau T4 - Outil requis: Pioche Aetherite+", "§8Génère dans les îles célestes (y > 180)"],
+        $this->customBlocks["aetherite_ore"] = $this->createUnimplementedBlock(
+            "Minerai d'Aetherite",
+            ["Niveau T4 - Outil requis: Pioche Aetherite+", "Génère dans les îles célestes (y > 180)"],
             "opal:aetherite_ore"
         );
 
-        $this->customBlocks["celestial_opal_ore"] = $this->createCustomItem(
-            VanillaBlocks::EMERALD_ORE()->asItem(),
-            "§e🌌 Minerai d'Opale Céleste",
-            ["§6Légendaire T5 - Outil requis: Pioche d'Opale", "§eMinerai d'élite ultra-rare"],
+        $this->customBlocks["celestial_opal_ore"] = $this->createUnimplementedBlock(
+            "Minerai d'Opale Céleste",
+            ["Légendaire T5 - Outil requis: Pioche d'Opale", "Minerai d'élite ultra-rare"],
             "opal:celestial_opal_ore"
         );
 
-        $this->customBlocks["stellar_amethyst"] = $this->createCustomItem(
-            VanillaBlocks::AMETHYST()->asItem(),
-            "§5🔮 Amas d'Améthyste Stellaire",
-            ["§7Cristal résonnant indispensable sous la terre fertile", "§7pour la pousse de l'Opale"],
+        $this->customBlocks["stellar_amethyst"] = $this->createUnimplementedBlock(
+            "Amas d'Améthyste Stellaire",
+            ["Cristal résonnant indispensable sous la terre fertile", "pour la pousse de l'Opale"],
             "opal:stellar_amethyst"
         );
 
-        $this->customBlocks["block_cobalt"] = $this->createCustomItem(
-            VanillaBlocks::LAPIS_LAZULI()->asItem(),
-            "§9🔷 Bloc de Cobalt",
-            ["§7Bloc de construction dense T2"],
+        $this->customBlocks["block_cobalt"] = $this->createUnimplementedBlock(
+            "Bloc de Cobalt",
+            ["Bloc de construction dense T2"],
             "opal:block_cobalt"
         );
 
-        $this->customBlocks["block_titanium"] = $this->createCustomItem(
-            VanillaBlocks::NETHERITE()->asItem(),
-            "§8🛡 Bloc de Titane",
-            ["§7Blindage pour coffres de faction T3"],
+        $this->customBlocks["block_titanium"] = $this->createUnimplementedBlock(
+            "Bloc de Titane",
+            ["Blindage pour coffres de faction T3"],
             "opal:block_titanium"
         );
 
-        $this->customBlocks["block_pure_opal"] = $this->createCustomItem(
-            VanillaBlocks::BEACON()->asItem(),
-            "§l§d🌌 Bloc d'Opale Pure",
-            ["§eBloc de prestige céleste ultime", "§dÉmet une aura stellaire continue"],
+        $this->customBlocks["block_pure_opal"] = $this->createUnimplementedBlock(
+            "Bloc d'Opale Pure",
+            ["Bloc de prestige céleste ultime", "Émet une aura stellaire continue"],
             "opal:block_pure_opal"
         );
 
         // 2. Machinerie & Fortifications
-        $this->customBlocks["acceleration_composter"] = $this->createCustomItem(
-            VanillaBlocks::BARREL()->asItem(),
-            "§a⚙ Composteur d'Accélération",
-            ["§7Transforme 64 déchets végétaux en Poussière Fertile"],
+        $this->customBlocks["acceleration_composter"] = $this->createUnimplementedBlock(
+            "Composteur d'Accélération",
+            ["Transforme 64 déchets végétaux en Poussière Fertile"],
             "opal:acceleration_composter"
         );
 
-        $this->customBlocks["faction_heart"] = $this->createCustomItem(
-            VanillaItems::END_CRYSTAL(),
-            "§l§c❤️ Cœur de Faction (Nexus)",
-            ["§41 000 Points de Structure", "§cProtège le claim et active le bouclier stellaire"],
+        $this->customBlocks["faction_heart"] = $this->createUnimplementedBlock(
+            "Cœur de Faction (Nexus)",
+            ["1 000 Points de Structure", "Protège le claim et active le bouclier stellaire"],
             "opal:faction_heart"
         );
 
-        $this->customBlocks["fortified_stone"] = $this->createCustomItem(
-            VanillaBlocks::STONE_BRICKS()->asItem(),
-            "§7🏰 Pierre Fortifiée",
-            ["§fRésiste à 3 détonations de TNT directes"],
+        $this->customBlocks["fortified_stone"] = $this->createUnimplementedBlock(
+            "Pierre Fortifiée",
+            ["Résiste à 3 détonations de TNT directes"],
             "opal:fortified_stone"
         );
 
-        $this->customBlocks["dense_void_obsidian"] = $this->createCustomItem(
-            VanillaBlocks::CRYING_OBSIDIAN()->asItem(),
-            "§5🕋 Obsidienne Dense de Faille",
-            ["§fRésiste à 5 détonations de TNT directes"],
+        $this->customBlocks["dense_void_obsidian"] = $this->createUnimplementedBlock(
+            "Obsidienne Dense de Faille",
+            ["Résiste à 5 détonations de TNT directes"],
             "opal:dense_void_obsidian"
         );
 
-        $this->customBlocks["ground_spikes"] = $this->createCustomItem(
-            VanillaBlocks::IRON_BARS()->asItem(),
-            "§c🗡 Piques d'Acier au Sol",
-            ["§cInflige 3 cœurs de dégâts directs et saignement aux intrus"],
+        $this->customBlocks["ground_spikes"] = $this->createUnimplementedBlock(
+            "Piques d'Acier au Sol",
+            ["Inflige 3 cœurs de dégâts directs et saignement aux intrus"],
             "opal:ground_spikes"
         );
 
-        $this->customBlocks["shock_plate"] = $this->createCustomItem(
-            VanillaBlocks::WEIGHTED_PRESSURE_PLATE_HEAVY()->asItem(),
-            "§e⚡ Dalle d'Électrocution",
-            ["§eAugmente la jauge de posture de l'intrus de +40%"],
+        $this->customBlocks["shock_plate"] = $this->createUnimplementedBlock(
+            "Dalle d'Électrocution",
+            ["Augmente la jauge de posture de l'intrus de +40%"],
             "opal:shock_plate"
         );
 
-        $this->customBlocks["ender_disruptor"] = $this->createCustomItem(
-            VanillaBlocks::ENCHANTING_TABLE()->asItem(),
-            "§d🔮 Balise Anti-Perles (Ender Disruptor)",
-            ["§5Annule toutes les perles d'ender dans un rayon de 16 blocs"],
+        $this->customBlocks["ender_disruptor"] = $this->createUnimplementedBlock(
+            "Balise Anti-Perles (Ender Disruptor)",
+            ["Annule toutes les perles d'ender dans un rayon de 16 blocs"],
             "opal:ender_disruptor"
         );
     }
@@ -265,31 +255,67 @@ class CreativeRegistry implements Listener{
     private function registerToBedrockCreativeMenu() : void{
         $ci = CreativeInventory::getInstance();
 
-        // 1. Groupe Blocs & Fortifications
-        $groupBlocks = new CreativeGroup(
-            new Translatable("§l§b🌌 OPAL HEAVEN — Blocs & Fortifications"),
-            $this->customBlocks["celestial_opal_ore"]
+        // Groupe Principal unifié "OPAL HEAVEN"
+        $groupOpal = new CreativeGroup(
+            new Translatable("§l§d🌌 OPAL HEAVEN — Tous les Ajouts"),
+            VanillaItems::NETHER_STAR()
         );
+
+        // Blocs (Barrières non disponibles)
         foreach($this->customBlocks as $item){
-            $ci->add($item, CreativeCategory::CONSTRUCTION, $groupBlocks);
+            $ci->add($item, CreativeCategory::ITEMS, $groupOpal);
         }
 
-        // 2. Groupe Mobs & Boss
-        $groupMobs = new CreativeGroup(
-            new Translatable("§l§c🌌 OPAL HEAVEN — Mobs & Boss"),
-            $this->customMobs["boss_vampire"]
-        );
+        // Mobs & Boss
         foreach($this->customMobs as $item){
-            $ci->add($item, CreativeCategory::NATURE, $groupMobs);
+            $ci->add($item, CreativeCategory::ITEMS, $groupOpal);
         }
 
-        // 3. Groupe Bâtons Tactiques & Équipements
-        $groupItems = new CreativeGroup(
-            new Translatable("§l§6🌌 OPAL HEAVEN — Bâtons Tactiques"),
-            $this->customItems["stick_heal"]
-        );
+        // Bâtons Tactiques
         foreach($this->customItems as $item){
-            $ci->add($item, CreativeCategory::EQUIPMENT, $groupItems);
+            $ci->add($item, CreativeCategory::ITEMS, $groupOpal);
+        }
+    }
+
+    public function onInventoryTransaction(InventoryTransactionEvent $event) : void{
+        $transaction = $event->getTransaction();
+        $player = $transaction->getSource();
+
+        foreach($transaction->getActions() as $action){
+            $source = $action->getSourceItem();
+            $target = $action->getTargetItem();
+
+            foreach([$source, $target] as $it){
+                if($it->getNamedTag()->getTag("opal_unimplemented") !== null){
+                    $event->cancel();
+                    $name = $it->getNamedTag()->getString("opal_clean_name", "Bloc");
+                    $player->sendMessage("§c❌ [{$name}] : Cet élément n'a pas encore de modèle 3D et n'est pas encore fait !");
+                    $player->sendTip("§c❌ {$name} — Pas encore fait !");
+                    return;
+                }
+            }
+        }
+    }
+
+    public function onInteract(PlayerInteractEvent $event) : void{
+        $item = $event->getItem();
+        if($item->getNamedTag()->getTag("opal_unimplemented") !== null){
+            $event->cancel();
+            $name = $item->getNamedTag()->getString("opal_clean_name", "Bloc");
+            $player = $event->getPlayer();
+            $player->sendMessage("§c❌ [{$name}] : Cet élément n'a pas encore de modèle 3D et n'est pas encore fait !");
+            $player->sendTip("§c❌ {$name} — Pas encore fait !");
+        }
+    }
+
+    public function onBlockPlace(BlockPlaceEvent $event) : void{
+        $item = $event->getItem();
+        if($item->getNamedTag()->getTag("opal_unimplemented") !== null){
+            $event->cancel();
+            $name = $item->getNamedTag()->getString("opal_clean_name", "Bloc");
+            $player = $event->getPlayer();
+            $player->sendMessage("§c❌ [{$name}] : Cet élément n'a pas encore de modèle 3D et n'est pas encore fait !");
+            $player->sendTip("§c❌ {$name} — Pas encore fait !");
         }
     }
 
@@ -298,7 +324,15 @@ class CreativeRegistry implements Listener{
         $item = $event->getItem();
         $tag = $item->getNamedTag();
 
-        if(!$tag->hasTag("opal_id")){
+        if($tag->getTag("opal_unimplemented") !== null){
+            $event->cancel();
+            $name = $tag->getString("opal_clean_name", $item->getCustomName());
+            $player->sendMessage("§c❌ [{$name}] : Cet élément n'a pas encore de modèle 3D et n'est pas encore fait !");
+            $player->sendTip("§c❌ {$name} — Pas encore fait !");
+            return;
+        }
+
+        if($tag->getTag("opal_id") === null){
             return;
         }
 
@@ -318,6 +352,23 @@ class CreativeRegistry implements Listener{
 
             $mobName = $item->getCustomName();
             $player->sendTitle("§6⭐ INVOCATION CÉLESTE ⭐", "§f{$mobName} §aest apparu !", 5, 30, 5);
+
+            // Apparition de l'entité en jeu
+            $this->spawnBossEntity($player, $pos, $mobName, $opalId);
+        }
+    }
+
+    private function spawnBossEntity(Player $player, \pocketmine\world\Position $pos, string $name, string $opalId) : void{
+        try{
+            $location = Location::fromObject($pos, $player->getWorld(), $player->getLocation()->getYaw(), $player->getLocation()->getPitch());
+            $entity = new Zombie($location);
+            $entity->setNameTag($name);
+            $entity->setNameTagAlwaysVisible(true);
+            $entity->setMaxHealth(300);
+            $entity->setHealth(300);
+            $entity->spawnToAll();
+        }catch(\Throwable $e){
+            $player->getServer()->getLogger()->warning("[CreativeRegistry] Impossible de faire apparaître le boss : " . $e->getMessage());
         }
     }
 
@@ -332,9 +383,9 @@ class CreativeRegistry implements Listener{
         });
 
         $form->setTitle("§l§d🎨 MENU CRÉATIF OPAL HEAVEN");
-        $form->setContent("§7Sélectionnez une catégorie pour récupérer instantanément n'importe quel bloc ou créature moddé :");
-        $form->addButton("§b💎 Blocs, Minerais & Fortifications\n§8[" . count($this->customBlocks) . " blocs]");
-        $form->addButton("§c👑 Mobs, Monstres & Boss\n§8[" . count($this->customMobs) . " entités]");
+        $form->setContent("§7Sélectionnez une catégorie pour récupérer vos éléments moddés (les blocs sans modèle 3D sont verrouillés) :");
+        $form->addButton("§b💎 Blocs & Fortifications\n§8[" . count($this->customBlocks) . " blocs - Verrouillés]");
+        $form->addButton("§c👑 Mobs & Boss\n§8[" . count($this->customMobs) . " entités]");
         $form->addButton("§6⚡ Bâtons Tactiques & Outils\n§8[" . count($this->customItems) . " items]");
 
         FormManager::getInstance()->sendForm($player, $form);
@@ -349,6 +400,12 @@ class CreativeRegistry implements Listener{
             }
             if(isset($keys[$data])){
                 $chosen = clone $keys[$data];
+                if($chosen->getNamedTag()->getTag("opal_unimplemented") !== null){
+                    $name = $chosen->getNamedTag()->getString("opal_clean_name", $chosen->getCustomName());
+                    $player->sendMessage("§c❌ [{$name}] : Cet élément n'a pas encore de modèle 3D et n'est pas encore fait !");
+                    $player->sendTip("§c❌ {$name} — Pas encore fait !");
+                    return;
+                }
                 $chosen->setCount($chosen->getMaxStackSize());
                 $player->getInventory()->addItem($chosen);
                 $player->sendMessage("§a✔ Vous avez reçu : " . $chosen->getCustomName() . " x" . $chosen->getCount());
@@ -356,7 +413,7 @@ class CreativeRegistry implements Listener{
         });
 
         $form->setTitle("§d" . $category);
-        $form->setContent("§7Cliquez sur un élément pour l'ajouter à votre inventaire :");
+        $form->setContent("§7Cliquez sur un élément (les blocs sans modèle 3D ne peuvent pas être pris) :");
         foreach($keys as $it){
             $form->addButton($it->getCustomName());
         }
@@ -369,6 +426,26 @@ class CreativeRegistry implements Listener{
         $item->setCustomName($name);
         $item->setLore($lore);
         $item->getNamedTag()->setString("opal_id", $opalId);
+        return $item;
+    }
+
+    private function createUnimplementedBlock(string $cleanName, array $description, string $opalId) : Item{
+        $item = VanillaBlocks::BARRIER()->asItem();
+        $item->setCustomName("§c⛔ " . $cleanName);
+        $lore = [
+            "§8[Opal Heaven — Non Disponible]",
+            "§7Modèle 3D : §cEn cours de création",
+            "§ePas encore fait",
+            "§7Description :"
+        ];
+        foreach($description as $line){
+            $lore[] = "§8• " . $line;
+        }
+        $lore[] = "§c❌ Impossible de récupérer cet item.";
+        $item->setLore($lore);
+        $item->getNamedTag()->setString("opal_id", $opalId);
+        $item->getNamedTag()->setByte("opal_unimplemented", 1);
+        $item->getNamedTag()->setString("opal_clean_name", $cleanName);
         return $item;
     }
 }

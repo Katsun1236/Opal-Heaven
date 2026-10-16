@@ -55,7 +55,8 @@ class ChatManager implements Listener{
         $facData = $this->factionManager->getPlayerFaction($player);
         $facTag = $facData !== null ? "§a[" . $facData["name"] . "]§r " : "";
 
-        $role = \opal\core\role\RoleManager::getInstance()->getRole($player->getXuid());
+        $roleKey = !empty($player->getXuid()) ? $player->getXuid() : $player->getName();
+        $role = \opal\core\role\RoleManager::getInstance()->getRole($roleKey);
         $roleTag = \opal\core\role\RoleManager::getInstance()->getRolePrefix($role);
 
         // 1. Canal Faction (@)

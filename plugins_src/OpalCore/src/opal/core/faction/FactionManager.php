@@ -24,7 +24,7 @@ class FactionManager{
 
     public function createFaction(Player $leader, string $name) : bool{
         $db = $this->database->getDb();
-        $leaderXuid = $leader->getXuid();
+        $leaderKey = !empty($leader->getXuid()) ? $leader->getXuid() : strtolower($leader->getName());
 
         if($this->getPlayerFaction($leader) !== null){
             $leader->sendMessage("§c❌ Vous faites déjà partie d'une faction !");
@@ -33,7 +33,7 @@ class FactionManager{
 
         $stmt = $db->prepare("INSERT INTO factions (name, leader_xuid, power, max_power) VALUES (:name, :leader, 10, 50)");
         $stmt->bindValue(":name", $name, SQLITE3_TEXT);
-        $stmt->bindValue(":leader", $leaderXuid, SQLITE3_TEXT);
+        $stmt->bindValue(":leader", $leaderKey, SQLITE3_TEXT);
         $success = @$stmt->execute();
 
         if(!$success){
@@ -42,7 +42,7 @@ class FactionManager{
         }
 
         $factionId = $db->lastInsertRowID();
-        $this->setMemberRank($leaderXuid, $factionId, "CHEF");
+        $this->setMemberRank($leaderKey, $factionId, "CHEF");
         $leader->sendMessage("§a🏰 Faction §e{$name} §acréée avec succès !");
         return true;
     }
@@ -65,16 +65,16 @@ class FactionManager{
     }
 
     public function getPlayerFaction(Player $player) : ?array{
-        $xuid = $player->getXuid();
+        $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
         $db = $this->database->getDb();
         $stmt = $db->prepare("
             SELECT f.*, fm.rank 
             FROM faction_members fm
             JOIN factions f ON f.id = fm.faction_id
-            WHERE fm.xuid = :xuid
+            WHERE fm.xuid = :key
             LIMIT 1
         ");
-        $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
+        $stmt->bindValue(":key", $key, SQLITE3_TEXT);
         $res = $stmt->execute();
         $row = $res->fetchArray(SQLITE3_ASSOC);
         return $row !== false ? $row : null;

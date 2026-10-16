@@ -29,21 +29,21 @@ class OrderManager{
     }
 
     public function getPlayerOrder(Player $player) : ?array{
-        $xuid = $player->getXuid();
+        $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
         $db = $this->database->getDb();
-        $stmt = $db->prepare("SELECT order_name, level, experience, specialization FROM player_orders WHERE xuid = :xuid LIMIT 1");
-        $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
+        $stmt = $db->prepare("SELECT order_name, level, experience, specialization FROM player_orders WHERE xuid = :key LIMIT 1");
+        $stmt->bindValue(":key", $key, SQLITE3_TEXT);
         $res = $stmt->execute();
         $row = $res->fetchArray(SQLITE3_ASSOC);
         return $row !== false ? $row : null;
     }
 
     public function setPlayerOrder(Player $player, string $orderName) : void{
-        $xuid = $player->getXuid();
+        $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
         $db = $this->database->getDb();
-        $stmt = $db->prepare("INSERT INTO player_orders (xuid, order_name, level, experience) VALUES (:xuid, :order, 1, 0)
+        $stmt = $db->prepare("INSERT INTO player_orders (xuid, order_name, level, experience) VALUES (:key, :order, 1, 0)
             ON CONFLICT(xuid, order_name) DO NOTHING");
-        $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
+        $stmt->bindValue(":key", $key, SQLITE3_TEXT);
         $stmt->bindValue(":order", $orderName, SQLITE3_TEXT);
         $stmt->execute();
     }
@@ -52,7 +52,7 @@ class OrderManager{
         $data = $this->getPlayerOrder($player);
         if($data === null) return;
 
-        $xuid = $player->getXuid();
+        $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
         $order = $data["order_name"];
         $lvl = (int)$data["level"];
         $xp = (int)$data["experience"] + $amount;

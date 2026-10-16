@@ -112,21 +112,22 @@ class AuctionHouseManager{
             }
 
             $fee = (int)ceil($price * 0.02);
-            $xuid = $player->getXuid();
-            if(!$this->economy->removeMoney($xuid, $fee)){
+            if(!$this->economy->removeMoney($player, $fee)){
                 $player->sendMessage("§c❌ Vous n'avez pas assez d'or pour payer les frais de mise en vente (2% = {$fee} Or) !");
                 return;
             }
 
-            // Sérialisation NBT basique
-            $nbtData = base64_encode(serialize($item));
+            // Sérialisation NBT PocketMine standard
+            $serializer = new \pocketmine\nbt\LittleEndianNbtSerializer();
+            $nbtData = base64_encode($serializer->write(new \pocketmine\nbt\TreeRoot($item->nbtSerialize())));
             $now = time();
             $expires = $now + (48 * 3600);
+            $sellerKey = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
 
             $db = $this->database->getDb();
             $stmt = $db->prepare("INSERT INTO ah_listings (seller_xuid, seller_name, item_nbt, item_name, category, price, created_at, expires_at)
                 VALUES (:xuid, :name, :nbt, :iname, :cat, :p, :c, :e)");
-            $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
+            $stmt->bindValue(":xuid", $sellerKey, SQLITE3_TEXT);
             $stmt->bindValue(":name", $player->getName(), SQLITE3_TEXT);
             $stmt->bindValue(":nbt", $nbtData, SQLITE3_TEXT);
             $stmt->bindValue(":iname", $item->getName() . " x" . $item->getCount(), SQLITE3_TEXT);
@@ -149,14 +150,14 @@ class AuctionHouseManager{
 
     public function buyItem(Player $player, array $listing) : void{
         $price = (int)$listing["price"];
-        $xuid = $player->getXuid();
+        $buyerKey = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
 
-        if($xuid === $listing["seller_xuid"]){
+        if($buyerKey === $listing["seller_xuid"]){
             $player->sendMessage("§c❌ Vous ne pouvez pas acheter votre propre offre !");
             return;
         }
 
-        if(!$this->economy->removeMoney($xuid, $price)){
+        if(!$this->economy->removeMoney($player, $price)){
             $player->sendMessage("§c❌ Solde insuffisant ! (Prix: {$price} Or)");
             return;
         }
@@ -169,7 +170,13 @@ class AuctionHouseManager{
         $this->economy->addMoney($listing["seller_xuid"], $price);
 
         // Donner l'item
-        $item = unserialize(base64_decode($listing["item_nbt"]));
+        try{
+            $tag = (new \pocketmine\nbt\LittleEndianNbtSerializer())->read(base64_decode($listing["item_nbt"]))->mustGetCompoundTag();
+            $item = Item::nbtDeserialize($tag);
+        }catch(\Throwable){
+            $item = @unserialize(base64_decode($listing["item_nbt"]));
+        }
+
         if($item instanceof Item){
             $player->getInventory()->addItem($item);
         }

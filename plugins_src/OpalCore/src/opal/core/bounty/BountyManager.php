@@ -33,17 +33,17 @@ class BountyManager implements Listener{
             return false;
         }
 
-        $creatorXuid = $creator->getXuid();
-        if(!$this->economy->removeMoney($creatorXuid, $amount)){
+        if(!$this->economy->removeMoney($creator, $amount)){
             $creator->sendMessage("§c❌ Solde insuffisant pour déposer cette prime !");
             return false;
         }
 
-        $targetXuid = $target->getXuid();
+        $creatorKey = !empty($creator->getXuid()) ? $creator->getXuid() : strtolower($creator->getName());
+        $targetKey = !empty($target->getXuid()) ? $target->getXuid() : strtolower($target->getName());
         $db = $this->database->getDb();
         $stmt = $db->prepare("INSERT INTO bounty_contracts (creator_xuid, target_xuid, reward) VALUES (:cx, :tx, :rew)");
-        $stmt->bindValue(":cx", $creatorXuid, SQLITE3_TEXT);
-        $stmt->bindValue(":tx", $targetXuid, SQLITE3_TEXT);
+        $stmt->bindValue(":cx", $creatorKey, SQLITE3_TEXT);
+        $stmt->bindValue(":tx", $targetKey, SQLITE3_TEXT);
         $stmt->bindValue(":rew", $amount, SQLITE3_INTEGER);
         $stmt->execute();
 
@@ -66,16 +66,16 @@ class BountyManager implements Listener{
         if($cause instanceof EntityDamageByEntityEvent){
             $killer = $cause->getDamager();
             if($killer instanceof Player && $killer->getName() !== $victim->getName()){
-                $targetXuid = $victim->getXuid();
-                $bounty = $this->getActiveBountiesOn($targetXuid);
+                $targetKey = !empty($victim->getXuid()) ? $victim->getXuid() : strtolower($victim->getName());
+                $bounty = $this->getActiveBountiesOn($targetKey);
 
                 if($bounty > 0){
                     $db = $this->database->getDb();
                     $stmt = $db->prepare("UPDATE bounty_contracts SET is_claimed = 1 WHERE target_xuid = :tx AND is_claimed = 0");
-                    $stmt->bindValue(":tx", $targetXuid, SQLITE3_TEXT);
+                    $stmt->bindValue(":tx", $targetKey, SQLITE3_TEXT);
                     $stmt->execute();
 
-                    $this->economy->addMoney($killer->getXuid(), $bounty);
+                    $this->economy->addMoney($killer, $bounty);
                     $killer->getServer()->broadcastMessage("§6🏆 PRIME RÉCLAMÉE : §e" . $killer->getName() . " §fa éliminé §c" . $victim->getName() . " §fet empoche §6{$bounty} Or §f!");
                 }
             }

@@ -36,20 +36,20 @@ class CombatDummyManager implements Listener{
     }
 
     public function startTraining(Player $player) : void{
-        $this->sessions[$player->getXuid()] = new DummySession($player);
+        $this->sessions[$player->getName()] = new DummySession($player);
         $player->sendMessage("§6🥋 [Mannequin de Parade] §eSession d'entraînement lancée ! Observez les alertes et baissez-vous (Sneak) au bon moment !");
     }
 
     public function stopTraining(Player $player) : void{
-        unset($this->sessions[$player->getXuid()]);
+        unset($this->sessions[$player->getName()]);
         $player->sendMessage("§7🥋 [Mannequin de Parade] Session terminée.");
     }
 
     public function onSneak(PlayerToggleSneakEvent $event) : void{
         $player = $event->getPlayer();
-        $xuid = $player->getXuid();
-        if(isset($this->sessions[$xuid]) && $event->isSneaking()){
-            $s = $this->sessions[$xuid];
+        $name = $player->getName();
+        if(isset($this->sessions[$name]) && $event->isSneaking()){
+            $s = $this->sessions[$name];
             if($s->state === 2 && !$s->hasParried){
                 $s->hasParried = true;
                 $timing = $s->ticksInState;
