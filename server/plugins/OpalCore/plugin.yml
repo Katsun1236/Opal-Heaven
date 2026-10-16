@@ -60,3 +60,7 @@ commands:
   role:
     description: "Consulter le rôle d'un joueur"
     permission: opal.player
+  opalcreative:
+    description: "Ouvrir le menu créatif tactile des blocs, mobs et items d'Opal Heaven"
+    permission: opal.player
+    aliases: ["oc"]

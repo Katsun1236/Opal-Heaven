@@ -49,6 +49,7 @@ class OpalCore extends PluginBase implements Listener{
     private NPCManager $npc;
     private CombatDummyManager $dummy;
     private \opal\core\role\RoleManager $roleManager;
+    private \opal\core\creative\CreativeRegistry $creativeRegistry;
 
     private string $serverRole = "faction"; // "hub" ou "faction"
 
@@ -83,6 +84,7 @@ class OpalCore extends PluginBase implements Listener{
         $this->npc = new NPCManager($this->orders, $this->quests, $this->ah);
         $this->dummy = new CombatDummyManager();
         $this->roleManager = new \opal\core\role\RoleManager($this->database, $this);
+        $this->creativeRegistry = new \opal\core\creative\CreativeRegistry();
         new \opal\core\schematic\SchematicLoader($this->getDataFolder());
         new \opal\core\trade\TradeManager($this->economy, $this->combatTag);
 
@@ -90,6 +92,7 @@ class OpalCore extends PluginBase implements Listener{
         $pm = $this->getServer()->getPluginManager();
         $pm->registerEvents($this, $this);
         $pm->registerEvents($this->roleManager, $this);
+        $pm->registerEvents($this->creativeRegistry, $this);
         $pm->registerEvents($this->formManager, $this);
         $pm->registerEvents($this->combatTag, $this);
         $pm->registerEvents($this->posture, $this);
@@ -258,6 +261,15 @@ class OpalCore extends PluginBase implements Listener{
                 $target = isset($args[0]) ? $args[0] : $sender->getName();
                 $curRole = $this->roleManager->getRole($target);
                 $sender->sendMessage("§eRôle de §f{$target} §e: " . $this->roleManager->getRolePrefix($curRole));
+                return true;
+
+            case "opalcreative":
+            case "oc":
+                if(!$sender->hasPermission("opal.admin") && $sender->getGamemode()->name() !== "CREATIVE"){
+                    $sender->sendMessage("§c❌ Vous devez être en mode créatif ou Administrateur.");
+                    return true;
+                }
+                $this->creativeRegistry->openCreativeGUI($sender);
                 return true;
         }
 
