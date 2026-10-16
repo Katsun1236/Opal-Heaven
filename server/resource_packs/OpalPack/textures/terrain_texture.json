@@ -1,0 +1,44 @@
+{
+    "resource_pack_name": "OpalPack",
+    "texture_name": "atlas.terrain",
+    "padding": 8,
+    "num_mip_levels": 4,
+    "texture_data": {
+        "minerai_opale": {
+            "textures": "textures/blocks/minerai_opale"
+        },
+        "deepslate_minerai_opale": {
+            "textures": "textures/blocks/deepslate_minerai_opale"
+        },
+        "bloc_opale": {
+            "textures": "textures/blocks/bloc_opale"
+        },
+        "briques_opale": {
+            "textures": "textures/blocks/briques_opale"
+        },
+        "lampe_opale": {
+            "textures": "textures/blocks/lampe_opale"
+        },
+        "minerai_argent": {
+            "textures": "textures/blocks/minerai_argent"
+        },
+        "deepslate_minerai_argent": {
+            "textures": "textures/blocks/deepslate_minerai_argent"
+        },
+        "bloc_argent": {
+            "textures": "textures/blocks/bloc_argent"
+        },
+        "minerai_rubis": {
+            "textures": "textures/blocks/minerai_rubis"
+        },
+        "deepslate_minerai_rubis": {
+            "textures": "textures/blocks/deepslate_minerai_rubis"
+        },
+        "bloc_rubis": {
+            "textures": "textures/blocks/bloc_rubis"
+        },
+        "amas_cristaux_rubis": {
+            "textures": "textures/blocks/amas_cristaux_rubis"
+        }
+    }
+}

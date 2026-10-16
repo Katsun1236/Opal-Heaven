@@ -6,6 +6,7 @@ namespace opal\core\bounty;
 
 use opal\core\database\DatabaseManager;
 use opal\core\economy\EconomyManager;
+use pocketmine\entity\projectile\Projectile;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
@@ -24,12 +25,17 @@ class BountyManager implements Listener{
     }
 
     public static function getInstance() : self{
-        return self::$instance;
+        return self::$instance ?? throw new \RuntimeException("BountyManager has not been initialized yet.");
     }
 
     public function placeBounty(Player $creator, Player $target, int $amount) : bool{
-        if($amount < 500){
-            $creator->sendMessage("§c❌ La prime minimale est de 500 Or !");
+        if(strtolower($creator->getName()) === strtolower($target->getName())){
+            $creator->sendMessage("§c❌ Vous ne pouvez pas placer une prime sur votre propre tête !");
+            return false;
+        }
+
+        if($amount < 500 || $amount > 1_000_000_000){
+            $creator->sendMessage("§c❌ La prime doit être comprise entre 500 et 1 000 000 000 Or !");
             return false;
         }
 
@@ -42,21 +48,32 @@ class BountyManager implements Listener{
         $targetKey = !empty($target->getXuid()) ? $target->getXuid() : strtolower($target->getName());
         $db = $this->database->getDb();
         $stmt = $db->prepare("INSERT INTO bounty_contracts (creator_xuid, target_xuid, reward) VALUES (:cx, :tx, :rew)");
+        if($stmt === false){
+            $this->economy->addMoney($creator, $amount); // Remboursement
+            $creator->sendMessage("§c❌ Erreur interne lors du dépôt de la prime.");
+            return false;
+        }
+
         $stmt->bindValue(":cx", $creatorKey, SQLITE3_TEXT);
         $stmt->bindValue(":tx", $targetKey, SQLITE3_TEXT);
         $stmt->bindValue(":rew", $amount, SQLITE3_INTEGER);
         $stmt->execute();
 
-        $creator->getServer()->broadcastMessage("§c☠ CONTRAT DE PRIME : §e" . $creator->getName() . " §fa mis à prix la tête de §c" . $target->getName() . " §fpour §6{$amount} Or §f!");
+        $creator->getServer()->broadcastMessage("§c☠ CONTRAT DE PRIME : §e" . $creator->getName() . " §fa mis à prix la tête de §c" . $target->getName() . " §fpour §6" . number_format($amount) . " Or §f!");
         return true;
     }
 
     public function getActiveBountiesOn(string $targetXuid) : int{
         $db = $this->database->getDb();
         $stmt = $db->prepare("SELECT SUM(reward) as total FROM bounty_contracts WHERE target_xuid = :tx AND is_claimed = 0");
+        if($stmt === false) return 0;
+
         $stmt->bindValue(":tx", $targetXuid, SQLITE3_TEXT);
-        $res = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
-        return (int)($res["total"] ?? 0);
+        $res = $stmt->execute();
+        if($res === false) return 0;
+
+        $row = $res->fetchArray(SQLITE3_ASSOC);
+        return (int)($row["total"] ?? 0);
     }
 
     public function onDeath(PlayerDeathEvent $event) : void{
@@ -64,19 +81,26 @@ class BountyManager implements Listener{
         $cause = $victim->getLastDamageCause();
 
         if($cause instanceof EntityDamageByEntityEvent){
-            $killer = $cause->getDamager();
-            if($killer instanceof Player && $killer->getName() !== $victim->getName()){
+            $damager = $cause->getDamager();
+            // Prise en charge des tirs à distance (arc, arbalète, trident)
+            if($damager instanceof Projectile){
+                $damager = $damager->getOwningEntity();
+            }
+
+            if($damager instanceof Player && strtolower($damager->getName()) !== strtolower($victim->getName())){
                 $targetKey = !empty($victim->getXuid()) ? $victim->getXuid() : strtolower($victim->getName());
                 $bounty = $this->getActiveBountiesOn($targetKey);
 
                 if($bounty > 0){
                     $db = $this->database->getDb();
                     $stmt = $db->prepare("UPDATE bounty_contracts SET is_claimed = 1 WHERE target_xuid = :tx AND is_claimed = 0");
-                    $stmt->bindValue(":tx", $targetKey, SQLITE3_TEXT);
-                    $stmt->execute();
+                    if($stmt !== false){
+                        $stmt->bindValue(":tx", $targetKey, SQLITE3_TEXT);
+                        $stmt->execute();
+                    }
 
-                    $this->economy->addMoney($killer, $bounty);
-                    $killer->getServer()->broadcastMessage("§6🏆 PRIME RÉCLAMÉE : §e" . $killer->getName() . " §fa éliminé §c" . $victim->getName() . " §fet empoche §6{$bounty} Or §f!");
+                    $this->economy->addMoney($damager, $bounty);
+                    $damager->getServer()->broadcastMessage("§6🏆 PRIME RÉCLAMÉE : §e" . $damager->getName() . " §fa éliminé §c" . $victim->getName() . " §fet empoche §6" . number_format($bounty) . " Or §f!");
                 }
             }
         }

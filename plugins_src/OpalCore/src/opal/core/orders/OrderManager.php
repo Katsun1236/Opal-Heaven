@@ -25,30 +25,64 @@ class OrderManager{
     }
 
     public static function getInstance() : self{
-        return self::$instance;
+        return self::$instance ?? throw new \RuntimeException("OrderManager has not been initialized yet.");
     }
 
-    public function getPlayerOrder(Player $player) : ?array{
-        $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
+    public function getPlayerOrder(Player|string $player) : ?array{
+        $key = $player instanceof Player
+            ? (!empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName()))
+            : $player;
+
         $db = $this->database->getDb();
         $stmt = $db->prepare("SELECT order_name, level, experience, specialization FROM player_orders WHERE xuid = :key LIMIT 1");
+        if($stmt === false) return null;
+
         $stmt->bindValue(":key", $key, SQLITE3_TEXT);
         $res = $stmt->execute();
+        if($res === false) return null;
+
         $row = $res->fetchArray(SQLITE3_ASSOC);
         return $row !== false ? $row : null;
     }
 
-    public function setPlayerOrder(Player $player, string $orderName) : void{
+    public function setPlayerOrder(Player $player, string $orderName) : bool{
+        $validOrders = [self::ORDER_SANG, self::ORDER_TERRE, self::ORDER_ABYSSES, self::ORDER_FORGE];
+        if(!in_array($orderName, $validOrders, true)){
+            return false;
+        }
+
         $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
         $db = $this->database->getDb();
         $stmt = $db->prepare("INSERT INTO player_orders (xuid, order_name, level, experience) VALUES (:key, :order, 1, 0)
             ON CONFLICT(xuid, order_name) DO NOTHING");
+        if($stmt === false) return false;
+
         $stmt->bindValue(":key", $key, SQLITE3_TEXT);
         $stmt->bindValue(":order", $orderName, SQLITE3_TEXT);
         $stmt->execute();
+
+        // Validation automatique du Chapitre 1 des quêtes ("Le Choix du Destin")
+        try{
+            \opal\core\quests\QuestManager::getInstance()->setQuestCompleted($key, "chap_1");
+        }catch(\Throwable){}
+
+        return true;
+    }
+
+    public function resetPlayerOrder(Player $player) : bool{
+        $key = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
+        $db = $this->database->getDb();
+        $stmt = $db->prepare("DELETE FROM player_orders WHERE xuid = :key");
+        if($stmt === false) return false;
+
+        $stmt->bindValue(":key", $key, SQLITE3_TEXT);
+        $stmt->execute();
+        return true;
     }
 
     public function addExperience(Player $player, int $amount) : void{
+        if($amount <= 0) return;
+
         $data = $this->getPlayerOrder($player);
         if($data === null) return;
 
@@ -56,19 +90,30 @@ class OrderManager{
         $order = $data["order_name"];
         $lvl = (int)$data["level"];
         $xp = (int)$data["experience"] + $amount;
-        $neededXp = $lvl * 1000;
 
-        if($xp >= $neededXp && $lvl < 50){
+        $leveledUp = false;
+        while($lvl < 50 && $xp >= ($lvl * 1000)){
+            $xp -= ($lvl * 1000);
             $lvl++;
-            $xp -= $neededXp;
+            $leveledUp = true;
+        }
+
+        if($leveledUp){
             $player->sendTitle("§6★ NIVEAU D'ORDRE SUPÉRIEUR ★", "§eTu es maintenant niveau {$lvl} dans l'Ordre {$order} !", 10, 40, 10);
+            if($lvl >= 20){
+                try{
+                    \opal\core\quests\QuestManager::getInstance()->setQuestCompleted($key, "chap_10");
+                }catch(\Throwable){}
+            }
         }
 
         $db = $this->database->getDb();
         $stmt = $db->prepare("UPDATE player_orders SET level = :lvl, experience = :xp WHERE xuid = :xuid AND order_name = :order");
+        if($stmt === false) return;
+
         $stmt->bindValue(":lvl", $lvl, SQLITE3_INTEGER);
         $stmt->bindValue(":xp", $xp, SQLITE3_INTEGER);
-        $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
+        $stmt->bindValue(":xuid", $key, SQLITE3_TEXT); // Correction: $key au lieu de $xuid non défini
         $stmt->bindValue(":order", $order, SQLITE3_TEXT);
         $stmt->execute();
     }

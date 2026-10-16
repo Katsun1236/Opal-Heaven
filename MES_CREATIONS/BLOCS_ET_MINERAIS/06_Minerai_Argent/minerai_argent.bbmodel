@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "format_version": "4.8",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "minerai_argent",
+  "model_identifier": "minerai_argent",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "minerai_argent",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "efba644c-efad-4beb-b92f-3075ae3efaf6"
+    }
+  ],
+  "outliner": [
+    "efba644c-efad-4beb-b92f-3075ae3efaf6"
+  ],
+  "textures": [
+    {
+      "path": "minerai_argent.png",
+      "name": "minerai_argent",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "23bc21de-162e-45be-9f51-d2ff69103a3f",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABO0lEQVR4nO3aMVLDMBSE4Z+dvU04UioOQkFBei5ExwU4BBMmXQ4ABQMFlUVk6ynLV7nwPFmFLe2Tb/b7uw+Cebe7JZlPp3eSiXAinAgnwolwIpwIJ8KJcL60wMPh0HT//ePT18X5jQpEOPcq9PzyyoxEOB+PY9LgqHHL9AN2RfoQHtUPqNKHEOFEOBHOlxb42dlNSkNGLbIN7rMT7DyZ1mxxacYQ4UxRW2ULEU6EE+FEOBHOVXJ5L63zcZVc3kvrfFwll/fSOh8RzhSzdboU1+QPwcxUs3FUFuG8VV7/9n82WIzTzgJ/E+FEOBHOTGLp6tO6yohwnu3/gKWrz9L6vtb/A5bWd2t+7pXW1u5DLK0vRpj6bPBc5+F7EOHMJNbqFIlr1PCamlms9O0R4UQ4EU6EE+FEOI1+gNE+Ac38YpUdceb0AAAAAElFTkSuQmCC"
+    }
+  ]
+}

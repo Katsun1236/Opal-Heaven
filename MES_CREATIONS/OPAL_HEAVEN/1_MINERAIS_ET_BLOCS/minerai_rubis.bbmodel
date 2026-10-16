@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "format_version": "4.8",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "minerai_rubis",
+  "model_identifier": "minerai_rubis",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "minerai_rubis",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "97bcaa1b-631b-4dc0-87f6-63f56469a099"
+    }
+  ],
+  "outliner": [
+    "97bcaa1b-631b-4dc0-87f6-63f56469a099"
+  ],
+  "textures": [
+    {
+      "path": "minerai_rubis.png",
+      "name": "minerai_rubis",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "32a079c1-d991-46dc-a119-cddb6e8a1eb5",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABWUlEQVR4nO3aMU7DQBCF4Z+n6TkDSml67oJS0VIgcQAklBYkjscVgtLkBCAhuaHyejf2rB9fkyY765WcrN+sr/b7h2+MxTDc4ixOpy+cCXPCnDAnzAlzwpwwJ8wJc1Fb4G13V/T9w/PT7+f58Z4MhLloVejz5Z0eCXNxPFamwd28YdXz9t4PGJL0IaK6H3B9M2tYlj6EMCfMCXNRW2B8suuV1pg0y2Nwkzug9WJKs0VtxhDmgqSWyhbCnDAnzAlzwlxkyeW1/YVR6XoiSy5vpXQ9kSWX1/YXRqXrEeaCZJZOl2JD5gSzIJmlo7IwF0vl9dH/2WAy4XYW+JcwJ8wJc0Enpu4+pbuMMBfF/YDKvD6aO+/U3Wdq/djq+wFT60dpfj68ftBCcR+isE8wtb5YQddng+dEF9+CMBd04lKdIrFBJT/ToBOX+u8R5oQ5YU6YE+aEOa19AWv7AV3XXCVKlS5NAAAAAElFTkSuQmCC"
+    }
+  ]
+}

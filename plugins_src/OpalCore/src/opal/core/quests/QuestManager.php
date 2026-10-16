@@ -39,17 +39,32 @@ class QuestManager{
     }
 
     public static function getInstance() : self{
-        return self::$instance;
+        return self::$instance ?? throw new \RuntimeException("QuestManager has not been initialized yet.");
+    }
+
+    private function getPlayerKey(Player|string $player) : string{
+        if($player instanceof Player){
+            $xuid = $player->getXuid();
+            return !empty($xuid) ? $xuid : strtolower($player->getName());
+        }
+        return $player;
     }
 
     public function getQuestProgress(string $xuid, string $questId) : array{
         $db = $this->database->getDb();
         $stmt = $db->prepare("SELECT * FROM player_quests WHERE xuid = :xuid AND quest_id = :qid");
+        if($stmt === false){
+            return ["progress" => 0, "completed" => 0, "claimed" => 0];
+        }
         $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
         $stmt->bindValue(":qid", $questId, SQLITE3_TEXT);
-        $res = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
-        if($res !== false){
-            return $res;
+        $res = $stmt->execute();
+        if($res === false){
+            return ["progress" => 0, "completed" => 0, "claimed" => 0];
+        }
+        $row = $res->fetchArray(SQLITE3_ASSOC);
+        if($row !== false){
+            return $row;
         }
         return ["progress" => 0, "completed" => 0, "claimed" => 0];
     }
@@ -59,35 +74,92 @@ class QuestManager{
         $stmt = $db->prepare("INSERT INTO player_quests (xuid, quest_id, progress, completed, claimed) 
             VALUES (:xuid, :qid, 1, 1, 0)
             ON CONFLICT(xuid, quest_id) DO UPDATE SET completed = 1");
+        if($stmt === false) return;
+
         $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
         $stmt->bindValue(":qid", $questId, SQLITE3_TEXT);
         $stmt->execute();
     }
 
-    public function claimReward(Player $player, int $chapter) : void{
-        $xuid = $player->getXuid();
+    public function checkAndComplete(Player $player, int $chapter) : bool{
+        $key = $this->getPlayerKey($player);
         $qid = "chap_" . $chapter;
-        $q = $this->getQuestProgress($xuid, $qid);
+        $q = $this->getQuestProgress($key, $qid);
+        if((int)$q["completed"] === 1){
+            return true;
+        }
+
+        $canComplete = false;
+        switch($chapter){
+            case 1: // Choix d'Ordre
+                $canComplete = $this->orderManager->getPlayerOrder($player) !== null;
+                break;
+            case 3: // Faction
+                $fac = \opal\core\faction\FactionManager::getInstance()?->getPlayerFaction($player);
+                $canComplete = ($fac !== null);
+                break;
+            case 10: // Niveau 20 d'Ordre
+                $orderData = $this->orderManager->getPlayerOrder($player);
+                $canComplete = ($orderData !== null && ((int)$orderData["level"]) >= 20);
+                break;
+        }
+
+        if($canComplete){
+            $this->setQuestCompleted($key, $qid);
+            $player->sendMessage("§a✨ Objectif validé pour le Chapitre {$chapter} !");
+            return true;
+        }
+        return false;
+    }
+
+    public function claimReward(Player $player, int $chapter) : void{
+        if(!isset($this->chapters[$chapter])){
+            $player->sendMessage("§c❌ Chapitre de quête invalide.");
+            return;
+        }
+
+        $key = $this->getPlayerKey($player);
+        $qid = "chap_" . $chapter;
+        $q = $this->getQuestProgress($key, $qid);
+
+        if((int)$q["completed"] !== 1){
+            // Tenter une vérification automatique
+            if(!$this->checkAndComplete($player, $chapter)){
+                $player->sendMessage("§c❌ Vous n'avez pas encore rempli l'objectif de cette quête !");
+                return;
+            }
+            $q = $this->getQuestProgress($key, $qid);
+        }
 
         if((int)$q["claimed"] === 1){
             $player->sendMessage("§c❌ Vous avez déjà récupéré cette récompense !");
             return;
         }
 
-        $reward = $this->chapters[$chapter]["reward_money"] ?? 1000;
-        $this->economy->addMoney($xuid, $reward);
+        $reward = (int)($this->chapters[$chapter]["reward_money"] ?? 1000);
 
+        // Enregistrer la réclamation en base d'abord (UPSERT pour éviter toute duplication en cas de premier enregistrement)
         $db = $this->database->getDb();
-        $stmt = $db->prepare("UPDATE player_quests SET claimed = 1 WHERE xuid = :xuid AND quest_id = :qid");
-        $stmt->bindValue(":xuid", $xuid, SQLITE3_TEXT);
+        $stmt = $db->prepare("INSERT INTO player_quests (xuid, quest_id, progress, completed, claimed) 
+            VALUES (:xuid, :qid, 1, 1, 1)
+            ON CONFLICT(xuid, quest_id) DO UPDATE SET claimed = 1 WHERE claimed = 0");
+        if($stmt === false) return;
+
+        $stmt->bindValue(":xuid", $key, SQLITE3_TEXT);
         $stmt->bindValue(":qid", $qid, SQLITE3_TEXT);
         $stmt->execute();
 
-        $player->sendTitle("§6⭐ QUÊTE ACCOMPLIE ⭐", "§a+{$reward} Or Céleste !", 10, 40, 10);
+        if($db->changes() === 0){
+            $player->sendMessage("§c❌ Récompense déjà perçue ou erreur interne.");
+            return;
+        }
+
+        $this->economy->addMoney($key, $reward);
+        $player->sendTitle("§6⭐ QUÊTE ACCOMPLIE ⭐", "§a+" . number_format($reward) . " Or Céleste !", 10, 40, 10);
     }
 
     public function openQuestsMenu(Player $player) : void{
-        $xuid = $player->getXuid();
+        $key = $this->getPlayerKey($player);
 
         $form = new SimpleForm(function(Player $player, $data) : void{
             if($data === null) return;
@@ -101,7 +173,7 @@ class QuestManager{
         $form->setContent("§7Accomplissez les chapitres de la Voie Initiatique pour obtenir des trésors divins :");
 
         foreach($this->chapters as $num => $info){
-            $q = $this->getQuestProgress($xuid, "chap_" . $num);
+            $q = $this->getQuestProgress($key, "chap_" . $num);
             $status = ((int)$q["claimed"] === 1) ? "§a[COMPLÉTÉ]" : (((int)$q["completed"] === 1) ? "§e[À RÉCLAMER]" : "§7[EN COURS]");
             $form->addButton($info["title"] . "\n" . $status);
         }
@@ -110,17 +182,16 @@ class QuestManager{
     }
 
     private function openChapterDetail(Player $player, int $chapter) : void{
-        $xuid = $player->getXuid();
+        $key = $this->getPlayerKey($player);
         $info = $this->chapters[$chapter];
-        $q = $this->getQuestProgress($xuid, "chap_" . $chapter);
+        
+        // Auto-check au moment d'ouvrir le détail
+        $this->checkAndComplete($player, $chapter);
+        $q = $this->getQuestProgress($key, "chap_" . $chapter);
 
-        $form = new SimpleForm(function(Player $player, $data) use ($chapter, $q) : void{
+        $form = new SimpleForm(function(Player $player, $data) use ($chapter) : void{
             if($data === 0){
-                if((int)$q["completed"] === 1 && (int)$q["claimed"] === 0){
-                    $this->claimReward($player, $chapter);
-                }else{
-                    $this->openQuestsMenu($player);
-                }
+                $this->claimReward($player, $chapter);
             }else{
                 $this->openQuestsMenu($player);
             }
@@ -134,8 +205,10 @@ class QuestManager{
         $form->setContent($text);
         if((int)$q["completed"] === 1 && (int)$q["claimed"] === 0){
             $form->addButton("§a🎁 RÉCLAMER LA RÉCOMPENSE");
-        }else{
+        }elseif((int)$q["claimed"] === 0){
             $form->addButton("§aValider (Si complété)");
+        }else{
+            $form->addButton("§a✔ Quête déjà terminée");
         }
         $form->addButton("§cRetour");
 

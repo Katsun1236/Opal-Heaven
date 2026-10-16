@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "format_version": "4.8",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "bloc_rubis",
+  "model_identifier": "bloc_rubis",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "bloc_rubis",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "51753cb9-4a65-44c0-99bb-2f60254ad091"
+    }
+  ],
+  "outliner": [
+    "51753cb9-4a65-44c0-99bb-2f60254ad091"
+  ],
+  "textures": [
+    {
+      "path": "bloc_rubis.png",
+      "name": "bloc_rubis",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "f81527ec-24c0-42ff-9344-4ec638548b36",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABEUlEQVR4nO3bIU5DQRSF4f+d3CYYgukO2AEGzSJgBQSJwTx2gKlBlu4FjelKMDgSRAmu1LSdhtDXv5+bZM6IyRV3kjvdon9ZIDF5fvq1frjvCXJBrpYX8+kMk/l0dqyAIBfkglyQC3K16cbXz3eG5OpkvNG+IFd/dbP/ZdtKDXLVGry4u2WfXnitlRnkatcDhv6ACnJBLsgFuSAX5IJckAtyQS7IBbkgF+SCXJALckEuyAW5IBfkglyQC3JBLsgFuSAX5IJctQZvJo/sg8vR2U75IFetwf70nEMQ5GrbwNAmRtcJcnUoE6KtglyQC3JBrrsejTVfZ1fb5revj2MFBLkg1y1/nx/66Ps6q238T3P3DbiDJ35xp3d8AAAAAElFTkSuQmCC"
+    }
+  ]
+}

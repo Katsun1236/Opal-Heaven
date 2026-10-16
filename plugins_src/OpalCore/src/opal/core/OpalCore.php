@@ -86,7 +86,7 @@ class OpalCore extends PluginBase implements Listener{
         $this->roleManager = new \opal\core\role\RoleManager($this->database, $this);
         $this->creativeRegistry = new \opal\core\creative\CreativeRegistry();
         new \opal\core\schematic\SchematicLoader($this->getDataFolder());
-        new \opal\core\trade\TradeManager($this->economy, $this->combatTag);
+        $trade = new \opal\core\trade\TradeManager($this->economy, $this->combatTag);
 
         // 3. Enregistrer les Écouteurs d'Événements
         $pm = $this->getServer()->getPluginManager();
@@ -102,6 +102,7 @@ class OpalCore extends PluginBase implements Listener{
         $pm->registerEvents($this->sticks, $this);
         $pm->registerEvents($this->teleport, $this);
         $pm->registerEvents($this->dummy, $this);
+        $pm->registerEvents($trade, $this);
 
         // 4. Enregistrer explicitement toutes les commandes dans la CommandMap pour l'autocomplétion Bedrock
         $this->registerCustomCommands();
@@ -110,8 +111,11 @@ class OpalCore extends PluginBase implements Listener{
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(function() : void{
             $this->posture->decayTick();
             $this->teleport->tick();
-            $this->dummy->tick();
         }), 20);
+
+        $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(function() : void{
+            $this->dummy->tick();
+        }), 1);
 
         $this->getLogger()->info("§a✔ OpalCore activé avec succès ! Toutes les commandes sont dans l'autocomplétion.");
     }
@@ -139,7 +143,7 @@ class OpalCore extends PluginBase implements Listener{
             case "money":
             case "bal":
             case "balance":
-                $bal = $this->economy->getBalance($sender->getXuid());
+                $bal = $this->economy->getBalance($sender);
                 $sender->sendMessage("§e💰 Votre solde : §6" . number_format($bal) . " Or Céleste");
                 return true;
 
@@ -158,7 +162,7 @@ class OpalCore extends PluginBase implements Listener{
                     $sender->sendMessage("§c❌ Montant invalide.");
                     return true;
                 }
-                if($this->economy->transfer($sender->getXuid(), $target->getXuid(), $amount)){
+                if($this->economy->transfer($sender, $target, $amount)){
                     $sender->sendMessage("§a✔ Vous avez envoyé §e{$amount} Or §aà §e" . $target->getName());
                     $target->sendMessage("§a✔ Vous avez reçu §e{$amount} Or §ade la part de §e" . $sender->getName());
                 }else{
@@ -194,7 +198,7 @@ class OpalCore extends PluginBase implements Listener{
 
             case "dummy":
             case "parry":
-                $this->dummy->startTraining($sender);
+                $this->dummy->toggleTraining($sender);
                 return true;
 
             case "f":
@@ -221,6 +225,12 @@ class OpalCore extends PluginBase implements Listener{
             case "hub":
                 $sender->sendMessage("§d🌌 Téléportation vers le Hub Céleste...");
                 $this->teleport->startServerTransfer($sender, "127.0.0.1", 19135, 1);
+                return true;
+
+            case "factionserver":
+            case "tofaction":
+                $sender->sendMessage("§a⚔ Connexion au serveur Faction Overworld...");
+                $this->teleport->startServerTransfer($sender, "127.0.0.1", 19132, 1);
                 return true;
 
             case "spawn":
@@ -268,7 +278,7 @@ class OpalCore extends PluginBase implements Listener{
 
             case "opalcreative":
             case "oc":
-                if(!$sender->hasPermission("opal.admin") && $sender->getGamemode()->name() !== "CREATIVE"){
+                if(!$sender->hasPermission("opal.admin") && $sender->getGamemode() !== \pocketmine\player\GameMode::CREATIVE()){
                     $sender->sendMessage("§c❌ Vous devez être en mode créatif ou Administrateur.");
                     return true;
                 }
@@ -344,7 +354,7 @@ class OpalCore extends PluginBase implements Listener{
                 }
                 $fid = (int)$fac["id"];
                 if($action === "deposit" && $amount > 0){
-                    if($this->economy->removeMoney($player->getXuid(), $amount)){
+                    if($this->economy->removeMoney($player, $amount)){
                         $this->factions->depositBank($fid, $amount);
                         $player->sendMessage("§a✔ Dépôt de §e{$amount} Or §adans la banque de faction !");
                     }else{
@@ -356,7 +366,7 @@ class OpalCore extends PluginBase implements Listener{
                         return;
                     }
                     if($this->factions->withdrawBank($fid, $amount)){
-                        $this->economy->addMoney($player->getXuid(), $amount);
+                        $this->economy->addMoney($player, $amount);
                         $player->sendMessage("§a✔ Retrait de §e{$amount} Or §aeffectué avec succès !");
                     }else{
                         $player->sendMessage("§c❌ Solde de banque de faction insuffisant.");
@@ -387,7 +397,7 @@ class OpalCore extends PluginBase implements Listener{
         $reg = fn(\pocketmine\command\Command $cmd) => $cmap->register("opal", $cmd);
 
         $reg(new \opal\core\command\BaseOpalCommand("money", "Afficher votre solde d'Or Céleste", "/money", ["bal", "balance"], null, function(Player $p, array $args){
-            $bal = $this->economy->getBalance($p->getXuid());
+            $bal = $this->economy->getBalance($p);
             $p->sendMessage("§e💰 Votre solde : §6" . number_format($bal) . " Or Céleste");
         }));
 
@@ -397,7 +407,7 @@ class OpalCore extends PluginBase implements Listener{
             if($target === null){ $p->sendMessage("§c❌ Joueur introuvable."); return; }
             $amount = (int)$args[1];
             if($amount <= 0){ $p->sendMessage("§c❌ Montant invalide."); return; }
-            if($this->economy->transfer($p->getXuid(), $target->getXuid(), $amount)){
+            if($this->economy->transfer($p, $target, $amount)){
                 $p->sendMessage("§a✔ Vous avez envoyé §e{$amount} Or §aà §e" . $target->getName());
                 $target->sendMessage("§a✔ Vous avez reçu §e{$amount} Or §ade la part de §e" . $p->getName());
             }else{ $p->sendMessage("§c❌ Solde insuffisant !"); }
@@ -427,7 +437,7 @@ class OpalCore extends PluginBase implements Listener{
         }));
 
         $reg(new \opal\core\command\BaseOpalCommand("dummy", "S'entraîner à la parade parfaite", "/dummy", ["parry"], null, function(Player $p, array $args){
-            $this->dummy->startTraining($p);
+            $this->dummy->toggleTraining($p);
         }));
 
         $reg(new \opal\core\command\BaseOpalCommand("trade", "Échange sécurisé de joueur à joueur", "/trade <joueur|accept>", [], null, function(Player $p, array $args){

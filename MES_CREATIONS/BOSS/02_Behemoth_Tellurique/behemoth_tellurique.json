@@ -1,0 +1,4229 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": true
+  },
+  "name": "telluric_behemoth",
+  "geometry_name": "geometry.telluric_behemoth",
+  "visible_box": [
+    32,
+    48,
+    32
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "torso_chest",
+      "uuid": "9bd7720d-62fe-4062-92c2-5d3dac22b042",
+      "from": [
+        -5.5,
+        7,
+        -6
+      ],
+      "to": [
+        5.5,
+        15,
+        6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        11.0,
+        8,
+        12
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            13,
+            13,
+            24,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            36,
+            13,
+            47,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            13,
+            13,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            24,
+            13,
+            36,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            13,
+            1,
+            24,
+            13
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            24,
+            1,
+            35,
+            13
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "pectoral_l",
+      "uuid": "7bbe4032-94b7-4c80-b2a8-dcf22d9369b8",
+      "from": [
+        -5.2,
+        8.5,
+        -6.8
+      ],
+      "to": [
+        -1,
+        14,
+        -5.8
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.2,
+        5.5,
+        1.0
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            171,
+            23,
+            175,
+            29
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            176,
+            23,
+            180,
+            29
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            170,
+            23,
+            171,
+            29
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            175,
+            23,
+            176,
+            29
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            171,
+            22,
+            175,
+            23
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            175,
+            22,
+            179,
+            23
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        170,
+        22
+      ]
+    },
+    {
+      "name": "pectoral_r",
+      "uuid": "581fb48f-92a1-408a-80c8-bb6b66565f8b",
+      "from": [
+        1,
+        8.5,
+        -6.8
+      ],
+      "to": [
+        5.2,
+        14,
+        -5.8
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.2,
+        5.5,
+        1.0
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            183,
+            23,
+            187,
+            29
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            188,
+            23,
+            192,
+            29
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            182,
+            23,
+            183,
+            29
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            187,
+            23,
+            188,
+            29
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            183,
+            22,
+            187,
+            23
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            187,
+            22,
+            191,
+            23
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        182,
+        22
+      ]
+    },
+    {
+      "name": "hump_rock",
+      "uuid": "6226634b-40d9-4619-a15e-478aaedf358c",
+      "from": [
+        -4.5,
+        14.5,
+        -3
+      ],
+      "to": [
+        4.5,
+        18,
+        5
+      ],
+      "origin": [
+        0,
+        15,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        9.0,
+        3.5,
+        8
+      ],
+      "bone_name": "hump",
+      "faces": {
+        "north": {
+          "uv": [
+            56,
+            9,
+            65,
+            13
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            73,
+            9,
+            82,
+            13
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            48,
+            9,
+            56,
+            13
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            65,
+            9,
+            73,
+            13
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            56,
+            1,
+            65,
+            9
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            65,
+            1,
+            74,
+            9
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        48,
+        1
+      ]
+    },
+    {
+      "name": "crystal_main",
+      "uuid": "8342367b-ee8b-4c5a-aa0b-807d2820752c",
+      "from": [
+        -1.5,
+        17.5,
+        -1
+      ],
+      "to": [
+        1.5,
+        23.5,
+        2
+      ],
+      "origin": [
+        0,
+        15,
+        0
+      ],
+      "rotation": [
+        -15,
+        0,
+        0
+      ],
+      "cube_type": "crystal_glow",
+      "size": [
+        3.0,
+        6.0,
+        3
+      ],
+      "bone_name": "hump",
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            25,
+            7,
+            31
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            10,
+            25,
+            13,
+            31
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            25,
+            4,
+            31
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            7,
+            25,
+            10,
+            31
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            4,
+            22,
+            7,
+            25
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            7,
+            22,
+            10,
+            25
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        22
+      ]
+    },
+    {
+      "name": "crystal_flank_l",
+      "uuid": "6ade3d82-0ea2-47f1-8660-c2c7bc56f058",
+      "from": [
+        -3.5,
+        17,
+        1
+      ],
+      "to": [
+        -1.5,
+        21.5,
+        3.5
+      ],
+      "origin": [
+        0,
+        15,
+        0
+      ],
+      "rotation": [
+        10,
+        20,
+        -15
+      ],
+      "cube_type": "raw_sapphire",
+      "size": [
+        2.0,
+        4.5,
+        2.5
+      ],
+      "bone_name": "hump",
+      "faces": {
+        "north": {
+          "uv": [
+            196,
+            24,
+            198,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            200,
+            24,
+            202,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            194,
+            24,
+            196,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            198,
+            24,
+            200,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            196,
+            22,
+            198,
+            24
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            198,
+            22,
+            200,
+            24
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        194,
+        22
+      ]
+    },
+    {
+      "name": "crystal_flank_r",
+      "uuid": "42cf6c05-bd6a-462f-8308-c60abdf4b06f",
+      "from": [
+        1.5,
+        17,
+        1
+      ],
+      "to": [
+        3.5,
+        21.5,
+        3.5
+      ],
+      "origin": [
+        0,
+        15,
+        0
+      ],
+      "rotation": [
+        10,
+        -20,
+        15
+      ],
+      "cube_type": "raw_sapphire",
+      "size": [
+        2.0,
+        4.5,
+        2.5
+      ],
+      "bone_name": "hump",
+      "faces": {
+        "north": {
+          "uv": [
+            206,
+            24,
+            208,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            210,
+            24,
+            212,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            204,
+            24,
+            206,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            208,
+            24,
+            210,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            206,
+            22,
+            208,
+            24
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            208,
+            22,
+            210,
+            24
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        204,
+        22
+      ]
+    },
+    {
+      "name": "crystal_rear",
+      "uuid": "a923edc7-5a22-4861-8497-38716cce0f49",
+      "from": [
+        -1.2,
+        16.5,
+        3
+      ],
+      "to": [
+        1.2,
+        20.5,
+        5.5
+      ],
+      "origin": [
+        0,
+        15,
+        0
+      ],
+      "rotation": [
+        25,
+        0,
+        0
+      ],
+      "cube_type": "raw_sapphire",
+      "size": [
+        2.4,
+        4.0,
+        2.5
+      ],
+      "bone_name": "hump",
+      "faces": {
+        "north": {
+          "uv": [
+            216,
+            24,
+            218,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            220,
+            24,
+            222,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            214,
+            24,
+            216,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            218,
+            24,
+            220,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            216,
+            22,
+            218,
+            24
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            218,
+            22,
+            220,
+            24
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        214,
+        22
+      ]
+    },
+    {
+      "name": "head_cranium",
+      "uuid": "b3faa61f-7555-44f2-a472-a2f07b519fd2",
+      "from": [
+        -4,
+        11,
+        -12
+      ],
+      "to": [
+        4,
+        16,
+        -6
+      ],
+      "origin": [
+        0,
+        12,
+        -7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        8,
+        5,
+        6
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            89,
+            7,
+            97,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            103,
+            7,
+            111,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            83,
+            7,
+            89,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            97,
+            7,
+            103,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            89,
+            1,
+            97,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            97,
+            1,
+            105,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        83,
+        1
+      ]
+    },
+    {
+      "name": "brow_horn_l",
+      "uuid": "80ed5a31-e0a6-41d7-b76b-eb8ba4872826",
+      "from": [
+        -4.5,
+        15,
+        -11.5
+      ],
+      "to": [
+        -2,
+        17.2,
+        -7
+      ],
+      "origin": [
+        0,
+        12,
+        -7
+      ],
+      "rotation": [
+        0,
+        15,
+        -10
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        2.5,
+        2.2,
+        4.5
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            229,
+            26,
+            231,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            235,
+            26,
+            237,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            225,
+            26,
+            229,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            231,
+            26,
+            235,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            229,
+            22,
+            231,
+            26
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            231,
+            22,
+            233,
+            26
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        225,
+        22
+      ]
+    },
+    {
+      "name": "brow_horn_r",
+      "uuid": "3bba4ea6-5474-4fb9-a4d0-a2805296b721",
+      "from": [
+        2,
+        15,
+        -11.5
+      ],
+      "to": [
+        4.5,
+        17.2,
+        -7
+      ],
+      "origin": [
+        0,
+        12,
+        -7
+      ],
+      "rotation": [
+        0,
+        -15,
+        10
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        2.5,
+        2.2,
+        4.5
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            244,
+            26,
+            246,
+            28
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            250,
+            26,
+            252,
+            28
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            240,
+            26,
+            244,
+            28
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            246,
+            26,
+            250,
+            28
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            244,
+            22,
+            246,
+            26
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            246,
+            22,
+            248,
+            26
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        240,
+        22
+      ]
+    },
+    {
+      "name": "eye_gem_l",
+      "uuid": "835868bf-5748-4676-91f8-6f0ccb689a17",
+      "from": [
+        -3.2,
+        13,
+        -12.2
+      ],
+      "to": [
+        -1.8,
+        14.4,
+        -11.5
+      ],
+      "origin": [
+        0,
+        12,
+        -7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "crystal_glow",
+      "size": [
+        1.4,
+        1.4,
+        0.7
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            74,
+            33,
+            75,
+            34
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            76,
+            33,
+            77,
+            34
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            73,
+            33,
+            74,
+            34
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            75,
+            33,
+            76,
+            34
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            74,
+            32,
+            75,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            75,
+            32,
+            76,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        73,
+        32
+      ]
+    },
+    {
+      "name": "eye_gem_r",
+      "uuid": "bb71c51c-b0f8-4f18-a5a0-e414a8790808",
+      "from": [
+        1.8,
+        13,
+        -12.2
+      ],
+      "to": [
+        3.2,
+        14.4,
+        -11.5
+      ],
+      "origin": [
+        0,
+        12,
+        -7
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "crystal_glow",
+      "size": [
+        1.4,
+        1.4,
+        0.7
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            80,
+            33,
+            81,
+            34
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            82,
+            33,
+            83,
+            34
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            79,
+            33,
+            80,
+            34
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            81,
+            33,
+            82,
+            34
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            80,
+            32,
+            81,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            81,
+            32,
+            82,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        79,
+        32
+      ]
+    },
+    {
+      "name": "jaw_underbite",
+      "uuid": "de138237-9ad9-4c2b-8c04-55b137e96091",
+      "from": [
+        -3.5,
+        8.5,
+        -13
+      ],
+      "to": [
+        3.5,
+        11.2,
+        -7
+      ],
+      "origin": [
+        0,
+        9.5,
+        -9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        7.0,
+        2.7,
+        6
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            20,
+            28,
+            27,
+            31
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            33,
+            28,
+            40,
+            31
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            14,
+            28,
+            20,
+            31
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            27,
+            28,
+            33,
+            31
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            20,
+            22,
+            27,
+            28
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            27,
+            22,
+            34,
+            28
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        14,
+        22
+      ]
+    },
+    {
+      "name": "tusk_l",
+      "uuid": "40820529-21d1-427d-8b93-d1c1c30232ee",
+      "from": [
+        -3.0,
+        11.0,
+        -12.5
+      ],
+      "to": [
+        -2.0,
+        13.0,
+        -11.5
+      ],
+      "origin": [
+        0,
+        9.5,
+        -9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        1.0,
+        2.0,
+        1.0
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            86,
+            33,
+            87,
+            35
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            88,
+            33,
+            89,
+            35
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            85,
+            33,
+            86,
+            35
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            87,
+            33,
+            88,
+            35
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            86,
+            32,
+            87,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            87,
+            32,
+            88,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        85,
+        32
+      ]
+    },
+    {
+      "name": "tusk_r",
+      "uuid": "79fb62b1-8bac-43e2-a30f-75629c3e3cf8",
+      "from": [
+        2.0,
+        11.0,
+        -12.5
+      ],
+      "to": [
+        3.0,
+        13.0,
+        -11.5
+      ],
+      "origin": [
+        0,
+        9.5,
+        -9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        1.0,
+        2.0,
+        1.0
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            91,
+            33,
+            92,
+            35
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            93,
+            33,
+            94,
+            35
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            90,
+            33,
+            91,
+            35
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            92,
+            33,
+            93,
+            35
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            91,
+            32,
+            92,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            92,
+            32,
+            93,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        90,
+        32
+      ]
+    },
+    {
+      "name": "chin_beard_rock",
+      "uuid": "3dacc209-cc61-4cd4-93de-b5bba5600e9c",
+      "from": [
+        -2.0,
+        6.8,
+        -11.5
+      ],
+      "to": [
+        2.0,
+        8.8,
+        -9.0
+      ],
+      "origin": [
+        0,
+        9.5,
+        -9
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        4.0,
+        2.0,
+        2.5
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            34,
+            7,
+            36
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            9,
+            34,
+            13,
+            36
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            34,
+            3,
+            36
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            7,
+            34,
+            9,
+            36
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            3,
+            32,
+            7,
+            34
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            7,
+            32,
+            11,
+            34
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        32
+      ]
+    },
+    {
+      "name": "shoulder_boulder_l",
+      "uuid": "eb70aafa-2185-49fe-a8ce-3fab0b78aa03",
+      "from": [
+        -6.2,
+        11,
+        -5
+      ],
+      "to": [
+        -5.0,
+        15,
+        -1
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        1.2,
+        4,
+        4
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            45,
+            26,
+            46,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            50,
+            26,
+            51,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            41,
+            26,
+            45,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            46,
+            26,
+            50,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            45,
+            22,
+            46,
+            26
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            46,
+            22,
+            47,
+            26
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        41,
+        22
+      ]
+    },
+    {
+      "name": "shoulder_crystal_l",
+      "uuid": "5ba2d802-2370-47e1-a6ea-fb5da661d90f",
+      "from": [
+        -6.5,
+        14.5,
+        -3.5
+      ],
+      "to": [
+        -5.2,
+        18,
+        -2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        20
+      ],
+      "cube_type": "crystal_glow",
+      "size": [
+        1.3,
+        3.5,
+        1.5
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            17,
+            34,
+            18,
+            38
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            20,
+            34,
+            21,
+            38
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            15,
+            34,
+            17,
+            38
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            18,
+            34,
+            20,
+            38
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            17,
+            32,
+            18,
+            34
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            18,
+            32,
+            19,
+            34
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        15,
+        32
+      ]
+    },
+    {
+      "name": "shoulder_boulder_r",
+      "uuid": "456dac00-4ef9-4f9b-867f-2009a2563372",
+      "from": [
+        5.0,
+        11,
+        -5
+      ],
+      "to": [
+        6.2,
+        15,
+        -1
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        1.2,
+        4,
+        4
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            57,
+            26,
+            58,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            62,
+            26,
+            63,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            53,
+            26,
+            57,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            58,
+            26,
+            62,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            57,
+            22,
+            58,
+            26
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            58,
+            22,
+            59,
+            26
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        53,
+        22
+      ]
+    },
+    {
+      "name": "shoulder_crystal_r",
+      "uuid": "2a83d767-6e1b-4772-94ca-c3bab26d5aa8",
+      "from": [
+        5.2,
+        14.5,
+        -3.5
+      ],
+      "to": [
+        6.5,
+        18,
+        -2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -20
+      ],
+      "cube_type": "crystal_glow",
+      "size": [
+        1.3,
+        3.5,
+        1.5
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            24,
+            34,
+            25,
+            38
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            27,
+            34,
+            28,
+            38
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            22,
+            34,
+            24,
+            38
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            25,
+            34,
+            27,
+            38
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            24,
+            32,
+            25,
+            34
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            25,
+            32,
+            26,
+            34
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        22,
+        32
+      ]
+    },
+    {
+      "name": "tail_club_rock",
+      "uuid": "5e3d0f89-8b46-4864-83ef-10cca5178512",
+      "from": [
+        -2.0,
+        6.5,
+        6.0
+      ],
+      "to": [
+        2.0,
+        10.0,
+        10.0
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.0,
+        3.5,
+        4.0
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            69,
+            26,
+            73,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            77,
+            26,
+            81,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            65,
+            26,
+            69,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            73,
+            26,
+            77,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            69,
+            22,
+            73,
+            26
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            73,
+            22,
+            77,
+            26
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        65,
+        22
+      ]
+    },
+    {
+      "name": "leg_fl_thigh",
+      "uuid": "10045fce-ca82-492f-b0d9-48c3a23b44c0",
+      "from": [
+        -7.5,
+        4.5,
+        -7.5
+      ],
+      "to": [
+        -3.5,
+        10,
+        -2.5
+      ],
+      "origin": [
+        -5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        4.0,
+        5.5,
+        5.0
+      ],
+      "bone_name": "leg_fl",
+      "faces": {
+        "north": {
+          "uv": [
+            117,
+            6,
+            121,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            126,
+            6,
+            130,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            112,
+            6,
+            117,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            121,
+            6,
+            126,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            117,
+            1,
+            121,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            121,
+            1,
+            125,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        112,
+        1
+      ]
+    },
+    {
+      "name": "leg_fl_knee_guard",
+      "uuid": "0278178a-91ff-4be8-a34e-8319a49da7f6",
+      "from": [
+        -7.8,
+        6.5,
+        -8.2
+      ],
+      "to": [
+        -4.2,
+        9.2,
+        -7.0
+      ],
+      "origin": [
+        -5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        3.6,
+        2.7,
+        1.2
+      ],
+      "bone_name": "leg_fl",
+      "faces": {
+        "north": {
+          "uv": [
+            30,
+            33,
+            34,
+            36
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            35,
+            33,
+            39,
+            36
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            29,
+            33,
+            30,
+            36
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            34,
+            33,
+            35,
+            36
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            30,
+            32,
+            34,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            34,
+            32,
+            38,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        29,
+        32
+      ]
+    },
+    {
+      "name": "leg_fl_shin",
+      "uuid": "7ec25187-f301-4caf-90af-ea4c4c40cd3f",
+      "from": [
+        -7.2,
+        0,
+        -7.2
+      ],
+      "to": [
+        -3.8,
+        5,
+        -2.8
+      ],
+      "origin": [
+        -5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        3.4,
+        5,
+        4.4
+      ],
+      "bone_name": "leg_fl",
+      "faces": {
+        "north": {
+          "uv": [
+            192,
+            5,
+            195,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            199,
+            5,
+            202,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            188,
+            5,
+            192,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            195,
+            5,
+            199,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            192,
+            1,
+            195,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            195,
+            1,
+            198,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        188,
+        1
+      ]
+    },
+    {
+      "name": "leg_fl_hoof",
+      "uuid": "75183dfc-b4b2-4da6-a89e-b3ef5c5a65ea",
+      "from": [
+        -7.8,
+        0,
+        -7.8
+      ],
+      "to": [
+        -3.2,
+        1.8,
+        -2.2
+      ],
+      "origin": [
+        -5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.6,
+        1.8,
+        5.6
+      ],
+      "bone_name": "leg_fl",
+      "faces": {
+        "north": {
+          "uv": [
+            88,
+            28,
+            93,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            99,
+            28,
+            104,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            82,
+            28,
+            88,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            93,
+            28,
+            99,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            88,
+            22,
+            93,
+            28
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            93,
+            22,
+            98,
+            28
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        82,
+        22
+      ]
+    },
+    {
+      "name": "leg_fr_thigh",
+      "uuid": "7f17fb16-0bce-4685-bdeb-2269e75a4b3c",
+      "from": [
+        3.5,
+        4.5,
+        -7.5
+      ],
+      "to": [
+        7.5,
+        10,
+        -2.5
+      ],
+      "origin": [
+        5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        4.0,
+        5.5,
+        5.0
+      ],
+      "bone_name": "leg_fr",
+      "faces": {
+        "north": {
+          "uv": [
+            136,
+            6,
+            140,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            145,
+            6,
+            149,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            131,
+            6,
+            136,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            140,
+            6,
+            145,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            136,
+            1,
+            140,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            140,
+            1,
+            144,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        131,
+        1
+      ]
+    },
+    {
+      "name": "leg_fr_knee_guard",
+      "uuid": "afbaaf66-e3de-4346-9757-160a54491151",
+      "from": [
+        4.2,
+        6.5,
+        -8.2
+      ],
+      "to": [
+        7.8,
+        9.2,
+        -7.0
+      ],
+      "origin": [
+        5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        3.6,
+        2.7,
+        1.2
+      ],
+      "bone_name": "leg_fr",
+      "faces": {
+        "north": {
+          "uv": [
+            41,
+            33,
+            45,
+            36
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            46,
+            33,
+            50,
+            36
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            40,
+            33,
+            41,
+            36
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            45,
+            33,
+            46,
+            36
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            41,
+            32,
+            45,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            45,
+            32,
+            49,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        40,
+        32
+      ]
+    },
+    {
+      "name": "leg_fr_shin",
+      "uuid": "89c46468-2d6e-4743-b73d-91eb9de2b034",
+      "from": [
+        3.8,
+        0,
+        -7.2
+      ],
+      "to": [
+        7.2,
+        5,
+        -2.8
+      ],
+      "origin": [
+        5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        3.4,
+        5,
+        4.4
+      ],
+      "bone_name": "leg_fr",
+      "faces": {
+        "north": {
+          "uv": [
+            209,
+            5,
+            212,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            216,
+            5,
+            219,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            205,
+            5,
+            209,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            212,
+            5,
+            216,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            209,
+            1,
+            212,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            212,
+            1,
+            215,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        205,
+        1
+      ]
+    },
+    {
+      "name": "leg_fr_hoof",
+      "uuid": "0008eb62-864e-4471-af71-f50c3f9c3fe3",
+      "from": [
+        3.2,
+        0,
+        -7.8
+      ],
+      "to": [
+        7.8,
+        1.8,
+        -2.2
+      ],
+      "origin": [
+        5,
+        8,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.6,
+        1.8,
+        5.6
+      ],
+      "bone_name": "leg_fr",
+      "faces": {
+        "north": {
+          "uv": [
+            110,
+            28,
+            115,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            121,
+            28,
+            126,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            104,
+            28,
+            110,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            115,
+            28,
+            121,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            110,
+            22,
+            115,
+            28
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            115,
+            22,
+            120,
+            28
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        104,
+        22
+      ]
+    },
+    {
+      "name": "leg_bl_thigh",
+      "uuid": "b5fa2309-908e-40c2-9c8e-b0184377a8a2",
+      "from": [
+        -7.5,
+        4.5,
+        2.5
+      ],
+      "to": [
+        -3.5,
+        10,
+        7.5
+      ],
+      "origin": [
+        -5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        4.0,
+        5.5,
+        5.0
+      ],
+      "bone_name": "leg_bl",
+      "faces": {
+        "north": {
+          "uv": [
+            155,
+            6,
+            159,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            164,
+            6,
+            168,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            150,
+            6,
+            155,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            159,
+            6,
+            164,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            155,
+            1,
+            159,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            159,
+            1,
+            163,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        150,
+        1
+      ]
+    },
+    {
+      "name": "leg_bl_knee_guard",
+      "uuid": "39495d9b-7013-424c-bfe2-437aa24d95db",
+      "from": [
+        -7.8,
+        6.5,
+        1.8
+      ],
+      "to": [
+        -4.2,
+        9.2,
+        3.0
+      ],
+      "origin": [
+        -5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        3.6,
+        2.7,
+        1.2
+      ],
+      "bone_name": "leg_bl",
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            33,
+            56,
+            36
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            57,
+            33,
+            61,
+            36
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            51,
+            33,
+            52,
+            36
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            56,
+            33,
+            57,
+            36
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            52,
+            32,
+            56,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            56,
+            32,
+            60,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        51,
+        32
+      ]
+    },
+    {
+      "name": "leg_bl_shin",
+      "uuid": "75ba4185-b086-4cb1-8d9e-61308d0ea7c9",
+      "from": [
+        -7.2,
+        0,
+        2.8
+      ],
+      "to": [
+        -3.8,
+        5,
+        7.2
+      ],
+      "origin": [
+        -5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        3.4,
+        5,
+        4.4
+      ],
+      "bone_name": "leg_bl",
+      "faces": {
+        "north": {
+          "uv": [
+            226,
+            5,
+            229,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            233,
+            5,
+            236,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            222,
+            5,
+            226,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            229,
+            5,
+            233,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            226,
+            1,
+            229,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            229,
+            1,
+            232,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        222,
+        1
+      ]
+    },
+    {
+      "name": "leg_bl_hoof",
+      "uuid": "745f60db-c513-4633-b8a2-9ae52fc1ac71",
+      "from": [
+        -7.8,
+        0,
+        2.2
+      ],
+      "to": [
+        -3.2,
+        1.8,
+        7.8
+      ],
+      "origin": [
+        -5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.6,
+        1.8,
+        5.6
+      ],
+      "bone_name": "leg_bl",
+      "faces": {
+        "north": {
+          "uv": [
+            132,
+            28,
+            137,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            143,
+            28,
+            148,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            126,
+            28,
+            132,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            137,
+            28,
+            143,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            132,
+            22,
+            137,
+            28
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            137,
+            22,
+            142,
+            28
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        126,
+        22
+      ]
+    },
+    {
+      "name": "leg_br_thigh",
+      "uuid": "7310511f-3c58-4e4c-a239-af2c1dd8a109",
+      "from": [
+        3.5,
+        4.5,
+        2.5
+      ],
+      "to": [
+        7.5,
+        10,
+        7.5
+      ],
+      "origin": [
+        5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        4.0,
+        5.5,
+        5.0
+      ],
+      "bone_name": "leg_br",
+      "faces": {
+        "north": {
+          "uv": [
+            174,
+            6,
+            178,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            183,
+            6,
+            187,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            169,
+            6,
+            174,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            178,
+            6,
+            183,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            174,
+            1,
+            178,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            178,
+            1,
+            182,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        169,
+        1
+      ]
+    },
+    {
+      "name": "leg_br_knee_guard",
+      "uuid": "16597356-57cb-4d7d-b882-e79137fc097f",
+      "from": [
+        4.2,
+        6.5,
+        1.8
+      ],
+      "to": [
+        7.8,
+        9.2,
+        3.0
+      ],
+      "origin": [
+        5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        3.6,
+        2.7,
+        1.2
+      ],
+      "bone_name": "leg_br",
+      "faces": {
+        "north": {
+          "uv": [
+            63,
+            33,
+            67,
+            36
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            68,
+            33,
+            72,
+            36
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            62,
+            33,
+            63,
+            36
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            67,
+            33,
+            68,
+            36
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            63,
+            32,
+            67,
+            33
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            67,
+            32,
+            71,
+            33
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        62,
+        32
+      ]
+    },
+    {
+      "name": "leg_br_shin",
+      "uuid": "d62973e6-90cc-42d2-b88b-be23898c1153",
+      "from": [
+        3.8,
+        0,
+        2.8
+      ],
+      "to": [
+        7.2,
+        5,
+        7.2
+      ],
+      "origin": [
+        5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "bedrock_grey",
+      "size": [
+        3.4,
+        5,
+        4.4
+      ],
+      "bone_name": "leg_br",
+      "faces": {
+        "north": {
+          "uv": [
+            243,
+            5,
+            246,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            250,
+            5,
+            253,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            239,
+            5,
+            243,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            246,
+            5,
+            250,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            243,
+            1,
+            246,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            246,
+            1,
+            249,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        239,
+        1
+      ]
+    },
+    {
+      "name": "leg_br_hoof",
+      "uuid": "6c452941-1a65-4023-825f-fe9150ed317b",
+      "from": [
+        3.2,
+        0,
+        2.2
+      ],
+      "to": [
+        7.8,
+        1.8,
+        7.8
+      ],
+      "origin": [
+        5,
+        8,
+        5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "granite_light",
+      "size": [
+        4.6,
+        1.8,
+        5.6
+      ],
+      "bone_name": "leg_br",
+      "faces": {
+        "north": {
+          "uv": [
+            154,
+            28,
+            159,
+            30
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            165,
+            28,
+            170,
+            30
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            148,
+            28,
+            154,
+            30
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            159,
+            28,
+            165,
+            30
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            154,
+            22,
+            159,
+            28
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            159,
+            22,
+            164,
+            28
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        148,
+        22
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "0f39e46d-f354-4cd8-a38c-e761f5d4870a",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        {
+          "name": "torso",
+          "origin": [
+            0,
+            10,
+            0
+          ],
+          "color": 0,
+          "uuid": "b0e02fb1-7e91-4fa5-aec8-9c858bbfae0e",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "9bd7720d-62fe-4062-92c2-5d3dac22b042",
+            "7bbe4032-94b7-4c80-b2a8-dcf22d9369b8",
+            "581fb48f-92a1-408a-80c8-bb6b66565f8b",
+            "eb70aafa-2185-49fe-a8ce-3fab0b78aa03",
+            "5ba2d802-2370-47e1-a6ea-fb5da661d90f",
+            "456dac00-4ef9-4f9b-867f-2009a2563372",
+            "2a83d767-6e1b-4772-94ca-c3bab26d5aa8",
+            "5e3d0f89-8b46-4864-83ef-10cca5178512",
+            {
+              "name": "head",
+              "origin": [
+                0,
+                12,
+                -7
+              ],
+              "color": 0,
+              "uuid": "ff2ef1b8-ca16-4ebd-bbd6-13d4e7858a0c",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "b3faa61f-7555-44f2-a472-a2f07b519fd2",
+                "80ed5a31-e0a6-41d7-b76b-eb8ba4872826",
+                "3bba4ea6-5474-4fb9-a4d0-a2805296b721",
+                "835868bf-5748-4676-91f8-6f0ccb689a17",
+                "bb71c51c-b0f8-4f18-a5a0-e414a8790808",
+                {
+                  "name": "jaw",
+                  "origin": [
+                    0,
+                    9.5,
+                    -9
+                  ],
+                  "color": 0,
+                  "uuid": "abffbd5f-acb1-4f61-83ad-b456c7ff329f",
+                  "export": true,
+                  "isOpen": true,
+                  "locked": false,
+                  "visibility": true,
+                  "children": [
+                    "de138237-9ad9-4c2b-8c04-55b137e96091",
+                    "40820529-21d1-427d-8b93-d1c1c30232ee",
+                    "79fb62b1-8bac-43e2-a30f-75629c3e3cf8",
+                    "3dacc209-cc61-4cd4-93de-b5bba5600e9c"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "hump",
+              "origin": [
+                0,
+                15,
+                0
+              ],
+              "color": 0,
+              "uuid": "696c3580-dcd1-49f8-a0a6-1a9450d48134",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "6226634b-40d9-4619-a15e-478aaedf358c",
+                "8342367b-ee8b-4c5a-aa0b-807d2820752c",
+                "6ade3d82-0ea2-47f1-8660-c2c7bc56f058",
+                "42cf6c05-bd6a-462f-8308-c60abdf4b06f",
+                "a923edc7-5a22-4861-8497-38716cce0f49"
+              ]
+            },
+            {
+              "name": "leg_fl",
+              "origin": [
+                -5,
+                8,
+                -5
+              ],
+              "color": 0,
+              "uuid": "0762657a-1681-4f14-a171-0d46e93a677f",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "10045fce-ca82-492f-b0d9-48c3a23b44c0",
+                "0278178a-91ff-4be8-a34e-8319a49da7f6",
+                "7ec25187-f301-4caf-90af-ea4c4c40cd3f",
+                "75183dfc-b4b2-4da6-a89e-b3ef5c5a65ea"
+              ]
+            },
+            {
+              "name": "leg_fr",
+              "origin": [
+                5,
+                8,
+                -5
+              ],
+              "color": 0,
+              "uuid": "a7f37948-491d-45c1-a2e3-9f2db3ea314e",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "7f17fb16-0bce-4685-bdeb-2269e75a4b3c",
+                "afbaaf66-e3de-4346-9757-160a54491151",
+                "89c46468-2d6e-4743-b73d-91eb9de2b034",
+                "0008eb62-864e-4471-af71-f50c3f9c3fe3"
+              ]
+            },
+            {
+              "name": "leg_bl",
+              "origin": [
+                -5,
+                8,
+                5
+              ],
+              "color": 0,
+              "uuid": "bb8b7917-a7f5-4b6c-b57f-e923d40c45ae",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "b5fa2309-908e-40c2-9c8e-b0184377a8a2",
+                "39495d9b-7013-424c-bfe2-437aa24d95db",
+                "75ba4185-b086-4cb1-8d9e-61308d0ea7c9",
+                "745f60db-c513-4633-b8a2-9ae52fc1ac71"
+              ]
+            },
+            {
+              "name": "leg_br",
+              "origin": [
+                5,
+                8,
+                5
+              ],
+              "color": 0,
+              "uuid": "4cea0855-55f1-4467-97b8-f6a278db9dd4",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "7310511f-3c58-4e4c-a239-af2c1dd8a109",
+                "16597356-57cb-4d7d-b882-e79137fc097f",
+                "d62973e6-90cc-42d2-b88b-be23898c1153",
+                "6c452941-1a65-4023-825f-fe9150ed317b"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "telluric_behemoth.png",
+      "name": "telluric_behemoth.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "0552f9a5-85ad-4c96-a1f6-b9e11eaf9288",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAGLUlEQVR4nO3dz6sVVRwA8Ll5SyuDiBbRQihFQ1AyeJCLLMo2hVDta1dguxbt2rYK3LpoVf9AgbTLCAkUhJJeIFoiaCKYmlDWexrcmEvzmpk3M3d+nPHdH58PyNw78z3fmXfvzDnz49xjFAELa9Cm0ME33x3Vibv0y3K0bceeqG7s+eVTrbany7bW2cau21a1DZPW32bd6fXl8zfNN++5Dv6XJ52j7bbMYo5h1MLd1ZXased/PFkrbstDW6M+1NnWSdvYddsmbUPV+tusO7++dP6m+eY9193Vlejbrz6Pdu3dv5ajzbbMao77Gq2BIOIvien6Ls7VbKjmLYcK4B5LviSVwHR4+pl942ncam4aDsf/FilHq0sA2nvp9XfGB3887culC8trr+9/YEurnWlecxXdO3j1rffG77fvXkqHjsquo+cpR7AKoO+depald9Z0TR3iQMjfYCy6IZbbGTI7RHqnWIRcVy6ezQTdun41On3i2LjVrFqWNk85hqFPaxe5Eii621/nLn/Bzpspt23HnsK8RTt08mWn1YmpGzfrufJOnzi2dt28e98LpcsGg8Fc5hjOymltqNY3r2sLPGknLNoR4y9j6cChzuXobunAobWWcdOmYemyec0R7BJgow7+Ls/Yq1rgfI6iVjgdU/d5bVITNz2Y25Yja+XvPzOV/41rv44vyeLXVcvmNcfM3wQsaz2bnAaGyFFXUhM3PYjbliPr4rkznTubXZyjHDNfAUyTdK2br32rbgK2LVe0zny5ovxFMYuSi6xWNchTu56t1RU4/tDv3qnXazCObdPdtmpb6qx/UkzdHH10Y4a+DZr07W/Tv79ubJvcDjoIcAkw6Rq4yzVxn7mBbnQFhgUWrAJIHlP1oc/csMiCVADpZ9Sh9ZkbFl2QCiB5Nt3HM+o+c8OiC3YJ0OcB6uCHHp8CFHVEKVPUQaUqts/cAEBL63qvjUaj0f5vVsevT768OUpen3plS6NBFpt08mk7+OHXX3w66DM+9OCVRfna5FzUvC++9vZajquXf45W/vr/7DIe+y5ftml8bHQz+6OvwWPLhdsTOq5rmbZl1/0WIDng869DDIBZNvhlm8EPL577odf4vgavzOdrk3MR8xY1LDvX/zx2lBzUTePX3PhnPPnkyLWoUui4rmValvVjIGZC3KP04UcenTivbfwo13J++PGTyXSUbklDx220YdVpf/p1Oqbu5UCfg3w0GcSjTXwfA4YwvY5/dnM8fW7n5vH0+/Ormfd9xRU5evT6eLr1weYP6ZqWHVad9ne9HAil7Jp8++6lzH+EkFzjh4ovGjAkfp+P96MkukifLXx59Hr0xuHHM8sPf/TEKD0/ffbQpWxseK+G4OrSkhYNcHj7j1vr5oWMn7T+tp9HqDMKecM6f/lOZpqf31dc+mwh8fvJ25mzhvz8UGVjw3s1AOakwS+rBr6MZkDdz6NiCLLMKLZl5Rc1b9yfJD/MVdG8RNP494/8Vms/Cx0XO/jBlfb/7VyHsp0qgLoDWXYtEysa3ywtPy9kfNn4aun3Tf82sc0/h6bDX4UYLmsRjD+k54+v1B4QJLkJWDQST9XoOWXLJpWZlTMAAJgpgxA94JIziKLHg2XLmvTSmobYsr+j6u+LOx9duvDToGoebKRhXz3gqjTppTUNselLpPh1crCXzU9yx/l27t0/ih83Fs3Lrww2pAIo67+fPyDiO/XpM4F1HYhSrWHVsia9tKYhtqzjU9n8JE/86DHJVzQPpmpQ0KIDomh+nY5CVcuaPKKZhtimzp75blBnHmy0Tjtl2dODuGWsWtZlnUA4RgUGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIMr6F001uDLp+HbhAAAAAElFTkSuQmCC"
+    }
+  ],
+  "animations": [
+    {
+      "uuid": "3f752635-8e28-4c41-bae8-2953ab103846",
+      "name": "idle_breathe",
+      "loop": "loop",
+      "length": 2.4,
+      "snapping": 24,
+      "animators": {
+        "ff2ef1b8-ca16-4ebd-bbd6-13d4e7858a0c": {
+          "name": "head",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "a03b1e75-b7f5-489b-979f-f0d417c8d430",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "ae516043-8dba-4822-aeea-689f4e3f5970",
+              "data_points": [
+                {
+                  "x": 4.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 2.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "0592a059-63c3-4541-843b-7e153c118fde",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "696c3580-dcd1-49f8-a0a6-1a9450d48134": {
+          "name": "hump",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "position",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "05fec593-e77e-43bc-bb45-78204e89c4f2",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "13d31773-b90a-4ab0-b38b-bfa4d0c6a2a5",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 1.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 2.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "55c842ab-97ed-4d49-8f5c-57750ee60420",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "2958a3a6-52c7-4a55-baf2-7074c50db909",
+      "name": "heavy_stomp",
+      "loop": "loop",
+      "length": 1.2,
+      "snapping": 24,
+      "animators": {
+        "0762657a-1681-4f14-a171-0d46e93a677f": {
+          "name": "leg_fl",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "8326af5f-a8c9-48d5-82a2-b06803805e38",
+              "data_points": [
+                {
+                  "x": 20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "ca8b34ae-ace7-457e-851b-0817dd398688",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "1fb5dd80-8de1-4aea-bce4-95a486a51e99",
+              "data_points": [
+                {
+                  "x": 20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "4cea0855-55f1-4467-97b8-f6a278db9dd4": {
+          "name": "leg_br",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "49d0514a-5fd3-4626-8c73-5a30f12df0e7",
+              "data_points": [
+                {
+                  "x": 20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "b1292ac5-a5a8-46f7-9d10-64b09caaf0be",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "b34c1804-bdea-407b-8eb9-77e54e619d47",
+              "data_points": [
+                {
+                  "x": 20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "a7f37948-491d-45c1-a2e3-9f2db3ea314e": {
+          "name": "leg_fr",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "122fd686-b05a-4d99-855a-2f379bf41c10",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "f7b32c3a-c7c1-4eec-ad15-8fb68e5aab29",
+              "data_points": [
+                {
+                  "x": 20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "e69fbbe8-0616-4b3f-b361-703411063b6c",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "bb8b7917-a7f5-4b6c-b57f-e923d40c45ae": {
+          "name": "leg_bl",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "6dc2fffd-7cf4-4739-b841-9205b2c3300a",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "64585f0b-e453-4854-8471-85d3e106e95e",
+              "data_points": [
+                {
+                  "x": 20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "5f7f4d90-b7ca-4c1a-9ed0-e493f15ad89c",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "b0e02fb1-7e91-4fa5-aec8-9c858bbfae0e": {
+          "name": "torso",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "022a652c-3d1e-4c02-ab51-b6cf0a0e7e6e",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 3.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "eaa1cf8f-9d31-4604-85fa-ed881712531f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -3.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "23d7e966-6974-4175-ae77-a26d47a469f2",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 3.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "9a46f841-f57a-4db8-bf6a-7a7655c5becf",
+      "name": "earthquake_slam",
+      "loop": "once",
+      "length": 1.6,
+      "snapping": 24,
+      "animators": {
+        "b0e02fb1-7e91-4fa5-aec8-9c858bbfae0e": {
+          "name": "torso",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "fdc5980d-9edb-4aca-bb1a-ebdcc9c2b9a5",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "6f979fe2-7cdc-4e2d-b1b0-99238af106cb",
+              "data_points": [
+                {
+                  "x": -35.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.9,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "fbfad48b-c04b-4da9-bd75-5268ae33b199",
+              "data_points": [
+                {
+                  "x": 40.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "bbdda7fb-03eb-477c-b13c-6c65fa461265",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "0762657a-1681-4f14-a171-0d46e93a677f": {
+          "name": "leg_fl",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "a6d1a67c-e6c8-4435-a418-7c6e94028038",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "c71db117-50ff-4f4b-a54c-3f86dfc5ff3e",
+              "data_points": [
+                {
+                  "x": -45.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.9,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "3188b735-47bc-4bc2-8f97-99bb2ed380ca",
+              "data_points": [
+                {
+                  "x": 30.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "d9d007c0-4df8-4112-b6b8-bf655f7e995f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "a7f37948-491d-45c1-a2e3-9f2db3ea314e": {
+          "name": "leg_fr",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "f3c28b11-bea0-4ff3-8179-b12c57139c2d",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "84dfeb3c-917a-4517-93c0-0d6e34b20f40",
+              "data_points": [
+                {
+                  "x": -45.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.9,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "bdf6876b-53d2-49b1-9a03-fda1630b14ce",
+              "data_points": [
+                {
+                  "x": 30.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "e5a21832-8267-455e-8304-db44f9eaea05",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

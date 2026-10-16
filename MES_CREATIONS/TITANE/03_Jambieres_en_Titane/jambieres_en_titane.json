@@ -1,0 +1,1031 @@
+{
+  "credit": "Definitive Titanium Set - Opal Heaven",
+  "parent": "item/generated",
+  "textures": {
+    "jambieres_en_titane": "item/jambieres_en_titane"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        90,
+        -35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -135,
+        25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        45,
+        -25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "elements": [
+    {
+      "from": [
+        -4.5,
+        8,
+        -3
+      ],
+      "to": [
+        4.5,
+        10.5,
+        3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            47,
+            7,
+            56,
+            9
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            62,
+            7,
+            71,
+            9
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            41,
+            7,
+            47,
+            9
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            56,
+            7,
+            62,
+            9
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            47,
+            1,
+            56,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            56,
+            1,
+            65,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -1.8,
+        8.2,
+        -3.3
+      ],
+      "to": [
+        1.8,
+        10.3,
+        -2.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            174,
+            2,
+            178,
+            4
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            179,
+            2,
+            183,
+            4
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            173,
+            2,
+            174,
+            4
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            178,
+            2,
+            179,
+            4
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            174,
+            1,
+            178,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            178,
+            1,
+            182,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.7,
+        8.6,
+        -3.5
+      ],
+      "to": [
+        0.7,
+        9.9,
+        -3.1
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            186,
+            2,
+            187,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            188,
+            2,
+            189,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            185,
+            2,
+            186,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            187,
+            2,
+            188,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            186,
+            1,
+            187,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            187,
+            1,
+            188,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        0.5,
+        3.5,
+        -2.5
+      ],
+      "to": [
+        4.5,
+        8,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            6,
+            10,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            15,
+            6,
+            19,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            1,
+            6,
+            6,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            10,
+            6,
+            15,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            6,
+            1,
+            10,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            10,
+            1,
+            14,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -4.5,
+        3.5,
+        -2.5
+      ],
+      "to": [
+        -0.5,
+        8,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            26,
+            6,
+            30,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            35,
+            6,
+            39,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            21,
+            6,
+            26,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            30,
+            6,
+            35,
+            10
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            26,
+            1,
+            30,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            30,
+            1,
+            34,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        0.8,
+        1.5,
+        -3.2
+      ],
+      "to": [
+        4.2,
+        4.2,
+        -2.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            154,
+            2,
+            157,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            158,
+            2,
+            161,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            153,
+            2,
+            154,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            157,
+            2,
+            158,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            154,
+            1,
+            157,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            157,
+            1,
+            160,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        1.7,
+        2.2,
+        -3.4
+      ],
+      "to": [
+        3.3,
+        3.5,
+        -3.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            192,
+            2,
+            194,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            195,
+            2,
+            197,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            191,
+            2,
+            192,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            194,
+            2,
+            195,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            192,
+            1,
+            194,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            194,
+            1,
+            196,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -4.2,
+        1.5,
+        -3.2
+      ],
+      "to": [
+        -0.8,
+        4.2,
+        -2.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            164,
+            2,
+            167,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            168,
+            2,
+            171,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            163,
+            2,
+            164,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            167,
+            2,
+            168,
+            5
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            164,
+            1,
+            167,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            167,
+            1,
+            170,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -3.3,
+        2.2,
+        -3.4
+      ],
+      "to": [
+        -1.7,
+        3.5,
+        -3.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            200,
+            2,
+            202,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            203,
+            2,
+            205,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            199,
+            2,
+            200,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            202,
+            2,
+            203,
+            3
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            200,
+            1,
+            202,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            202,
+            1,
+            204,
+            2
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        0.6,
+        0,
+        -2.4
+      ],
+      "to": [
+        4.2,
+        2.0,
+        2.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            78,
+            6,
+            82,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            87,
+            6,
+            91,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            73,
+            6,
+            78,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            82,
+            6,
+            87,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            78,
+            1,
+            82,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            82,
+            1,
+            86,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -4.2,
+        0,
+        -2.4
+      ],
+      "to": [
+        -0.6,
+        2.0,
+        2.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            98,
+            6,
+            102,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            107,
+            6,
+            111,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            93,
+            6,
+            98,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            102,
+            6,
+            107,
+            8
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            98,
+            1,
+            102,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            102,
+            1,
+            106,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        0.4,
+        5.5,
+        -2.7
+      ],
+      "to": [
+        4.6,
+        6.5,
+        2.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            118,
+            6,
+            122,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            127,
+            6,
+            131,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            113,
+            6,
+            118,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            122,
+            6,
+            127,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            118,
+            1,
+            122,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            122,
+            1,
+            126,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -4.6,
+        5.5,
+        -2.7
+      ],
+      "to": [
+        -0.4,
+        6.5,
+        2.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            138,
+            6,
+            142,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "south": {
+          "uv": [
+            147,
+            6,
+            151,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "west": {
+          "uv": [
+            133,
+            6,
+            138,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "east": {
+          "uv": [
+            142,
+            6,
+            147,
+            7
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "up": {
+          "uv": [
+            138,
+            1,
+            142,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        },
+        "down": {
+          "uv": [
+            142,
+            1,
+            146,
+            6
+          ],
+          "texture": "#jambieres_en_titane"
+        }
+      }
+    }
+  ]
+}

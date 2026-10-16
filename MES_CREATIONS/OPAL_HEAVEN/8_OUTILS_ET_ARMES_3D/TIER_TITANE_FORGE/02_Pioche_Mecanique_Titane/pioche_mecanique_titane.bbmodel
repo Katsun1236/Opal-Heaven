@@ -1,0 +1,1712 @@
+{
+  "meta": {
+    "format_version": "4.5",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "pioche_titane",
+  "geometry_name": "pioche_titane",
+  "visible_box": [
+    2,
+    2,
+    2
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "shaft",
+      "uuid": "e78a1c85-cf1a-42e1-abbd-20b5471fec77",
+      "from": [
+        -0.9,
+        0.0,
+        -0.9
+      ],
+      "to": [
+        0.9,
+        28.0,
+        0.9
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        1.8,
+        28.0,
+        1.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            31
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            7,
+            3,
+            9,
+            31
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            3,
+            3,
+            31
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            5,
+            3,
+            7,
+            31
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            3,
+            1,
+            5,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            5,
+            1,
+            7,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "shaft_pommel",
+      "uuid": "6929053d-21c5-4f0b-89cc-b3fa98cc60da",
+      "from": [
+        -1.3,
+        0.0,
+        -1.3
+      ],
+      "to": [
+        1.3,
+        2.5,
+        1.3
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        2.6,
+        2.5,
+        2.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            186,
+            4,
+            189,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            192,
+            4,
+            195,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            183,
+            4,
+            186,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            189,
+            4,
+            192,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            186,
+            1,
+            189,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            189,
+            1,
+            192,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        183,
+        1
+      ]
+    },
+    {
+      "name": "shaft_reinforce",
+      "uuid": "4e31b1de-6f07-4824-a114-996a0ba228b0",
+      "from": [
+        -1.1,
+        10.0,
+        -1.1
+      ],
+      "to": [
+        1.1,
+        14.0,
+        1.1
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_steel",
+      "size": [
+        2.2,
+        4.0,
+        2.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            141,
+            3,
+            143,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            145,
+            3,
+            147,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            139,
+            3,
+            141,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            143,
+            3,
+            145,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            141,
+            1,
+            143,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            143,
+            1,
+            145,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        139,
+        1
+      ]
+    },
+    {
+      "name": "gearbox_socket",
+      "uuid": "10c21aec-8cdb-44b2-8760-49c315dd0689",
+      "from": [
+        -2.8,
+        25.0,
+        -2.4
+      ],
+      "to": [
+        2.8,
+        32.0,
+        2.4
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        5.6,
+        7.0,
+        4.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            16,
+            6,
+            22,
+            13
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            27,
+            6,
+            33,
+            13
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            11,
+            6,
+            16,
+            13
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            22,
+            6,
+            27,
+            13
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            16,
+            1,
+            22,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            22,
+            1,
+            28,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        11,
+        1
+      ]
+    },
+    {
+      "name": "gear_face_f",
+      "uuid": "8ce39f80-4fc0-40ef-8389-9e2dcde13930",
+      "from": [
+        -2.0,
+        26.5,
+        -2.8
+      ],
+      "to": [
+        2.0,
+        30.5,
+        -2.2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brass_gear",
+      "size": [
+        4.0,
+        4.0,
+        0.5999999999999996
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            198,
+            2,
+            202,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            203,
+            2,
+            207,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            197,
+            2,
+            198,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            202,
+            2,
+            203,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            198,
+            1,
+            202,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            202,
+            1,
+            206,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        197,
+        1
+      ]
+    },
+    {
+      "name": "gear_face_b",
+      "uuid": "76d0d52b-2486-458b-bb3c-20cd58714047",
+      "from": [
+        -2.0,
+        26.5,
+        2.2
+      ],
+      "to": [
+        2.0,
+        30.5,
+        2.8
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brass_gear",
+      "size": [
+        4.0,
+        4.0,
+        0.5999999999999996
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            210,
+            2,
+            214,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            215,
+            2,
+            219,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            209,
+            2,
+            210,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            214,
+            2,
+            215,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            210,
+            1,
+            214,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            214,
+            1,
+            218,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        209,
+        1
+      ]
+    },
+    {
+      "name": "piston_cyl_l",
+      "uuid": "5e182ae0-0ba3-4d35-9771-e92645c7fbdb",
+      "from": [
+        -6.0,
+        26.5,
+        -1.4
+      ],
+      "to": [
+        -2.8,
+        30.5,
+        1.4
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        3.2,
+        4.0,
+        2.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            58,
+            4,
+            61,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            64,
+            4,
+            67,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            55,
+            4,
+            58,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            61,
+            4,
+            64,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            58,
+            1,
+            61,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            61,
+            1,
+            64,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        55,
+        1
+      ]
+    },
+    {
+      "name": "piston_cyl_r",
+      "uuid": "9d25b289-b5c4-46b3-b8e9-6c77141ded24",
+      "from": [
+        2.8,
+        26.5,
+        -1.4
+      ],
+      "to": [
+        6.0,
+        30.5,
+        1.4
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        3.2,
+        4.0,
+        2.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            72,
+            4,
+            75,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            78,
+            4,
+            81,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            69,
+            4,
+            72,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            75,
+            4,
+            78,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            72,
+            1,
+            75,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            75,
+            1,
+            78,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        69,
+        1
+      ]
+    },
+    {
+      "name": "copper_band_l",
+      "uuid": "042d2b2f-4edd-4ee7-9a6e-7366aec0b472",
+      "from": [
+        -4.5,
+        26.0,
+        -1.6
+      ],
+      "to": [
+        -3.5,
+        31.0,
+        1.6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        1.0,
+        5.0,
+        3.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            38,
+            4,
+            39,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            42,
+            4,
+            43,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            35,
+            4,
+            38,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            39,
+            4,
+            42,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            38,
+            1,
+            39,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            39,
+            1,
+            40,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        35,
+        1
+      ]
+    },
+    {
+      "name": "copper_band_r",
+      "uuid": "0251f321-b4b6-4908-a454-03e4c47c10c7",
+      "from": [
+        3.5,
+        26.0,
+        -1.6
+      ],
+      "to": [
+        4.5,
+        31.0,
+        1.6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        1.0,
+        5.0,
+        3.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            48,
+            4,
+            49,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            52,
+            4,
+            53,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            45,
+            4,
+            48,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            49,
+            4,
+            52,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            48,
+            1,
+            49,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            49,
+            1,
+            50,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        45,
+        1
+      ]
+    },
+    {
+      "name": "drill_head_l1",
+      "uuid": "84ea1a57-f1a2-4e88-bb97-2e069edd22c0",
+      "from": [
+        -10.5,
+        26.0,
+        -1.2
+      ],
+      "to": [
+        -6.0,
+        31.0,
+        1.2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_steel",
+      "size": [
+        4.5,
+        5.0,
+        2.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            85,
+            3,
+            89,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            91,
+            3,
+            95,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            83,
+            3,
+            85,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            89,
+            3,
+            91,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            85,
+            1,
+            89,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            89,
+            1,
+            93,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        83,
+        1
+      ]
+    },
+    {
+      "name": "drill_beak_l2",
+      "uuid": "48bc38c1-aa6e-4304-bb6e-27be418b7058",
+      "from": [
+        -15.0,
+        24.5,
+        -0.9
+      ],
+      "to": [
+        -10.5,
+        29.5,
+        0.9
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        4.5,
+        5.0,
+        1.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            99,
+            3,
+            103,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            105,
+            3,
+            109,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            97,
+            3,
+            99,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            103,
+            3,
+            105,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            99,
+            1,
+            103,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            103,
+            1,
+            107,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        97,
+        1
+      ]
+    },
+    {
+      "name": "drill_tip_l3",
+      "uuid": "6f605ab0-c15b-44fd-8843-17424eafa7ed",
+      "from": [
+        -18.5,
+        22.0,
+        -0.6
+      ],
+      "to": [
+        -15.0,
+        27.0,
+        0.6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        3.5,
+        5.0,
+        1.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            150,
+            2,
+            154,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            155,
+            2,
+            159,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            149,
+            2,
+            150,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            154,
+            2,
+            155,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            150,
+            1,
+            154,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            154,
+            1,
+            158,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        149,
+        1
+      ]
+    },
+    {
+      "name": "drill_head_r1",
+      "uuid": "c767c1e8-916e-49ed-a780-0ab75cdb8a83",
+      "from": [
+        6.0,
+        26.0,
+        -1.2
+      ],
+      "to": [
+        10.5,
+        31.0,
+        1.2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_steel",
+      "size": [
+        4.5,
+        5.0,
+        2.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            113,
+            3,
+            117,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            119,
+            3,
+            123,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            111,
+            3,
+            113,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            117,
+            3,
+            119,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            113,
+            1,
+            117,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            117,
+            1,
+            121,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        111,
+        1
+      ]
+    },
+    {
+      "name": "drill_beak_r2",
+      "uuid": "1bd9b15b-148c-4208-bbde-f68d143209b4",
+      "from": [
+        10.5,
+        24.5,
+        -0.9
+      ],
+      "to": [
+        15.0,
+        29.5,
+        0.9
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        4.5,
+        5.0,
+        1.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            127,
+            3,
+            131,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            133,
+            3,
+            137,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            125,
+            3,
+            127,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            131,
+            3,
+            133,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            127,
+            1,
+            131,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            131,
+            1,
+            135,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        125,
+        1
+      ]
+    },
+    {
+      "name": "drill_tip_r3",
+      "uuid": "dd8dad0a-b229-4d06-9e20-25e858336250",
+      "from": [
+        15.0,
+        22.0,
+        -0.6
+      ],
+      "to": [
+        18.5,
+        27.0,
+        0.6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        3.5,
+        5.0,
+        1.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            162,
+            2,
+            166,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            167,
+            2,
+            171,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            161,
+            2,
+            162,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            166,
+            2,
+            167,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            162,
+            1,
+            166,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            166,
+            1,
+            170,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        161,
+        1
+      ]
+    },
+    {
+      "name": "exhaust_chimney",
+      "uuid": "e3c72617-6173-4060-bd3e-a5c910e3db3d",
+      "from": [
+        -1.0,
+        32.0,
+        -1.0
+      ],
+      "to": [
+        1.0,
+        36.5,
+        1.0
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        2.0,
+        4.5,
+        2.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            175,
+            3,
+            177,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            179,
+            3,
+            181,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            173,
+            3,
+            175,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            177,
+            3,
+            179,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            175,
+            1,
+            177,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            177,
+            1,
+            179,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        173,
+        1
+      ]
+    },
+    {
+      "name": "chimney_cap",
+      "uuid": "70f0e63c-0ab7-4c7f-a7a7-834b3f258385",
+      "from": [
+        -1.4,
+        35.5,
+        -1.4
+      ],
+      "to": [
+        1.4,
+        37.5,
+        1.4
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        2.8,
+        2.0,
+        2.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            224,
+            4,
+            227,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            230,
+            4,
+            233,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            221,
+            4,
+            224,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            227,
+            4,
+            230,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            224,
+            1,
+            227,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            227,
+            1,
+            230,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        221,
+        1
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "bc7e936e-44fc-46b5-b42f-0a8c6f4ff036",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "75f0dd06-0d24-4d77-90a4-5f5578ed7451"
+      ]
+    },
+    {
+      "name": "item",
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "color": 0,
+      "uuid": "75f0dd06-0d24-4d77-90a4-5f5578ed7451",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "e78a1c85-cf1a-42e1-abbd-20b5471fec77",
+        "6929053d-21c5-4f0b-89cc-b3fa98cc60da",
+        "4e31b1de-6f07-4824-a114-996a0ba228b0",
+        "10c21aec-8cdb-44b2-8760-49c315dd0689",
+        "8ce39f80-4fc0-40ef-8389-9e2dcde13930",
+        "76d0d52b-2486-458b-bb3c-20cd58714047",
+        "5e182ae0-0ba3-4d35-9771-e92645c7fbdb",
+        "9d25b289-b5c4-46b3-b8e9-6c77141ded24",
+        "042d2b2f-4edd-4ee7-9a6e-7366aec0b472",
+        "0251f321-b4b6-4908-a454-03e4c47c10c7",
+        "84ea1a57-f1a2-4e88-bb97-2e069edd22c0",
+        "48bc38c1-aa6e-4304-bb6e-27be418b7058",
+        "6f605ab0-c15b-44fd-8843-17424eafa7ed",
+        "c767c1e8-916e-49ed-a780-0ab75cdb8a83",
+        "1bd9b15b-148c-4208-bbde-f68d143209b4",
+        "dd8dad0a-b229-4d06-9e20-25e858336250",
+        "e3c72617-6173-4060-bd3e-a5c910e3db3d",
+        "70f0e63c-0ab7-4c7f-a7a7-834b3f258385"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "pioche_titane.png",
+      "name": "pioche_titane.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "a9c33854-5560-48dd-8045-0b44a5983d5a",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAFYklEQVR4nO3da4hUVRwA8LM9iMzHZlD5YKP3A9IPQlIYFUWCQfQpEAoKrAiDWkiIHj62D32wWiLsXSpai0Uk5ZeVIsp17enWWmhQ4W6KvdC2tVJIJmbkjDOzd2Znr7Ntdn8/WO45//u/j7l75n/PvR92QwAyq6m0M/fGW3Kl/c6315atT7JzX65sm7xli5eGJW1LQ1J85dPLht1nXu7Fmwv7bbrj9aZG5MXP1vt5V5gxa06I7T27dzZ8u/Y17xWvScdL7WH+gtZQ2v/kgw1Nw13LymtY69qN5fHyWm+9dkhe32M3FHNefmdr6PvtYHHdWc0nhbbuPU1Hkz/S8RrHyZKVm8Ky268Msd2WsN9Cfu81xX0/1f5Z+Gb3oeK6C6cdH+5bOdh0NPlpz6vRTijt/PXn/sKyd2t33Tv4oa+/2J4zsyV0fXm4v/DOu4bknn7mlLr32//rH2Hxmi0Ny4ufLe/jro2F5cknjxuV7fb+8mNZ/9nljxTbzadOrutaVl7DWtdurI63btWKUGtQl1rVel1FZFMuDvKR5qcZr/lxEt3W/m6xsCTJDcwbcj7PvHF1RWRTLn6pR5qf9rxGrQBUVtLZc66PzVy9M4FGu/elrobm9Xz6YWE5fvzEcOjQ33Wfx0i2q7wzRncverSsP39Ba670zpw0i8pb8cLzZf0lbUtzpXfmsT5eyXFypTOBJ17rDpe2nFpYcf2q3hBWTk2MRSPNTzNe4ziZcca4MHDwyN05yeqHNofZMycNG0ubn/a8Rq0AfP3FR4XO+InNheX+338r69cr3v3TSpoO5cOxH6f59eZVm75fcdW8Yrs0J07r02735prnCuunTG8p+1zV4tHjy9sLy4suvqSu+HD7/beOt2dXf83jjJZ6x2u16fVbD8wttnMlOf/WtPu/dF5ljwBpPPzAoiGxc86/OOwfPPxLGckjQL7qRxu7todt/fvK+iPNiwMlr+/7HWH7tk/D1OlnV41X2264ONVtvG1GXbG0+bVUjpPh4lFnz8HQ2fNzsT/7ghMTY2nz057XmBeAyqljrZd9qzvWhaTc/LQy7YtBxtauvm/LlpXxqKt/sPAT5ae3SbG0+QMDe8uWlfHo/vd3HRlX3XuSP1T30HjH5gNl47Fj84GknNT5ac9rzAtAnCKW2rCh86hzR0scEPnn990/fB8mNp9WaFeLV9sutqvFa31BTj9zWtV4tG3rR2XLOIuqFh+r4+38pqeuQr3+u4GyvPXfDSTlpM4fHNjrhtEghQs5veW8XK1nqh1ffVbIu+fBJ8vu3n8MDoRZl11e7C+8ZW5YsbYzfP7JlnDKhPIXILVy4wzgpnMn5WK17/3pz2Ju7MeBUm8eMMrvABopfnEr7wAJ/brygNqOCw2Uv6OPRi5wDBQA4H/8CFD6cii+IHrj1VeG5JW+UKonFzgGXgIC/y8eASDDFADIMAUAMkwBgAxTACDDFADIMAUAMkwBgAxTACDDFADIMAUAMkwBgAxTACDDFADIMAUAMkwBgAwr/KGPCZMmJ/6rqMifYQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMeufwCltFfuMnBCXgAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": []
+}

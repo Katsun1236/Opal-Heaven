@@ -1,0 +1,1031 @@
+{
+  "credit": "Definitive Titanium Set - Opal Heaven",
+  "parent": "item/generated",
+  "textures": {
+    "pelle_en_titane": "item/pelle_en_titane"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        90,
+        -35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -135,
+        25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        45,
+        -25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "elements": [
+    {
+      "from": [
+        -1.8,
+        0,
+        -0.6
+      ],
+      "to": [
+        1.8,
+        1.2,
+        0.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            110,
+            2,
+            114,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            115,
+            2,
+            119,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            109,
+            2,
+            110,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            114,
+            2,
+            115,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            110,
+            1,
+            114,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            114,
+            1,
+            118,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -1.8,
+        1.2,
+        -0.5
+      ],
+      "to": [
+        -0.8,
+        3.5,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            76,
+            2,
+            77,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            78,
+            2,
+            79,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            75,
+            2,
+            76,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            77,
+            2,
+            78,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            76,
+            1,
+            77,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            77,
+            1,
+            78,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        0.8,
+        1.2,
+        -0.5
+      ],
+      "to": [
+        1.8,
+        3.5,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            82,
+            2,
+            83,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            84,
+            2,
+            85,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            81,
+            2,
+            82,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            83,
+            2,
+            84,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            82,
+            1,
+            83,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            83,
+            1,
+            84,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.7,
+        3.5,
+        -0.7
+      ],
+      "to": [
+        0.7,
+        15.0,
+        0.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            2,
+            3,
+            14
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            4,
+            2,
+            5,
+            14
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            1,
+            2,
+            2,
+            14
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            3,
+            2,
+            4,
+            14
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            2,
+            1,
+            3,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            3,
+            1,
+            4,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -1.2,
+        13.5,
+        -1.2
+      ],
+      "to": [
+        1.2,
+        16.5,
+        1.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            43,
+            3,
+            45,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            47,
+            3,
+            49,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            41,
+            3,
+            43,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            45,
+            3,
+            47,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            43,
+            1,
+            45,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            45,
+            1,
+            47,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.6,
+        14.3,
+        -1.5
+      ],
+      "to": [
+        0.6,
+        15.7,
+        -1.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            122,
+            2,
+            123,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            124,
+            2,
+            125,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            121,
+            2,
+            122,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            123,
+            2,
+            124,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            122,
+            1,
+            123,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            123,
+            1,
+            124,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -3.0,
+        16.0,
+        -0.8
+      ],
+      "to": [
+        3.0,
+        18.5,
+        0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            59,
+            3,
+            65,
+            5
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            67,
+            3,
+            73,
+            5
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            57,
+            3,
+            59,
+            5
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            65,
+            3,
+            67,
+            5
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            59,
+            1,
+            65,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            65,
+            1,
+            71,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -3.5,
+        18.5,
+        -0.6
+      ],
+      "to": [
+        3.5,
+        23.5,
+        0.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            24,
+            2,
+            31,
+            7
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            32,
+            2,
+            39,
+            7
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            23,
+            2,
+            24,
+            7
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            31,
+            2,
+            32,
+            7
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            24,
+            1,
+            31,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            31,
+            1,
+            38,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        3.0,
+        16.5,
+        -1.0
+      ],
+      "to": [
+        3.8,
+        23.0,
+        0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            9,
+            3,
+            10,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            12,
+            3,
+            13,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            7,
+            3,
+            9,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            10,
+            3,
+            12,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            9,
+            1,
+            10,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            10,
+            1,
+            11,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -3.8,
+        16.5,
+        -1.0
+      ],
+      "to": [
+        -3.0,
+        23.0,
+        0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            17,
+            3,
+            18,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            20,
+            3,
+            21,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            15,
+            3,
+            17,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            18,
+            3,
+            20,
+            9
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            17,
+            1,
+            18,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            18,
+            1,
+            19,
+            3
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.5,
+        18.0,
+        -0.9
+      ],
+      "to": [
+        0.5,
+        22.0,
+        -0.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            2,
+            53,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            54,
+            2,
+            55,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            51,
+            2,
+            52,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            53,
+            2,
+            54,
+            6
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            52,
+            1,
+            53,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            53,
+            1,
+            54,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.7,
+        19.2,
+        -1.2
+      ],
+      "to": [
+        0.7,
+        20.8,
+        -0.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            88,
+            2,
+            89,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            90,
+            2,
+            91,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            87,
+            2,
+            88,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            89,
+            2,
+            90,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            88,
+            1,
+            89,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            89,
+            1,
+            90,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -3.0,
+        23.5,
+        -0.4
+      ],
+      "to": [
+        3.0,
+        25.5,
+        0.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            94,
+            2,
+            100,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "south": {
+          "uv": [
+            101,
+            2,
+            107,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "west": {
+          "uv": [
+            93,
+            2,
+            94,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "east": {
+          "uv": [
+            100,
+            2,
+            101,
+            4
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "up": {
+          "uv": [
+            94,
+            1,
+            100,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        },
+        "down": {
+          "uv": [
+            100,
+            1,
+            106,
+            2
+          ],
+          "texture": "#pelle_en_titane"
+        }
+      }
+    }
+  ]
+}

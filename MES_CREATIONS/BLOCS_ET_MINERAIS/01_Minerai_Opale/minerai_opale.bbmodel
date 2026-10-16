@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "opal_ore",
+  "geometry_name": "geometry.opal_ore",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "block_base",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            64,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "89f9238f-0b3d-42bc-b6b7-e73fec8f46ea"
+    },
+    {
+      "name": "gem_shard_1",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        4.0,
+        5.0,
+        -1.2
+      ],
+      "to": [
+        10.0,
+        11.0,
+        0.4
+      ],
+      "origin": [
+        7.0,
+        8.0,
+        0.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "f2836ca8-8800-4b02-8044-1a6994d55929"
+    },
+    {
+      "name": "gem_shard_2",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        8.0,
+        15.2,
+        7.0
+      ],
+      "to": [
+        13.0,
+        17.8,
+        12.0
+      ],
+      "origin": [
+        10.5,
+        16.5,
+        9.5
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "e50cb59b-e857-4a5c-88b5-0f1bd54456a1"
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "e2f51a0f-b14d-4a05-b661-05f07d072253",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "89f9238f-0b3d-42bc-b6b7-e73fec8f46ea",
+        "f2836ca8-8800-4b02-8044-1a6994d55929",
+        "e50cb59b-e857-4a5c-88b5-0f1bd54456a1"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\1_MINERAI_OPALE_ET_DERIVES\\01_Minerai_Opale\\opal_ore.png",
+      "name": "opal_ore.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "ff94eaaa-4434-4b89-9364-4ae271780198",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAB20lEQVR4nOXZP0vDQBgG8CcPNxd18Q9IxU/gJCg4OEh1s4Li0kERxFFUcHBw6NZBcBBcFHQRv0B10cGpCqKIuInVL6BDByflWv8g2gRytmnz/IY0kNy9ed+G3OXiXdwW3xDS9u4hnor3yK6vhm4/PzOFKOMbu1O4vIMrlz6ijE+II8QR4ghxhDhCnEGDSmVPg88pbxN4jmMBrJ6DRQR5mN4A4loAy/S1l39LS3nIPgNKNUq+KQpQy+SbogC1Rogz9pXQlUsf1dqm6hTf2PdpV//Rx28J/6NtrZWdzHhgTyPXe1WPeX4LIv+x4ODX3m9BpGViqzwPeN2/rFqAo9n+wGsY3TlHId3lviBScFy08Gv/17FU0CTn458f6aw8xgZOXkPFN2hQx2vDuLq++bqDfiVQ/N4NSj7Wo8CAQ/KxKIArQhwhjhBHiDNoYnaSI1uAzeRL4Dmf8wikq89kCXGEOG9uOef7ddjeQt3J3tABGr29l5pcCP15PA68k45MpAUYfNyNMjzKo8BQPhdJ8LOxFUTN1Gv9vSlGgZJY8j8KoJi8JT8PIMQR4ghxhDhCHCGOEEeII8QR4ghxhDhCHCGOEEeII8QR4ghxhDhCHCGOEEeII8QZu2mEr7RReQdBnqFVJIgHVgAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": []
+}

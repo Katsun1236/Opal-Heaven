@@ -1,0 +1,1530 @@
+{
+  "meta": {
+    "format_version": "4.5",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "masse_titane",
+  "geometry_name": "masse_titane",
+  "visible_box": [
+    2,
+    2,
+    2
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "shaft",
+      "uuid": "e2a2542e-d7d4-49c9-a697-f8baee58a655",
+      "from": [
+        -1.1,
+        0.0,
+        -1.1
+      ],
+      "to": [
+        1.1,
+        28.0,
+        1.1
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        2.2,
+        28.0,
+        2.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            31
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            7,
+            3,
+            9,
+            31
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            3,
+            3,
+            31
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            5,
+            3,
+            7,
+            31
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            3,
+            1,
+            5,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            5,
+            1,
+            7,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "pommel_counterweight",
+      "uuid": "59c2cddb-ae4c-49bc-b45c-61e3129c7bc0",
+      "from": [
+        -1.6,
+        0.0,
+        -1.6
+      ],
+      "to": [
+        1.6,
+        3.5,
+        1.6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        3.2,
+        3.5,
+        3.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            176,
+            4,
+            179,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            182,
+            4,
+            185,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            173,
+            4,
+            176,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            179,
+            4,
+            182,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            176,
+            1,
+            179,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            179,
+            1,
+            182,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        173,
+        1
+      ]
+    },
+    {
+      "name": "shaft_ring1",
+      "uuid": "8897e3bc-1ab3-45d1-872b-338245766e3b",
+      "from": [
+        -1.3,
+        10.0,
+        -1.3
+      ],
+      "to": [
+        1.3,
+        12.0,
+        1.3
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        2.6,
+        2.0,
+        2.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            236,
+            4,
+            239,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            242,
+            4,
+            245,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            233,
+            4,
+            236,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            239,
+            4,
+            242,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            236,
+            1,
+            239,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            239,
+            1,
+            242,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        233,
+        1
+      ]
+    },
+    {
+      "name": "shaft_ring2",
+      "uuid": "54abd371-f938-4028-8d98-dc26ae859976",
+      "from": [
+        -1.3,
+        18.0,
+        -1.3
+      ],
+      "to": [
+        1.3,
+        20.0,
+        1.3
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        2.6,
+        2.0,
+        2.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            36,
+            7,
+            38
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            10,
+            36,
+            13,
+            38
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            36,
+            4,
+            38
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            7,
+            36,
+            10,
+            38
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            4,
+            33,
+            7,
+            36
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            7,
+            33,
+            10,
+            36
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        33
+      ]
+    },
+    {
+      "name": "hammer_collar",
+      "uuid": "241d1e26-d7d2-403c-ab57-f6a2f6779d6c",
+      "from": [
+        -2.2,
+        23.5,
+        -2.2
+      ],
+      "to": [
+        2.2,
+        27.0,
+        2.2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        4.4,
+        3.5,
+        4.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            129,
+            5,
+            133,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            137,
+            5,
+            141,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            125,
+            5,
+            129,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            133,
+            5,
+            137,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            129,
+            1,
+            133,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            133,
+            1,
+            137,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        125,
+        1
+      ]
+    },
+    {
+      "name": "hammer_block_c",
+      "uuid": "8646c7e7-f5d6-4310-a2b5-bd79cbff5053",
+      "from": [
+        -5.0,
+        25.0,
+        -4.0
+      ],
+      "to": [
+        5.0,
+        34.0,
+        4.0
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_steel",
+      "size": [
+        10.0,
+        9.0,
+        8.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            19,
+            9,
+            29,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            37,
+            9,
+            47,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            11,
+            9,
+            19,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            29,
+            9,
+            37,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            19,
+            1,
+            29,
+            9
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            29,
+            1,
+            39,
+            9
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        11,
+        1
+      ]
+    },
+    {
+      "name": "hammer_face_l",
+      "uuid": "ebd5a30f-4fc0-4ce2-8fed-a98d4cc09765",
+      "from": [
+        -7.5,
+        25.5,
+        -3.5
+      ],
+      "to": [
+        -4.5,
+        33.5,
+        3.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        3.0,
+        8.0,
+        7.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            56,
+            8,
+            59,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            66,
+            8,
+            69,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            49,
+            8,
+            56,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            59,
+            8,
+            66,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            56,
+            1,
+            59,
+            8
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            59,
+            1,
+            62,
+            8
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        49,
+        1
+      ]
+    },
+    {
+      "name": "impact_studs_l",
+      "uuid": "52cf5971-18ff-4331-ac65-5f94f6b33e60",
+      "from": [
+        -8.5,
+        26.5,
+        -2.5
+      ],
+      "to": [
+        -7.0,
+        32.5,
+        2.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        1.5,
+        6.0,
+        5.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            98,
+            6,
+            100,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            105,
+            6,
+            107,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            93,
+            6,
+            98,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            100,
+            6,
+            105,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            98,
+            1,
+            100,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            100,
+            1,
+            102,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        93,
+        1
+      ]
+    },
+    {
+      "name": "hammer_face_r",
+      "uuid": "e4fecce9-b78d-4b73-a804-179b35630c5b",
+      "from": [
+        4.5,
+        25.5,
+        -3.5
+      ],
+      "to": [
+        7.5,
+        33.5,
+        3.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        3.0,
+        8.0,
+        7.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            78,
+            8,
+            81,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            88,
+            8,
+            91,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            71,
+            8,
+            78,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            81,
+            8,
+            88,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            78,
+            1,
+            81,
+            8
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            81,
+            1,
+            84,
+            8
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        71,
+        1
+      ]
+    },
+    {
+      "name": "impact_studs_r",
+      "uuid": "690446e7-75aa-45f5-9509-3e198d703935",
+      "from": [
+        7.0,
+        26.5,
+        -2.5
+      ],
+      "to": [
+        8.5,
+        32.5,
+        2.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        1.5,
+        6.0,
+        5.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            114,
+            6,
+            116,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            121,
+            6,
+            123,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            109,
+            6,
+            114,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            116,
+            6,
+            121,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            114,
+            1,
+            116,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            116,
+            1,
+            118,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        109,
+        1
+      ]
+    },
+    {
+      "name": "top_plate",
+      "uuid": "afcd0277-f386-4158-891a-ff61e5686fd4",
+      "from": [
+        -4.0,
+        33.5,
+        -3.0
+      ],
+      "to": [
+        4.0,
+        35.5,
+        3.0
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        8.0,
+        2.0,
+        6.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            149,
+            7,
+            157,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            163,
+            7,
+            171,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            143,
+            7,
+            149,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            157,
+            7,
+            163,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            149,
+            1,
+            157,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            157,
+            1,
+            165,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        143,
+        1
+      ]
+    },
+    {
+      "name": "top_spike",
+      "uuid": "53c4b3ea-8d82-45ac-95f7-0157bea4496c",
+      "from": [
+        -0.8,
+        35.0,
+        -0.8
+      ],
+      "to": [
+        0.8,
+        38.5,
+        0.8
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        1.6,
+        3.5,
+        1.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            225,
+            3,
+            227,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            229,
+            3,
+            231,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            223,
+            3,
+            225,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            227,
+            3,
+            229,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            225,
+            1,
+            227,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            227,
+            1,
+            229,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        223,
+        1
+      ]
+    },
+    {
+      "name": "side_plate_f",
+      "uuid": "68e40043-6a9a-40d6-9a8e-aac00f2917eb",
+      "from": [
+        -3.5,
+        26.5,
+        -4.6
+      ],
+      "to": [
+        3.5,
+        32.5,
+        -3.8
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brass_gear",
+      "size": [
+        7.0,
+        6.0,
+        0.7999999999999998
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            188,
+            2,
+            195,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            196,
+            2,
+            203,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            187,
+            2,
+            188,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            195,
+            2,
+            196,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            188,
+            1,
+            195,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            195,
+            1,
+            202,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        187,
+        1
+      ]
+    },
+    {
+      "name": "side_plate_b",
+      "uuid": "bf3367aa-8cf2-4735-afb2-04b31655008b",
+      "from": [
+        -3.5,
+        26.5,
+        3.8
+      ],
+      "to": [
+        3.5,
+        32.5,
+        4.6
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "brass_gear",
+      "size": [
+        7.0,
+        6.0,
+        0.7999999999999998
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            206,
+            2,
+            213,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            214,
+            2,
+            221,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            205,
+            2,
+            206,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            213,
+            2,
+            214,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            206,
+            1,
+            213,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            213,
+            1,
+            220,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        205,
+        1
+      ]
+    },
+    {
+      "name": "corner_brace1",
+      "uuid": "ad190a7d-aba7-4daf-a854-4bb68ede506f",
+      "from": [
+        -5.5,
+        24.5,
+        -1.0
+      ],
+      "to": [
+        -4.5,
+        26.5,
+        1.0
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            17,
+            35,
+            18,
+            37
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            20,
+            35,
+            21,
+            37
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            15,
+            35,
+            17,
+            37
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            18,
+            35,
+            20,
+            37
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            17,
+            33,
+            18,
+            35
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            18,
+            33,
+            19,
+            35
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        15,
+        33
+      ]
+    },
+    {
+      "name": "corner_brace2",
+      "uuid": "f37a610d-1141-490d-a767-5c26a69c1678",
+      "from": [
+        4.5,
+        24.5,
+        -1.0
+      ],
+      "to": [
+        5.5,
+        26.5,
+        1.0
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            25,
+            35,
+            26,
+            37
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            28,
+            35,
+            29,
+            37
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            23,
+            35,
+            25,
+            37
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            26,
+            35,
+            28,
+            37
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            25,
+            33,
+            26,
+            35
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            26,
+            33,
+            27,
+            35
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        23,
+        33
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "932fb7dc-7a0a-4476-9e6b-f0ee63131ea4",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "3e02df3c-e17e-455b-96a7-9235638c9232"
+      ]
+    },
+    {
+      "name": "item",
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "color": 0,
+      "uuid": "3e02df3c-e17e-455b-96a7-9235638c9232",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "e2a2542e-d7d4-49c9-a697-f8baee58a655",
+        "59c2cddb-ae4c-49bc-b45c-61e3129c7bc0",
+        "8897e3bc-1ab3-45d1-872b-338245766e3b",
+        "54abd371-f938-4028-8d98-dc26ae859976",
+        "241d1e26-d7d2-403c-ab57-f6a2f6779d6c",
+        "8646c7e7-f5d6-4310-a2b5-bd79cbff5053",
+        "ebd5a30f-4fc0-4ce2-8fed-a98d4cc09765",
+        "52cf5971-18ff-4331-ac65-5f94f6b33e60",
+        "e4fecce9-b78d-4b73-a804-179b35630c5b",
+        "690446e7-75aa-45f5-9509-3e198d703935",
+        "afcd0277-f386-4158-891a-ff61e5686fd4",
+        "53c4b3ea-8d82-45ac-95f7-0157bea4496c",
+        "68e40043-6a9a-40d6-9a8e-aac00f2917eb",
+        "bf3367aa-8cf2-4735-afb2-04b31655008b",
+        "ad190a7d-aba7-4daf-a854-4bb68ede506f",
+        "f37a610d-1141-490d-a767-5c26a69c1678"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "masse_titane.png",
+      "name": "masse_titane.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "c1f43659-aadd-4704-9e6c-a9e3d3e80910",
+      "source": "data:image/png;base64,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"
+    }
+  ],
+  "animations": []
+}

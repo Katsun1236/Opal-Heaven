@@ -1,0 +1,4457 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": true
+  },
+  "name": "mob_ash_wraith",
+  "geometry_name": "geometry.mob_ash_wraith",
+  "visible_box": [
+    32,
+    48,
+    32
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "skull_cranium",
+      "uuid": "cbbb119e-8b6b-4c55-82c7-3d6ccd0d6cec",
+      "from": [
+        -3.5,
+        12,
+        -3.5
+      ],
+      "to": [
+        3.5,
+        18,
+        3.5
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        7.0,
+        6,
+        7.0
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            8,
+            15,
+            14
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            22,
+            8,
+            29,
+            14
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            8,
+            8,
+            14
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            15,
+            8,
+            22,
+            14
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            8,
+            1,
+            15,
+            8
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            15,
+            1,
+            22,
+            8
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "brow_ridge",
+      "uuid": "5d6c9063-5e30-437d-ac9e-9bb3b0f5db55",
+      "from": [
+        -3.8,
+        15.5,
+        -4.2
+      ],
+      "to": [
+        3.8,
+        17,
+        -2.8
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        7.6,
+        1.5,
+        1.4
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            35,
+            16,
+            43,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            44,
+            16,
+            52,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            34,
+            16,
+            35,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            43,
+            16,
+            44,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            35,
+            15,
+            43,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            43,
+            15,
+            51,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        34,
+        15
+      ]
+    },
+    {
+      "name": "eye_socket_l",
+      "uuid": "fd550e87-7866-450d-858f-1a5916de0a4f",
+      "from": [
+        -2.8,
+        14,
+        -3.8
+      ],
+      "to": [
+        -1.0,
+        15.5,
+        -3.2
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.8,
+        1.5,
+        0.6
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            54,
+            16,
+            56,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            57,
+            16,
+            59,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            53,
+            16,
+            54,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            56,
+            16,
+            57,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            54,
+            15,
+            56,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            56,
+            15,
+            58,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        53,
+        15
+      ]
+    },
+    {
+      "name": "eye_socket_r",
+      "uuid": "2e58c9d0-4bcb-41e3-be31-a9795758923c",
+      "from": [
+        1.0,
+        14,
+        -3.8
+      ],
+      "to": [
+        2.8,
+        15.5,
+        -3.2
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.8,
+        1.5,
+        0.6
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            60,
+            16,
+            62,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            63,
+            16,
+            65,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            59,
+            16,
+            60,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            62,
+            16,
+            63,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            60,
+            15,
+            62,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            62,
+            15,
+            64,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        59,
+        15
+      ]
+    },
+    {
+      "name": "fire_pupil_l",
+      "uuid": "a46b96dc-3d62-473d-a317-647259536496",
+      "from": [
+        -2.2,
+        14.4,
+        -4.0
+      ],
+      "to": [
+        -1.4,
+        15.2,
+        -3.4
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_white",
+      "size": [
+        0.8,
+        0.8,
+        0.6
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            92,
+            16,
+            93,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            94,
+            16,
+            95,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            91,
+            16,
+            92,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            93,
+            16,
+            94,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            92,
+            15,
+            93,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            93,
+            15,
+            94,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        91,
+        15
+      ]
+    },
+    {
+      "name": "fire_pupil_r",
+      "uuid": "551a6c47-f9cc-47a2-96a8-e5339b13d833",
+      "from": [
+        1.4,
+        14.4,
+        -4.0
+      ],
+      "to": [
+        2.2,
+        15.2,
+        -3.4
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_white",
+      "size": [
+        0.8,
+        0.8,
+        0.6
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            96,
+            16,
+            97,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            98,
+            16,
+            99,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            95,
+            16,
+            96,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            97,
+            16,
+            98,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            96,
+            15,
+            97,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            97,
+            15,
+            98,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        95,
+        15
+      ]
+    },
+    {
+      "name": "horn_l1",
+      "uuid": "d10b6e16-e2f1-49cd-aee0-1bd68ba3a684",
+      "from": [
+        -5.5,
+        17.5,
+        -0.5
+      ],
+      "to": [
+        -3.5,
+        20.5,
+        1.5
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -25
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        3.0,
+        2.0
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            51,
+            3,
+            53,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            55,
+            3,
+            57,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            49,
+            3,
+            51,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            53,
+            3,
+            55,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            51,
+            1,
+            53,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            53,
+            1,
+            55,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        49,
+        1
+      ]
+    },
+    {
+      "name": "horn_l2",
+      "uuid": "44304834-b351-46ae-84c6-8f9d919f31bc",
+      "from": [
+        -6.8,
+        20.0,
+        1.0
+      ],
+      "to": [
+        -5.2,
+        23.0,
+        2.5
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.6,
+        3.0,
+        1.5
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            60,
+            3,
+            62,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            64,
+            3,
+            66,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            58,
+            3,
+            60,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            62,
+            3,
+            64,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            60,
+            1,
+            62,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            62,
+            1,
+            64,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        58,
+        1
+      ]
+    },
+    {
+      "name": "horn_r1",
+      "uuid": "8b1c8db5-c991-496e-9f68-92ee629d8490",
+      "from": [
+        3.5,
+        17.5,
+        -0.5
+      ],
+      "to": [
+        5.5,
+        20.5,
+        1.5
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        25
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        3.0,
+        2.0
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            68,
+            3,
+            70,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            72,
+            3,
+            74,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            66,
+            3,
+            68,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            70,
+            3,
+            72,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            68,
+            1,
+            70,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            70,
+            1,
+            72,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        66,
+        1
+      ]
+    },
+    {
+      "name": "horn_r2",
+      "uuid": "577a621e-f4bb-4ae8-9730-6d99b5359c6e",
+      "from": [
+        5.2,
+        20.0,
+        1.0
+      ],
+      "to": [
+        6.8,
+        23.0,
+        2.5
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        40
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.6,
+        3.0,
+        1.5
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            77,
+            3,
+            79,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            81,
+            3,
+            83,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            75,
+            3,
+            77,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            79,
+            3,
+            81,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            77,
+            1,
+            79,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            79,
+            1,
+            81,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        75,
+        1
+      ]
+    },
+    {
+      "name": "jaw_bone",
+      "uuid": "6cc02db5-fb10-4589-9a77-61e87867e91a",
+      "from": [
+        -2.5,
+        10.5,
+        -4
+      ],
+      "to": [
+        2.5,
+        12.2,
+        -1
+      ],
+      "origin": [
+        0,
+        12,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        5.0,
+        1.7,
+        3
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            86,
+            4,
+            91,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            94,
+            4,
+            99,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            83,
+            4,
+            86,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            91,
+            4,
+            94,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            86,
+            1,
+            91,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            91,
+            1,
+            96,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        83,
+        1
+      ]
+    },
+    {
+      "name": "fang_l",
+      "uuid": "4de632f8-c0a3-4a3b-a5ba-e83b045bb14b",
+      "from": [
+        -2.0,
+        12.0,
+        -3.8
+      ],
+      "to": [
+        -1.2,
+        13.4,
+        -3.0
+      ],
+      "origin": [
+        0,
+        12,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_white",
+      "size": [
+        0.8,
+        1.4,
+        0.8
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            66,
+            16,
+            67,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            68,
+            16,
+            69,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            65,
+            16,
+            66,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            67,
+            16,
+            68,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            66,
+            15,
+            67,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            67,
+            15,
+            68,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        65,
+        15
+      ]
+    },
+    {
+      "name": "fang_r",
+      "uuid": "111f0435-a4a4-42b1-8364-9bffe3508df0",
+      "from": [
+        1.2,
+        12.0,
+        -3.8
+      ],
+      "to": [
+        2.0,
+        13.4,
+        -3.0
+      ],
+      "origin": [
+        0,
+        12,
+        -2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_white",
+      "size": [
+        0.8,
+        1.4,
+        0.8
+      ],
+      "bone_name": "jaw",
+      "faces": {
+        "north": {
+          "uv": [
+            71,
+            16,
+            72,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            73,
+            16,
+            74,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            70,
+            16,
+            71,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            72,
+            16,
+            73,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            71,
+            15,
+            72,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            72,
+            15,
+            73,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        70,
+        15
+      ]
+    },
+    {
+      "name": "spine_vert_1",
+      "uuid": "71b33c3d-058e-472e-9a8f-37ad9f77c34e",
+      "from": [
+        -2.5,
+        9.5,
+        -2.0
+      ],
+      "to": [
+        2.5,
+        11.1,
+        2.0
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        5.0,
+        1.6,
+        4.0
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            34,
+            5,
+            39,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            43,
+            5,
+            48,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            30,
+            5,
+            34,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            39,
+            5,
+            43,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            34,
+            1,
+            39,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            39,
+            1,
+            44,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        30,
+        1
+      ]
+    },
+    {
+      "name": "spine_fire_1",
+      "uuid": "f78d7d68-8ff3-449e-8bdd-f99051a5dbce",
+      "from": [
+        -1.5,
+        9.8,
+        -1.25
+      ],
+      "to": [
+        1.5,
+        10.8,
+        1.25
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        3.0,
+        1.0,
+        2.5
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            175,
+            3,
+            178,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            180,
+            3,
+            183,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            173,
+            3,
+            175,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            178,
+            3,
+            180,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            175,
+            1,
+            178,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            178,
+            1,
+            181,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        173,
+        1
+      ]
+    },
+    {
+      "name": "spine_vert_2",
+      "uuid": "48553d4d-8680-4194-8686-c84dd408125a",
+      "from": [
+        -2.1,
+        7.5,
+        -1.68
+      ],
+      "to": [
+        2.1,
+        9.1,
+        1.68
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        4.2,
+        1.6,
+        3.36
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            103,
+            4,
+            107,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            110,
+            4,
+            114,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            100,
+            4,
+            103,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            107,
+            4,
+            110,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            103,
+            1,
+            107,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            107,
+            1,
+            111,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        100,
+        1
+      ]
+    },
+    {
+      "name": "spine_fire_2",
+      "uuid": "78c1f0cd-7489-41c2-b0c6-b1e8bd7d1fa6",
+      "from": [
+        -1.26,
+        7.8,
+        -1.05
+      ],
+      "to": [
+        1.26,
+        8.8,
+        1.05
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        2.52,
+        1.0,
+        2.1
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            187,
+            3,
+            190,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            192,
+            3,
+            195,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            185,
+            3,
+            187,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            190,
+            3,
+            192,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            187,
+            1,
+            190,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            190,
+            1,
+            193,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        185,
+        1
+      ]
+    },
+    {
+      "name": "spine_vert_3",
+      "uuid": "1e8a37a4-d4a6-42af-a6aa-eeef8b2bfe99",
+      "from": [
+        -1.7,
+        5.5,
+        -1.36
+      ],
+      "to": [
+        1.7,
+        7.1,
+        1.36
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        3.4,
+        1.6,
+        2.72
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            120,
+            4,
+            123,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            126,
+            4,
+            129,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            117,
+            4,
+            120,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            123,
+            4,
+            126,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            120,
+            1,
+            123,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            123,
+            1,
+            126,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        117,
+        1
+      ]
+    },
+    {
+      "name": "spine_fire_3",
+      "uuid": "bcbae12f-d5b0-4b5d-ad1a-925dbeb18721",
+      "from": [
+        -1.02,
+        5.8,
+        -0.85
+      ],
+      "to": [
+        1.02,
+        6.8,
+        0.85
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        2.04,
+        1.0,
+        1.7
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            77,
+            17,
+            79,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            81,
+            17,
+            83,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            75,
+            17,
+            77,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            79,
+            17,
+            81,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            77,
+            15,
+            79,
+            17
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            79,
+            15,
+            81,
+            17
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        75,
+        15
+      ]
+    },
+    {
+      "name": "spine_vert_4",
+      "uuid": "fcc3d6eb-0dcf-4ac0-820c-b96a2f4e3fa6",
+      "from": [
+        -1.3,
+        3.5,
+        -1.04
+      ],
+      "to": [
+        1.3,
+        5.1,
+        1.04
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        2.6,
+        1.6,
+        2.08
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            198,
+            3,
+            201,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            203,
+            3,
+            206,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            196,
+            3,
+            198,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            201,
+            3,
+            203,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            198,
+            1,
+            201,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            201,
+            1,
+            204,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        196,
+        1
+      ]
+    },
+    {
+      "name": "spine_fire_4",
+      "uuid": "7ac87454-35b6-4af2-832a-722b6b437dec",
+      "from": [
+        -0.78,
+        3.8,
+        -0.65
+      ],
+      "to": [
+        0.78,
+        4.8,
+        0.65
+      ],
+      "origin": [
+        0,
+        14,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.56,
+        1.0,
+        1.3
+      ],
+      "bone_name": "skull",
+      "faces": {
+        "north": {
+          "uv": [
+            85,
+            16,
+            87,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            88,
+            16,
+            90,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            84,
+            16,
+            85,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            87,
+            16,
+            88,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            85,
+            15,
+            87,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            87,
+            15,
+            89,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        84,
+        15
+      ]
+    },
+    {
+      "name": "debris_1",
+      "uuid": "7ce5644d-1522-4579-b77e-87bab741d1f2",
+      "from": [
+        5.0,
+        11,
+        -1.0
+      ],
+      "to": [
+        7.0,
+        13,
+        1.0
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        2,
+        2.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            209,
+            3,
+            211,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            213,
+            3,
+            215,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            207,
+            3,
+            209,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            211,
+            3,
+            213,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            209,
+            1,
+            211,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            211,
+            1,
+            213,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        207,
+        1
+      ]
+    },
+    {
+      "name": "debris_glow_1",
+      "uuid": "1cf89d8a-a84f-4f27-9b9b-22a0ef9b2f5f",
+      "from": [
+        5.5,
+        11.5,
+        -0.5
+      ],
+      "to": [
+        6.5,
+        12.5,
+        0.5
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            100,
+            16,
+            101,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            102,
+            16,
+            103,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            99,
+            16,
+            100,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            101,
+            16,
+            102,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            100,
+            15,
+            101,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            101,
+            15,
+            102,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        99,
+        15
+      ]
+    },
+    {
+      "name": "debris_2",
+      "uuid": "cc188305-4732-407e-9f0d-a4bef417414c",
+      "from": [
+        2.75,
+        13,
+        5.5
+      ],
+      "to": [
+        4.75,
+        15,
+        7.5
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        2,
+        2.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            218,
+            3,
+            220,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            222,
+            3,
+            224,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            216,
+            3,
+            218,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            220,
+            3,
+            222,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            218,
+            1,
+            220,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            220,
+            1,
+            222,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        216,
+        1
+      ]
+    },
+    {
+      "name": "debris_glow_2",
+      "uuid": "c42680bf-dcba-4732-8924-fe2b39b45a99",
+      "from": [
+        3.25,
+        13.5,
+        6.0
+      ],
+      "to": [
+        4.25,
+        14.5,
+        7.0
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            105,
+            16,
+            106,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            107,
+            16,
+            108,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            104,
+            16,
+            105,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            106,
+            16,
+            107,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            105,
+            15,
+            106,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            106,
+            15,
+            107,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        104,
+        15
+      ]
+    },
+    {
+      "name": "debris_3",
+      "uuid": "30c086a9-3c9f-4221-a235-5f40b6c51642",
+      "from": [
+        -4.25,
+        10,
+        4.63
+      ],
+      "to": [
+        -2.25,
+        12,
+        6.63
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        2,
+        2.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            227,
+            3,
+            229,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            231,
+            3,
+            233,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            225,
+            3,
+            227,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            229,
+            3,
+            231,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            227,
+            1,
+            229,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            229,
+            1,
+            231,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        225,
+        1
+      ]
+    },
+    {
+      "name": "debris_glow_3",
+      "uuid": "22306571-e2f3-4579-b146-38b5a951a115",
+      "from": [
+        -3.75,
+        10.5,
+        5.13
+      ],
+      "to": [
+        -2.75,
+        11.5,
+        6.13
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            110,
+            16,
+            111,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            112,
+            16,
+            113,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            109,
+            16,
+            110,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            111,
+            16,
+            112,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            110,
+            15,
+            111,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            111,
+            15,
+            112,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        109,
+        15
+      ]
+    },
+    {
+      "name": "debris_4",
+      "uuid": "fa266483-cc3d-4cf3-81f0-e1ef1a5cd54f",
+      "from": [
+        -9.0,
+        12,
+        -1.0
+      ],
+      "to": [
+        -7.0,
+        14,
+        1.0
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        2,
+        2.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            236,
+            3,
+            238,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            240,
+            3,
+            242,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            234,
+            3,
+            236,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            238,
+            3,
+            240,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            236,
+            1,
+            238,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            238,
+            1,
+            240,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        234,
+        1
+      ]
+    },
+    {
+      "name": "debris_glow_4",
+      "uuid": "44eb531d-f3e1-46bf-b301-e6d192ac22e1",
+      "from": [
+        -8.5,
+        12.5,
+        -0.5
+      ],
+      "to": [
+        -7.5,
+        13.5,
+        0.5
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            115,
+            16,
+            116,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            117,
+            16,
+            118,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            114,
+            16,
+            115,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            116,
+            16,
+            117,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            115,
+            15,
+            116,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            116,
+            15,
+            117,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        114,
+        15
+      ]
+    },
+    {
+      "name": "debris_5",
+      "uuid": "d90912e3-2e06-4b0a-b2ac-6f742329e5ef",
+      "from": [
+        -4.4,
+        9,
+        -6.89
+      ],
+      "to": [
+        -2.4,
+        11,
+        -4.89
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        2,
+        2.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            245,
+            3,
+            247,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            249,
+            3,
+            251,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            243,
+            3,
+            245,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            247,
+            3,
+            249,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            245,
+            1,
+            247,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            247,
+            1,
+            249,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        243,
+        1
+      ]
+    },
+    {
+      "name": "debris_glow_5",
+      "uuid": "119ff7f3-d2c3-4f03-91a8-6f3040aa1d7f",
+      "from": [
+        -3.9,
+        9.5,
+        -6.39
+      ],
+      "to": [
+        -2.9,
+        10.5,
+        -5.39
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            120,
+            16,
+            121,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            122,
+            16,
+            123,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            119,
+            16,
+            120,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            121,
+            16,
+            122,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            120,
+            15,
+            121,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            121,
+            15,
+            122,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        119,
+        15
+      ]
+    },
+    {
+      "name": "debris_6",
+      "uuid": "d4765805-d85d-4bbb-8fd8-d48ee928e573",
+      "from": [
+        2.6,
+        11.5,
+        -7.24
+      ],
+      "to": [
+        4.6,
+        13.5,
+        -5.24
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            17,
+            5,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            7,
+            17,
+            9,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            17,
+            3,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            5,
+            17,
+            7,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            3,
+            15,
+            5,
+            17
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            5,
+            15,
+            7,
+            17
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        15
+      ]
+    },
+    {
+      "name": "debris_glow_6",
+      "uuid": "3f7d78c4-032f-4960-a475-206f457c56b6",
+      "from": [
+        3.1,
+        12.0,
+        -6.74
+      ],
+      "to": [
+        4.1,
+        13.0,
+        -5.74
+      ],
+      "origin": [
+        0,
+        12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "ring_debris",
+      "faces": {
+        "north": {
+          "uv": [
+            125,
+            16,
+            126,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            127,
+            16,
+            128,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            124,
+            16,
+            125,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            126,
+            16,
+            127,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            125,
+            15,
+            126,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            126,
+            15,
+            127,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        124,
+        15
+      ]
+    },
+    {
+      "name": "hand_l_wrist",
+      "uuid": "437ee0c6-cc92-49b8-a5c7-c0b03726a40b",
+      "from": [
+        -7.5,
+        10,
+        -3
+      ],
+      "to": [
+        -5.5,
+        12.5,
+        -1
+      ],
+      "origin": [
+        -6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        2.0,
+        2.5,
+        2
+      ],
+      "bone_name": "hand_l",
+      "faces": {
+        "north": {
+          "uv": [
+            133,
+            3,
+            135,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            137,
+            3,
+            139,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            131,
+            3,
+            133,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            135,
+            3,
+            137,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            133,
+            1,
+            135,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            135,
+            1,
+            137,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        131,
+        1
+      ]
+    },
+    {
+      "name": "hand_l_palm",
+      "uuid": "df58745e-5f35-42e7-9668-b41af5a7608c",
+      "from": [
+        -7.8,
+        8,
+        -4
+      ],
+      "to": [
+        -5.2,
+        10.2,
+        -1.5
+      ],
+      "origin": [
+        -6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.6,
+        2.2,
+        2.5
+      ],
+      "bone_name": "hand_l",
+      "faces": {
+        "north": {
+          "uv": [
+            142,
+            3,
+            145,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            147,
+            3,
+            150,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            140,
+            3,
+            142,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            145,
+            3,
+            147,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            142,
+            1,
+            145,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            145,
+            1,
+            148,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        140,
+        1
+      ]
+    },
+    {
+      "name": "hand_l_claw1",
+      "uuid": "f4aaf5d4-14ab-43f2-b488-26a9b754370a",
+      "from": [
+        -6.2,
+        6,
+        -4.5
+      ],
+      "to": [
+        -5.0,
+        8.2,
+        -3.2
+      ],
+      "origin": [
+        -6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.2,
+        2.2,
+        1.3
+      ],
+      "bone_name": "hand_l",
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            16,
+            12,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            13,
+            16,
+            14,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            10,
+            16,
+            11,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            12,
+            16,
+            13,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            11,
+            15,
+            12,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            12,
+            15,
+            13,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        10,
+        15
+      ]
+    },
+    {
+      "name": "hand_l_claw2",
+      "uuid": "90fbd5dc-7a9a-4ef0-ad36-2f38ff126909",
+      "from": [
+        -8.0,
+        6,
+        -4.5
+      ],
+      "to": [
+        -6.8,
+        8.2,
+        -3.2
+      ],
+      "origin": [
+        -6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.2,
+        2.2,
+        1.3
+      ],
+      "bone_name": "hand_l",
+      "faces": {
+        "north": {
+          "uv": [
+            17,
+            16,
+            18,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            19,
+            16,
+            20,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            16,
+            16,
+            17,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            18,
+            16,
+            19,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            17,
+            15,
+            18,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            18,
+            15,
+            19,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        16,
+        15
+      ]
+    },
+    {
+      "name": "hand_r_wrist",
+      "uuid": "9bf55915-a961-4ef0-bbef-4048a97e8f42",
+      "from": [
+        5.5,
+        10,
+        -3
+      ],
+      "to": [
+        7.5,
+        12.5,
+        -1
+      ],
+      "origin": [
+        6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "ash_black",
+      "size": [
+        2.0,
+        2.5,
+        2
+      ],
+      "bone_name": "hand_r",
+      "faces": {
+        "north": {
+          "uv": [
+            154,
+            3,
+            156,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            158,
+            3,
+            160,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            152,
+            3,
+            154,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            156,
+            3,
+            158,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            154,
+            1,
+            156,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            156,
+            1,
+            158,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        152,
+        1
+      ]
+    },
+    {
+      "name": "hand_r_palm",
+      "uuid": "f4f1d6c3-0110-4ef3-b6b6-150c940d41ef",
+      "from": [
+        5.2,
+        8,
+        -4
+      ],
+      "to": [
+        7.8,
+        10.2,
+        -1.5
+      ],
+      "origin": [
+        6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "basalt_rim",
+      "size": [
+        2.6,
+        2.2,
+        2.5
+      ],
+      "bone_name": "hand_r",
+      "faces": {
+        "north": {
+          "uv": [
+            163,
+            3,
+            166,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            168,
+            3,
+            171,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            161,
+            3,
+            163,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            166,
+            3,
+            168,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            163,
+            1,
+            166,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            166,
+            1,
+            169,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        161,
+        1
+      ]
+    },
+    {
+      "name": "hand_r_claw1",
+      "uuid": "62d8078e-987c-4e22-a7e1-b41566e9f616",
+      "from": [
+        5.0,
+        6,
+        -4.5
+      ],
+      "to": [
+        6.2,
+        8.2,
+        -3.2
+      ],
+      "origin": [
+        6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.2,
+        2.2,
+        1.3
+      ],
+      "bone_name": "hand_r",
+      "faces": {
+        "north": {
+          "uv": [
+            23,
+            16,
+            24,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            25,
+            16,
+            26,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            22,
+            16,
+            23,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            24,
+            16,
+            25,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            23,
+            15,
+            24,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            24,
+            15,
+            25,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        22,
+        15
+      ]
+    },
+    {
+      "name": "hand_r_claw2",
+      "uuid": "f6bcb7b2-458b-4921-a1a0-a1c90bd934b5",
+      "from": [
+        6.8,
+        6,
+        -4.5
+      ],
+      "to": [
+        8.0,
+        8.2,
+        -3.2
+      ],
+      "origin": [
+        6,
+        11,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_fire",
+      "size": [
+        1.2,
+        2.2,
+        1.3
+      ],
+      "bone_name": "hand_r",
+      "faces": {
+        "north": {
+          "uv": [
+            29,
+            16,
+            30,
+            18
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            31,
+            16,
+            32,
+            18
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            28,
+            16,
+            29,
+            18
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            30,
+            16,
+            31,
+            18
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            29,
+            15,
+            30,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            30,
+            15,
+            31,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        28,
+        15
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "f0b8da82-5def-4327-9009-f47a98fe0677",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        {
+          "name": "skull",
+          "origin": [
+            0,
+            14,
+            0
+          ],
+          "color": 0,
+          "uuid": "028d33cf-c89c-46d0-9f4e-ba3a05708aa2",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "cbbb119e-8b6b-4c55-82c7-3d6ccd0d6cec",
+            "5d6c9063-5e30-437d-ac9e-9bb3b0f5db55",
+            "fd550e87-7866-450d-858f-1a5916de0a4f",
+            "2e58c9d0-4bcb-41e3-be31-a9795758923c",
+            "a46b96dc-3d62-473d-a317-647259536496",
+            "551a6c47-f9cc-47a2-96a8-e5339b13d833",
+            "d10b6e16-e2f1-49cd-aee0-1bd68ba3a684",
+            "44304834-b351-46ae-84c6-8f9d919f31bc",
+            "8b1c8db5-c991-496e-9f68-92ee629d8490",
+            "577a621e-f4bb-4ae8-9730-6d99b5359c6e",
+            "71b33c3d-058e-472e-9a8f-37ad9f77c34e",
+            "f78d7d68-8ff3-449e-8bdd-f99051a5dbce",
+            "48553d4d-8680-4194-8686-c84dd408125a",
+            "78c1f0cd-7489-41c2-b0c6-b1e8bd7d1fa6",
+            "1e8a37a4-d4a6-42af-a6aa-eeef8b2bfe99",
+            "bcbae12f-d5b0-4b5d-ad1a-925dbeb18721",
+            "fcc3d6eb-0dcf-4ac0-820c-b96a2f4e3fa6",
+            "7ac87454-35b6-4af2-832a-722b6b437dec",
+            {
+              "name": "jaw",
+              "origin": [
+                0,
+                12,
+                -2
+              ],
+              "color": 0,
+              "uuid": "154105b8-ca2f-44ee-a69e-1fd73271750a",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "6cc02db5-fb10-4589-9a77-61e87867e91a",
+                "4de632f8-c0a3-4a3b-a5ba-e83b045bb14b",
+                "111f0435-a4a4-42b1-8364-9bffe3508df0"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ring_debris",
+          "origin": [
+            0,
+            12,
+            0
+          ],
+          "color": 0,
+          "uuid": "5a5b01a8-1079-490e-b55e-320db4cd607c",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "7ce5644d-1522-4579-b77e-87bab741d1f2",
+            "1cf89d8a-a84f-4f27-9b9b-22a0ef9b2f5f",
+            "cc188305-4732-407e-9f0d-a4bef417414c",
+            "c42680bf-dcba-4732-8924-fe2b39b45a99",
+            "30c086a9-3c9f-4221-a235-5f40b6c51642",
+            "22306571-e2f3-4579-b146-38b5a951a115",
+            "fa266483-cc3d-4cf3-81f0-e1ef1a5cd54f",
+            "44eb531d-f3e1-46bf-b301-e6d192ac22e1",
+            "d90912e3-2e06-4b0a-b2ac-6f742329e5ef",
+            "119ff7f3-d2c3-4f03-91a8-6f3040aa1d7f",
+            "d4765805-d85d-4bbb-8fd8-d48ee928e573",
+            "3f7d78c4-032f-4960-a475-206f457c56b6"
+          ]
+        },
+        {
+          "name": "hand_l",
+          "origin": [
+            -6,
+            11,
+            -3
+          ],
+          "color": 0,
+          "uuid": "373f34b9-573c-4373-a890-b5793df50b20",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "437ee0c6-cc92-49b8-a5c7-c0b03726a40b",
+            "df58745e-5f35-42e7-9668-b41af5a7608c",
+            "f4aaf5d4-14ab-43f2-b488-26a9b754370a",
+            "90fbd5dc-7a9a-4ef0-ad36-2f38ff126909"
+          ]
+        },
+        {
+          "name": "hand_r",
+          "origin": [
+            6,
+            11,
+            -3
+          ],
+          "color": 0,
+          "uuid": "585f196d-0d45-45d3-80d8-de3472d8c818",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "9bf55915-a961-4ef0-bbef-4048a97e8f42",
+            "f4f1d6c3-0110-4ef3-b6b6-150c940d41ef",
+            "62d8078e-987c-4e22-a7e1-b41566e9f616",
+            "f6bcb7b2-458b-4921-a1a0-a1c90bd934b5"
+          ]
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "mob_ash_wraith.png",
+      "name": "mob_ash_wraith.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "8e5acaa8-30b3-4076-8cbc-d17ac7f4415d",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAE+UlEQVR4nO3bzW8UVQAA8LdtIaRQ6sFQqwmaSKThoKjE6EVNvBk14sXEizf9Czwb/wD+ADnhxSsmXiTRWOOFKB8Ro1BEMRZTP9BAaWspLWNm66yzszM7O9vustrf7zI772te38z72Om+EIAtq1aW4LFDz0V54b/9+lPYM7E3FMVdmf2utOy06PBk03U+vLQYXty3M2TDXvp6vtZpGbXjcy1poyiKwuFaCMejEB9rHzS3wWaUkdduee1V1k7pumTbo6wtsmWk85flzdb9zKlPWtK+9vrb9TQXvj0Zpg48GZLPZ748UetXmY37EPvnXsTy7kfV9FGFdkvqnXj/vXcGPk1iJJRYXb1VGHdl9mJu+PbtO0JlN2+3BB05N990/tDocEdlHJlZKE6TPADJsRdlFLRbtr1K2ynTJun2KG2LnDKS/GV5k7r/Mne5MM3y8lLj8+kvTtSPO3eN97XMpvZvcy+6Sn+z83ZL6v3Nuc8Lixu0NInSVnv44NON0eSrs5+FRx59pv75zz/mwsrKcm6e+MGuvAJ4fqJ5BTD7V7i4tNaUJr4BeSNwdtbOimfx7KzdcqxNho2WkZ5J7pl8oKlOIyPbWgaFOKxdO727f1ejjMntQ2Fu5d+HMj7vZAWQlJHOX5S3aLWXnrWzs0t6tk6HJbN2L8qMXg5ty0wk96NK+qjCSjRb76x45h20NJVXAOnOnx0ENtPR7xebzuOHdGykszFk+vL6iPf42Pqfc/rGatN57qydOW5GGcnDXrTcv/e+B0M2fs/E3kaeeDDIW3om528cGAvpuGjfzkbadIcuWr6m86fTJHmv/v5zPX7HjvU8y8uLTeexSxdP14+7x+9uG5boRZlFS/wiVdJPZ56DorC8Os5fv1r6d9zpNAOzAmj3/TYvrN1InJ4p87w5s1ArmwWOnt8VNlrG/Wen6sfbt9fC6OjuprilpfkwNDTcNj5us08PjtevcWMtCs/eta0RP33tVhgbXm/SvLj0AJBXRlH+bF62lkoDQNpGB4DkIc17oLMPbLs0Hl7o4QCQ/S7b7jttOq7qOwCg/2ob+Vdft3EGBxgMI+kXNXkWblwrjOs2HzAYhqoknrlwqquLdJsPGJABIOnEVTtzt/mAARoA9k8dajr2Oh/Qp5eA3b7p7zbOS0AAuMNqVXYRJb+Ea9lBt0nhr7z6VuEv7X784VxYXLhe+IfEm0bSu8ayv9or+l14Njxdp8L6l+0oLLhGXpll5/0KY2vK7YDJLqKZ8yc33KE6DS/byJC3QSQvTTwI1K+R2u7Z0edMnTrpxJ3EtSuzTFE9NjusSp34f+mo88UrgV4PAE889ULUbtNC/NPj+P1BWZrGAFBBp52grFydif+aRudrt4vo44+OmSUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIf/A0P71tvb5dN5QAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": [
+    {
+      "uuid": "f25f5c57-f39f-42a3-bd8d-4abcb08eb7e7",
+      "name": "hover",
+      "loop": "loop",
+      "length": 2.0,
+      "snapping": 24,
+      "animators": {
+        "028d33cf-c89c-46d0-9f4e-ba3a05708aa2": {
+          "name": "skull",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "position",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "f67ef654-bcaf-462d-a26d-6146dcf8b927",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "40b3d87e-9337-43b8-9607-de92acd9b22f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 2.5,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "358bce88-4e8e-4a08-b554-b6cee3d2a407",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "5a5b01a8-1079-490e-b55e-320db4cd607c": {
+          "name": "ring_debris",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "c6b1b863-fa67-4ce3-9aa9-3138f727d44b",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "029bd1dc-5688-49a9-80c9-c38e644851cb",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "c9aa7186-b4f6-4d94-aa6f-a8d9251accbb",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 360.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "373f34b9-573c-4373-a890-b5793df50b20": {
+          "name": "hand_l",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "position",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "3734760d-173d-4236-9fa4-e25020d403a0",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "2c26d968-4d79-40f0-8b32-b146e1210509",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 1.8,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "9b6000bc-3722-4054-afef-92c00ce0bf44",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "585f196d-0d45-45d3-80d8-de3472d8c818": {
+          "name": "hand_r",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "position",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "db0a5395-45de-4e94-871b-9fc5ce8b198d",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "df265c02-22db-4bf5-be8b-91b24fb264c1",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": -1.8,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "5264cddb-37d3-45f9-a772-c676d49883d4",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "e7f28fd0-f1e3-4a68-a385-1608c972e5ec",
+      "name": "orbit_burst",
+      "loop": "once",
+      "length": 1.5,
+      "snapping": 24,
+      "animators": {
+        "5a5b01a8-1079-490e-b55e-320db4cd607c": {
+          "name": "ring_debris",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "5bb306b0-8234-4b29-a7e5-e9e6ec0ed208",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "0821b03c-afce-423c-93ef-1581369e7ddf",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 360.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "ed0206d5-8a78-4453-acbc-7f17a1538627",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 720.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "433f3c9b-7683-4214-a1ff-27abfec2f15c",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 1080.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "028d33cf-c89c-46d0-9f4e-ba3a05708aa2": {
+          "name": "skull",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "6ae3bdf2-d30c-498f-8ffa-80b31c7f4b65",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "fb49bc52-301c-4760-87d5-6371631d5886",
+              "data_points": [
+                {
+                  "x": -20.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "774fccf4-14fb-4922-993b-a6d2cf02b4eb",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "9fe29ae2-98c6-48e3-ae89-9d59bf3edf8b",
+      "name": "pyro_blast",
+      "loop": "once",
+      "length": 1.2,
+      "snapping": 24,
+      "animators": {
+        "028d33cf-c89c-46d0-9f4e-ba3a05708aa2": {
+          "name": "skull",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "918b4ec9-1305-4e80-98f7-af0c1388db31",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "ba25158b-c99d-43dc-a1a6-dba20f195a68",
+              "data_points": [
+                {
+                  "x": -25.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.7,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "78339b7e-e6fb-4037-bd18-96e9844e57f8",
+              "data_points": [
+                {
+                  "x": 30.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "e277909b-c562-4548-8691-6951c7ee3a07",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "154105b8-ca2f-44ee-a69e-1fd73271750a": {
+          "name": "jaw",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "54263d4b-1185-4e19-a730-ab198cb8ff93",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "779a9645-5ea8-4fc1-b499-90154f2667ab",
+              "data_points": [
+                {
+                  "x": 40.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.8,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "7aa532cb-fdef-4ce0-bd11-65ed62e95e33",
+              "data_points": [
+                {
+                  "x": 40.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "ae5b7ce8-0dab-4705-82a2-499cb48683cc",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "373f34b9-573c-4373-a890-b5793df50b20": {
+          "name": "hand_l",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "c569ad64-08c3-4bb3-995f-830d8ca8196d",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.7,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "9252af17-0de9-497b-842f-4b5da3c66900",
+              "data_points": [
+                {
+                  "x": 45.0,
+                  "y": -25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "0addc661-b3f5-4a2d-b608-d533a7411a5c",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "585f196d-0d45-45d3-80d8-de3472d8c818": {
+          "name": "hand_r",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "9e5fbd64-6150-4911-b5a1-7bf67c8ca1cf",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.7,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "a941b576-e564-4848-9f48-48291b278645",
+              "data_points": [
+                {
+                  "x": 45.0,
+                  "y": 25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "cdfa7882-b051-4574-8aaf-81bb4c2479df",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

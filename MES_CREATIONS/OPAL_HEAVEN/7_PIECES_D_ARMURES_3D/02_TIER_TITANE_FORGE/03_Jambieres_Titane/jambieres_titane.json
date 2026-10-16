@@ -1,0 +1,1377 @@
+{
+  "meta": {
+    "format_version": "4.5",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "jambieres_titane",
+  "geometry_name": "jambieres_titane",
+  "visible_box": [
+    2,
+    2,
+    2
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        90,
+        -35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -135,
+        25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        45,
+        -25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "elements": [
+    {
+      "name": "belt_steel",
+      "uuid": "2caa6430-d1a5-4ff0-86bd-c7f32af4508f",
+      "from": [
+        -4.8,
+        8.0,
+        -2.8
+      ],
+      "to": [
+        4.8,
+        10.5,
+        2.8
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "dark_iron",
+      "size": [
+        9.6,
+        2.5,
+        5.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            71,
+            7,
+            81,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            87,
+            7,
+            97,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            65,
+            7,
+            71,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            81,
+            7,
+            87,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            71,
+            1,
+            81,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            81,
+            1,
+            91,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        65,
+        1
+      ]
+    },
+    {
+      "name": "buckle_rivet",
+      "uuid": "112f5331-da9f-4eda-9518-4fa29cfe76b2",
+      "from": [
+        -1.8,
+        8.0,
+        -3.2
+      ],
+      "to": [
+        1.8,
+        10.5,
+        -2.4
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        3.6,
+        2.5,
+        0.8000000000000003
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            132,
+            2,
+            136,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            137,
+            2,
+            141,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            131,
+            2,
+            132,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            136,
+            2,
+            137,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            132,
+            1,
+            136,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            136,
+            1,
+            140,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        131,
+        1
+      ]
+    },
+    {
+      "name": "cuisse_r",
+      "uuid": "89923063-d8e3-4b50-8175-974613eaef4a",
+      "from": [
+        -4.0,
+        2.0,
+        -2.4
+      ],
+      "to": [
+        -0.6,
+        8.0,
+        2.4
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_steel",
+      "size": [
+        3.4,
+        6.0,
+        4.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            6,
+            9,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            14,
+            6,
+            17,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            6,
+            6,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            9,
+            6,
+            14,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            6,
+            1,
+            9,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            9,
+            1,
+            12,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "knee_r",
+      "uuid": "1441fb5c-d5ac-4d17-a82a-ccae5c0d2585",
+      "from": [
+        -3.9,
+        0.0,
+        -3.3
+      ],
+      "to": [
+        -0.7,
+        3.5,
+        -1.9
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        3.2,
+        3.5,
+        1.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            100,
+            2,
+            103,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            104,
+            2,
+            107,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            99,
+            2,
+            100,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            103,
+            2,
+            104,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            100,
+            1,
+            103,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            103,
+            1,
+            106,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        99,
+        1
+      ]
+    },
+    {
+      "name": "knee_rivet_r",
+      "uuid": "ad678682-87a3-473d-8210-885f41c70e13",
+      "from": [
+        -2.8,
+        0.8,
+        -3.6
+      ],
+      "to": [
+        -1.7,
+        2.5,
+        -3.0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        1.0999999999999999,
+        1.7,
+        0.6000000000000001
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            144,
+            2,
+            145,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            146,
+            2,
+            147,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            143,
+            2,
+            144,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            145,
+            2,
+            146,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            144,
+            1,
+            145,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            145,
+            1,
+            146,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        143,
+        1
+      ]
+    },
+    {
+      "name": "cuisse_l",
+      "uuid": "1f256c4c-62f3-4e38-b31f-84bf5caa7006",
+      "from": [
+        0.6,
+        2.0,
+        -2.4
+      ],
+      "to": [
+        4.0,
+        8.0,
+        2.4
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_steel",
+      "size": [
+        3.4,
+        6.0,
+        4.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            24,
+            6,
+            27,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            6,
+            35,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            19,
+            6,
+            24,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            27,
+            6,
+            32,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            24,
+            1,
+            27,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            27,
+            1,
+            30,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        19,
+        1
+      ]
+    },
+    {
+      "name": "knee_l",
+      "uuid": "69713a38-4892-4a24-b50f-b883ce3ea5f1",
+      "from": [
+        0.7,
+        0.0,
+        -3.3
+      ],
+      "to": [
+        3.9,
+        3.5,
+        -1.9
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        3.2,
+        3.5,
+        1.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            110,
+            2,
+            113,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            114,
+            2,
+            117,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            109,
+            2,
+            110,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            113,
+            2,
+            114,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            110,
+            1,
+            113,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            113,
+            1,
+            116,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        109,
+        1
+      ]
+    },
+    {
+      "name": "knee_rivet_l",
+      "uuid": "8a92be25-d629-4ee9-81d1-a3a41b1ec13b",
+      "from": [
+        1.7,
+        0.8,
+        -3.6
+      ],
+      "to": [
+        2.8,
+        2.5,
+        -3.0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        1.0999999999999999,
+        1.7,
+        0.6000000000000001
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            150,
+            2,
+            151,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            152,
+            2,
+            153,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            149,
+            2,
+            150,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            151,
+            2,
+            152,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            150,
+            1,
+            151,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            151,
+            1,
+            152,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        149,
+        1
+      ]
+    },
+    {
+      "name": "side_plate_l",
+      "uuid": "5056d856-2b1f-4841-99c5-8e9b9b373f65",
+      "from": [
+        -4.8,
+        4.5,
+        -2.6
+      ],
+      "to": [
+        -3.8,
+        9.0,
+        2.6
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        1.0,
+        4.5,
+        5.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            42,
+            6,
+            43,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            48,
+            6,
+            49,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            37,
+            6,
+            42,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            43,
+            6,
+            48,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            42,
+            1,
+            43,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            43,
+            1,
+            44,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        37,
+        1
+      ]
+    },
+    {
+      "name": "side_plate_r",
+      "uuid": "a0c5e206-f691-4ae9-9c9c-2e92d8ec3478",
+      "from": [
+        3.8,
+        4.5,
+        -2.6
+      ],
+      "to": [
+        4.8,
+        9.0,
+        2.6
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        1.0,
+        4.5,
+        5.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            56,
+            6,
+            57,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            62,
+            6,
+            63,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            51,
+            6,
+            56,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            57,
+            6,
+            62,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            56,
+            1,
+            57,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            57,
+            1,
+            58,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        51,
+        1
+      ]
+    },
+    {
+      "name": "front_piston",
+      "uuid": "2841e33b-703e-465a-8b63-6c8d98384b5a",
+      "from": [
+        -2.2,
+        4.5,
+        -2.9
+      ],
+      "to": [
+        2.2,
+        7.5,
+        -2.2
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "titane_plate",
+      "size": [
+        4.4,
+        3.0,
+        0.6999999999999997
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            120,
+            2,
+            124,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            125,
+            2,
+            129,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            119,
+            2,
+            120,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            124,
+            2,
+            125,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            120,
+            1,
+            124,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            124,
+            1,
+            128,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        119,
+        1
+      ]
+    },
+    {
+      "name": "back_hose_r",
+      "uuid": "bcfe5515-927a-420f-8bea-3c6b975f7923",
+      "from": [
+        -3.5,
+        4.0,
+        2.4
+      ],
+      "to": [
+        -1.0,
+        6.5,
+        3.0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        2.5,
+        2.5,
+        0.6000000000000001
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            156,
+            2,
+            158,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            159,
+            2,
+            161,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            155,
+            2,
+            156,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            158,
+            2,
+            159,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            1,
+            158,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            158,
+            1,
+            160,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        155,
+        1
+      ]
+    },
+    {
+      "name": "back_hose_l",
+      "uuid": "310ba46a-19b4-4238-b662-4f389f882fac",
+      "from": [
+        1.0,
+        4.0,
+        2.4
+      ],
+      "to": [
+        3.5,
+        6.5,
+        3.0
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "copper_rivet",
+      "size": [
+        2.5,
+        2.5,
+        0.6000000000000001
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            164,
+            2,
+            166,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            167,
+            2,
+            169,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            163,
+            2,
+            164,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            166,
+            2,
+            167,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            164,
+            1,
+            166,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            166,
+            1,
+            168,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        163,
+        1
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "item",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "100569a6-f67c-4e93-9bea-71941d07424a",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "2caa6430-d1a5-4ff0-86bd-c7f32af4508f",
+        "112f5331-da9f-4eda-9518-4fa29cfe76b2",
+        "89923063-d8e3-4b50-8175-974613eaef4a",
+        "1441fb5c-d5ac-4d17-a82a-ccae5c0d2585",
+        "ad678682-87a3-473d-8210-885f41c70e13",
+        "1f256c4c-62f3-4e38-b31f-84bf5caa7006",
+        "69713a38-4892-4a24-b50f-b883ce3ea5f1",
+        "8a92be25-d629-4ee9-81d1-a3a41b1ec13b",
+        "5056d856-2b1f-4841-99c5-8e9b9b373f65",
+        "a0c5e206-f691-4ae9-9c9c-2e92d8ec3478",
+        "2841e33b-703e-465a-8b63-6c8d98384b5a",
+        "bcfe5515-927a-420f-8bea-3c6b975f7923",
+        "310ba46a-19b4-4238-b662-4f389f882fac"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "jambieres_titane.png",
+      "name": "jambieres_titane.png",
+      "folder": "item",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "5368e2c2-906f-4115-a637-793a71ed06ce",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAADuElEQVR4nO3YX4gVVRgA8HMhCMPS9UGUoCQQM0gI30LcF8MoiHoJAh/1qSeh10wFKdDYB4m0cjOWCpTowUUsEVmU7Q8kS5IrGLJ322UXBQ1ZXHq6MVfOep0708y9jtdwfz+4zMz3fefM7MIc5nwhAItWLS8xMHSmkRy//WIgvLN9Z4jnv44M5455kPNM3Gw051nTV+vJuMTWN7Y1x/6X3387HzZs3BTK1M1MTxQ+w7mxevOeg0cGw7XZmWZs5arV4cuDe2r3U5euzauvf/j6Qv2RExdC/e9/FnLPLn887B2daavfNfRT+OrSjdLx5JjkEp3mqdZjeYkb12cXzj/d/37zuLxvRcc3qGqev+qT4aN9+3o2LjF/e65U3S/nfyysWbLkidKLVfTJZ4dbLxvxZe22LqP2nvrG52+31R/duSUVOdeIi0CsT2qOhtCo7ThWKt46byd5ergAkG3k9Peh/5W3Hsi/58D+gfD8+hfCu9u2Zl53W1cUiz7+ZjS8+ExfYSyduzh5856aonginSuTp3oWgEfYxQs/N3/Rc2vXZ8ai985O1UKYypgpK5aun+ow3j5vUZ7q5X5arVn3UvNzbOWqp8O12ekQzzvdu1c1T/+rdz4PR04d68m4xOYtbxb2AK6Mj4X5+dultgBFPYD4rPHFvHplPLRex0/1snVQpNbaqIvSDbt4npePL3NV86T3rnt27Q4f7N3d9vAxHht83Y7L8+SyFYULwNKlT4W5uVuhTF2ZJiD0fAvw3dChtsTo2ZML50X5snVl50n2qWnDwz+Ey+OXMuP3Oy6r299Jd//l/tdCmfEbNm7KvI+FgYdFDyCE8MfY3T1xq/rVyz0ZDw/L/3IBaG1SxX3t8a8H2+rS8W7HTU3+mflpPjM90d0fUNF4WJQLQLphN3Iqr66acbBY1Vo79VG6Yx/P8/KxeVfVPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOER8S8WKeppRMMqCgAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": []
+}

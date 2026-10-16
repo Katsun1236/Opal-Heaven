@@ -10,6 +10,7 @@ use opal\core\ui\CustomForm;
 use opal\core\ui\FormManager;
 use opal\core\ui\SimpleForm;
 use pocketmine\item\Item;
+use pocketmine\item\VanillaItems;
 use pocketmine\player\Player;
 
 class AuctionHouseManager{
@@ -25,7 +26,7 @@ class AuctionHouseManager{
     }
 
     public static function getInstance() : self{
-        return self::$instance;
+        return self::$instance ?? throw new \RuntimeException("AuctionHouseManager has not been initialized yet.");
     }
 
     public function openMainMenu(Player $player) : void{
@@ -59,13 +60,20 @@ class AuctionHouseManager{
     public function openCategoryMenu(Player $player, string $category) : void{
         $db = $this->database->getDb();
         $stmt = $db->prepare("SELECT * FROM ah_listings WHERE category = :cat AND is_sold = 0 AND expires_at > :now ORDER BY id DESC LIMIT 20");
+        if($stmt === false){
+            $player->sendMessage("§c❌ Erreur lors du chargement des annonces.");
+            return;
+        }
+
         $stmt->bindValue(":cat", $category, SQLITE3_TEXT);
         $stmt->bindValue(":now", time(), SQLITE3_INTEGER);
         $res = $stmt->execute();
 
         $listings = [];
-        while($row = $res->fetchArray(SQLITE3_ASSOC)){
-            $listings[] = $row;
+        if($res !== false){
+            while($row = $res->fetchArray(SQLITE3_ASSOC)){
+                $listings[] = $row;
+            }
         }
 
         $form = new SimpleForm(function(Player $player, $data) use ($listings, $category) : void{
@@ -84,7 +92,7 @@ class AuctionHouseManager{
         }else{
             $form->setContent("§7Cliquez sur un objet pour l'acheter directement :");
             foreach($listings as $item){
-                $form->addButton("§f" . $item["item_name"] . "\n§6" . number_format($item["price"]) . " Or §8- §e" . $item["seller_name"]);
+                $form->addButton("§f" . $item["item_name"] . "\n§6" . number_format((int)$item["price"]) . " Or §8- §e" . $item["seller_name"]);
             }
         }
 
@@ -98,18 +106,33 @@ class AuctionHouseManager{
             return;
         }
 
-        $form = new CustomForm(function(Player $player, $data) use ($item) : void{
+        // Clone figé de l'item à vendre au moment de l'ouverture
+        $targetItem = clone $item;
+
+        $form = new CustomForm(function(Player $player, $data) use ($targetItem) : void{
             if($data === null || !isset($data[1])) return;
             $catIndex = (int)$data[0];
+
+            if(!is_numeric($data[1])){
+                $player->sendMessage("§c❌ Le prix doit être un nombre valide !");
+                return;
+            }
+
             $price = (int)$data[1];
+            if($price < 10 || $price > 1_000_000_000){
+                $player->sendMessage("§c❌ Le prix de vente doit être compris entre 10 et 1 000 000 000 Or !");
+                return;
+            }
+
+            // ANTI-DUPE : Vérifier que le joueur tient TOUJOURS exactement le même objet dans sa main
+            $currentItem = $player->getInventory()->getItemInHand();
+            if($currentItem->isNull() || !$currentItem->equalsExact($targetItem) || $currentItem->getCount() < $targetItem->getCount()){
+                $player->sendMessage("§c❌ L'objet dans votre main a été modifié, déplacé ou retiré ! Mise en vente annulée.");
+                return;
+            }
 
             $categories = ["ARMES", "MINERAIS", "AGRICULTURE", "PARCHEMINS", "BLOCS"];
             $cat = $categories[$catIndex] ?? "ARMES";
-
-            if($price < 10){
-                $player->sendMessage("§c❌ Le prix minimum est de 10 Or !");
-                return;
-            }
 
             $fee = (int)ceil($price * 0.02);
             if(!$this->economy->removeMoney($player, $fee)){
@@ -119,7 +142,7 @@ class AuctionHouseManager{
 
             // Sérialisation NBT PocketMine standard
             $serializer = new \pocketmine\nbt\LittleEndianNbtSerializer();
-            $nbtData = base64_encode($serializer->write(new \pocketmine\nbt\TreeRoot($item->nbtSerialize())));
+            $nbtData = base64_encode($serializer->write(new \pocketmine\nbt\TreeRoot($targetItem->nbtSerialize())));
             $now = time();
             $expires = $now + (48 * 3600);
             $sellerKey = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
@@ -127,18 +150,25 @@ class AuctionHouseManager{
             $db = $this->database->getDb();
             $stmt = $db->prepare("INSERT INTO ah_listings (seller_xuid, seller_name, item_nbt, item_name, category, price, created_at, expires_at)
                 VALUES (:xuid, :name, :nbt, :iname, :cat, :p, :c, :e)");
+            if($stmt === false){
+                $this->economy->addMoney($player, $fee); // Remboursement en cas d'erreur DB
+                $player->sendMessage("§c❌ Erreur base de données lors de la mise en vente.");
+                return;
+            }
+
             $stmt->bindValue(":xuid", $sellerKey, SQLITE3_TEXT);
             $stmt->bindValue(":name", $player->getName(), SQLITE3_TEXT);
             $stmt->bindValue(":nbt", $nbtData, SQLITE3_TEXT);
-            $stmt->bindValue(":iname", $item->getName() . " x" . $item->getCount(), SQLITE3_TEXT);
+            $stmt->bindValue(":iname", $targetItem->getName() . " x" . $targetItem->getCount(), SQLITE3_TEXT);
             $stmt->bindValue(":cat", $cat, SQLITE3_TEXT);
             $stmt->bindValue(":p", $price, SQLITE3_INTEGER);
             $stmt->bindValue(":c", $now, SQLITE3_INTEGER);
             $stmt->bindValue(":e", $expires, SQLITE3_INTEGER);
             $stmt->execute();
 
-            $player->getInventory()->setItemInHand($player->getInventory()->getItemInHand()->setCount(0));
-            $player->sendMessage("§a✔ Objet mis en vente pour §e{$price} Or §a(Frais: §c{$fee} Or§a) !");
+            // Retrait propre de l'item de la main
+            $player->getInventory()->setItemInHand(VanillaItems::AIR());
+            $player->sendMessage("§a✔ Objet mis en vente pour §e" . number_format($price) . " Or §a(Frais: §c" . number_format($fee) . " Or§a) !");
         });
 
         $form->setTitle("§6Mettre en vente à l'HDV");
@@ -149,6 +179,7 @@ class AuctionHouseManager{
     }
 
     public function buyItem(Player $player, array $listing) : void{
+        $id = (int)$listing["id"];
         $price = (int)$listing["price"];
         $buyerKey = !empty($player->getXuid()) ? $player->getXuid() : strtolower($player->getName());
 
@@ -157,31 +188,83 @@ class AuctionHouseManager{
             return;
         }
 
-        if(!$this->economy->removeMoney($player, $price)){
-            $player->sendMessage("§c❌ Solde insuffisant ! (Prix: {$price} Or)");
+        $db = $this->database->getDb();
+
+        // 1. Vérification préalable de disponibilité
+        $checkStmt = $db->prepare("SELECT * FROM ah_listings WHERE id = :id AND is_sold = 0 AND expires_at > :now");
+        if($checkStmt === false){
+            $player->sendMessage("§c❌ Erreur interne lors de la vérification de l'offre.");
+            return;
+        }
+        $checkStmt->bindValue(":id", $id, SQLITE3_INTEGER);
+        $checkStmt->bindValue(":now", time(), SQLITE3_INTEGER);
+        $resCheck = $checkStmt->execute();
+        $freshListing = $resCheck !== false ? $resCheck->fetchArray(SQLITE3_ASSOC) : false;
+        if($freshListing === false){
+            $player->sendMessage("§c❌ Cette offre n'est plus disponible ou a déjà été vendue !");
             return;
         }
 
-        $db = $this->database->getDb();
-        $id = $listing["id"];
-        $db->exec("UPDATE ah_listings SET is_sold = 1 WHERE id = $id");
+        // 2. Débit de l'acheteur
+        if(!$this->economy->removeMoney($player, $price)){
+            $player->sendMessage("§c❌ Solde insuffisant ! (Prix: " . number_format($price) . " Or)");
+            return;
+        }
 
-        // Verser l'argent au vendeur
-        $this->economy->addMoney($listing["seller_xuid"], $price);
+        // 3. Verrouillage atomique de la vente
+        $updateStmt = $db->prepare("UPDATE ah_listings SET is_sold = 1 WHERE id = :id AND is_sold = 0");
+        if($updateStmt === false){
+            $this->economy->addMoney($player, $price); // Remboursement
+            $player->sendMessage("§c❌ Erreur interne.");
+            return;
+        }
+        $updateStmt->bindValue(":id", $id, SQLITE3_INTEGER);
+        $updateStmt->execute();
 
-        // Donner l'item
+        if($db->changes() === 0){
+            // Vente concurrente simultanée : quelqu'un vient de l'acheter
+            $this->economy->addMoney($player, $price); // Remboursement immédiat
+            $player->sendMessage("§c❌ Cette offre vient tout juste d'être achetée par un autre joueur !");
+            return;
+        }
+
+        // 4. Désérialisation NBT sécurisée (sans unserialize)
         try{
-            $tag = (new \pocketmine\nbt\LittleEndianNbtSerializer())->read(base64_decode($listing["item_nbt"]))->mustGetCompoundTag();
+            $decoded = base64_decode($listing["item_nbt"], true);
+            if($decoded === false){
+                throw new \RuntimeException("Données NBT invalides");
+            }
+            $tag = (new \pocketmine\nbt\LittleEndianNbtSerializer())->read($decoded)->mustGetCompoundTag();
             $item = Item::nbtDeserialize($tag);
         }catch(\Throwable){
-            $item = @unserialize(base64_decode($listing["item_nbt"]));
+            // Échec critique : remboursement de l'acheteur et annulation
+            $rollbackStmt = $db->prepare("UPDATE ah_listings SET is_sold = 0 WHERE id = :id");
+            if($rollbackStmt !== false){
+                $rollbackStmt->bindValue(":id", $id, SQLITE3_INTEGER);
+                $rollbackStmt->execute();
+            }
+            $this->economy->addMoney($player, $price);
+            $player->sendMessage("§c❌ Erreur lors du décodage de l'objet (NBT invalide). Achat annulé et or remboursé.");
+            return;
         }
 
-        if($item instanceof Item){
-            $player->getInventory()->addItem($item);
+        // 5. Crédit du vendeur
+        $this->economy->addMoney($listing["seller_xuid"], $price);
+        $sellerPlayer = $player->getServer()->getPlayerExact($listing["seller_name"]);
+        if($sellerPlayer !== null && $sellerPlayer->isOnline()){
+            $sellerPlayer->sendMessage("§a💰 Votre offre pour §e" . $listing["item_name"] . " §aa été achetée par §e" . $player->getName() . " §apour §6" . number_format($price) . " Or §a!");
         }
 
-        $player->sendMessage("§a✔ Achat réussi de §e" . $listing["item_name"] . " §apour §6{$price} Or §a!");
+        // 6. Donner l'item au joueur (gestion sécurisée de l'inventaire plein)
+        $leftovers = $player->getInventory()->addItem($item);
+        foreach($leftovers as $leftover){
+            $player->getWorld()->dropItem($player->getPosition(), $leftover);
+        }
+        if(!empty($leftovers)){
+            $player->sendMessage("§e⚠ Votre inventaire était plein, certains objets sont tombés au sol !");
+        }
+
+        $player->sendMessage("§a✔ Achat réussi de §e" . $listing["item_name"] . " §apour §6" . number_format($price) . " Or §a!");
     }
 
     public function openBuyOrdersMenu(Player $player) : void{

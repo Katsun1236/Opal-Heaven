@@ -10,7 +10,10 @@ use opal\core\ui\CustomForm;
 use opal\core\ui\FormManager;
 use opal\core\ui\ModalForm;
 use opal\core\ui\SimpleForm;
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\item\Item;
+use pocketmine\item\VanillaItems;
 use pocketmine\player\Player;
 
 class TradeSession{
@@ -37,7 +40,7 @@ class TradeSession{
     }
 }
 
-class TradeManager{
+class TradeManager implements Listener{
 
     private static ?self $instance = null;
     private EconomyManager $economy;
@@ -56,7 +59,23 @@ class TradeManager{
     }
 
     public static function getInstance() : self{
-        return self::$instance;
+        return self::$instance ?? throw new \RuntimeException("TradeManager has not been initialized yet.");
+    }
+
+    public function onPlayerQuit(PlayerQuitEvent $event) : void{
+        $name = $event->getPlayer()->getName();
+        unset($this->pendingRequests[$name]);
+
+        foreach($this->pendingRequests as $target => $sender){
+            if($sender === $name){
+                unset($this->pendingRequests[$target]);
+            }
+        }
+
+        if(isset($this->activeSessions[$name])){
+            $session = $this->activeSessions[$name];
+            $this->cancelTrade($session, "Le troc a été interrompu suite à la déconnexion d'un joueur.");
+        }
     }
 
     public function requestTrade(Player $sender, Player $target) : void{
@@ -65,13 +84,23 @@ class TradeManager{
             return;
         }
 
-        if($sender->getPosition()->distance($target->getPosition()) > 6.0){
-            $sender->sendMessage("§c❌ Vous devez être à moins de 6 blocs du joueur !");
+        if($sender->getWorld() !== $target->getWorld() || $sender->getPosition()->distance($target->getPosition()) > 6.0){
+            $sender->sendMessage("§c❌ Vous devez être dans le même monde et à moins de 6 blocs du joueur !");
             return;
         }
 
         if($this->combatTag->isTagged($sender) || $this->combatTag->isTagged($target)){
             $sender->sendMessage("§c❌ Impossible d'échanger en état de combat !");
+            return;
+        }
+
+        if(isset($this->activeSessions[$sender->getName()])){
+            $sender->sendMessage("§c❌ Vous êtes déjà dans un échange en cours !");
+            return;
+        }
+
+        if(isset($this->activeSessions[$target->getName()])){
+            $sender->sendMessage("§c❌ Ce joueur est déjà dans un échange avec quelqu'un d'autre !");
             return;
         }
 
@@ -94,8 +123,13 @@ class TradeManager{
             return;
         }
 
-        if($sender->getPosition()->distance($receiver->getPosition()) > 6.0){
-            $receiver->sendMessage("§c❌ Le joueur s'est trop éloigné (> 6 blocs).");
+        if(isset($this->activeSessions[$receiver->getName()]) || isset($this->activeSessions[$sender->getName()])){
+            $receiver->sendMessage("§c❌ L'un des joueurs est déjà dans un échange actif.");
+            return;
+        }
+
+        if($sender->getWorld() !== $receiver->getWorld() || $sender->getPosition()->distance($receiver->getPosition()) > 6.0){
+            $receiver->sendMessage("§c❌ Le joueur s'est trop éloigné ou a changé de dimension (> 6 blocs).");
             return;
         }
 
@@ -138,7 +172,7 @@ class TradeManager{
                     }else{
                         $session->offer2[] = clone $item;
                     }
-                    $player->getInventory()->setItemInHand($player->getInventory()->getItemInHand()->setCount(0));
+                    $player->getInventory()->setItemInHand(VanillaItems::AIR());
                     $this->refreshTradeViews($session);
                     break;
 
@@ -176,13 +210,17 @@ class TradeManager{
         });
 
         $form->setTitle("§l§dÉCHANGE SÉCURISÉ — " . $other->getName());
-        $text = "§7Distance: §a" . round($player->getPosition()->distance($other->getPosition()), 1) . "m\n\n" .
+        $distance = ($player->getWorld() === $other->getWorld()) 
+            ? round($player->getPosition()->distance($other->getPosition()), 1) . "m"
+            : "Monde différent";
+
+        $text = "§7Distance: §a" . $distance . "\n\n" .
             "§6--- VOTRE OFFRE ---\n" .
-            "§fPièces Célestes: §e{$myMoney} Or\n" .
+            "§fPièces Célestes: §e" . number_format($myMoney) . " Or\n" .
             "§fObjets proposés: §b" . count($myOffer) . " items\n" .
             "§fStatut: " . ($myReady ? "§a✔ PRÊT" : "§c✖ EN ATTENTE") . "\n\n" .
             "§6--- OFFRE DE " . strtoupper($other->getName()) . " ---\n" .
-            "§fPièces Célestes: §e{$otherMoney} Or\n" .
+            "§fPièces Célestes: §e" . number_format($otherMoney) . " Or\n" .
             "§fObjets proposés: §b" . count($otherOffer) . " items\n" .
             "§fStatut: " . ($otherReady ? "§a✔ PRÊT" : "§c✖ EN ATTENTE") . "\n";
 
@@ -199,9 +237,9 @@ class TradeManager{
         $form = new CustomForm(function(Player $player, $data) use ($session, $isP1) : void{
             if($data === null || !isset($data[0])) return;
             $amount = (int)$data[0];
-            $bal = $this->economy->getBalance($player->getXuid());
+            $bal = $this->economy->getBalance($player);
             if($amount < 0 || $amount > $bal){
-                $player->sendMessage("§c❌ Montant invalide ou solde insuffisant ($bal Or max).");
+                $player->sendMessage("§c❌ Montant invalide ou solde insuffisant (" . number_format($bal) . " Or max).");
             }else{
                 $this->triggerAntiSwitch($session);
                 if($isP1){
@@ -219,7 +257,6 @@ class TradeManager{
     }
 
     private function triggerAntiSwitch(TradeSession $session) : void{
-        // En cas de changement de l'offre : reset des états prêts + 3 secondes de délai
         $session->ready1 = false;
         $session->ready2 = false;
         $session->antiSwitchCooldown1 = time() + 3;
@@ -239,20 +276,41 @@ class TradeManager{
         $p1 = $session->player1;
         $p2 = $session->player2;
 
-        // Swap monétaire
-        if($session->money1 > 0){
-            $this->economy->transfer($p1->getXuid(), $p2->getXuid(), $session->money1);
-        }
-        if($session->money2 > 0){
-            $this->economy->transfer($p2->getXuid(), $p1->getXuid(), $session->money2);
+        if(!$p1->isOnline() || !$p2->isOnline()){
+            $this->cancelTrade($session, "Un des joueurs s'est déconnecté avant la validation finale.");
+            return;
         }
 
-        // Swap d'items
+        // Vérification de sécurité des soldes au moment exact de la validation
+        if($session->money1 > 0 && $this->economy->getMoney($p1) < $session->money1){
+            $this->cancelTrade($session, "Échange annulé : " . $p1->getName() . " ne possède plus les fonds requis.");
+            return;
+        }
+        if($session->money2 > 0 && $this->economy->getMoney($p2) < $session->money2){
+            $this->cancelTrade($session, "Échange annulé : " . $p2->getName() . " ne possède plus les fonds requis.");
+            return;
+        }
+
+        // Swap monétaire sécurisé (compatible offline mode via objet Player)
+        if($session->money1 > 0){
+            $this->economy->transfer($p1, $p2, $session->money1);
+        }
+        if($session->money2 > 0){
+            $this->economy->transfer($p2, $p1, $session->money2);
+        }
+
+        // Swap d'items avec protection contre la perte d'inventaire plein
         foreach($session->offer1 as $it){
-            $p2->getInventory()->addItem($it);
+            $leftovers = $p2->getInventory()->addItem($it);
+            foreach($leftovers as $l){
+                $p2->getWorld()->dropItem($p2->getPosition(), $l);
+            }
         }
         foreach($session->offer2 as $it){
-            $p1->getInventory()->addItem($it);
+            $leftovers = $p1->getInventory()->addItem($it);
+            foreach($leftovers as $l){
+                $p1->getWorld()->dropItem($p1->getPosition(), $l);
+            }
         }
 
         unset($this->activeSessions[$p1->getName()]);
@@ -266,12 +324,22 @@ class TradeManager{
         $p1 = $session->player1;
         $p2 = $session->player2;
 
-        // Rendre les items
+        // Rendre les items avec sécurité inventaire plein
         foreach($session->offer1 as $it){
-            if($p1->isOnline()) $p1->getInventory()->addItem($it);
+            if($p1->isOnline()){
+                $leftovers = $p1->getInventory()->addItem($it);
+                foreach($leftovers as $l){
+                    $p1->getWorld()->dropItem($p1->getPosition(), $l);
+                }
+            }
         }
         foreach($session->offer2 as $it){
-            if($p2->isOnline()) $p2->getInventory()->addItem($it);
+            if($p2->isOnline()){
+                $leftovers = $p2->getInventory()->addItem($it);
+                foreach($leftovers as $l){
+                    $p2->getWorld()->dropItem($p2->getPosition(), $l);
+                }
+            }
         }
 
         unset($this->activeSessions[$p1->getName()]);

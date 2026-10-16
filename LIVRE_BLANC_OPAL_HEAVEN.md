@@ -358,9 +358,228 @@ Le plugin `AntiExploitManager.php` protège le serveur contre les abus classique
 16. **Anti-Macro Parade :** Maintenir le Sneak en continu annule la parade parfaite au profit de la garde passive.
 17. **Anti-Glitch Wither :** Le Wither ne peut pas casser les blocs protégés hors des heures de raid.
 18. **Anti-Desync Inventaire :** Checksum vérifié à chaque transaction financière.
+---
+
+## 15. Le Grand Répertoire des Commandes & Ergonomie Complète
+
+Pour offrir une expérience fluide, intuitive et sans friction sur mobile comme sur PC, l'ensemble des commandes a été conçu pour être rapide à taper, doté d'autocomplétion native et secondé par des interfaces FormUI Bedrock tactiles.
+
+### 15.1. Commandes Utilitaires & Qualité de Vie Joueur (QoL)
+
+| Commande | Raccourcis | Description & Fonctionnement | Cooldown |
+| :--- | :--- | :--- | :--- |
+| `/condense` | `/compact` | Transforme instantanément tous les lingots/pépites de l'inventaire en blocs (Rubis, Argent, Opale, Fer, Or, Diamant, Redstone, Charbon). Zéro clic manuel. | Aucun |
+| `/trash` | `/poubelle` | Ouvre une interface de poubelle sécurisée. Les objets déposés sont détruits à la fermeture avec confirmation anti-fausse manip. | Aucun |
+| `/sell all` | `/sell` | Vend tous les items vendables de l'inventaire au prix du `/shop` en une milliseconde avec récapitulatif du gain dans le chat. | Aucun |
+| `/sell hand` | `/sh` | Vend uniquement le stack d'items tenu en main. | Aucun |
+| `/nv` | `/nightvision` | Active/désactive l'effet Vision Nocturne permanent (indispensable pour miner dans l'obscurité sans placer 50 torches). | Aucun |
+| `/near` | Aucun | Scanne et affiche la distance des joueurs non-alliés dans un rayon de 30 blocs (utile pour détecter les embuscades). | 15s |
+| `/settings` | `/options` | Ouvre le panneau FormUI de préférences : toggle des `/msg`, des `/tpa`, de l'auto-pickup, des sons de killmark et du mode Low-Spec. | Aucun |
+| `/rtp` | `/wild` | Téléporte aléatoirement le joueur dans une zone sûre (anti-lave, anti-océan) du Monde Minage ou Monde Faction. | 60s |
+| `/feed` | Aucun | Restaure instantanément la barre de nourriture du joueur (réservé aux grades boutique). | 15 min |
+| `/reclaim` | Aucun | Permet de récupérer en un clic les récompenses de vote mensuel, les compensations de maintenance ou les avantages de début de saison. | Unique |
+| `/claiminfo` | `/f info chunk` | Affiche l'état du chunk actuel : faction propriétaire, niveau de protection du claim, intégrité du bouclier anti-creeper. | Aucun |
+| `/loadout` | `/gear` | Interface permettant d'enregistrer et de rééquiper en 1 clic un ensemble complet (armure, épée, potions, perles) depuis son coffre. | 10s |
+| `/sort` | `/trier` | Trie automatiquement l'inventaire du joueur ou le coffre ouvert par catégorie (Armures > Armes > Outils > Minerais > Consommables). | 3s |
 
 ---
 
-# 🏁 Conclusion
+### 15.2. Commandes de Gestion de Faction (`/f`)
 
-Ce document fixe les règles d'or et l'architecture concrète d'**Opal Heaven**. Zéro fioriture inutile, un gameplay carré, des blocs et armes utiles, un PvP compétitif en Warzone et une économie saine taillée pour durer 6 mois.
+L'intégralité du système de faction est accessible via la commande `/f` ou un menu tactile centralisé `/f menu` :
+
+```
+             ┌─────────────────────────────────────────────────────────┐
+             │                 MENU FACTION OPAL HEAVEN                │
+             ├─────────────────────────────────────────────────────────┤
+             │ [ 🏰 Ma Faction ]         [ 🗺️ Carte Radar (/f map) ]    │
+             │ [ 🛡️ Permissions Rôles ]  [ 📦 Coffre Partagé (/f chest) ]│
+             │ [ 💰 Banque de Faction ]  [ ⚔️ Ralliement Warzone ]     │
+             │ [ 🏆 Classement Top ]     [ ⚙️ Paramètres & Recrutement]│
+             └─────────────────────────────────────────────────────────┘
+```
+
+* **Création & Territoire :**
+  * `/f create <nom>` : Fonde une faction (coût : 5 000$).
+  * `/f claim` : Revendique le chunk où se tient le joueur (consomme 1 point de Power).
+  * `/f unclaim` / `/f unclaimall` : Libère un ou tous les claims.
+  * `/f autoclaim` : Revendique automatiquement chaque nouveau chunk traversé par le chef ou officier en marchant.
+* **Radar & Tactique :**
+  * `/f map` : Affiche une matrice 9x9 chunks dans le chat ou sous FormUI avec code couleur :
+    * 🟩 Vert = Vos claims de faction.
+    * 🟦 Bleu = Factions alliées.
+    * 🟥 Rouge = Factions ennemies.
+    * ⬜ Gris = Factions neutres.
+    * ⬛ Noir = Wilderness (territoire libre).
+  * `/f rally` : Place une balise tactique d'urgence visible par tous les membres sur la boussole et l'ActionBar pendant 60 secondes (indispensable pour coordonner un assaut ou une défense en Warzone).
+* **Hiérarchie & Permissions fines (`/f perm`) :**
+  * Matrice de permissions par grade (Recrue, Membre, Capitaine, Officier, Co-Leader, Chef) paramétrable par clic :
+    * *Droit d'ouvrir les coffres / conteneurs.*
+    * *Droit de casser / poser des blocs dans le claim.*
+    * *Droit d'inviter ou exclure des joueurs.*
+    * *Droit d'activer la dynamite ou d'utiliser les Foreuses.*
+    * *Droit de retirer de l'argent de la banque de faction.*
+* **Coffre & Économie Faction :**
+  * `/f chest` : Coffre virtuel partagé (taille évolutive selon le niveau de faction, de 27 à 108 slots). Chaque mouvement d'item est horodaté et consigné dans un journal anti-vol (`/f chest logs`).
+  * `/f deposit <montant>` & `/f withdraw <montant>` : Gestion de la trésorerie commune.
+
+---
+
+### 15.3. Commandes de Modération & Administration Staff
+
+Pour assurer un ordre absolu, une réactivité chirurgicale et une transparence exemplaire :
+
+* **Interpellation & Vérification Anti-Cheat :**
+  * `/freeze <pseudo>` : Immobilise totalement le joueur suspect. Sa caméra est figée, un bandeau FormUI d'avertissement s'affiche avec le lien Discord du serveur et un compte à rebours de 5 minutes pour se présenter en vérification vocale/partage d'écran. **Toute déconnexion sous freeze entraîne un bannissement automatique de 30 jours pour refus de vérification.**
+  * `/vanish` (ou `/v`) : Invisibilité absolue. Masque le modérateur de la liste TAB, désactive les bruits de pas, les particules, et permet d'ouvrir les coffres et fours en mode fantôme sans déclencher l'animation d'ouverture pour les joueurs alentours.
+  * `/alts <pseudo>` : Recherche instantanée dans la base SQLite de tous les comptes ayant partagé la même adresse IP, le même XUID Xbox Live ou le même identifiant matériel (DeviceID Bedrock). Détecte immédiatement les doubles comptes de ban-evade.
+* **Sanctions & Régulation :**
+  * `/mute <pseudo> [durée] [raison]` & `/tempmute` : Sanctionne les infractions textuelles. Le joueur peut toujours lire le chat mais ne peut plus envoyer de messages publics ni privés.
+  * `/ban <pseudo> [durée] [raison]` & `/tempban` : Bannissement avec broadcast discret ou public et archivage webhook Discord.
+  * `/kick <pseudo> [raison]` : Expulsion immédiate.
+  * `/staffchat` (ou `/sc <texte>`) : Canal de communication chiffré exclusif au staff, synchronisé en direct avec un salon privé Discord Staff via webhook.
+* **Inspection & Restauration :**
+  * `/invsee <pseudo>` : Ouvre l'inventaire en direct d'un joueur connecté pour inspecter ses armes, armures et slots de raccourcis.
+  * `/endersee <pseudo>` : Ouvre et permet d'éditer le contenu de l'Enderchest d'un joueur.
+  * `/clearlag` : Déclenche manuellement un scan et nettoyage d'entités orphelines avec annonce de décompte (15s, 10s, 5s).
+  * `/tpall` & `/tphere <pseudo>` : Outils de téléportation administrative.
+
+---
+
+### 15.4. Outils Développeur & Diagnostics Système en Direct
+
+Pour surveiller la santé de la machine sans impacter le gameplay :
+
+* `/status` : Tableau de bord instantané affichant les métriques PocketMine fondamentales :
+  * TPS (Ticks Per Second) sur 1m, 5m, 15m.
+  * Mémoire vive RAM (Allouée, Utilisée, Pic, Garbage Collector stats).
+  * Nombre d'entités vivantes, de tuiles (TileEntities) et de chunks actifs par monde (`hub`, `warzone`, `opal_main`, `mining_world`).
+* `/timings <on|off|paste>` : Profileur natif PocketMine de haute précision. Enregistre la durée de chaque événement d'écoute, chaque tâche asynchrone et chaque tick d'entité, puis génère un rapport web pour identifier le moindre plugin consommateur de millisecondes.
+* `/reload-config [plugin]` : Recharge à chaud les fichiers de configuration YAML (`shop.yml`, `bosses.yml`, `kits.yml`, `anti_exploit.yml`) sans redémarrer le serveur et sans interrompre les sessions de jeu en cours.
+* `/rollback <player|chunk> <temps>` : Annule toutes les modifications de blocs d'un joueur ou restaure l'état d'un chunk donné via les logs SQLite d'audit (indispensable en cas d'erreur de modérateur ou d'abus avéré).
+* `/packetstat` : Affiche le débit réseau en temps réel (paquets entrants/sortants par seconde, compression ratio, bande passante en KB/s) entre le Proxy Go et les clients connectés.
+
+---
+
+## 16. L'Ingénierie Anti-Lag & les Sensations Jouissives (Game Feel & Dopamine)
+
+Un serveur PvP-Faction réussit ou échoue sur deux critères déterminants : **la fluidité absolue (zéro latence, 20 TPS constants)** et **le plaisir physique de jouer (le hit feel, le sound design, la gratification instantanée)**. Voici l'architecture technique mise en œuvre sur Opal Heaven.
+
+---
+
+### 16.1. L'Architecture Réseau & Multi-Thread Zéro-Lag
+
+```
+ [ Client Joueur Mobile / PC ]
+              │  (UDP RakNet Chiffré - 60 à 100 paquets/sec)
+              ▼
+   ┌────────────────────────────────────────────────────────┐
+   │             PROXY GO DÉDIÉ (C-Go / Golang)             │
+   │  * Terminaison RakNet UDP & Déchiffrement ECDH         │
+   │  * Compression / Décompression Zlib & Snappy           │
+   │  * Filtre Anti-DDoS Volumétrique & Cache de Skins      │
+   │  * Régulateur de Mouvement (Agrégation à 20 paquets/s) │
+   └────────────────────────────────────────────────────────┘
+              │  (Paquets binaires décompressés via Loopback TCP 127.0.0.1)
+              ▼
+   ┌────────────────────────────────────────────────────────┐
+   │               POCKETMINE-MP 5.X CORE ENGINE             │
+   │  * Boucle Principale Dédiée : Combat & Ticks Blocs     │
+   │  * 0% de charge CPU gaspillée en compression réseau    │
+   │  * 4 Threads Asynchrones (AsyncTask) pour SQL/Disque   │
+   └────────────────────────────────────────────────────────┘
+```
+
+1. **Découplage Intégral Réseau / Gameplay :**
+   * Sur un serveur Bedrock classique, la compression Zlib/Snappy des paquets réseau consomme jusqu'à **45% de la puissance CPU**.
+   * Sur Opal Heaven, le **Proxy Go** absorbe l'intégralité du protocole RakNet, de la négociation MTU et de la compression. PocketMine reçoit des paquets bruts, légers et désérialisés, libérant 100% du thread principal pour la physique du combat et la réactivité des coups.
+2. **Régulation des Paquets de Déplacement (`PlayerAuthInputPacket`) :**
+   * Les clients Bedrock modernes (surtout Windows 10/11 à 144Hz+) envoient jusqu'à 80 paquets de position par seconde, saturant le thread principal.
+   * Le Proxy Go échantillonne et fusionne ces données pour délivrer exactement **20 états de déplacement par seconde** (1 par tick serveur), divisant par 3 les calculs de collision sans perte de précision pour la visée.
+3. **Distance de Vue Dynamique & Culling d'Entités Intelligent :**
+   * Par défaut, la distance de vue est fixée à **8 chunks**.
+   * Dès qu'un rassemblement massif est détecté en Warzone (plus de 25 joueurs dans une zone de 64x64 blocs lors d'un KOTH ou d'un Boss), la distance d'envoi des chunks est temporairement ajustée à **5 chunks** pour les participants, maintenant 20.0 TPS même lors des assauts à 50 contre 50.
+   * **Smart Tick Culling :** Les entités passives ou neutres situées à plus de 24 blocs d'un joueur réduisent leur fréquence d'IA de 20 ticks/sec à 4 ticks/sec, réduisant de 75% l'empreinte CPU des entités.
+
+---
+
+### 16.2. L'Élimination Radicale des Entités au Sol (Anti-Drop Lag)
+
+Les entités au sol (items jetés, minerais minés, drops de mobs) sont la cause n°1 des micro-freezes sur Bedrock :
+
+1. **Auto-Pickup Direct dans l'Inventaire (Minage & Récolte) :**
+   * Dès qu'un joueur brise un minerai ou une culture avec un outil moddé (ou avec le mode `/toggle pickup` activé), **le drop est injecté directement dans son inventaire ou dans son Sac en Opale**.
+   * Aucun item flottant n'est créé dans le monde. Plus de 60 000 entités de cobble et de minerais sont ainsi évitées chaque heure.
+2. **Caisse de Mort Éphémère (Death Urn) :**
+   * À la mort d'un joueur en Warzone ou en monde Faction, ses 36 slots d'inventaire ne s'éparpillent pas en 36 entités distinctes qui font chuter les FPS des téléphones portables.
+   * L'intégralité du butin est compactée en un **Coffre de Mort temporaire (Hologramme interactif)** pendant 5 minutes. Un simple clic dessus permet au vainqueur de ramasser le tout ou de looter ce qui l'intéresse.
+3. **Bridage Anti-Lag Redstone :**
+   * Tout circuit redstone qui pulse à plus de 4 Hz (horloges rapides) est automatiquement limité par le plugin `RedstoneGovernor`.
+   * Si une boucle infinie de pistons ou de répéteurs tourne dans le vide pendant plus de 30 secondes sans joueur à proximité, elle est désactivée et son propriétaire reçoit une alerte dans l'ActionBar.
+
+---
+
+### 16.3. Le Fast-Respawn & l'Éradication des Délais Frustrants
+
+Sur Bedrock vanilla, la mort d'un joueur est lente et frustrante : un écran rouge/noir bloque la vue pendant 2 à 3 secondes avec un bouton "Réapparaître" qui freeze parfois sur mobile.
+
+* **Bypass Instantané de l'Écran de Mort :**
+  * Dès que la santé d'un joueur tombe à 0, le serveur intercepte l'événement et envoie instantanément un paquet `RespawnPacket`.
+  * Le joueur est téléporté immédiatement à son Faction Home ou au Spawn sans subir l'écran de mort ni de transition noire.
+* **Système de Re-Gear Instantané (`/loadout`) :**
+  * En tapant `/loadout 1` ou en cliquant sur le panneau de sa base, le joueur vide son inventaire et rééquipe en **0.1 seconde** son armure en Rubis/Argent/Opale, son épée, ses potions de soin et ses perles depuis son coffre de faction.
+  * Retour au combat en Warzone en moins de 10 secondes après une défaite !
+
+---
+
+### 16.4. Le "Hit Feel" Jouissif & le Sound Design Dopaminergique
+
+Ce qui rend un serveur PvP addictif et agréable, c'est le retour sensoriel de chaque action :
+
+1. **Sound Design Tranchant & Réactif :**
+   * **Frappe Critique :** Son d'enclume métallique cristalline (`random.anvil_land` à pitch 1.8x) indiquant immédiatement que le coup a porté son multiplicateur de dégâts.
+   * **Coup Fatal (Kill Chime) :** Un tintement de clochette jubilatoire (`random.orb` à pitch 2.0x, inspiré du hitmarker de Call of Duty et de Paladium) retentit instantanément dans le casque du vainqueur, accompagné d'un battement de cœur sourd pour le vaincu.
+   * **Brisure d'Armure Ennemie :** Bruit d'explosion de verre brisé (`random.glass`) couplé à une alerte visuelle : *"Armure Ennemie Brisée !"*.
+   * **Parade Parfaite Réussie :** Son lourd de tôle d'acier percutée (`item.shield.block`) avec micro-secousse de la caméra de l'assaillant, signalant son étourdissement pendant 1 seconde.
+2. **Indicateurs de Dégâts Flottants (Floating Damage Particles) :**
+   * Chaque coup porté fait jaillir une micro-particule discrète affichant les dégâts exacts infligés (ex: `💥 -6.4 ❤` en coup critique, `-3.2 ❤` en coup standard).
+   * Les particules disparaissent en 0.5 seconde pour ne jamais obstruer la vision de visée.
+3. **Physique du Knockback Équilibrée & Nerveuse :**
+   * Vitesse horizontale : **0.385 bloc/tick** (permet d'enchaîner des combos W-Tap fluides sans projeter l'adversaire à 10 mètres).
+   * Vitesse verticale : **0.360 bloc/tick** (retombée rapide au sol, éliminant l'effet de flottaison lunaire désagréable de Minecraft Bedrock de base).
+   * Plafond de prise en compte CPS fixé à **12 CPS côté serveur** : neutralise les macros et autoclickers tout en récompensant le timing pur et la précision du curseur.
+
+---
+
+### 16.5. Le Minage Dopaminergique (Sound & Visual Crunch)
+
+Miner pendant des heures ne doit jamais être une corvée monotone :
+
+* **Le Crunch des Blocs 3x3 :** Casser un bloc avec un Marteau en Rubis ou en Opale déclenche un son de craquement de roche dense et percutant, doublé d'une gerbe d'étincelles irisées.
+* **Jauge d'XP Métier Dynamique :** Une barre de progression discrète apparaît au-dessus de la barre de raccourcis lors du minage (`Mineur Lv. 34 : [██████░░░░] +24 XP`), ponctuée d'un accord sonore ascendant à chaque passage de niveau.
+* **Auto-Compactage Silencieux :** Les minerais bruts se transforment automatiquement en lingots dans le Sac en Opale, évitant d'avoir à s'arrêter toutes les 2 minutes pour trier son sac.
+
+---
+
+### 16.6. Killstreaks & Adrénaline en Warzone
+
+Pour inciter les joueurs à sortir de leur base et à livrer des combats spectaculaires en Warzone :
+
+* **Séries d'Éliminations (Killstreaks) :**
+  * **3 Kills d'affilée :** *Frénésie Guerrière* ➔ Effet Vitesse I pendant 15 secondes + 150$ de prime.
+  * **5 Kills d'affilée :** *Carnage* ➔ Annonce sonore de gong pour tous les joueurs en Warzone + message rouge éclatant dans le chat + 500$ de prime.
+  * **10 Kills d'affilée :** *Légende d'Opale* ➔ Une prime de 2 500$ est automatiquement posée sur sa tête + une traînée de particules dorées éphémères suit ses pas. Le joueur devient la cible prioritaire de toute la Warzone !
+* **Tension Sonore des Coffres Contestés :**
+  * Lors de la mort d'un World Boss ou de l'atterrissage d'un Airdrop, les **30 secondes de déverrouillage** du coffre sont rythmées par un tic-tac d'horloge qui accélère toutes les 5 secondes (`random.click` ➔ `note.hat`), créant une montée d'adrénaline insoutenable jusqu'à l'explosion d'étincelles marquant l'ouverture du butin.
+
+---
+
+# 🏁 Conclusion Générale
+
+Ce Livre Blanc définit l'ensemble des piliers fondateurs d'**Opal Heaven** :
+1. **Un Game Design Épuré et Terre-à-Terre :** 3 tiers d'armures moddées (Rubis, Argent, Opale), aucun délire mystique ou cosmique déconnecté, un gameplay inspiré des plus grands succès du PvP-Faction français (*Paladium*, *Histeria*).
+2. **Une Concentration Totale en Warzone :** Zéro donjon instancié. Les World Boss, les Airdrops, le KOTH et le Totem se déroulent à ciel ouvert, générant des batailles de territoire épiques et continues.
+3. **Une Économie Fermée et Anti-Inflation :** Des prix de vente fixes, des taxes d'hôtel des ventes, et une rareté millimétrée garantissant 6 mois de progression sans saturation.
+4. **Une Haute Ingénierie Technique Bedrock :** Découplage complet via Proxy Go, 20 TPS inébranlables même à 300 joueurs, auto-pickup direct anti-lag, respawn instantané et sensations de frappe dopaminergiques au millième de seconde près.
+
+Opal Heaven est prêt pour son implémentation technique et son déploiement.

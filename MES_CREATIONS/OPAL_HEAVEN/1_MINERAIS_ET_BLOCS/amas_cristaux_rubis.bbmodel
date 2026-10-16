@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "format_version": "4.8",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "amas_cristaux_rubis",
+  "model_identifier": "amas_cristaux_rubis",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "cristal_centre",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        5,
+        0,
+        5
+      ],
+      "to": [
+        11,
+        14,
+        11
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "c1cb2a00-f5c5-4e4b-bed1-e556c15b5f59"
+    },
+    {
+      "name": "cristal_nord",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6,
+        0,
+        2
+      ],
+      "to": [
+        10,
+        9,
+        6
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "09285e7a-e680-4026-be2b-383d9a279f0d"
+    },
+    {
+      "name": "cristal_sud",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6,
+        0,
+        10
+      ],
+      "to": [
+        10,
+        8,
+        14
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "a18aa3e3-4f12-4c29-9bbf-20fe6fc728ef"
+    },
+    {
+      "name": "cristal_est",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        10,
+        0,
+        6
+      ],
+      "to": [
+        14,
+        10,
+        10
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "9800ae99-221e-4687-b95b-4dea1665b839"
+    },
+    {
+      "name": "cristal_ouest",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        2,
+        0,
+        6
+      ],
+      "to": [
+        6,
+        7,
+        10
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "b45ef15f-4595-4a43-9792-b9ebc8285db0"
+    }
+  ],
+  "outliner": [
+    "c1cb2a00-f5c5-4e4b-bed1-e556c15b5f59",
+    "09285e7a-e680-4026-be2b-383d9a279f0d",
+    "a18aa3e3-4f12-4c29-9bbf-20fe6fc728ef",
+    "9800ae99-221e-4687-b95b-4dea1665b839",
+    "b45ef15f-4595-4a43-9792-b9ebc8285db0"
+  ],
+  "textures": [
+    {
+      "path": "amas_cristaux_rubis.png",
+      "name": "amas_cristaux_rubis",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "06ccbe1a-6f52-4739-8125-6d49bd240ee4",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABEUlEQVR4nO3bIU5DQRSF4f+d3CYYgukO2AEGzSJgBQSJwTx2gKlBlu4FjelKMDgSRAmu1LSdhtDXv5+bZM6IyRV3kjvdon9ZIDF5fvq1frjvCXJBrpYX8+kMk/l0dqyAIBfkglyQC3K16cbXz3eG5OpkvNG+IFd/dbP/ZdtKDXLVGry4u2WfXnitlRnkatcDhv6ACnJBLsgFuSAX5IJckAtyQS7IBbkgF+SCXJALckEuyAW5IBfkglyQC3JBLsgFuSAX5IJctQZvJo/sg8vR2U75IFetwf70nEMQ5GrbwNAmRtcJcnUoE6KtglyQC3JBrrsejTVfZ1fb5revj2MFBLkg1y1/nx/66Ps6q238T3P3DbiDJ35xp3d8AAAAAElFTkSuQmCC"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "deepslate_opal_ore",
+  "geometry_name": "geometry.deepslate_opal_ore",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "block_base",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            64,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "3baac047-4ce2-4619-b7dd-35ab7c367a12"
+    },
+    {
+      "name": "abyss_shard_1",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        5.0,
+        4.0,
+        -1.4
+      ],
+      "to": [
+        12.0,
+        11.0,
+        0.4
+      ],
+      "origin": [
+        8.5,
+        7.5,
+        0.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "42584bc6-a567-44c7-92cd-61d6a303bfe5"
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "fdc012db-6c68-43be-ae2b-bab133854e81",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "3baac047-4ce2-4619-b7dd-35ab7c367a12",
+        "42584bc6-a567-44c7-92cd-61d6a303bfe5"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\1_MINERAI_OPALE_ET_DERIVES\\02_Minerai_Opale_Des_Abimes\\deepslate_opal_ore.png",
+      "name": "deepslate_opal_ore.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "d8d4aa22-4736-459b-a27f-162e4df8eee8",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABoUlEQVR4nOXasUpCURzH8a8/DhpBjoWbQ0MkRJPgUFtQ0AM01xNEr9De0NDW3BvU1NIQ9ASN1hQNQoGQERTXMmjwer33xlV/n8Er6jl/z185nvM/llabu5+k1L6/4+P9jeW1zdTt6ytNiowfojud50eyytJHkfGFOWFOmBPmhDlhTpgT5gIT7qayM/zJ2s/1Bag0fh/e6F3OTgIi9YtDkmrvnTCOwJQI60v9a/co+ac7c3NAN+fBT1UC/mPwkRBtCbPK0sfItoOJbgyvnafErw3RfjqrPPrI0zjvJ8QVE/IoOMS1H1UQSfvNGsRLEj8kLSZkLVrEtc+jIDKqv2ExhDlhTpgLTIFxl7czlYDGw1l/Fs97ohwQ5oQ5YU6YE+aEudJ8dTH2dDjaTITyXOoAk96+VJ6rpj4enwUlHd8WmoCF04Miw9NfCV7tp/+TQhbb59mrUbkthbdq3/Nh67qH7a9Ay2zwfxLgOPiI/TpAmBPmhDlhTpgT5oQ5YU6YE+aEOWFOmBPmhDlhTpgT5oQ5YU6YE+aEOWFOmAvRzSSc0hblC5SYjmytIGx7AAAAAElFTkSuQmCC"
+    }
+  ],
+  "animations": []
+}

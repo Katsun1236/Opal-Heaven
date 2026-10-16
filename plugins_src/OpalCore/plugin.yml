@@ -64,3 +64,8 @@ commands:
     description: "Ouvrir le menu créatif tactile des blocs, mobs et items d'Opal Heaven"
     permission: opal.player
     aliases: ["oc"]
+  factionserver:
+    description: "Téléportation vers le serveur Faction Overworld"
+    permission: opal.player
+    aliases: ["tofaction"]
+

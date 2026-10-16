@@ -1,0 +1,893 @@
+{
+  "meta": {
+    "format_version": "4.5",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "faux_opale",
+  "geometry_name": "faux_opale",
+  "visible_box": [
+    2,
+    2,
+    2
+  ],
+  "resolution": {
+    "width": 128,
+    "height": 128
+  },
+  "elements": [
+    {
+      "name": "shaft_base",
+      "uuid": "4b36610d-9491-427b-90ca-5c4b4f4352ed",
+      "from": [
+        -0.8,
+        0,
+        -0.8
+      ],
+      "to": [
+        0.8,
+        32.0,
+        0.8
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "aether_marble",
+      "size": [
+        1.6,
+        32.0,
+        1.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            35
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            7,
+            3,
+            9,
+            35
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            3,
+            3,
+            35
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            5,
+            3,
+            7,
+            35
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            3,
+            1,
+            5,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            5,
+            1,
+            7,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "shaft_ring_mid",
+      "uuid": "2713e725-90c3-44a8-8e58-30c2b07cd70b",
+      "from": [
+        -1.2,
+        14.0,
+        -1.2
+      ],
+      "to": [
+        1.2,
+        16.0,
+        1.2
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "solar_gold",
+      "size": [
+        2.4,
+        2.0,
+        2.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            107,
+            3,
+            109,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            111,
+            3,
+            113,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            105,
+            3,
+            107,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            109,
+            3,
+            111,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            107,
+            1,
+            109,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            109,
+            1,
+            111,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        105,
+        1
+      ]
+    },
+    {
+      "name": "grip_peg",
+      "uuid": "2dd6cdb7-7542-407e-94d8-a2367f92d746",
+      "from": [
+        0.8,
+        14.5,
+        -0.6
+      ],
+      "to": [
+        3.5,
+        15.5,
+        0.6
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "solar_gold",
+      "size": [
+        2.7,
+        1.0,
+        1.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            116,
+            2,
+            119,
+            3
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            120,
+            2,
+            123,
+            3
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            115,
+            2,
+            116,
+            3
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            119,
+            2,
+            120,
+            3
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            116,
+            1,
+            119,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            119,
+            1,
+            122,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        115,
+        1
+      ]
+    },
+    {
+      "name": "scythe_socket",
+      "uuid": "4500ba66-372a-4316-a37f-3e494566b917",
+      "from": [
+        -2.0,
+        31.0,
+        -1.5
+      ],
+      "to": [
+        2.0,
+        36.0,
+        1.5
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "solar_gold",
+      "size": [
+        4.0,
+        5.0,
+        3.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            4,
+            18,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            21,
+            4,
+            25,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            11,
+            4,
+            14,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            18,
+            4,
+            21,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            14,
+            1,
+            18,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            18,
+            1,
+            22,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        11,
+        1
+      ]
+    },
+    {
+      "name": "socket_gem",
+      "uuid": "39d93895-42a6-4ec6-9ed7-847908a09331",
+      "from": [
+        -1.0,
+        32.5,
+        -1.8
+      ],
+      "to": [
+        1.0,
+        34.5,
+        1.8
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "material": "opal_rose",
+      "size": [
+        2.0,
+        2.0,
+        3.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            45,
+            5,
+            47,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            51,
+            5,
+            53,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            41,
+            5,
+            45,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            47,
+            5,
+            51,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            45,
+            1,
+            47,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            47,
+            1,
+            49,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        41,
+        1
+      ]
+    },
+    {
+      "name": "blade_arc1",
+      "uuid": "c2feb72e-a7b6-4f21-abd1-3d2c83dd51ba",
+      "from": [
+        -7.0,
+        32.5,
+        -0.8
+      ],
+      "to": [
+        -1.8,
+        36.5,
+        0.8
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -15
+      ],
+      "material": "platinum",
+      "size": [
+        5.2,
+        4.0,
+        1.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            57,
+            3,
+            62,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            64,
+            3,
+            69,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            55,
+            3,
+            57,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            62,
+            3,
+            64,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            57,
+            1,
+            62,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            62,
+            1,
+            67,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        55,
+        1
+      ]
+    },
+    {
+      "name": "blade_arc2",
+      "uuid": "e42b0dc4-e44c-403b-9274-ec26514d7597",
+      "from": [
+        -13.5,
+        31.0,
+        -0.7
+      ],
+      "to": [
+        -6.5,
+        35.5,
+        0.7
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -25
+      ],
+      "material": "opal_crystal",
+      "size": [
+        7.0,
+        4.5,
+        1.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            88,
+            2,
+            95,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            96,
+            2,
+            103,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            87,
+            2,
+            88,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            95,
+            2,
+            96,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            88,
+            1,
+            95,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            95,
+            1,
+            102,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        87,
+        1
+      ]
+    },
+    {
+      "name": "blade_arc3",
+      "uuid": "35c74954-5dda-4bff-a13a-6792506d1aaf",
+      "from": [
+        -19.0,
+        27.5,
+        -0.6
+      ],
+      "to": [
+        -12.5,
+        32.5,
+        0.6
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -40
+      ],
+      "material": "opal_crystal",
+      "size": [
+        6.5,
+        5.0,
+        1.2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            72,
+            2,
+            78,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            79,
+            2,
+            85,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            71,
+            2,
+            72,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            78,
+            2,
+            79,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            72,
+            1,
+            78,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            78,
+            1,
+            84,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        71,
+        1
+      ]
+    },
+    {
+      "name": "blade_tip",
+      "uuid": "51da7158-a111-4d7d-94d4-e4a57cb851ee",
+      "from": [
+        -23.0,
+        22.0,
+        -0.5
+      ],
+      "to": [
+        -18.0,
+        28.0,
+        0.5
+      ],
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -55
+      ],
+      "material": "opal_rose",
+      "size": [
+        5.0,
+        6.0,
+        1.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            28,
+            2,
+            33,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            34,
+            2,
+            39,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            27,
+            2,
+            28,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            33,
+            2,
+            34,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            28,
+            1,
+            33,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            33,
+            1,
+            38,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        27,
+        1
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "5d9274b1-f3f0-46c0-844f-63c89463866a",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "67fc6cef-313e-4c6f-846b-9d266bb6519c"
+      ]
+    },
+    {
+      "name": "scythe",
+      "origin": [
+        0,
+        16,
+        0
+      ],
+      "color": 0,
+      "uuid": "67fc6cef-313e-4c6f-846b-9d266bb6519c",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "autouv": 0,
+      "children": [
+        "4b36610d-9491-427b-90ca-5c4b4f4352ed",
+        "2713e725-90c3-44a8-8e58-30c2b07cd70b",
+        "2dd6cdb7-7542-407e-94d8-a2367f92d746",
+        "4500ba66-372a-4316-a37f-3e494566b917",
+        "39d93895-42a6-4ec6-9ed7-847908a09331",
+        "c2feb72e-a7b6-4f21-abd1-3d2c83dd51ba",
+        "e42b0dc4-e44c-403b-9274-ec26514d7597",
+        "35c74954-5dda-4bff-a13a-6792506d1aaf",
+        "51da7158-a111-4d7d-94d4-e4a57cb851ee"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "faux_opale.png",
+      "name": "faux_opale.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "7837e680-30cc-459b-ba3e-fa6e756d4a47",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADEElEQVR4nO3bPUwTYRzH8X9NMSYMrOqgAwsx1AGHLiTq4tIOONCZlfjC4gALAwx0kEVjGLUzgwzcwmJMWDrYwRpDNMRoUBxYGHSww5nnylOfuz7PtaWVlzzfT0KO5+WeO/r/3UsHROC1jNkIwzCMDWYysfHY3K+F1tyNtW2Zmp0Us32/fGjdNzrGer3VDsoVKbx7KotXi62+/JUxKdZW3cfWa0znRG0zpZvOuba/K3hbl8LtnCT7infa11H7Bo14X2ktkF+PC3JxZjHWPzSRl99zxUyn/dPWcK2T/MyVzPXAOUfVoPqxeeD8jSFnPbK2zo2tqvRq4dGb1u/qgN0UwrT0YzMqprZZltAZgqN5Zmh6VX6xHmvnxsd6Ol/lz6slaQuHbIa6eJ32d62RXCftsza9nh8JD2r1WB0m8yNHYxLaQpC1nejUvbyY/bY7QTcFTwpuPZF8Ltd1f7/SCjD/YNo637wTDD8LZGiy+VkkpY11O6ebNWxX/srzu0dbCc07QbPAh4m9k21LAOqfv0eN0WuXo+3ut5+xdvJEbLd8fVJ6LJxtnlza4+C4FucWupqniqlMjI/2NHbWqM9Q0VfzdvUw1u5H9jgnopi3mk5j/TLfG/Q7g/kOsCQrodnf6Z3gpDRq1ejHRj3nO41r/y6g3q7ugQfgtKhHhOlgphJtq+WKtV+rf9iJbc3nfdqY5ipQWvHMwjUqy84gNuKn2vP4oJxoAKr7O9GPSb3xu/q1tpfBmuMAif6Fh6W+7gQNRwHTinNShTuVAJhfK1ZfHrT6VTttTFveb//aIvuB/WCufgxUVJD3n/bCtJfA4UvZM/FMxeBd+A9r4hwhAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ4jAJ6L/jNo98uemFst2QYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADOtb/OaV48Zm9BlAAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": []
+}

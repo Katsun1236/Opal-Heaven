@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "format_version": "4.8",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "deepslate_minerai_rubis",
+  "model_identifier": "deepslate_minerai_rubis",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "deepslate_minerai_rubis",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "99eee517-4df7-4053-b7b7-c652ccc5eb75"
+    }
+  ],
+  "outliner": [
+    "99eee517-4df7-4053-b7b7-c652ccc5eb75"
+  ],
+  "textures": [
+    {
+      "path": "deepslate_minerai_rubis.png",
+      "name": "deepslate_minerai_rubis",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "06ec6308-3221-42a6-933d-2e7c8e765a31",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABOUlEQVR4nO3aMU7DQBCF4d9PcwaKiCJN6NJxKSokWiQaak6S21DlHOQAIJDSUO3GG++sX77GjTW25bV2346n7fbhG2Ox2dzjLE6nL5wJc8KcMCfMCXPCnDAnzAlzMbfA59Nr1fnvL89/x8PujgyEuWhV6Pj2wYiEueiVBrOk0Oi1H5BlHyLcR4AwJ8wJczG3wHllNyr1uGiWZfCvab9/TNUXqM0WczOGMBcktVS2EOaEOWFOmBPmIksqa6X2eSJLLm+l9nnCfQQIc0EyS6dLsSKXpMwpWxpcmjAXS+X1s1tvcC2zwHHQXuB/wpwwJ8wFgyidfWpnGWEuRusOl84+pfVjrf8HlNaP2jfRKq1de+SV1hfmvcEY+eZbEOaCQVxrp0isUM1nOt12hMwJc8KcMCfMCXPqfQO9/QBwelV1u8MBuQAAAABJRU5ErkJggg=="
+    }
+  ]
+}

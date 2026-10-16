@@ -63,6 +63,24 @@ class FactionClaim implements Listener{
             return false;
         }
 
+        $db = $this->database->getDb();
+
+        // Vérification de la limite de claims par rapport au Power de la faction
+        $countStmt = $db->prepare("SELECT COUNT(*) as cnt FROM faction_claims WHERE faction_id = :fid");
+        if($countStmt !== false){
+            $countStmt->bindValue(":fid", (int)$fac["id"], SQLITE3_INTEGER);
+            $resCount = $countStmt->execute();
+            if($resCount !== false){
+                $row = $resCount->fetchArray(SQLITE3_ASSOC);
+                $claims = (int)($row["cnt"] ?? 0);
+                $power = (int)($fac["power"] ?? 10);
+                if($claims >= $power){
+                    $player->sendMessage("§c❌ Power insuffisant ! Votre faction possède {$claims}/{$power} claims maximum.");
+                    return false;
+                }
+            }
+        }
+
         $cx = $player->getPosition()->getFloorX() >> 4;
         $cz = $player->getPosition()->getFloorZ() >> 4;
 
@@ -71,8 +89,9 @@ class FactionClaim implements Listener{
             return false;
         }
 
-        $db = $this->database->getDb();
         $stmt = $db->prepare("INSERT INTO faction_claims (faction_id, chunk_x, chunk_z, world_name) VALUES (:fid, :cx, :cz, :w)");
+        if($stmt === false) return false;
+
         $stmt->bindValue(":fid", $fac["id"], SQLITE3_INTEGER);
         $stmt->bindValue(":cx", $cx, SQLITE3_INTEGER);
         $stmt->bindValue(":cz", $cz, SQLITE3_INTEGER);
@@ -104,10 +123,13 @@ class FactionClaim implements Listener{
         }
 
         $db = $this->database->getDb();
-        $stmt = $db->prepare("DELETE FROM faction_claims WHERE world_name = :w AND chunk_x = :cx AND chunk_z = :cz");
+        $stmt = $db->prepare("DELETE FROM faction_claims WHERE world_name = :w AND chunk_x = :cx AND chunk_z = :cz AND faction_id = :fid");
+        if($stmt === false) return false;
+
         $stmt->bindValue(":w", $world, SQLITE3_TEXT);
         $stmt->bindValue(":cx", $cx, SQLITE3_INTEGER);
         $stmt->bindValue(":cz", $cz, SQLITE3_INTEGER);
+        $stmt->bindValue(":fid", (int)$fac["id"], SQLITE3_INTEGER);
         $stmt->execute();
 
         $player->sendMessage("§e🚩 Chunk [§6{$cx}, {$cz}§e] abandonné.");
@@ -115,7 +137,13 @@ class FactionClaim implements Listener{
     }
 
     public function canInteract(Player $player, Position $pos) : bool{
-        $world = $pos->getWorld()->getFolderName();
+        if($player->hasPermission("opal.admin") || $player->hasPermission("pocketmine.group.operator")){
+            return true;
+        }
+
+        $world = $pos->getWorld()?->getFolderName();
+        if($world === null) return true;
+
         $cx = $pos->getFloorX() >> 4;
         $cz = $pos->getFloorZ() >> 4;
 
@@ -149,6 +177,11 @@ class FactionClaim implements Listener{
     }
 
     public function onInteract(PlayerInteractEvent $event) : void{
+        // Ne pas bloquer l'utilisation d'items en l'air (nourriture, potions, arcs, perles)
+        if($event->getAction() === PlayerInteractEvent::RIGHT_CLICK_AIR){
+            return;
+        }
+
         $player = $event->getPlayer();
         $pos = $event->getBlock()->getPosition();
         if(!$this->canInteract($player, $pos)){
@@ -164,19 +197,46 @@ class FactionClaim implements Listener{
         $myFac = $this->factionManager->getPlayerFaction($player);
         $myFacId = $myFac !== null ? (int)$myFac["id"] : -1;
 
-        $player->sendMessage("§e==== §6Carte des Factions [§f{$curCx}, {$curCz}§6] §e====");
         $radius = 4;
-        for($z = $curCz - $radius; $z <= $curCz + $radius; $z++){
+        $minX = $curCx - $radius;
+        $maxX = $curCx + $radius;
+        $minZ = $curCz - $radius;
+        $maxZ = $curCz + $radius;
+
+        // Requête SQLite optimisée : 1 seule requête pour toute la zone au lieu de 81
+        $claimsMap = [];
+        $db = $this->database->getDb();
+        $stmt = $db->prepare("
+            SELECT chunk_x, chunk_z, faction_id 
+            FROM faction_claims 
+            WHERE world_name = :w AND chunk_x BETWEEN :minX AND :maxX AND chunk_z BETWEEN :minZ AND :maxZ
+        ");
+        if($stmt !== false){
+            $stmt->bindValue(":w", $world, SQLITE3_TEXT);
+            $stmt->bindValue(":minX", $minX, SQLITE3_INTEGER);
+            $stmt->bindValue(":maxX", $maxX, SQLITE3_INTEGER);
+            $stmt->bindValue(":minZ", $minZ, SQLITE3_INTEGER);
+            $stmt->bindValue(":maxZ", $maxZ, SQLITE3_INTEGER);
+            $res = $stmt->execute();
+            if($res !== false){
+                while($row = $res->fetchArray(SQLITE3_ASSOC)){
+                    $claimsMap[$row["chunk_x"] . ":" . $row["chunk_z"]] = (int)$row["faction_id"];
+                }
+            }
+        }
+
+        $player->sendMessage("§e==== §6Carte des Factions [§f{$curCx}, {$curCz}§6] §e====");
+        for($z = $minZ; $z <= $maxZ; $z++){
             $line = "";
-            for($x = $curCx - $radius; $x <= $curCx + $radius; $x++){
+            for($x = $minX; $x <= $maxX; $x++){
                 if($x === $curCx && $z === $curCz){
                     $line .= "§b+"; // Joueur
                     continue;
                 }
-                $c = $this->getClaimAt($world, $x, $z);
-                if($c === null){
+                $facId = $claimsMap[$x . ":" . $z] ?? null;
+                if($facId === null){
                     $line .= "§7-"; // Libre
-                }elseif((int)$c["faction_id"] === $myFacId){
+                }elseif($facId === $myFacId){
                     $line .= "§a#"; // Votre faction
                 }else{
                     $line .= "§c#"; // Ennemi

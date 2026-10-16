@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "format_version": "4.8",
+    "model_format": "free",
+    "box_uv": false
+  },
+  "name": "bloc_argent",
+  "model_identifier": "bloc_argent",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "bloc_argent",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "uuid": "3ff99a75-c3dc-4d5c-bf05-db71fb914a18"
+    }
+  ],
+  "outliner": [
+    "3ff99a75-c3dc-4d5c-bf05-db71fb914a18"
+  ],
+  "textures": [
+    {
+      "path": "bloc_argent.png",
+      "name": "bloc_argent",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "b7ee9d3f-231b-43e2-a1f6-6bc2ec955709",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABDUlEQVR4nO3bMUpDQRSF4f8d7jqsBQtthbcPSy0EiW4g7sANuAj38cDWFIJ1NvLELqZJMkHMy5+vG5gzxXCLO3CnG8dxROLl9e3Xev50Q5ALcrW6GBZLTIbF8lQBQS7IBbkgF+Rq243D8M6U9P31VvuCXP3Vzf6XXSs1yFVrsL8845BeeK2VGeRq3wOm/oAKckEuyAW5IBfkglyQC3JBLsgFuSAX5IJckAtyQS7IBbkgF+SCXJALckEuyAW5IBfkgly1Bu8enzkE5xdXe+WDXLUG7x9mHIMgV7sGpjYxukmQq2OZEG0V5IJckAty3e1srvk6u942f31+nCogyAW5bvX7/NRH3zdZb+N/mrtvsZgsnWNycTMAAAAASUVORK5CYII="
+    }
+  ]
+}

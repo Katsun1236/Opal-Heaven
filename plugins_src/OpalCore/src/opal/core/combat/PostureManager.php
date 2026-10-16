@@ -7,31 +7,28 @@ namespace opal\core\combat;
 use opal\core\database\DatabaseManager;
 use pocketmine\event\Listener;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\player\PlayerToggleSneakEvent;
 use pocketmine\network\mcpe\protocol\CameraShakePacket;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\network\mcpe\protocol\SpawnParticleEffectPacket;
-use pocketmine\network\mcpe\protocol\types\CameraShakeAction;
-use pocketmine\network\mcpe\protocol\types\CameraShakeType;
 use pocketmine\player\Player;
 use pocketmine\world\particle\CriticalParticle;
-use pocketmine\world\sound\AnvilFallSound;
 use pocketmine\entity\effect\EffectInstance;
 use pocketmine\entity\effect\VanillaEffects;
-use pocketmine\math\Vector3;
 
 class PostureManager implements Listener{
 
     private static ?self $instance = null;
     private DatabaseManager $database;
 
-    /** @var array<string, float> xuid => 0..100 */
+    /** @var array<string, float> key => 0..100 */
     private array $posture = [];
 
-    /** @var array<string, int> xuid => server tick of sneak start */
+    /** @var array<string, int> key => server tick of sneak start */
     private array $sneakStartTick = [];
 
-    /** @var array<string, int> xuid => stagger end tick */
+    /** @var array<string, int> key => stagger end tick */
     private array $staggerEndTick = [];
 
     public function __construct(DatabaseManager $database){
@@ -43,13 +40,19 @@ class PostureManager implements Listener{
         return self::$instance;
     }
 
+    private function getPlayerKey(Player $player) : string{
+        $xuid = $player->getXuid();
+        return !empty($xuid) ? $xuid : strtolower($player->getName());
+    }
+
     public function getPosture(Player $player) : float{
-        return $this->posture[$player->getXuid()] ?? 0.0;
+        return $this->posture[$this->getPlayerKey($player)] ?? 0.0;
     }
 
     public function setPosture(Player $player, float $amount) : void{
         $amount = max(0.0, min(100.0, $amount));
-        $this->posture[$player->getXuid()] = $amount;
+        $key = $this->getPlayerKey($player);
+        $this->posture[$key] = $amount;
         $this->updateActionBar($player);
 
         if($amount >= 100.0){
@@ -58,29 +61,29 @@ class PostureManager implements Listener{
     }
 
     public function isStaggered(Player $player) : bool{
-        $xuid = $player->getXuid();
-        if(isset($this->staggerEndTick[$xuid])){
+        $key = $this->getPlayerKey($player);
+        if(isset($this->staggerEndTick[$key])){
             $currentTick = $player->getServer()->getTick();
-            if($currentTick < $this->staggerEndTick[$xuid]){
+            if($currentTick < $this->staggerEndTick[$key]){
                 return true;
             }
-            unset($this->staggerEndTick[$xuid]);
+            unset($this->staggerEndTick[$key]);
         }
         return false;
     }
 
     public function triggerStagger(Player $player) : void{
         $currentTick = $player->getServer()->getTick();
-        $this->staggerEndTick[$player->getXuid()] = $currentTick + 40; // 40 ticks = 2s
-        $this->posture[$player->getXuid()] = 100.0;
+        $key = $this->getPlayerKey($player);
+        $this->staggerEndTick[$key] = $currentTick + 40; // 40 ticks = 2s
+        $this->posture[$key] = 100.0;
 
         // Effets visuels & sonores de rupture
-        $pos = $player->getPosition();
         $player->getEffects()->add(new EffectInstance(VanillaEffects::SLOWNESS(), 40, 2, false));
         $player->getEffects()->add(new EffectInstance(VanillaEffects::WEAKNESS(), 40, 2, false));
 
-        // Camera Shake Packet
-        $shakePk = CameraShakePacket::create(0.3, 1.0, CameraShakeType::POSITIONAL, CameraShakeAction::ADD);
+        // Camera Shake Packet (constants defined on CameraShakePacket)
+        $shakePk = CameraShakePacket::create(0.3, 1.0, CameraShakePacket::TYPE_POSITIONAL, CameraShakePacket::ACTION_ADD);
         $player->getNetworkSession()->sendDataPacket($shakePk);
 
         // Sons de rupture
@@ -92,15 +95,19 @@ class PostureManager implements Listener{
 
     public function onSneak(PlayerToggleSneakEvent $event) : void{
         $player = $event->getPlayer();
-        $xuid = $player->getXuid();
+        $key = $this->getPlayerKey($player);
         if($event->isSneaking()){
-            $this->sneakStartTick[$xuid] = $player->getServer()->getTick();
+            $this->sneakStartTick[$key] = $player->getServer()->getTick();
         }else{
-            unset($this->sneakStartTick[$xuid]);
+            unset($this->sneakStartTick[$key]);
         }
     }
 
     public function onDamage(EntityDamageByEntityEvent $event) : void{
+        if($event->isCancelled()){
+            return;
+        }
+
         $victim = $event->getEntity();
         $damager = $event->getDamager();
 
@@ -108,8 +115,13 @@ class PostureManager implements Listener{
             return;
         }
 
+        if($victim === $damager){
+            return;
+        }
+
         $serverTick = $victim->getServer()->getTick();
-        $victimXuid = $victim->getXuid();
+        $victimKey = $this->getPlayerKey($victim);
+        $damagerKey = $this->getPlayerKey($damager);
 
         // 1. Vérifier si la victime est en Stagger -> Coup critique d'exécution !
         if($this->isStaggered($victim)){
@@ -128,8 +140,8 @@ class PostureManager implements Listener{
         }
 
         // 3. Vérifier Parade au Sneak
-        if($victim->isSneaking() && isset($this->sneakStartTick[$victimXuid])){
-            $sneakTicks = $serverTick - $this->sneakStartTick[$victimXuid];
+        if($victim->isSneaking() && isset($this->sneakStartTick[$victimKey])){
+            $sneakTicks = $serverTick - $this->sneakStartTick[$victimKey];
 
             // PARADE PARFAITE (Timing fenêtre de 1 à 9 ticks = 0.05s à 0.45s)
             if($sneakTicks >= 1 && $sneakTicks <= 9){
@@ -156,16 +168,18 @@ class PostureManager implements Listener{
                 $this->setPosture($victim, max(0.0, $this->getPosture($victim) - 10.0));
 
                 // Recul de l'attaquant
-                $direction = $damager->getPosition()->subtractVector($victim->getPosition())->normalize();
+                $diff = $damager->getPosition()->subtractVector($victim->getPosition());
+                $direction = $diff->lengthSquared() > 0.0001 ? $diff->normalize() : $victim->getDirectionVector();
                 $damager->setMotion($direction->multiply(0.6)->add(0, 0.25, 0));
 
                 $victim->sendActionBarMessage("§6⭐ §lPARADE PARFAITE ! §r§aTiming: {$sneakTicks} ticks/9");
                 $damager->sendActionBarMessage("§c⚡ PARADE SUBIE ! §7Votre posture a augmenté de +20%");
 
                 // Incrémenter stats de parade réussie
+                $escapedXuid = \SQLite3::escapeString($victimKey);
                 $this->database->getDb()->exec("
                     INSERT INTO combat_stats (xuid, parries_success) 
-                    VALUES ('$victimXuid', 1) 
+                    VALUES ('$escapedXuid', 1) 
                     ON CONFLICT(xuid) DO UPDATE SET parries_success = parries_success + 1;
                 ");
                 return;
@@ -206,22 +220,26 @@ class PostureManager implements Listener{
 
     public function decayTick() : void{
         // Décroissance naturelle de posture (1% par seconde quand non attaqué)
-        foreach($this->posture as $xuid => $val){
+        foreach($this->posture as $key => $val){
             if($val > 0.0){
-                $this->posture[$xuid] = max(0.0, $val - 1.0);
+                $this->posture[$key] = max(0.0, $val - 1.0);
             }
         }
     }
 
+    public function onQuit(PlayerQuitEvent $event) : void{
+        $key = $this->getPlayerKey($event->getPlayer());
+        unset($this->posture[$key], $this->sneakStartTick[$key], $this->staggerEndTick[$key]);
+    }
+
     private function sendCustomSound(Player $player, string $soundName, float $pitch) : void{
-        $pk = PlaySoundPacket::create(
-            $soundName,
-            $player->getPosition()->x,
-            $player->getPosition()->y,
-            $player->getPosition()->z,
-            1.0,
-            $pitch
-        );
+        $pk = new PlaySoundPacket();
+        $pk->soundName = $soundName;
+        $pk->x = (float)$player->getPosition()->x;
+        $pk->y = (float)$player->getPosition()->y;
+        $pk->z = (float)$player->getPosition()->z;
+        $pk->volume = 1.0;
+        $pk->pitch = $pitch;
         $player->getNetworkSession()->sendDataPacket($pk);
     }
 }

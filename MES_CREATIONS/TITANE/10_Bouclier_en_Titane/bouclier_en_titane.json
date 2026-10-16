@@ -1,0 +1,895 @@
+{
+  "credit": "Definitive Titanium Set - Opal Heaven",
+  "parent": "item/generated",
+  "textures": {
+    "bouclier_en_titane": "item/bouclier_en_titane"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        0,
+        90,
+        -35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        0,
+        -90,
+        35
+      ],
+      "translation": [
+        0,
+        1.25,
+        -3.5
+      ],
+      "scale": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        -135,
+        25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        45,
+        -25
+      ],
+      "translation": [
+        0,
+        4,
+        2
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "elements": [
+    {
+      "from": [
+        -5.0,
+        1.0,
+        -0.5
+      ],
+      "to": [
+        5.0,
+        15.0,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            2,
+            12,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            13,
+            2,
+            23,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            1,
+            2,
+            2,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            12,
+            2,
+            13,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            2,
+            1,
+            12,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            12,
+            1,
+            22,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -5.5,
+        14.5,
+        -0.7
+      ],
+      "to": [
+        5.5,
+        15.8,
+        0.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            72,
+            2,
+            83,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            84,
+            2,
+            95,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            71,
+            2,
+            72,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            83,
+            2,
+            84,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            72,
+            1,
+            83,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            83,
+            1,
+            94,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -4.8,
+        0.2,
+        -0.7
+      ],
+      "to": [
+        4.8,
+        1.5,
+        0.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            98,
+            2,
+            108,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            109,
+            2,
+            119,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            97,
+            2,
+            98,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            108,
+            2,
+            109,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            98,
+            1,
+            108,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            108,
+            1,
+            118,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        4.6,
+        1.0,
+        -0.7
+      ],
+      "to": [
+        5.6,
+        15.0,
+        0.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            26,
+            2,
+            27,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            28,
+            2,
+            29,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            25,
+            2,
+            26,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            27,
+            2,
+            28,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            26,
+            1,
+            27,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            27,
+            1,
+            28,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -5.6,
+        1.0,
+        -0.7
+      ],
+      "to": [
+        -4.6,
+        15.0,
+        0.7
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            2,
+            33,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            34,
+            2,
+            35,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            31,
+            2,
+            32,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            33,
+            2,
+            34,
+            16
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            32,
+            1,
+            33,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            33,
+            1,
+            34,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -2.5,
+        5.5,
+        -1.7
+      ],
+      "to": [
+        2.5,
+        10.5,
+        -0.4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            38,
+            2,
+            43,
+            7
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            44,
+            2,
+            49,
+            7
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            37,
+            2,
+            38,
+            7
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            43,
+            2,
+            44,
+            7
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            38,
+            1,
+            43,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            43,
+            1,
+            48,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -1.0,
+        7.0,
+        -2.2
+      ],
+      "to": [
+        1.0,
+        9.0,
+        -1.6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            2,
+            54,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            55,
+            2,
+            57,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            51,
+            2,
+            52,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            54,
+            2,
+            55,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            52,
+            1,
+            54,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            54,
+            1,
+            56,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.7,
+        11.2,
+        -1.5
+      ],
+      "to": [
+        0.7,
+        12.6,
+        -0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            122,
+            2,
+            123,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            124,
+            2,
+            125,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            121,
+            2,
+            122,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            123,
+            2,
+            124,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            122,
+            1,
+            123,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            123,
+            1,
+            124,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.7,
+        3.4,
+        -1.5
+      ],
+      "to": [
+        0.7,
+        4.8,
+        -0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            128,
+            2,
+            129,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            130,
+            2,
+            131,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            127,
+            2,
+            128,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            129,
+            2,
+            130,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            128,
+            1,
+            129,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            129,
+            1,
+            130,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -1.5,
+        6.5,
+        0.5
+      ],
+      "to": [
+        1.5,
+        7.8,
+        2.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            61,
+            3,
+            64,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            66,
+            3,
+            69,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            59,
+            3,
+            61,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            64,
+            3,
+            66,
+            4
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            61,
+            1,
+            64,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            64,
+            1,
+            67,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    },
+    {
+      "from": [
+        -2.0,
+        9.5,
+        0.5
+      ],
+      "to": [
+        2.0,
+        10.8,
+        1.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            134,
+            2,
+            138,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "south": {
+          "uv": [
+            139,
+            2,
+            143,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "west": {
+          "uv": [
+            133,
+            2,
+            134,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "east": {
+          "uv": [
+            138,
+            2,
+            139,
+            3
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "up": {
+          "uv": [
+            134,
+            1,
+            138,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        },
+        "down": {
+          "uv": [
+            138,
+            1,
+            142,
+            2
+          ],
+          "texture": "#bouclier_en_titane"
+        }
+      }
+    }
+  ]
+}

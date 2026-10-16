@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "opal_bricks",
+  "geometry_name": "geometry.opal_bricks",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "brick_block",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "c04e7bf0-285b-4186-ae46-60b0e6156556"
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "e690b954-c214-400b-9809-03e3241eb004",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "c04e7bf0-285b-4186-ae46-60b0e6156556"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\1_MINERAI_OPALE_ET_DERIVES\\05_Briques_Opale\\opal_bricks.png",
+      "name": "opal_bricks.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "7bb072a5-ec45-4f8c-b040-8dcd2b66090f",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA00lEQVR4nOXasU0DQRhE4XdPl1EJpbgd90EJtEETJj3ndgkWIiBZdC1wlhbpfdFm82vTmWWMMZjk83rn9X3j5e00LX/dH4/vH2abdYPESZzESZzESZzESZzESZzESZzESZzESZzESZzESZzESZzESZzESZzESZzErXtFPNvMG5av88e0fcC/MA64bLexf+AsR/Mv2208bSAxe2Tx13yJkziJkziJkziJkziJkziJkziJkziJkziJkziJkziJkziJkziJkziJW59RTc+u2I/kL/V6/BeyLykRk8nH+QAAAABJRU5ErkJggg=="
+    }
+  ],
+  "animations": []
+}
