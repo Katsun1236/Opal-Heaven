@@ -133,19 +133,18 @@ final class ChunkSerializer{
                     $stream->writeByteArray($nbtSerializer->write(new TreeRoot($state->toNbt())));
                 }
             }else{
-                //we would use writeSignedIntArray() here, but the gains of writing in batch are negated by the cost of
-                //allocating a temporary array for the mapped palette IDs, especially for small palettes
-                foreach($palette as $p){
-                    $networkId = $blockTranslator->internalIdToNetworkId($p);
-                    
-                    // MODIFICATION : Gestion automatique du hash FNV-1a si activé dans le protocole
-                    $netIdToWrite = method_exists($blockStateDictionary, 'getNetworkIdHash')
-                        ? ($blockStateDictionary->getNetworkIdHash($networkId) ?? $networkId)
-                        : $networkId;
+				foreach($palette as $p){
+					$networkId = $blockTranslator->internalIdToNetworkId($p);
+				
+				// CORRECTION : On utilise directement le générateur de hash FNV-1a de PMMP si disponible, 
+				// ou on force le hashage de l'état NBT du bloc.
+				$netIdToWrite = method_exists($blockStateDictionary, 'getHashFromNetworkId')
+					? $blockStateDictionary->getHashFromNetworkId($networkId)
+					: $networkId;
 
-                    VarInt::writeSignedInt($stream, $netIdToWrite);
-                }
-            }
+				VarInt::writeSignedInt($stream, $netIdToWrite);
+			}
+		}
         }
     }
 
