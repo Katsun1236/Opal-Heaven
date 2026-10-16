@@ -48,6 +48,7 @@ class OpalCore extends PluginBase implements Listener{
     private TeleportManager $teleport;
     private NPCManager $npc;
     private CombatDummyManager $dummy;
+    private \opal\core\role\RoleManager $roleManager;
 
     private string $serverRole = "faction"; // "hub" ou "faction"
 
@@ -81,12 +82,14 @@ class OpalCore extends PluginBase implements Listener{
         $this->teleport = new TeleportManager($this->combatTag);
         $this->npc = new NPCManager($this->orders, $this->quests, $this->ah);
         $this->dummy = new CombatDummyManager();
+        $this->roleManager = new \opal\core\role\RoleManager($this->database, $this);
         new \opal\core\schematic\SchematicLoader($this->getDataFolder());
         new \opal\core\trade\TradeManager($this->economy, $this->combatTag);
 
         // 3. Enregistrer les Écouteurs d'Événements
         $pm = $this->getServer()->getPluginManager();
         $pm->registerEvents($this, $this);
+        $pm->registerEvents($this->roleManager, $this);
         $pm->registerEvents($this->formManager, $this);
         $pm->registerEvents($this->combatTag, $this);
         $pm->registerEvents($this->posture, $this);
@@ -231,6 +234,30 @@ class OpalCore extends PluginBase implements Listener{
                     return true;
                 }
                 $loader->pasteSchematic($sender, $args[0]);
+                return true;
+
+            case "setrole":
+                if(!$sender->hasPermission("opal.admin")){
+                    $sender->sendMessage("§c❌ Seuls les Administrateurs peuvent modifier les rôles.");
+                    return true;
+                }
+                if(count($args) < 2){
+                    $sender->sendMessage("§cUsage: /setrole <joueur> <ADMIN|JOUEUR>");
+                    return true;
+                }
+                $targetPlayer = $args[0];
+                $newRole = strtoupper($args[1]);
+                if($this->roleManager->setRole($targetPlayer, $newRole)){
+                    $sender->sendMessage("§a✔ Rôle de §e{$targetPlayer} §adéfini sur §e{$newRole} §aavec succès !");
+                }else{
+                    $sender->sendMessage("§c❌ Rôle invalide. Rôles valides: ADMIN, JOUEUR");
+                }
+                return true;
+
+            case "role":
+                $target = isset($args[0]) ? $args[0] : $sender->getName();
+                $curRole = $this->roleManager->getRole($target);
+                $sender->sendMessage("§eRôle de §f{$target} §e: " . $this->roleManager->getRolePrefix($curRole));
                 return true;
         }
 
