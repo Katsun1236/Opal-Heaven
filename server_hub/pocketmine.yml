@@ -1,0 +1,70 @@
+# Configuration système avancée PocketMine-MP 5 - OPAL HEAVEN
+
+settings:
+ language: "fra"
+ default-permissions: member
+ force-language: true
+ shutdown-message: "§c[Opal Heaven] §7Le serveur redémarre pour maintenance..."
+ query-target-address: "0.0.0.0"
+ enable-dev-builds: true
+ async-workers: 2
+
+debug:
+ level: 2
+
+memory:
+ async-worker-hard-limit: 1024
+ global-soft-limit: 0
+ global-hard-limit: 0
+ main-hard-limit: 0
+ check-rate: 20
+ dump-on-oom: true
+
+network:
+ batch-threshold: 256
+ compression-level: 6
+ max-mtu-size: 1492
+ async-compression: false
+ upnp-forwarding: false
+ enable-encryption: false
+
+network-session:
+ packet-limit-per-tick: 500
+
+player:
+ save-player-data: true
+ verify-login-data: false
+ force-skin-trusted: true
+ verify-xuid: false
+
+level-settings:
+ default-format: leveldb
+ auto-tick-rate: 1
+ auto-tick-rate-limit: 20
+ base-tick-rate: 1
+
+worlds:
+ test_flat:
+  generator: flat
+
+chunk-ticking:
+ per-tick: 40
+ max-chunks: 50
+ tick-radius: 3
+
+chunk-generation:
+ queue-size: 8
+ population-queue-size: 8
+
+chunk-sending:
+ per-tick: 16
+ spawn-radius: 5
+
+ticks-per:
+ autosave: 6000
+
+auto-report:
+ enabled: false
+
+anonymous-statistics:
+ enabled: false

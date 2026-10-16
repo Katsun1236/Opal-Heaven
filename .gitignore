@@ -4,10 +4,16 @@
 **/LOCK
 crashdumps/
 server/crashdumps/
+server_hub/crashdumps/
 
-# Temporary worlds
+# SQLite WAL and runtime
+*.db-shm
+*.db-wal
+
+# Temporary worlds and players
 server/worlds/test_flat/
 server/worlds/flat/
+server_hub/worlds/
 server/pmmp_src_backup/
 PocketMine-MP-stable.zip
 

@@ -1,0 +1,52 @@
+name: OpalCore
+version: 1.0.0
+main: opal\core\OpalCore
+api: 5.0.0
+author: Bastien & Antigravity
+description: Cœur PvP-Faction & RPG d'Opal Heaven (Factions, Économie, Posture/Parade, Ordres d'Ascension, Chat, Primes, PNJ, HDV, Troc, Quêtes)
+
+permissions:
+  opal.player:
+    default: true
+    description: "Permissions de base pour les joueurs d'Opal Heaven"
+  opal.admin:
+    default: op
+    description: "Permissions d'administration Opal Heaven"
+
+commands:
+  money:
+    description: "Afficher votre solde d'Or Céleste"
+    permission: opal.player
+    aliases: ["bal", "balance"]
+  pay:
+    description: "Transférer de l'Or Céleste à un joueur"
+    permission: opal.player
+  order:
+    description: "Consulter ou choisir votre Ordre d'Ascension"
+    permission: opal.player
+  f:
+    description: "Commandes de Faction d'Opal Heaven"
+    permission: opal.player
+    aliases: ["faction"]
+  quests:
+    description: "Carnet de quêtes scénarisées et contrats"
+    permission: opal.player
+  ah:
+    description: "Accéder à l'Hôtel des Ventes Céleste"
+    permission: opal.player
+  bounty:
+    description: "Mettre à prix la tête d'un joueur ou voir les primes"
+    permission: opal.player
+  dummy:
+    description: "S'entraîner à la parade parfaite contre le mannequin"
+    permission: opal.player
+    aliases: ["parry"]
+  trade:
+    description: "Échange sécurisé de joueur à joueur avec anti-switch"
+    permission: opal.player
+  hub:
+    description: "Téléportation vers le Hub Céleste (Sanctuaire 0 PvP)"
+    permission: opal.player
+  spawn:
+    description: "Retourner au point de réapparition du monde"
+    permission: opal.player
