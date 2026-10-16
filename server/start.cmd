@@ -7,8 +7,7 @@ echo           OPAL HEAVEN - SERVEUR MINECRAFT BEDROCK
 echo ======================================================================
 echo.
 
-:: 1. Tuer les anciens processus PHP qui verrouillent le dossier ou le port UDP
-taskkill /F /IM php.exe >nul 2>&1
+:: 1. Initialisation de l'environnement
 
 :: 2. Nettoyer les caches phar temporaires
 rmdir /s /q "%TEMP%\PocketMine-MP-phar-cache.0" >nul 2>&1

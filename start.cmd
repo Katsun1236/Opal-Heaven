@@ -1,4 +1,3 @@
 @echo off
-TITLE Opal Heaven - Lanceur Principal
-cd /d "%~dp0server"
-call start.cmd
+cd /d "%~dp0"
+call start_all.cmd

@@ -11,9 +11,10 @@ server_hub/crashdumps/
 *.db-wal
 
 # Temporary worlds and players
-server/worlds/test_flat/
-server/worlds/flat/
+server/worlds/
 server_hub/worlds/
+server/players/
+server_hub/players/
 server/pmmp_src_backup/
 PocketMine-MP-stable.zip
 
