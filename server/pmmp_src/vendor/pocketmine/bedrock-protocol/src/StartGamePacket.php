@@ -60,7 +60,7 @@ class StartGamePacket extends DataPacket implements ClientboundPacket{
 	public string $serverSoftwareVersion;
 	public UuidInterface $worldTemplateId; //why is this here twice ??? mojang
 	public bool $enableClientSideChunkGeneration;
-	public bool $blockNetworkIdsAreHashes = false; //new in 1.19.80, possibly useful for multi version
+	public bool $blockNetworkIdsAreHashes = true; //new in 1.19.80, possibly useful for multi version
 	public NetworkPermissions $networkPermissions;
 	public bool $isLoggingChat = false;
 	public ?ServerJoinInformation $serverJoinInformation;
