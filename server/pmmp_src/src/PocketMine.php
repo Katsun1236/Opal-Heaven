@@ -268,11 +268,11 @@ JIT_WARNING
 		}
 		require_once($bootstrap);
 
-		$composerGitHash = InstalledVersions::getReference('pocketmine/pocketmine-mp');
+		$composerGitHash = InstalledVersions::getReference('axolotl-pm/pocketmine-mp');
 		if($composerGitHash !== null){
 			//we can't verify dependency versions if we were installed without using git
-			// Opal Heaven: bypass git hash check for direct source execution
-			if(false && $currentGitHash !== $composerGitHash){
+			$currentGitHash = explode("-", VersionInfo::GIT_HASH(), 2)[0];
+			if($currentGitHash !== $composerGitHash){
 				critical_error("Composer dependencies and/or autoloader are out of sync.");
 				critical_error("- Current revision is $currentGitHash");
 				critical_error("- Composer dependencies were last synchronized for revision $composerGitHash");

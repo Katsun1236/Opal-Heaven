@@ -4,11 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587
+class ComposerStaticInita89e57aefcb2488e59b2110842c7fe7c
 {
     public static $files = array (
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        'e54d4abbfb143f3da5b4e1588a89eb32' => __DIR__ . '/../..' . '/src/CoreConstants.php',
+        '808e7b590bc3f58cb232dc735baee8bb' => __DIR__ . '/../..' . '/src/CoreConstants.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -19,9 +19,11 @@ class ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587
         ),
         'p' =>
         array (
+            'pocketmine\\xoroshiro128pp\\' => 26,
             'pocketmine\\utils\\' => 17,
             'pocketmine\\snooze\\' => 18,
             'pocketmine\\network\\mcpe\\protocol\\' => 33,
+            'pocketmine\\nethernet\\' => 21,
             'pocketmine\\nbt\\' => 15,
             'pocketmine\\math\\' => 16,
             'pocketmine\\errorhandler\\' => 24,
@@ -60,6 +62,10 @@ class ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587
         array (
             0 => __DIR__ . '/..' . '/pocketmine/raklib/src',
         ),
+        'pocketmine\\xoroshiro128pp\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/axolotl-pm/xoroshiro128pp/src',
+        ),
         'pocketmine\\utils\\' =>
         array (
             0 => __DIR__ . '/..' . '/pocketmine/binaryutils/src',
@@ -70,7 +76,11 @@ class ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587
         ),
         'pocketmine\\network\\mcpe\\protocol\\' =>
         array (
-            0 => __DIR__ . '/..' . '/pocketmine/bedrock-protocol/src',
+            0 => __DIR__ . '/..' . '/axolotl-pm/bedrock-protocol/src',
+        ),
+        'pocketmine\\nethernet\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/axolotl-pm/nethernet/src',
         ),
         'pocketmine\\nbt\\' =>
         array (
@@ -143,10 +153,10 @@ class ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit43b2298cca1bf8dc7aebd21cb8d1f587::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita89e57aefcb2488e59b2110842c7fe7c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita89e57aefcb2488e59b2110842c7fe7c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita89e57aefcb2488e59b2110842c7fe7c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita89e57aefcb2488e59b2110842c7fe7c::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -8,9 +8,11 @@ $baseDir = dirname($vendorDir);
 return array(
     'raklib\\server\\ipc\\' => array($vendorDir . '/pocketmine/raklib-ipc/src'),
     'raklib\\' => array($vendorDir . '/pocketmine/raklib/src'),
+    'pocketmine\\xoroshiro128pp\\' => array($vendorDir . '/axolotl-pm/xoroshiro128pp/src'),
     'pocketmine\\utils\\' => array($vendorDir . '/pocketmine/binaryutils/src'),
     'pocketmine\\snooze\\' => array($vendorDir . '/pocketmine/snooze/src'),
-    'pocketmine\\network\\mcpe\\protocol\\' => array($vendorDir . '/pocketmine/bedrock-protocol/src'),
+    'pocketmine\\network\\mcpe\\protocol\\' => array($vendorDir . '/axolotl-pm/bedrock-protocol/src'),
+    'pocketmine\\nethernet\\' => array($vendorDir . '/axolotl-pm/nethernet/src'),
     'pocketmine\\nbt\\' => array($vendorDir . '/pocketmine/nbt/src'),
     'pocketmine\\math\\' => array($vendorDir . '/pocketmine/math/src'),
     'pocketmine\\errorhandler\\' => array($vendorDir . '/pocketmine/errorhandler/src'),

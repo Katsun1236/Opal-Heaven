@@ -25,7 +25,6 @@ namespace pocketmine\network\mcpe\handler;
 
 use pocketmine\lang\KnownTranslationFactory;
 use pocketmine\network\mcpe\NetworkSession;
-use pocketmine\network\mcpe\protocol\ClientCacheStatusPacket;
 use pocketmine\network\mcpe\protocol\ProtocolInfo;
 use pocketmine\network\mcpe\protocol\ResourcePackChunkDataPacket;
 use pocketmine\network\mcpe\protocol\ResourcePackChunkRequestPacket;
@@ -34,6 +33,7 @@ use pocketmine\network\mcpe\protocol\ResourcePackDataInfoPacket;
 use pocketmine\network\mcpe\protocol\ResourcePacksInfoPacket;
 use pocketmine\network\mcpe\protocol\ResourcePackStackPacket;
 use pocketmine\network\mcpe\protocol\types\Experiments;
+use pocketmine\network\mcpe\protocol\types\ResourcePackClientResponseStatus;
 use pocketmine\network\mcpe\protocol\types\resourcepacks\ResourcePackInfoEntry;
 use pocketmine\network\mcpe\protocol\types\resourcepacks\ResourcePackStackEntry;
 use pocketmine\network\mcpe\protocol\types\resourcepacks\ResourcePackType;
@@ -54,7 +54,6 @@ use function substr;
  * Handler used for the resource packs sequence phase of the session. This handler takes care of downloading resource
  * packs to the client.
  */
-#[SilentDiscard(ClientCacheStatusPacket::class, comment: "Client blob cache status")]
 class ResourcePacksPacketHandler extends PacketHandler{
 	private const PACK_CHUNK_SIZE = 256 * 1024; //256KB
 
@@ -156,11 +155,11 @@ class ResourcePacksPacketHandler extends PacketHandler{
 
 	public function handleResourcePackClientResponse(ResourcePackClientResponsePacket $packet) : bool{
 		switch($packet->status){
-			case ResourcePackClientResponsePacket::STATUS_REFUSED:
+			case ResourcePackClientResponseStatus::REFUSED:
 				//TODO: add lang strings for this
 				$this->session->disconnect("Refused resource packs", "You must accept resource packs to join this server.", true);
 				break;
-			case ResourcePackClientResponsePacket::STATUS_SEND_PACKS:
+			case ResourcePackClientResponseStatus::SEND_PACKS:
 				if($this->requestedMetadata){
 					throw new PacketHandlingException("Cannot request resource pack metadata multiple times");
 				}
@@ -206,7 +205,7 @@ class ResourcePacksPacketHandler extends PacketHandler{
 				}
 				$this->session->getLogger()->debug("Player requested download of " . count($packet->packIds) . " resource packs");
 				break;
-			case ResourcePackClientResponsePacket::STATUS_HAVE_ALL_PACKS:
+			case ResourcePackClientResponseStatus::HAVE_ALL_PACKS:
 				if($this->requestedStack){
 					throw new PacketHandlingException("Cannot request resource pack stack multiple times");
 				}
@@ -216,13 +215,18 @@ class ResourcePacksPacketHandler extends PacketHandler{
 					return new ResourcePackStackEntry($pack->getPackId(), $pack->getPackVersion(), ""); //TODO: subpacks
 				}, $this->resourcePackStack);
 
+				//we support chemistry blocks by default, the client should already have these installed
+				foreach(self::CHEMISTRY_RESOURCE_PACKS as [$uuid, $version]){
+					$stack[] = new ResourcePackStackEntry($uuid, $version, "");
+				}
+
 				//we don't force here, because it doesn't have user-facing effects
 				//but it does have an annoying side-effect when true: it makes
 				//the client remove its own non-server-supplied resource packs.
 				$this->session->sendDataPacket(ResourcePackStackPacket::create($stack, false, ProtocolInfo::MINECRAFT_VERSION_NETWORK, new Experiments([], false), false));
 				$this->session->getLogger()->debug("Applying resource pack stack");
 				break;
-			case ResourcePackClientResponsePacket::STATUS_COMPLETED:
+			case ResourcePackClientResponseStatus::COMPLETED:
 				$this->session->getLogger()->debug("Resource packs sequence completed");
 				if($this->session->getHandler() === $this){
 					$this->session->setHandler(null);

@@ -342,7 +342,7 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer, Nev
 		}
 		$this->perm = new PermissibleBase($rootPermissions);
 		$this->chunksPerTick = $this->server->getConfigGroup()->getPropertyInt(YmlServerProperties::CHUNK_SENDING_PER_TICK, 4);
-		$this->spawnThreshold = (int) max(1, $this->server->getConfigGroup()->getPropertyInt(YmlServerProperties::CHUNK_SENDING_SPAWN_RADIUS, 4) ** 2);
+		$this->spawnThreshold = (int) (($this->server->getConfigGroup()->getPropertyInt(YmlServerProperties::CHUNK_SENDING_SPAWN_RADIUS, 4) ** 2) * M_PI);
 		$this->chunkSelector = new ChunkSelector();
 
 		$this->chunkLoader = new class implements ChunkLoader{};
@@ -644,7 +644,8 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer, Nev
 		}
 
 		$this->viewDistance = $newViewDistance;
-		$this->spawnThreshold = (int) max(1, $this->server->getConfigGroup()->getPropertyInt(YmlServerProperties::CHUNK_SENDING_SPAWN_RADIUS, 4) ** 2);
+
+		$this->spawnThreshold = (int) (min($this->viewDistance, $this->server->getConfigGroup()->getPropertyInt(YmlServerProperties::CHUNK_SENDING_SPAWN_RADIUS, 4)) ** 2 * M_PI);
 
 		$this->nextChunkOrderRun = 0;
 
@@ -778,6 +779,16 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer, Nev
 		}
 	}
 
+	/**
+	 * Removes the player's cooldown time for the given item.
+	 */
+	public function removeItemCooldown(Item $item) : void{
+		if($this->hasItemCooldown($item)){
+			unset($this->usedItemsCooldown[$item->getCooldownTag() ?? $item->getStateId()]);
+			$this->getNetworkSession()->onItemCooldownChanged($item, 0);
+		}
+	}
+
 	protected function checkItemCooldowns() : void{
 		$serverTick = $this->server->getTick();
 		foreach($this->usedItemsCooldown as $itemId => $cooldownUntil){
@@ -876,7 +887,6 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer, Nev
 			$this->usedChunks[$index] = UsedChunkStatus::REQUESTED_GENERATION;
 			$this->activeChunkGenerationRequests[$index] = true;
 			unset($this->loadQueue[$index]);
-			$this->logger->info("[CHUNK-REQ] Demande du chunk ($X, $Z) - Restants en file: " . count($this->loadQueue));
 			$world->registerChunkLoader($this->chunkLoader, $X, $Z, true);
 			$world->registerChunkListener($this, $X, $Z);
 			if(isset($this->tickingChunks[$index])){
@@ -889,16 +899,17 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer, Nev
 						return;
 					}
 					if($this->usedChunks[$index] !== UsedChunkStatus::REQUESTED_GENERATION){
+						//We may have previously requested this, decided we didn't want it, and then decided we did want
+						//it again, all before the generation request got executed. In that case, the promise would have
+						//multiple callbacks for this player. In that case, only the first one matters.
 						return;
 					}
 					unset($this->activeChunkGenerationRequests[$index]);
 					$this->usedChunks[$index] = UsedChunkStatus::REQUESTED_SENDING;
-					$this->logger->info("[CHUNK-POP] Chunk ($X, $Z) prêt! Compression & transmission réseau...");
 
 					$this->getNetworkSession()->startUsingChunk($X, $Z, function() use ($X, $Z, $index) : void{
 						$this->usedChunks[$index] = UsedChunkStatus::SENT;
-						$this->logger->notice("[CHUNK-SENT] >> Chunk ($X, $Z) ENVOYÉ avec succès au joueur ! (Compteur: {$this->spawnChunkLoadCount}/{$this->spawnThreshold})");
-						if($this->spawnChunkLoadCount === -1 || $this->spawned){
+						if($this->spawnChunkLoadCount === -1){
 							$this->spawnEntitiesOnChunk($X, $Z);
 						}elseif($this->spawnChunkLoadCount++ === $this->spawnThreshold){
 							$this->spawnChunkLoadCount = -1;
@@ -941,8 +952,6 @@ class Player extends Human implements CommandSender, ChunkListener, IPlayer, Nev
 			return;
 		}
 		$this->spawned = true;
-		$this->spawnChunkLoadCount = -1;
-		$this->spawnEntitiesOnAllChunks();
 		$this->recheckBroadcastPermissions();
 		$this->getPermissionRecalculationCallbacks()->add(function(array $changedPermissionsOldValues) : void{
 			if(isset($changedPermissionsOldValues[Server::BROADCAST_CHANNEL_ADMINISTRATIVE]) || isset($changedPermissionsOldValues[Server::BROADCAST_CHANNEL_USERS])){

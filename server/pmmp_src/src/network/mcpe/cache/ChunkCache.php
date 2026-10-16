@@ -23,22 +23,15 @@ declare(strict_types=1);
 
 namespace pocketmine\network\mcpe\cache;
 
-use pmmp\encoding\ByteBufferWriter;
 use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\ChunkRequestTask;
 use pocketmine\network\mcpe\compression\CompressBatchPromise;
 use pocketmine\network\mcpe\compression\Compressor;
-use pocketmine\network\mcpe\convert\TypeConverter;
-use pocketmine\network\mcpe\protocol\LevelChunkPacket;
-use pocketmine\network\mcpe\protocol\serializer\PacketBatch;
-use pocketmine\network\mcpe\protocol\types\ChunkPosition;
 use pocketmine\network\mcpe\protocol\types\DimensionIds;
-use pocketmine\network\mcpe\serializer\ChunkSerializer;
 use pocketmine\world\ChunkListener;
 use pocketmine\world\ChunkListenerNoOpTrait;
 use pocketmine\world\format\Chunk;
 use pocketmine\world\World;
-use function chr;
 use function is_string;
 use function spl_object_id;
 use function strlen;
@@ -140,33 +133,6 @@ class ChunkCache implements ChunkListener{
 		}
 	}
 
-	public function prepareChunkSync(int $chunkX, int $chunkZ, int $chunkHash) : string{
-		$this->world->registerChunkListener($this, $chunkX, $chunkZ);
-		$chunk = $this->world->getChunk($chunkX, $chunkZ);
-		if($chunk === null){
-			throw new \InvalidArgumentException("Cannot request an unloaded chunk");
-		}
-		++$this->misses;
-
-		$this->world->timings->syncChunkSendPrepare->startTiming();
-		try{
-			$subCount = ChunkSerializer::getSubChunkCount($chunk, $this->dimensionId);
-			$converter = TypeConverter::getInstance();
-			$tiles = ChunkSerializer::serializeTiles($chunk);
-			$payload = ChunkSerializer::serializeFullChunk($chunk, $this->dimensionId, $converter->getBlockTranslator(), $tiles);
-
-			$stream = new ByteBufferWriter();
-			PacketBatch::encodePackets($stream, [LevelChunkPacket::create(new ChunkPosition($chunkX, $chunkZ), $this->dimensionId, $subCount, false, null, $payload)]);
-
-			$result = chr($this->compressor->getNetworkId()) . $this->compressor->compress($stream->getData());
-			$this->caches[$chunkHash] = $result;
-
-			return $result;
-		}finally{
-			$this->world->timings->syncChunkSendPrepare->stopTiming();
-		}
-	}
-
 	/**
 	 * Requests asynchronous preparation of the chunk at the given coordinates.
 	 *
@@ -177,10 +143,6 @@ class ChunkCache implements ChunkListener{
 		if(isset($this->caches[$chunkHash])){
 			++$this->hits;
 			return $this->caches[$chunkHash];
-		}
-
-		if(!$this->world->getServer()->getConfigGroup()->getPropertyBool("network.async-compression", true)){
-			return $this->prepareChunkSync($chunkX, $chunkZ, $chunkHash);
 		}
 
 		return $this->prepareChunkAsync($chunkX, $chunkZ, $chunkHash);

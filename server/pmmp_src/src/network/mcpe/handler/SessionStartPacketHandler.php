@@ -40,7 +40,6 @@ final class SessionStartPacketHandler extends PacketHandler{
 
 	public function handleRequestNetworkSettings(RequestNetworkSettingsPacket $packet) : bool{
 		$protocolVersion = $packet->getProtocolVersion();
-		$this->session->getLogger()->notice("[CLIENT-HANDSHAKE] RequestNetworkSettingsPacket: Client Protocol Version = $protocolVersion");
 		if(!$this->isCompatibleProtocol($protocolVersion)){
 			$this->session->disconnectIncompatibleProtocol($protocolVersion);
 
@@ -50,7 +49,7 @@ final class SessionStartPacketHandler extends PacketHandler{
 		//TODO: we're filling in the defaults to get pre-1.19.30 behaviour back for now, but we should explore the new options in the future
 		$this->session->sendDataPacket(NetworkSettingsPacket::create(
 			NetworkSettingsPacket::COMPRESS_EVERYTHING,
-			$this->session->getCompressor()->getNetworkId(),
+			$this->session->getCompressor()->getNetworkType(),
 			false,
 			0,
 			0
@@ -61,6 +60,6 @@ final class SessionStartPacketHandler extends PacketHandler{
 	}
 
 	protected function isCompatibleProtocol(int $protocolVersion) : bool{
-		return true; // Opal Heaven: Accepter toutes les versions Bedrock clientes
+		return $protocolVersion === ProtocolInfo::CURRENT_PROTOCOL;
 	}
 }

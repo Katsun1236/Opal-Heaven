@@ -26,30 +26,24 @@ namespace pocketmine\network\mcpe\cache;
 use pocketmine\color\Color;
 use pocketmine\data\bedrock\BedrockDataFiles;
 use pocketmine\data\SavedDataLoadingException;
-use pocketmine\nbt\BigEndianNbtSerializer;
-use pocketmine\nbt\NBT;
 use pocketmine\nbt\tag\CompoundTag;
-use pocketmine\nbt\tag\ListTag;
+use pocketmine\network\mcpe\cache\model\VoxelShapesData;
 use pocketmine\network\mcpe\protocol\AvailableActorIdentifiersPacket;
 use pocketmine\network\mcpe\protocol\BiomeDefinitionListPacket;
-use pocketmine\network\mcpe\protocol\FeatureRegistryPacket;
 use pocketmine\network\mcpe\protocol\JigsawStructureDataPacket;
-use pocketmine\network\mcpe\protocol\VoxelShapesPacket;
-use pocketmine\network\mcpe\convert\TypeConverter;
 use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
 use pocketmine\network\mcpe\protocol\types\biome\BiomeDefinitionEntry;
 use pocketmine\network\mcpe\protocol\types\BlockPaletteEntry;
 use pocketmine\network\mcpe\protocol\types\CacheableNbt;
+use pocketmine\network\mcpe\protocol\types\SerializableVoxelCells;
+use pocketmine\network\mcpe\protocol\types\SerializableVoxelShape;
+use pocketmine\network\mcpe\protocol\VoxelShapesPacket;
 use pocketmine\utils\Filesystem;
 use pocketmine\utils\SingletonTrait;
 use pocketmine\utils\Utils;
 use pocketmine\world\biome\model\BiomeDefinitionEntryData;
-use Symfony\Component\Filesystem\Path;
-use const pocketmine\RESOURCE_PATH;
 use function count;
-use function file_exists;
 use function get_debug_type;
-use function gzdecode;
 use function is_array;
 use function json_decode;
 
@@ -57,7 +51,7 @@ class StaticPacketCache{
 	use SingletonTrait;
 
 	/**
-	 * @phpstan-return CacheableNbt<\pocketmine\nbt\tag\CompoundTag>
+	 * @phpstan-return CacheableNbt<CompoundTag>
 	 */
 	private static function loadCompoundFromFile(string $filePath) : CacheableNbt{
 		return new CacheableNbt((new NetworkNbtSerializer())->read(Filesystem::fileGetContents($filePath))->mustGetCompoundTag());
@@ -112,30 +106,83 @@ class StaticPacketCache{
 		return $entries;
 	}
 
-	private static function make() : self{
-		$emptyJigsawNbt = CompoundTag::create()
-			->setTag("processors", new ListTag([], NBT::TAG_Compound))
-			->setTag("template_pools", new ListTag([], NBT::TAG_Compound))
-			->setTag("jigsaws", new ListTag([], NBT::TAG_Compound))
-			->setTag("structure_sets", new ListTag([], NBT::TAG_Compound));
-		$jigsawPacket = JigsawStructureDataPacket::create(new CacheableNbt($emptyJigsawNbt));
+	private static function loadVoxelShapesModel(string $filePath) : VoxelShapesData{
+		$voxelShapes = json_decode(Filesystem::fileGetContents($filePath), associative: true);
+		if(!is_array($voxelShapes)){
+			throw new SavedDataLoadingException("$filePath root should be an array, got " . get_debug_type($voxelShapes));
+		}
 
+		$jsonMapper = new \JsonMapper();
+		$jsonMapper->bExceptionOnMissingData = true;
+		$jsonMapper->bStrictObjectTypeChecking = true;
+		$jsonMapper->bEnforceMapType = false;
+
+		try{
+			return $jsonMapper->map($voxelShapes, new VoxelShapesData());
+		}catch(\JsonMapper_Exception $e){
+			throw new \RuntimeException($e->getMessage(), 0, $e);
+		}
+	}
+
+	private static function buildVoxelShapesPacket(VoxelShapesData $data) : VoxelShapesPacket{
+		$shapes = [];
+		foreach($data->shapes as $shape){
+			$cells = $shape->cells;
+			$shapes[] = new SerializableVoxelShape(
+				new SerializableVoxelCells($cells->xSize, $cells->ySize, $cells->zSize, $cells->storage),
+				$shape->x,
+				$shape->y,
+				$shape->z
+			);
+		}
+
+		return VoxelShapesPacket::create($shapes, $data->nameMap, 0);
+	}
+
+	/** @phpstan-return list<BlockPaletteEntry> */
+	private static function loadDataDrivenBlockPalette(string $filePath) : array{
+		$nbt = self::loadCompoundFromFile($filePath)->getRoot();
+		if(!$nbt instanceof CompoundTag){
+			throw new SavedDataLoadingException("$filePath should contain a CompoundTag, got " . get_debug_type($nbt));
+		}
+		$paletteNBT = $nbt->getListTag("blockPalette");
+		if($paletteNBT === null){
+			throw new SavedDataLoadingException("$filePath should contain a blockPalette ListTag");
+		}
+		$palette = [];
+		foreach($paletteNBT->getValue() as $entryNBT){
+			if(!$entryNBT instanceof CompoundTag){
+				throw new SavedDataLoadingException("$filePath blockPalette should contain CompoundTag entries, got " . get_debug_type($entryNBT));
+			}
+			$name = $entryNBT->getString("name");
+			$states = $entryNBT->getCompoundTag("states");
+			if($states === null){
+				throw new SavedDataLoadingException("$filePath blockPalette entry $name should contain a states CompoundTag");
+			}
+			$palette[] = new BlockPaletteEntry($name, new CacheableNbt($states));
+		}
+		return $palette;
+	}
+
+	private static function make() : self{
 		return new self(
 			BiomeDefinitionListPacket::fromDefinitions(self::loadBiomeDefinitionModel(BedrockDataFiles::BIOME_DEFINITIONS_JSON)),
 			AvailableActorIdentifiersPacket::create(self::loadCompoundFromFile(BedrockDataFiles::ENTITY_IDENTIFIERS_NBT)),
-			FeatureRegistryPacket::create([]),
-			$jigsawPacket,
-			VoxelShapesPacket::create([], [], 0)
+			JigsawStructureDataPacket::create(self::loadCompoundFromFile(BedrockDataFiles::JIGSAW_STRUCTURES_DATA_NBT)),
+			self::buildVoxelShapesPacket(self::loadVoxelShapesModel(BedrockDataFiles::VOXEL_SHAPES_JSON)),
+			self::loadDataDrivenBlockPalette(BedrockDataFiles::DATA_DRIVEN_BLOCKS_NBT)
 		);
 	}
 
+	/** @phpstan-param list<BlockPaletteEntry> $blockPaletteEntries */
 	public function __construct(
 		private BiomeDefinitionListPacket $biomeDefs,
 		private AvailableActorIdentifiersPacket $availableActorIdentifiers,
-		private FeatureRegistryPacket $featureRegistry,
 		private JigsawStructureDataPacket $jigsawStructureData,
-		private VoxelShapesPacket $voxelShapes
-	){}
+		private VoxelShapesPacket $voxelShapes,
+		private array $blockPaletteEntries
+	){
+	}
 
 	public function getBiomeDefs() : BiomeDefinitionListPacket{
 		return $this->biomeDefs;
@@ -143,10 +190,6 @@ class StaticPacketCache{
 
 	public function getAvailableActorIdentifiers() : AvailableActorIdentifiersPacket{
 		return $this->availableActorIdentifiers;
-	}
-
-	public function getFeatureRegistry() : FeatureRegistryPacket{
-		return $this->featureRegistry;
 	}
 
 	public function getJigsawStructureData() : JigsawStructureDataPacket{
@@ -157,28 +200,11 @@ class StaticPacketCache{
 		return $this->voxelShapes;
 	}
 
-	/** @var BlockPaletteEntry[]|null */
-	private ?array $blockPalette = null;
-
 	/**
 	 * @return BlockPaletteEntry[]
 	 * @phpstan-return list<BlockPaletteEntry>
 	 */
-	public function getBlockPalette() : array{
-		if($this->blockPalette === null){
-			$tc = TypeConverter::getInstance();
-			$states = $tc->getBlockTranslator()->getBlockStateDictionary()->getStates();
-
-			$this->blockPalette = [];
-			foreach($states as $state){
-				$stateData = $state->generateStateData();
-				$statesTag = CompoundTag::create();
-				foreach($stateData->getStates() as $k => $v){
-					$statesTag->setTag($k, $v);
-				}
-				$this->blockPalette[] = new BlockPaletteEntry($stateData->getName(), new CacheableNbt($statesTag));
-			}
-		}
-		return $this->blockPalette;
+	public function getBlockPaletteEntries() : array{
+		return $this->blockPaletteEntries;
 	}
 }

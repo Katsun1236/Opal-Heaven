@@ -28,6 +28,7 @@ use pmmp\encoding\ByteBufferWriter;
 use pmmp\encoding\DataDecodeException;
 use pocketmine\entity\effect\EffectInstance;
 use pocketmine\event\player\PlayerDuplicateLoginEvent;
+use pocketmine\event\player\PlayerIdentityVerifyEvent;
 use pocketmine\event\player\PlayerResourcePackOfferEvent;
 use pocketmine\event\server\DataPacketDecodeEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
@@ -103,6 +104,8 @@ use pocketmine\network\mcpe\protocol\UpdateAbilitiesPacket;
 use pocketmine\network\mcpe\protocol\UpdateAdventureSettingsPacket;
 use pocketmine\network\NetworkSessionManager;
 use pocketmine\network\PacketHandlingException;
+use pocketmine\network\TransportIdentityException;
+use pocketmine\network\TransportIdentityKey;
 use pocketmine\permission\DefaultPermissionNames;
 use pocketmine\permission\DefaultPermissions;
 use pocketmine\player\GameMode;
@@ -176,15 +179,6 @@ class NetworkSession{
 
 	private ?EncryptionContext $cipher = null;
 
-	private string $lastPacketReceived = "AUCUN";
-	private float $lastPacketReceivedTime = 0.0;
-	private string $lastPacketSent = "AUCUN";
-	private float $lastPacketSentTime = 0.0;
-	private bool $clientInitializedEarly = false;
-
-	/** @var array<array{name: string, time: float, dir: string}> */
-	private array $recentPacketLog = [];
-
 	/**
 	 * @var string[]
 	 * @phpstan-var list<string>
@@ -229,7 +223,9 @@ class NetworkSession{
 		private Compressor $compressor,
 		private TypeConverter $typeConverter,
 		private string $ip,
-		private int $port
+		private int $port,
+		private ?TransportIdentityKey $transportIdentityKey = null,
+		private bool $transportEncrypted = false
 	){
 		$this->logger = new \PrefixedLogger($this->server->getLogger(), $this->getLogPrefix());
 
@@ -421,11 +417,12 @@ class NetworkSession{
 			}
 
 			if($this->enableCompression){
-				$compressionType = ord($payload[0]);
+				$compressionTypeId = ord($payload[0]);
+				$compressionType = CompressionAlgorithm::tryFrom($compressionTypeId);
 				$compressed = substr($payload, 1);
 				if($compressionType === CompressionAlgorithm::NONE){
 					$decompressed = $compressed;
-				}elseif($compressionType === $this->compressor->getNetworkId()){
+				}elseif($compressionType === $this->compressor->getNetworkType()){
 					Timings::$playerNetworkReceiveDecompress->startTiming();
 					try{
 						$decompressed = $this->compressor->decompress($compressed);
@@ -436,7 +433,7 @@ class NetworkSession{
 						Timings::$playerNetworkReceiveDecompress->stopTiming();
 					}
 				}else{
-					throw new PacketHandlingException("Packet compressed with unexpected compression type $compressionType");
+					throw new PacketHandlingException("Packet compressed with unexpected compression type $compressionTypeId");
 				}
 			}else{
 				$decompressed = $payload;
@@ -491,7 +488,7 @@ class NetworkSession{
 		$debugSegmentLength = strlen($debugSegment);
 		$fullLength = strlen($buffer);
 		$truncatedLabel = $debugSegmentLength === $fullLength ? "" : " ... (" . ($fullLength - $debugSegmentLength) . " bytes not shown)";
-		$this->logger->warning("[PAQUET NON GÉRÉ/REJETÉ] $label: " . $packet->getName() . " ($fullLength bytes): " . base64_encode($debugSegment) . $truncatedLabel);
+		$this->logger->debug($label . ": " . $packet->getName() . " ($fullLength bytes): " . base64_encode($debugSegment) . $truncatedLabel);
 	}
 
 	/**
@@ -499,13 +496,6 @@ class NetworkSession{
 	 * @throws FilterNoisyPacketException
 	 */
 	public function handleDataPacket(Packet $packet, string $buffer) : void{
-		$this->lastPacketReceived = $packet->getName();
-		$this->lastPacketReceivedTime = microtime(true);
-		$this->recentPacketLog[] = ['name' => $packet->getName(), 'time' => $this->lastPacketReceivedTime, 'dir' => 'RECV'];
-		if(count($this->recentPacketLog) > 20){
-			array_shift($this->recentPacketLog);
-		}
-		$this->logger->info("[NET] << RECEIVED: " . $packet->getName());
 		if(!($packet instanceof ServerboundPacket)){
 			throw new PacketHandlingException("Unexpected non-serverbound packet");
 		}
@@ -601,12 +591,6 @@ class NetworkSession{
 		if(!$this->connected){
 			return false;
 		}
-		$this->lastPacketSent = $packet->getName();
-		$this->lastPacketSentTime = microtime(true);
-		$this->recentPacketLog[] = ['name' => $packet->getName(), 'time' => $this->lastPacketSentTime, 'dir' => 'SENT'];
-		if(count($this->recentPacketLog) > 20){
-			array_shift($this->recentPacketLog);
-		}
 		//Basic safety restriction. TODO: improve this
 		if(!$this->loggedIn && !$packet->canBeSentBeforeLogin()){
 			throw new \InvalidArgumentException("Attempted to send " . get_class($packet) . " to " . $this->getDisplayName() . " too early");
@@ -632,7 +616,6 @@ class NetworkSession{
 			$writer = new ByteBufferWriter();
 			foreach($packets as $evPacket){
 				$writer->clear(); //memory reuse let's gooooo
-				$this->logger->info("[NET] >> SENDING: " . $evPacket->getName());
 				$this->addToSendBuffer(self::encodePacketTimed($writer, $evPacket));
 			}
 			if($immediate){
@@ -807,96 +790,6 @@ class NetworkSession{
 	 */
 	private function tryDisconnect(\Closure $func, Translatable|string $reason) : void{
 		if($this->connected && !$this->disconnectGuard){
-			$handlerName = $this->handler !== null ? get_class($this->handler) : "NULL";
-			$playerName = $this->player !== null ? $this->player->getName() : ($this->info !== null ? $this->info->getUsername() : "Inconnu");
-			$spawned = ($this->player !== null && $this->player->spawned) ? "OUI" : "NON";
-			$pos = $this->player !== null ? sprintf("(%.1f, %.1f, %.1f)", $this->player->getLocation()->x, $this->player->getLocation()->y, $this->player->getLocation()->z) : "N/A";
-			$now = microtime(true);
-			$recvElapsed = $this->lastPacketReceivedTime > 0 ? sprintf("%.1f ms", ($now - $this->lastPacketReceivedTime) * 1000) : "N/A";
-			$sentElapsed = $this->lastPacketSentTime > 0 ? sprintf("%.1f ms", ($now - $this->lastPacketSentTime) * 1000) : "N/A";
-			$lastRecv = "{$this->lastPacketReceived} (il y a $recvElapsed)";
-			$lastSent = "{$this->lastPacketSent} (il y a $sentElapsed)";
-			$deviceInfo = "N/A";
-			$gameVer = "N/A";
-			if($this->info !== null){
-				$extra = $this->info->getExtraData();
-				$osMap = [1 => "Android", 2 => "iOS", 3 => "macOS", 4 => "FireOS", 7 => "Windows 10/11", 8 => "Windows 32", 11 => "PlayStation", 12 => "Nintendo Switch", 13 => "Xbox"];
-				$osName = $osMap[$extra["DeviceOS"] ?? 0] ?? ("OS-" . ($extra["DeviceOS"] ?? 0));
-				$deviceInfo = "$osName (" . ($extra["DeviceModel"] ?? "Unknown") . ")";
-				$gameVer = $extra["GameVersion"] ?? "Unknown";
-			}
-			$blockAtPos = "N/A";
-			$worldSpawnStr = "N/A";
-			if($this->player !== null){
-				$world = $this->player->getWorld();
-				$wSpawn = $world->getSpawnLocation();
-				$worldSpawnStr = sprintf("(%.1f, %.1f, %.1f)", $wSpawn->x, $wSpawn->y, $wSpawn->z);
-				$pPos = $this->player->getLocation();
-				$b = $world->getBlock($pPos);
-				$blockAtPos = $b->getName() . " (Solide: " . ($b->isFullCube() ? "OUI" : "NON") . ", StateId: " . $b->getStateId() . ")";
-			}
-
-			$translatedReason = $reason instanceof \pocketmine\lang\Translatable ? $this->server->getLanguage()->translate($reason) : (string) $reason;
-
-			$this->logger->warning("==================== [DIAGNOSTIC DECONNEXION COMPLET] ====================");
-			$this->logger->warning("Joueur: $playerName | Version Client: $gameVer | Appareil: $deviceInfo");
-			$this->logger->warning("En Jeu (Spawned): $spawned | Position: $pos | Bloc au joueur: $blockAtPos");
-			$this->logger->warning("Point de Spawn Monde: $worldSpawnStr");
-			$this->logger->warning("Handler Reseau Actif: $handlerName");
-			$this->logger->warning("Dernier Paquet Recu: $lastRecv");
-			$this->logger->warning("Dernier Paquet Envoye: $lastSent");
-			$this->logger->warning("Raison Deconnexion: $translatedReason");
-
-			$this->logger->warning("---------- HISTORIQUE DES DERNIERS PAQUETS (CHRONOLOGIE) ----------");
-			$recentReversed = array_reverse(array_slice($this->recentPacketLog, -10));
-			foreach($recentReversed as $entry){
-				$rel = sprintf("%.1f ms", ($now - $entry['time']) * 1000);
-				$arrow = $entry['dir'] === 'RECV' ? "<<" : ">>";
-				$this->logger->warning("  [$arrow {$entry['dir']}] {$entry['name']} (il y a $rel)");
-			}
-
-			$this->logger->warning("---------- ANALYSE DIAGNOSTIQUE OPAL HEAVEN ----------");
-			if($handlerName === "pocketmine\\network\\mcpe\\handler\\SpawnResponsePacketHandler"){
-				$this->logger->warning("  [!] ECHEC GAME-SETUP / CHARGEMENT MONDE: Le client s'est déconnecté après PLAYER_SPAWN");
-				$this->logger->warning("      Causes potentielles: Erreur 'Boat' (données de structure manquantes), timeout du client,");
-				$this->logger->warning("      ou incompatibilité de rendu de sous-chunk côté Bedrock.");
-			}elseif($handlerName === "pocketmine\\network\\mcpe\\handler\\PreSpawnPacketHandler"){
-				$this->logger->warning("  [!] ECHEC PRE-SPAWN: Le client a fermé avant la finalisation des chunks ou StartGame.");
-			}elseif($handlerName === "pocketmine\\network\\mcpe\\handler\\LoginPacketHandler"){
-				$this->logger->warning("  [!] ECHEC AUTH / LOGIN: Le handshake initial a échoué.");
-			}
-
-			$appData = getenv("APPDATA");
-			if($appData !== false){
-				$clientLogPattern = str_replace("\\", "/", $appData) . "/Minecraft Bedrock/Users/*/games/com.mojang/minecraftpe/ContentLog*.txt";
-				$matches = glob($clientLogPattern);
-				if(!empty($matches)){
-					$newest = null;
-					$newestMtime = 0;
-					foreach($matches as $m){
-						$mt = @filemtime($m);
-						if($mt > $newestMtime){
-							$newestMtime = $mt;
-							$newest = $m;
-						}
-					}
-					if($newest !== null && ($now - $newestMtime) < 180){
-						$this->logger->warning("---------- LOGS CLIENT EXTRAITS ($newest) ----------");
-						$cLines = @file($newest);
-						if($cLines !== false){
-							$lastFew = array_slice($cLines, -8);
-							foreach($lastFew as $cl){
-								$tCl = trim($cl);
-								if($tCl !== ""){
-									$this->logger->warning("  [CLIENT] " . $tCl);
-								}
-							}
-						}
-					}
-				}
-			}
-			$this->logger->warning("==========================================================================");
-
 			$this->disconnectGuard = true;
 			$func();
 			$this->disconnectGuard = false;
@@ -921,6 +814,8 @@ class NetworkSession{
 			foreach($sendBufferAckPromises as $resolver){
 				$resolver->reject();
 			}
+
+			$this->logger->info($this->server->getLanguage()->translate(KnownTranslationFactory::pocketmine_network_session_close($reason)));
 		}
 	}
 
@@ -982,7 +877,7 @@ class NetworkSession{
 	public function transfer(string $ip, int $port, Translatable|string|null $reason = null) : void{
 		$reason ??= KnownTranslationFactory::pocketmine_disconnect_transfer();
 		$this->tryDisconnect(function() use ($ip, $port, $reason) : void{
-			$this->sendDataPacket(TransferPacket::create($ip, $port, false), true);
+			$this->sendDataPacket(TransferPacket::create($ip, $port, false, null), true);
 			if($this->player !== null){
 				$this->player->onPostDisconnect($reason, null);
 			}
@@ -1019,20 +914,27 @@ class NetworkSession{
 				$error = "Expected XUID but none found";
 			}elseif($clientPubKey === null){
 				$error = "Missing client public key"; //failsafe
+			}elseif($authenticated && $this->transportIdentityKey !== null){
+				//Authenticated logins require the connection's proven key to prevent replay attacks,
+				//unauthenticated logins carry no verified identity to impersonate.
+				try{
+					$this->transportIdentityKey->verify($clientPubKey);
+				}catch(TransportIdentityException $e){
+					$error = $e->getMessage();
+				}
 			}
 		}
 
 		if($error !== null){
-			if($authRequired){
-				$this->disconnectWithError(
-					reason: KnownTranslationFactory::pocketmine_disconnect_invalidSession($error),
-					disconnectScreenMessage: KnownTranslationFactory::pocketmine_disconnect_error_authentication()
-				);
+			$this->disconnectWithError(
+				reason: KnownTranslationFactory::pocketmine_disconnect_invalidSession($error),
+				disconnectScreenMessage: KnownTranslationFactory::pocketmine_disconnect_error_authentication()
+			);
 
-				return;
-			}
-			$this->logger->warning("Xbox Live verification failed, continuing in offline mode since xbox-auth=off. ($error)");
-			$authenticated = false;
+			return;
+		}
+		if($clientPubKey === null){
+			throw new AssumptionFailedError("Client public key should have been checked above");
 		}
 
 		$this->authenticated = $authenticated;
@@ -1048,6 +950,22 @@ class NetworkSession{
 			}
 		}
 		$this->logger->debug("Xbox Live authenticated: " . ($this->authenticated ? "YES" : "NO"));
+
+		$ev = new PlayerIdentityVerifyEvent(
+			$this,
+			$this->info ?? throw new AssumptionFailedError("Player info is set before login verification starts"),
+			$this->authenticated,
+			$authRequired,
+			$clientPubKey,
+			$this->transportIdentityKey,
+			"Plugin reason",
+			KnownTranslationFactory::pocketmine_disconnect_error_authentication()
+		);
+		$ev->call();
+		if($ev->isCancelled()){
+			$this->disconnect($ev->getDisconnectReason(), $ev->getDisconnectScreenMessage());
+			return;
+		}
 
 		$checkXUID = $this->server->getConfigGroup()->getPropertyBool(YmlServerProperties::PLAYER_VERIFY_XUID, true);
 		$myXUID = $this->info instanceof XboxLivePlayerInfo ? $this->info->getXuid() : "";
@@ -1096,7 +1014,8 @@ class NetworkSession{
 			}
 		}
 
-		if(EncryptionContext::$ENABLED){
+		// Skip handshake if the transport layer already provides encryption and client identity.
+		if(EncryptionContext::$ENABLED && !($this->transportEncrypted && $this->transportIdentityKey !== null)){
 			$this->server->getAsyncPool()->submitTask(new PrepareEncryptionTask($clientPubKey, function(string $encryptionKey, string $handshakeJwt) : void{
 				if(!$this->connected){
 					return;
@@ -1143,26 +1062,14 @@ class NetworkSession{
 		$this->logger->debug("Waiting for chunk radius request");
 	}
 
-	public function markClientInitializedEarly() : void{
-		$this->clientInitializedEarly = true;
-	}
-
 	public function notifyTerrainReady() : void{
-		if($this->handler instanceof InGamePacketHandler || $this->handler instanceof SpawnResponsePacketHandler){
-			return;
-		}
-		$this->logger->notice(">> [SPAWN-FLOW] Terrain prêt! Envoi de PlayStatusPacket::PLAYER_SPAWN à " . $this->getDisplayName());
+		$this->logger->debug("Sending spawn notification, waiting for spawn response");
 		$this->sendDataPacket(PlayStatusPacket::create(PlayStatusPacket::PLAYER_SPAWN));
-		if($this->clientInitializedEarly){
-			$this->logger->notice(">> [SPAWN-FLOW] Client déjà initialisé prématurément, passage immédiat en jeu !");
-			$this->onClientSpawnResponse();
-		}else{
-			$this->setHandler(new SpawnResponsePacketHandler($this, $this->onClientSpawnResponse(...)));
-		}
+		$this->setHandler(new SpawnResponsePacketHandler($this->onClientSpawnResponse(...)));
 	}
 
 	private function onClientSpawnResponse() : void{
-		$this->logger->notice("<< [SPAWN-FLOW] Reçu SetLocalPlayerAsInitialized! Le joueur entre EN JEU (InGamePacketHandler)");
+		$this->logger->debug("Received spawn response, entering in-game phase");
 		$this->player->setNoClientPredictions(false); //TODO: HACK: we set this during the spawn sequence to prevent the client sending junk movements
 		$this->player->doFirstSpawn();
 		$this->forceAsyncCompression = false;
@@ -1465,18 +1372,18 @@ class NetworkSession{
 	 * @param Player[] $players
 	 */
 	public function syncPlayerList(array $players) : void{
-		$this->sendDataPacket(PlayerListPacket::add(array_map(function(Player $player) : PlayerListEntry{
+		$this->sendDataPacket(PlayerListPacket::create(array_map(function(Player $player) : PlayerListEntry{
 			return PlayerListEntry::createAdditionEntry($player->getUniqueId(), $player->getId(), $player->getDisplayName(), $this->typeConverter->getSkinAdapter()->toSkinData($player->getSkin()), $player->getXuid());
 		}, $players)));
 	}
 
 	public function onPlayerAdded(Player $p) : void{
-		$this->sendDataPacket(PlayerListPacket::add([PlayerListEntry::createAdditionEntry($p->getUniqueId(), $p->getId(), $p->getDisplayName(), $this->typeConverter->getSkinAdapter()->toSkinData($p->getSkin()), $p->getXuid())]));
+		$this->sendDataPacket(PlayerListPacket::create([PlayerListEntry::createAdditionEntry($p->getUniqueId(), $p->getId(), $p->getDisplayName(), $this->typeConverter->getSkinAdapter()->toSkinData($p->getSkin()), $p->getXuid())]));
 	}
 
 	public function onPlayerRemoved(Player $p) : void{
 		if($p !== $this->player){
-			$this->sendDataPacket(PlayerListPacket::remove([PlayerListEntry::createRemovalEntry($p->getUniqueId())]));
+			$this->sendDataPacket(PlayerListPacket::create([PlayerListEntry::createRemovalEntry($p->getUniqueId())]));
 		}
 	}
 

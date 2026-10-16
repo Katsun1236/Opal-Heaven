@@ -28,28 +28,16 @@ use pocketmine\network\mcpe\cache\CraftingDataCache;
 use pocketmine\network\mcpe\cache\StaticPacketCache;
 use pocketmine\network\mcpe\InventoryManager;
 use pocketmine\network\mcpe\NetworkSession;
-use pocketmine\network\mcpe\protocol\ClientCacheStatusPacket;
-use pocketmine\network\mcpe\protocol\CurrentStructureFeaturePacket;
-use pocketmine\network\mcpe\protocol\DimensionDataPacket;
-use pocketmine\network\mcpe\protocol\DisconnectPacket;
 use pocketmine\network\mcpe\protocol\ItemRegistryPacket;
-use pocketmine\network\mcpe\protocol\PacketViolationWarningPacket;
 use pocketmine\network\mcpe\protocol\PlayerAuthInputPacket;
-use pocketmine\network\mcpe\protocol\ProtocolInfo;
 use pocketmine\network\mcpe\protocol\RequestChunkRadiusPacket;
 use pocketmine\network\mcpe\protocol\ServerboundLoadingScreenPacket;
-use pocketmine\network\mcpe\protocol\SetLocalPlayerAsInitializedPacket;
 use pocketmine\network\mcpe\protocol\StartGamePacket;
-use pocketmine\network\mcpe\protocol\StructureTemplateDataRequestPacket;
-use pocketmine\network\mcpe\protocol\StructureTemplateDataResponsePacket;
 use pocketmine\network\mcpe\protocol\types\BlockPosition;
 use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 use pocketmine\network\mcpe\protocol\types\CacheableNbt;
-use pocketmine\network\mcpe\protocol\types\DimensionData;
 use pocketmine\network\mcpe\protocol\types\DimensionIds;
-use pocketmine\network\mcpe\protocol\types\DimensionNameIds;
 use pocketmine\network\mcpe\protocol\types\Experiments;
-use pocketmine\network\mcpe\protocol\types\GeneratorType;
 use pocketmine\network\mcpe\protocol\types\LevelSettings;
 use pocketmine\network\mcpe\protocol\types\NetworkPermissions;
 use pocketmine\network\mcpe\protocol\types\PlayerMovementSettings;
@@ -66,7 +54,7 @@ use function sprintf;
  * Handler used for the pre-spawn phase of the session.
  */
 #[SilentDiscard(PlayerAuthInputPacket::class, comment: "Spammed after StartGame even though player has no controls")]
-#[SilentDiscard(ClientCacheStatusPacket::class, comment: "Client blob cache status")]
+#[SilentDiscard(ServerboundLoadingScreenPacket::class, "Not needed")]
 class PreSpawnPacketHandler extends PacketHandler{
 	public function __construct(
 		private Server $server,
@@ -83,9 +71,11 @@ class PreSpawnPacketHandler extends PacketHandler{
 
 			$typeConverter = $this->session->getTypeConverter();
 
-			$this->session->getLogger()->debug("Sending jigsaw structure data");
+			$this->session->getLogger()->debug("Sending JigsawStructureData");
 			$this->session->sendDataPacket(StaticPacketCache::getInstance()->getJigsawStructureData());
 
+			$this->session->getLogger()->debug("Sending VoxelShapesPacket");
+			$this->session->sendDataPacket(StaticPacketCache::getInstance()->getVoxelShapes());
 
 			$this->session->getLogger()->debug("Preparing StartGamePacket");
 			$levelSettings = new LevelSettings();
@@ -95,7 +85,6 @@ class PreSpawnPacketHandler extends PacketHandler{
 			$levelSettings->difficulty = $world->getDifficulty();
 			$levelSettings->spawnPosition = BlockPosition::fromVector3($world->getSpawnLocation());
 			$levelSettings->hasAchievementsDisabled = true;
-			$levelSettings->vanillaVersion = ProtocolInfo::MINECRAFT_VERSION_NETWORK;
 			$levelSettings->time = $world->getTime();
 			$levelSettings->eduEditionOffer = 0;
 			$levelSettings->rainLevel = 0; //TODO: implement these properly
@@ -123,17 +112,16 @@ class PreSpawnPacketHandler extends PacketHandler{
 				new PlayerMovementSettings(0, true),
 				0,
 				0,
-				Uuid::uuid4()->toString(),
+				"",
 				true,
 				sprintf("%s %s", VersionInfo::NAME, VersionInfo::VERSION()->getFullVersion(true)),
 				Uuid::fromString(Uuid::NIL),
 				false,
 				false,
 				new NetworkPermissions(disableClientSounds: true),
-				true,
 				null,
 				new ServerTelemetryData("", "", "", ""),
-				$typeConverter->getBlockPaletteEntries(),
+				StaticPacketCache::getInstance()->getBlockPaletteEntries(),
 				0,
 			));
 
@@ -182,30 +170,8 @@ class PreSpawnPacketHandler extends PacketHandler{
 	}
 
 	public function handleRequestChunkRadius(RequestChunkRadiusPacket $packet) : bool{
-		$this->session->getLogger()->notice("[PRE-SPAWN] << Reçu RequestChunkRadiusPacket (Rayon demandé: {$packet->radius})");
 		$this->player->setViewDistance($packet->radius);
 
-		return true;
-	}
-
-	public function handlePacketViolationWarning(PacketViolationWarningPacket $packet) : bool{
-		$this->session->getLogger()->error("[CLIENT VIOLATION PACKET] Type: {$packet->getType()} | Severity: {$packet->getSeverity()} | PacketId: 0x" . dechex($packet->getPacketId()) . " | Message: {$packet->getMessage()}");
-		return true;
-	}
-
-	public function handleSetLocalPlayerAsInitialized(SetLocalPlayerAsInitializedPacket $packet) : bool{
-		$this->session->getLogger()->notice("[PRE-SPAWN] << Reçu SetLocalPlayerAsInitializedPacket avant PLAYER_SPAWN ! Enregistré.");
-		$this->session->markClientInitializedEarly();
-		return true;
-	}
-
-	public function handleServerboundLoadingScreen(ServerboundLoadingScreenPacket $packet) : bool{
-		$this->session->getLogger()->notice("[LOADING SCREEN] << Type: " . $packet->getLoadingScreenType()->name);
-		return true;
-	}
-
-	public function handleDisconnect(DisconnectPacket $packet) : bool{
-		$this->session->getLogger()->error(">> [CLIENT-DISCONNECT-PACKET] Raison: {$packet->reason} | Message: " . ($packet->message ?? "N/A") . " | FilteredMessage: " . ($packet->filteredMessage ?? "N/A"));
 		return true;
 	}
 }

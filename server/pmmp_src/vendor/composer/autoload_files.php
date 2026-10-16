@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
-    'e54d4abbfb143f3da5b4e1588a89eb32' => $baseDir . '/src/CoreConstants.php',
+    '808e7b590bc3f58cb232dc735baee8bb' => $baseDir . '/src/CoreConstants.php',
 );
