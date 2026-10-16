@@ -1,0 +1,115 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cobalt_ore",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3,
+        "visible_bounds_offset": [
+          0,
+          1.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            8.0,
+            8.0,
+            8.0
+          ],
+          "parent": null,
+          "cubes": [
+            {
+              "origin": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "size": [
+                16.0,
+                16.0,
+                16.0
+              ],
+              "pivot": [
+                8.0,
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "origin": [
+                3.0,
+                4.0,
+                -1.8
+              ],
+              "size": [
+                6.0,
+                6.0,
+                2.3
+              ],
+              "pivot": [
+                6.0,
+                7.0,
+                0.0
+              ],
+              "rotation": [
+                -8.0,
+                5.0,
+                12.0
+              ]
+            },
+            {
+              "origin": [
+                15.2,
+                7.0,
+                4.0
+              ],
+              "size": [
+                2.3,
+                6.0,
+                5.0
+              ],
+              "pivot": [
+                16.0,
+                10.0,
+                6.5
+              ],
+              "rotation": [
+                10.0,
+                0.0,
+                -15.0
+              ]
+            },
+            {
+              "origin": [
+                6.0,
+                15.2,
+                8.0
+              ],
+              "size": [
+                5.0,
+                2.8,
+                5.0
+              ],
+              "pivot": [
+                8.5,
+                16.0,
+                10.5
+              ],
+              "rotation": [
+                12.0,
+                15.0,
+                0.0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

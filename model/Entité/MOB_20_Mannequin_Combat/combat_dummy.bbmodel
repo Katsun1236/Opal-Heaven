@@ -1,0 +1,3417 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": true
+  },
+  "name": "combat_dummy",
+  "geometry_name": "geometry.combat_dummy",
+  "visible_box": [
+    32,
+    48,
+    32
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "cross_beam_x",
+      "uuid": "e041afa2-38de-47c0-88fc-7ce04f6f5288",
+      "from": [
+        -7,
+        0,
+        -2
+      ],
+      "to": [
+        7,
+        2.5,
+        2
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        14,
+        2.5,
+        4
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            5,
+            23,
+            19,
+            25
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            23,
+            23,
+            37,
+            25
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            23,
+            5,
+            25
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            19,
+            23,
+            23,
+            25
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            5,
+            19,
+            19,
+            23
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            19,
+            19,
+            33,
+            23
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        19
+      ]
+    },
+    {
+      "name": "cross_beam_z",
+      "uuid": "e03684b3-1df8-4e8c-8361-1a93a582a11e",
+      "from": [
+        -2,
+        0,
+        -7
+      ],
+      "to": [
+        2,
+        2.5,
+        7
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        4,
+        2.5,
+        14
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            15,
+            19,
+            17
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            33,
+            15,
+            37,
+            17
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            15,
+            15,
+            17
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            19,
+            15,
+            33,
+            17
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            15,
+            1,
+            19,
+            15
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            19,
+            1,
+            23,
+            15
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "iron_strap_x1",
+      "uuid": "5119eaa6-1af7-48d1-b7bb-199c0ff20768",
+      "from": [
+        -6.8,
+        2.4,
+        -2.1
+      ],
+      "to": [
+        -5.2,
+        2.8,
+        2.1
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        1.6,
+        0.5,
+        4.2
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            86,
+            23,
+            88,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            92,
+            23,
+            94,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            82,
+            23,
+            86,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            88,
+            23,
+            92,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            86,
+            19,
+            88,
+            23
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            88,
+            19,
+            90,
+            23
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        82,
+        19
+      ]
+    },
+    {
+      "name": "iron_strap_x2",
+      "uuid": "5014b311-9251-4d2b-9018-f5a4e8af9e18",
+      "from": [
+        5.2,
+        2.4,
+        -2.1
+      ],
+      "to": [
+        6.8,
+        2.8,
+        2.1
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        1.6,
+        0.5,
+        4.2
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            99,
+            23,
+            101,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            105,
+            23,
+            107,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            95,
+            23,
+            99,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            101,
+            23,
+            105,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            99,
+            19,
+            101,
+            23
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            101,
+            19,
+            103,
+            23
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        95,
+        19
+      ]
+    },
+    {
+      "name": "iron_strap_z1",
+      "uuid": "5dcd336d-adfb-4235-91f6-769431f6cdfe",
+      "from": [
+        -2.1,
+        2.4,
+        -6.8
+      ],
+      "to": [
+        2.1,
+        2.8,
+        -5.2
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        4.2,
+        0.5,
+        1.6
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            181,
+            21,
+            185,
+            22
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            187,
+            21,
+            191,
+            22
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            179,
+            21,
+            181,
+            22
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            185,
+            21,
+            187,
+            22
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            181,
+            19,
+            185,
+            21
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            185,
+            19,
+            189,
+            21
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        179,
+        19
+      ]
+    },
+    {
+      "name": "iron_strap_z2",
+      "uuid": "f312c9fb-d98c-4bc0-acc7-5fd33ef734f4",
+      "from": [
+        -2.1,
+        2.4,
+        5.2
+      ],
+      "to": [
+        2.1,
+        2.8,
+        6.8
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        4.2,
+        0.5,
+        1.6
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            194,
+            21,
+            198,
+            22
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            200,
+            21,
+            204,
+            22
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            192,
+            21,
+            194,
+            22
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            198,
+            21,
+            200,
+            22
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            194,
+            19,
+            198,
+            21
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            198,
+            19,
+            202,
+            21
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        192,
+        19
+      ]
+    },
+    {
+      "name": "ground_spike_x1",
+      "uuid": "83c6b09f-4cb5-4d6a-ac02-df34b5e9dcc3",
+      "from": [
+        -8.2,
+        0,
+        -1
+      ],
+      "to": [
+        -6.8,
+        2.0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        25
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        1.4,
+        2.0,
+        2
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            140,
+            21,
+            141,
+            23
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            143,
+            21,
+            144,
+            23
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            138,
+            21,
+            140,
+            23
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            141,
+            21,
+            143,
+            23
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            140,
+            19,
+            141,
+            21
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            141,
+            19,
+            142,
+            21
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        138,
+        19
+      ]
+    },
+    {
+      "name": "ground_spike_x2",
+      "uuid": "4a6c4453-6e07-46ac-80a1-e46580bfc221",
+      "from": [
+        6.8,
+        0,
+        -1
+      ],
+      "to": [
+        8.2,
+        2.0,
+        1
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -25
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        1.4,
+        2.0,
+        2
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            148,
+            21,
+            149,
+            23
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            151,
+            21,
+            152,
+            23
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            146,
+            21,
+            148,
+            23
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            149,
+            21,
+            151,
+            23
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            148,
+            19,
+            149,
+            21
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            149,
+            19,
+            150,
+            21
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        146,
+        19
+      ]
+    },
+    {
+      "name": "post_trunk",
+      "uuid": "7edcab07-e205-4d51-a11e-7d6b8eb9b5c0",
+      "from": [
+        -2,
+        2.5,
+        -2
+      ],
+      "to": [
+        2,
+        10.5,
+        2
+      ],
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        4,
+        8.0,
+        4
+      ],
+      "bone_name": "base_post",
+      "faces": {
+        "north": {
+          "uv": [
+            71,
+            5,
+            75,
+            13
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            79,
+            5,
+            83,
+            13
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            67,
+            5,
+            71,
+            13
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            75,
+            5,
+            79,
+            13
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            71,
+            1,
+            75,
+            5
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            75,
+            1,
+            79,
+            5
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        67,
+        1
+      ]
+    },
+    {
+      "name": "spring_coil",
+      "uuid": "3b2ad337-442e-4718-b7ff-8c276603565d",
+      "from": [
+        -1.5,
+        10.5,
+        -1.5
+      ],
+      "to": [
+        1.5,
+        13.5,
+        1.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            41,
+            22,
+            44,
+            25
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            47,
+            22,
+            50,
+            25
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            38,
+            22,
+            41,
+            25
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            44,
+            22,
+            47,
+            25
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            41,
+            19,
+            44,
+            22
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            44,
+            19,
+            47,
+            22
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        38,
+        19
+      ]
+    },
+    {
+      "name": "torso_barrel",
+      "uuid": "727cd81e-9f31-4d50-8dc9-04591794164e",
+      "from": [
+        -4,
+        13,
+        -3
+      ],
+      "to": [
+        4,
+        20.5,
+        3
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        8,
+        7.5,
+        6
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            44,
+            7,
+            52,
+            15
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            58,
+            7,
+            66,
+            15
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            38,
+            7,
+            44,
+            15
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            52,
+            7,
+            58,
+            15
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            44,
+            1,
+            52,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            52,
+            1,
+            60,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        38,
+        1
+      ]
+    },
+    {
+      "name": "iron_belt",
+      "uuid": "34c39577-61ed-440e-b7d1-4abcc827f291",
+      "from": [
+        -4.2,
+        14,
+        -3.2
+      ],
+      "to": [
+        4.2,
+        15.5,
+        3.2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        8.4,
+        1.5,
+        6.4
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            176,
+            7,
+            184,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            190,
+            7,
+            198,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            170,
+            7,
+            176,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            184,
+            7,
+            190,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            176,
+            1,
+            184,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            184,
+            1,
+            192,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        170,
+        1
+      ]
+    },
+    {
+      "name": "leather_brigandine",
+      "uuid": "9401b7a5-cc92-4641-8f12-0b4228ffc4f3",
+      "from": [
+        -3.8,
+        16,
+        -3.4
+      ],
+      "to": [
+        3.8,
+        19.5,
+        -2.8
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "studded_leather",
+      "size": [
+        7.6,
+        3.5,
+        0.6
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            109,
+            20,
+            117,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            118,
+            20,
+            126,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            108,
+            20,
+            109,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            117,
+            20,
+            118,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            109,
+            19,
+            117,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            117,
+            19,
+            125,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        108,
+        19
+      ]
+    },
+    {
+      "name": "target_outer",
+      "uuid": "c2c4038b-5f5f-4a9b-b5a6-803477bc9e40",
+      "from": [
+        -2.5,
+        16.2,
+        -3.8
+      ],
+      "to": [
+        2.5,
+        19.2,
+        -3.2
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        5.0,
+        3.0,
+        0.6
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            155,
+            20,
+            160,
+            23
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            161,
+            20,
+            166,
+            23
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            154,
+            20,
+            155,
+            23
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            160,
+            20,
+            161,
+            23
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            155,
+            19,
+            160,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            160,
+            19,
+            165,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        154,
+        19
+      ]
+    },
+    {
+      "name": "target_bullseye",
+      "uuid": "7fbc7895-63ce-4782-9ea3-dd97f8e02dcd",
+      "from": [
+        -1.0,
+        17.0,
+        -4.0
+      ],
+      "to": [
+        1.0,
+        18.5,
+        -3.4
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "opal_heraldry",
+      "size": [
+        2.0,
+        1.5,
+        0.6
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            206,
+            20,
+            208,
+            22
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            209,
+            20,
+            211,
+            22
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            205,
+            20,
+            206,
+            22
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            208,
+            20,
+            209,
+            22
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            206,
+            19,
+            208,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            208,
+            19,
+            210,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        205,
+        19
+      ]
+    },
+    {
+      "name": "pauldron_dummy_l",
+      "uuid": "79a0117e-908e-46c2-8b59-dbf0ad3f6fb4",
+      "from": [
+        -5.5,
+        18,
+        -2.5
+      ],
+      "to": [
+        -3.5,
+        21.5,
+        2.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        15
+      ],
+      "cube_type": "studded_leather",
+      "size": [
+        2.0,
+        3.5,
+        5.0
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            145,
+            6,
+            147,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            152,
+            6,
+            154,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            140,
+            6,
+            145,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            147,
+            6,
+            152,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            145,
+            1,
+            147,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            147,
+            1,
+            149,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        140,
+        1
+      ]
+    },
+    {
+      "name": "pauldron_dummy_r",
+      "uuid": "03324197-a802-460c-b716-9bc0f31656ad",
+      "from": [
+        3.5,
+        18,
+        -2.5
+      ],
+      "to": [
+        5.5,
+        21.5,
+        2.5
+      ],
+      "origin": [
+        0,
+        10,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -15
+      ],
+      "cube_type": "studded_leather",
+      "size": [
+        2.0,
+        3.5,
+        5.0
+      ],
+      "bone_name": "torso",
+      "faces": {
+        "north": {
+          "uv": [
+            160,
+            6,
+            162,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            167,
+            6,
+            169,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            155,
+            6,
+            160,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            162,
+            6,
+            167,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            160,
+            1,
+            162,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            162,
+            1,
+            164,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        155,
+        1
+      ]
+    },
+    {
+      "name": "head_burlap",
+      "uuid": "c2297c75-8027-4976-ac5d-0f971b96495a",
+      "from": [
+        -2.5,
+        20.5,
+        -2.5
+      ],
+      "to": [
+        2.5,
+        25.5,
+        2.5
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        5.0,
+        5.0,
+        5.0
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            119,
+            6,
+            124,
+            11
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            129,
+            6,
+            134,
+            11
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            114,
+            6,
+            119,
+            11
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            124,
+            6,
+            129,
+            11
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            119,
+            1,
+            124,
+            6
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            124,
+            1,
+            129,
+            6
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        114,
+        1
+      ]
+    },
+    {
+      "name": "visor_cage_top",
+      "uuid": "bc6f1ec3-3eac-4154-af44-9c1938ac5d0b",
+      "from": [
+        -2.8,
+        24.5,
+        -2.8
+      ],
+      "to": [
+        2.8,
+        26,
+        2.8
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        5.6,
+        1.5,
+        5.6
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            207,
+            7,
+            213,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            219,
+            7,
+            225,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            201,
+            7,
+            207,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            213,
+            7,
+            219,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            207,
+            1,
+            213,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            213,
+            1,
+            219,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        201,
+        1
+      ]
+    },
+    {
+      "name": "visor_bar_1",
+      "uuid": "9b67eac9-625e-415d-8886-f271cd98cd63",
+      "from": [
+        -2.8,
+        21.5,
+        -2.9
+      ],
+      "to": [
+        -2.0,
+        24.5,
+        -2.3
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        0.8,
+        3.0,
+        0.6
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            168,
+            20,
+            169,
+            23
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            170,
+            20,
+            171,
+            23
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            167,
+            20,
+            168,
+            23
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            169,
+            20,
+            170,
+            23
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            168,
+            19,
+            169,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            169,
+            19,
+            170,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        167,
+        19
+      ]
+    },
+    {
+      "name": "visor_bar_2",
+      "uuid": "fc3f8299-ab07-439f-bd8e-5372f8beba80",
+      "from": [
+        -0.4,
+        21.5,
+        -2.9
+      ],
+      "to": [
+        0.4,
+        24.5,
+        -2.3
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        0.8,
+        3.0,
+        0.6
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            172,
+            20,
+            173,
+            23
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            174,
+            20,
+            175,
+            23
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            171,
+            20,
+            172,
+            23
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            173,
+            20,
+            174,
+            23
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            172,
+            19,
+            173,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            173,
+            19,
+            174,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        171,
+        19
+      ]
+    },
+    {
+      "name": "visor_bar_3",
+      "uuid": "d9c61840-3ba0-4ca8-83d5-3d33ba9bca15",
+      "from": [
+        2.0,
+        21.5,
+        -2.9
+      ],
+      "to": [
+        2.8,
+        24.5,
+        -2.3
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        0.8,
+        3.0,
+        0.6
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            176,
+            20,
+            177,
+            23
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            178,
+            20,
+            179,
+            23
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            175,
+            20,
+            176,
+            23
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            177,
+            20,
+            178,
+            23
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            176,
+            19,
+            177,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            177,
+            19,
+            178,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        175,
+        19
+      ]
+    },
+    {
+      "name": "helmet_crest_ridge",
+      "uuid": "093f12c2-8a13-4d63-9ba0-e3305f6fcb51",
+      "from": [
+        -0.8,
+        25.8,
+        -3.0
+      ],
+      "to": [
+        0.8,
+        28.0,
+        2.5
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        1.6,
+        2.2,
+        5.5
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            231,
+            7,
+            233,
+            9
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            239,
+            7,
+            241,
+            9
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            225,
+            7,
+            231,
+            9
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            233,
+            7,
+            239,
+            9
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            231,
+            1,
+            233,
+            7
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            233,
+            1,
+            235,
+            7
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        225,
+        1
+      ]
+    },
+    {
+      "name": "helmet_plume",
+      "uuid": "44110740-979d-4791-89b6-c804150b1eda",
+      "from": [
+        -0.5,
+        27.5,
+        1.5
+      ],
+      "to": [
+        0.5,
+        30.5,
+        3.5
+      ],
+      "origin": [
+        0,
+        20,
+        0
+      ],
+      "rotation": [
+        -20,
+        0,
+        0
+      ],
+      "cube_type": "opal_heraldry",
+      "size": [
+        1.0,
+        3.0,
+        2.0
+      ],
+      "bone_name": "head",
+      "faces": {
+        "north": {
+          "uv": [
+            128,
+            21,
+            129,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            131,
+            21,
+            132,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            126,
+            21,
+            128,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            129,
+            21,
+            131,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            128,
+            19,
+            129,
+            21
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            129,
+            19,
+            130,
+            21
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        126,
+        19
+      ]
+    },
+    {
+      "name": "arm_left_peg",
+      "uuid": "c759c7e0-3cb1-4458-93ce-8d4833f67bf2",
+      "from": [
+        -6.5,
+        16,
+        -1.5
+      ],
+      "to": [
+        -3.8,
+        18.5,
+        1.5
+      ],
+      "origin": [
+        -6,
+        17,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        2.7,
+        2.5,
+        3.0
+      ],
+      "bone_name": "arm_l",
+      "faces": {
+        "north": {
+          "uv": [
+            54,
+            22,
+            57,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            60,
+            22,
+            63,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            51,
+            22,
+            54,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            57,
+            22,
+            60,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            54,
+            19,
+            57,
+            22
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            57,
+            19,
+            60,
+            22
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        51,
+        19
+      ]
+    },
+    {
+      "name": "shield_heater",
+      "uuid": "a0952e77-7036-435c-98d8-eee55d5bddf8",
+      "from": [
+        -10,
+        11,
+        -4.5
+      ],
+      "to": [
+        -4,
+        21,
+        -3.5
+      ],
+      "origin": [
+        -7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        6,
+        10,
+        1.0
+      ],
+      "bone_name": "shield",
+      "faces": {
+        "north": {
+          "uv": [
+            85,
+            2,
+            91,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            92,
+            2,
+            98,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            84,
+            2,
+            85,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            91,
+            2,
+            92,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            85,
+            1,
+            91,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            91,
+            1,
+            97,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        84,
+        1
+      ]
+    },
+    {
+      "name": "shield_rim_iron",
+      "uuid": "5b22a761-618d-4e45-82f2-509494ec8f85",
+      "from": [
+        -10.2,
+        10.8,
+        -4.8
+      ],
+      "to": [
+        -3.8,
+        21.2,
+        -4.2
+      ],
+      "origin": [
+        -7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        6.4,
+        10.4,
+        0.6
+      ],
+      "bone_name": "shield",
+      "faces": {
+        "north": {
+          "uv": [
+            100,
+            2,
+            106,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            107,
+            2,
+            113,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            99,
+            2,
+            100,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            106,
+            2,
+            107,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            100,
+            1,
+            106,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            106,
+            1,
+            112,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        99,
+        1
+      ]
+    },
+    {
+      "name": "shield_boss",
+      "uuid": "04e80879-9a2f-44c8-bbed-2659ce922933",
+      "from": [
+        -7.5,
+        15.5,
+        -5.2
+      ],
+      "to": [
+        -6.5,
+        16.5,
+        -4.2
+      ],
+      "origin": [
+        -7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bone_name": "shield",
+      "faces": {
+        "north": {
+          "uv": [
+            228,
+            20,
+            229,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            230,
+            20,
+            231,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            227,
+            20,
+            228,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            229,
+            20,
+            230,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            228,
+            19,
+            229,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            229,
+            19,
+            230,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        227,
+        19
+      ]
+    },
+    {
+      "name": "shield_opal_cross",
+      "uuid": "ec05007a-6bf9-4991-9751-917065f13e2d",
+      "from": [
+        -7.5,
+        13.5,
+        -5.0
+      ],
+      "to": [
+        -6.5,
+        18.5,
+        -4.4
+      ],
+      "origin": [
+        -7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "opal_heraldry",
+      "size": [
+        1.0,
+        5.0,
+        0.6
+      ],
+      "bone_name": "shield",
+      "faces": {
+        "north": {
+          "uv": [
+            65,
+            20,
+            66,
+            25
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            67,
+            20,
+            68,
+            25
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            64,
+            20,
+            65,
+            25
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            66,
+            20,
+            67,
+            25
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            65,
+            19,
+            66,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            66,
+            19,
+            67,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        64,
+        19
+      ]
+    },
+    {
+      "name": "arm_right_peg",
+      "uuid": "8c608530-d536-429e-bdbb-25be15418652",
+      "from": [
+        3.8,
+        16,
+        -1.5
+      ],
+      "to": [
+        6.5,
+        18.5,
+        1.5
+      ],
+      "origin": [
+        6,
+        17,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        2.7,
+        2.5,
+        3.0
+      ],
+      "bone_name": "arm_r",
+      "faces": {
+        "north": {
+          "uv": [
+            72,
+            22,
+            75,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            78,
+            22,
+            81,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            69,
+            22,
+            72,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            75,
+            22,
+            78,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            72,
+            19,
+            75,
+            22
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            75,
+            19,
+            78,
+            22
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        69,
+        19
+      ]
+    },
+    {
+      "name": "sword_handle",
+      "uuid": "e13446c0-97d4-481f-9882-06d5f5133679",
+      "from": [
+        6.5,
+        14,
+        -3
+      ],
+      "to": [
+        7.5,
+        18,
+        -2
+      ],
+      "origin": [
+        7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        1.0,
+        4,
+        1
+      ],
+      "bone_name": "sword",
+      "faces": {
+        "north": {
+          "uv": [
+            134,
+            20,
+            135,
+            24
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            136,
+            20,
+            137,
+            24
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            133,
+            20,
+            134,
+            24
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            135,
+            20,
+            136,
+            24
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            134,
+            19,
+            135,
+            20
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            135,
+            19,
+            136,
+            20
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        133,
+        19
+      ]
+    },
+    {
+      "name": "sword_guard",
+      "uuid": "cdd1bf9e-3f02-4c52-98d5-d3c11579d555",
+      "from": [
+        4.5,
+        17.5,
+        -3.5
+      ],
+      "to": [
+        9.5,
+        18.5,
+        -1.5
+      ],
+      "origin": [
+        7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "forged_iron",
+      "size": [
+        5.0,
+        1.0,
+        2.0
+      ],
+      "bone_name": "sword",
+      "faces": {
+        "north": {
+          "uv": [
+            214,
+            21,
+            219,
+            22
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            221,
+            21,
+            226,
+            22
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            212,
+            21,
+            214,
+            22
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            219,
+            21,
+            221,
+            22
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            214,
+            19,
+            219,
+            21
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            219,
+            19,
+            224,
+            21
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        212,
+        19
+      ]
+    },
+    {
+      "name": "sword_blade",
+      "uuid": "42cd95ea-3525-4471-a79c-8c644647ffc4",
+      "from": [
+        6.6,
+        18.5,
+        -3
+      ],
+      "to": [
+        7.4,
+        27,
+        -2
+      ],
+      "origin": [
+        7,
+        16,
+        -3
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "oak_wood",
+      "size": [
+        0.8,
+        8.5,
+        1
+      ],
+      "bone_name": "sword",
+      "faces": {
+        "north": {
+          "uv": [
+            136,
+            2,
+            137,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            138,
+            2,
+            139,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            135,
+            2,
+            136,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            137,
+            2,
+            138,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            136,
+            1,
+            137,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            137,
+            1,
+            138,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        135,
+        1
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "c218c626-bbea-4ea3-a819-96c96941fd15",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        {
+          "name": "base_post",
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "color": 0,
+          "uuid": "618271c5-28ae-4fb0-a77a-3d9979045dd0",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "e041afa2-38de-47c0-88fc-7ce04f6f5288",
+            "e03684b3-1df8-4e8c-8361-1a93a582a11e",
+            "5119eaa6-1af7-48d1-b7bb-199c0ff20768",
+            "5014b311-9251-4d2b-9018-f5a4e8af9e18",
+            "5dcd336d-adfb-4235-91f6-769431f6cdfe",
+            "f312c9fb-d98c-4bc0-acc7-5fd33ef734f4",
+            "83c6b09f-4cb5-4d6a-ac02-df34b5e9dcc3",
+            "4a6c4453-6e07-46ac-80a1-e46580bfc221",
+            "7edcab07-e205-4d51-a11e-7d6b8eb9b5c0"
+          ]
+        },
+        {
+          "name": "torso",
+          "origin": [
+            0,
+            10,
+            0
+          ],
+          "color": 0,
+          "uuid": "06a52b5e-03dd-495a-aa92-80daf790e0f9",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "3b2ad337-442e-4718-b7ff-8c276603565d",
+            "727cd81e-9f31-4d50-8dc9-04591794164e",
+            "34c39577-61ed-440e-b7d1-4abcc827f291",
+            "9401b7a5-cc92-4641-8f12-0b4228ffc4f3",
+            "c2c4038b-5f5f-4a9b-b5a6-803477bc9e40",
+            "7fbc7895-63ce-4782-9ea3-dd97f8e02dcd",
+            "79a0117e-908e-46c2-8b59-dbf0ad3f6fb4",
+            "03324197-a802-460c-b716-9bc0f31656ad",
+            {
+              "name": "head",
+              "origin": [
+                0,
+                20,
+                0
+              ],
+              "color": 0,
+              "uuid": "9449a496-5bdb-48da-bb07-7697ffe2df9f",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "c2297c75-8027-4976-ac5d-0f971b96495a",
+                "bc6f1ec3-3eac-4154-af44-9c1938ac5d0b",
+                "9b67eac9-625e-415d-8886-f271cd98cd63",
+                "fc3f8299-ab07-439f-bd8e-5372f8beba80",
+                "d9c61840-3ba0-4ca8-83d5-3d33ba9bca15",
+                "093f12c2-8a13-4d63-9ba0-e3305f6fcb51",
+                "44110740-979d-4791-89b6-c804150b1eda"
+              ]
+            },
+            {
+              "name": "arm_l",
+              "origin": [
+                -6,
+                17,
+                0
+              ],
+              "color": 0,
+              "uuid": "997e4605-1418-4d44-885b-9fdc7297c948",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "c759c7e0-3cb1-4458-93ce-8d4833f67bf2",
+                {
+                  "name": "shield",
+                  "origin": [
+                    -7,
+                    16,
+                    -3
+                  ],
+                  "color": 0,
+                  "uuid": "67993d1e-6825-4d53-b5d3-f3b2129183e3",
+                  "export": true,
+                  "isOpen": true,
+                  "locked": false,
+                  "visibility": true,
+                  "children": [
+                    "a0952e77-7036-435c-98d8-eee55d5bddf8",
+                    "5b22a761-618d-4e45-82f2-509494ec8f85",
+                    "04e80879-9a2f-44c8-bbed-2659ce922933",
+                    "ec05007a-6bf9-4991-9751-917065f13e2d"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "arm_r",
+              "origin": [
+                6,
+                17,
+                0
+              ],
+              "color": 0,
+              "uuid": "c8de9a20-1f44-43da-ab8c-0c3f0bcc527a",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "8c608530-d536-429e-bdbb-25be15418652",
+                {
+                  "name": "sword",
+                  "origin": [
+                    7,
+                    16,
+                    -3
+                  ],
+                  "color": 0,
+                  "uuid": "0af7e914-c0bc-4388-9a46-a0518b46a71b",
+                  "export": true,
+                  "isOpen": true,
+                  "locked": false,
+                  "visibility": true,
+                  "children": [
+                    "e13446c0-97d4-481f-9882-06d5f5133679",
+                    "cdd1bf9e-3f02-4c52-98d5-d3c11579d555",
+                    "42cd95ea-3525-4471-a79c-8c644647ffc4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "combat_dummy.png",
+      "name": "combat_dummy.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "0082ab43-6b4d-4e08-9a13-64551fad47d3",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAGRElEQVR4nO3cz4tVVRwA8Ds55DiiadgmV60nGnIxUPQP6KZaaYGRFATtdNWiH1RQO93WQoiEcZubZuWihQRKxEhKBWIbA0VRxxxnbOzFeXLkzn333nd/vDc/Px94vPveud9zzrtzzrl37o+TJMCmNdImePrd3Z24PHNpIdk/MZakP5+68KBV/v3KzMrWIS+9Tp2a/r5vDu3qqeO5K4vJzfv/9ay7Z/tTy/J588hHPbF//TmbzN+70xM7vmNX8uu5mZGq2ypv+/TbJksTE51Prl9Pvr55s3I5b393u9E2rhubFz/M9lCl7KIym5TVdttUMdomeG5h+e8/dX5+WcMehmyZWek6ZNWtUyzrg9O3k5mp8Uq/r6xBHp4aL0rqhMZx6MMvC2Nffu1AYWzRIJC3rbLbp2ybdCYnuxl8tXdveHVGZmdLyzlz8UFSV5vYdPxKtIeqZeeV2aSstttm6APAZhA6f/D9+fnkQMneJDr7x2Kyd9eW2mnBlUsXkp27n6udNizTt24lL46NJb8tLHTf2XiGs5veIGYuLyRvTG7rLr8zNZ48PTry5AUbgSOACv/znz7ybPf94L7Hg0FMz64/jHMebQewtJ1bhzN4xXKa5N0mlk04AGQb9SAbeDhET/v9+lKt9NVU9YRfehCL3+XFFg1mVco5uG9bJ5sWTmC1iV2N9tBPXtmDLHMlBsc1OwDUOcNa1sCzcfsnxnLzXWt777qyg1PRAFV1vSblXLvzqDTvNrGr2R6ma57tLyqzbj5Fg2M2vc3VgTU7AOQ1liqNtWlcmc9/nOueA2iazvpuD2dr5jHo9fMGx7L8NsQAsFaEzh2vArz/6vbS9FMj6/ogosfVhw+7r7gcZO9lCIe8s9f+zY3PprWJPfnz/Kpt3JOrWPawGQD6+OzAzid7+Lz/xdLpq6lK5wrfVV0v+PjGjZ4ffObiQuPO0CaW4TAAVBA6edX00MHy7viLna8oLbj/z93uK2vr2HhpWqBz0YQBICXdObN7xuzeMy+9bUe8/MtP9pCsKANAir0om83ooK6DDvqaa9GhctFJo5jeNA42o5F+D7AUyXs6ruyabJ181vs1eVhXRwBF1yH76XenXNN8AACAYan0wEcVbc4B9PufP9YnXUa/uDoxYQafMOnCzOXFkUGUnY6LqtyvXTUmb8ahfjMPFc1AFMvMllW0TYrWr5KerXdeXbP1y9aj3+d0HeqcY5quGbNw9Oiy3zJ24kTudirKsyjfsra4YlcBymZZCRNkfPvW7tqzrxSpMlNKuj6xjH5xVWPiHyrM1nN4aryTbbhNym46m0uVmCqDc8nMQ8tmIIplZssr2yZ562d/Q156Ub0L6tqtX7Ye6Zi8z7GeTWaqmqsREzr/1uPHk8Vjx7qfw/JCknTSg0CT2Zjee2W88/fdR8nzz2xJPt2/o/PFzL2RNXUZMM6OUzYIDEO83FjnUmPVmDhLT3jgIm+2niZlD1PerELhVuT03YhV1kl3yHSHCp0ob5uUrV8lvWg2pCozKMV69HsPHSjEhU6UFjpUEMsJnevqzaXu3rdJTPgcO392uSi/vDyz+a7GMwejdZ6xnpnclvww++DJLDlpg+4gRYfe8VHL9OOV8VCqScygyh7Es9xNYuLDSNkO3m+deMUmdqC4XKTf+v3S826DLro9Ot6XkU6r8t7kRq6TDTpd9nC/bX6rqWf0HuT1/DbnBOJI+nCpk7yw5/E4FUbK2Dmy37eJSe9FwmFXm7Kz6elHOdPfp8upE/P6S73Pr6cH5dB55hZ7Dz+rrBOETpQtwx2SG1e3RRc1xDrSHaRtPqFDxUaYbqxly01vHtLYAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBkffofz+LnO0jAsC4AAAAASUVORK5CYII="
+    }
+  ],
+  "animations": [
+    {
+      "uuid": "966ca915-ab8d-4caf-9477-136d51c24578",
+      "name": "idle_bob",
+      "loop": "loop",
+      "length": 1.6,
+      "snapping": 24,
+      "animators": {
+        "06a52b5e-03dd-495a-aa92-80daf790e0f9": {
+          "name": "torso",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "400146d1-3fed-420a-9837-80916c3805ab",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -4.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.8,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "2a061ccc-c35b-4b3d-a850-8b936908967e",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 4.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.6,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "74647e1c-0dc3-4aa2-a0fa-f071d8318d16",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -4.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "8e9ef43d-fba0-4aa0-ad43-094e851ce751",
+      "name": "hit_recoil",
+      "loop": "once",
+      "length": 0.8,
+      "snapping": 24,
+      "animators": {
+        "06a52b5e-03dd-495a-aa92-80daf790e0f9": {
+          "name": "torso",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "6e3a2cf3-8c77-4ea2-81e7-6189e33db4e4",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.1,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "0909febf-f7e9-497f-93e4-eb1ad42bc0a8",
+              "data_points": [
+                {
+                  "x": -25.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.3,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "8588a905-6d3e-4162-9b6e-9ecd2917a496",
+              "data_points": [
+                {
+                  "x": 15.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "e74838fb-abb5-4102-a99c-b69cada1aa8a",
+              "data_points": [
+                {
+                  "x": -8.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.8,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "eddb411e-5e88-4989-a0a3-4b59476d31ed",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "dc763488-6a17-4cea-9914-4904aa13f6df",
+      "name": "parry_spin",
+      "loop": "once",
+      "length": 1.2,
+      "snapping": 24,
+      "animators": {
+        "06a52b5e-03dd-495a-aa92-80daf790e0f9": {
+          "name": "torso",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "3353e4e1-8c2c-41b4-a320-981d6fd5802f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "b37f068f-b65f-43f2-ad79-695f3dbbb6e9",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.8,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "eb982311-bfc3-4492-b9f8-952d70c43b84",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 360.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "8fc195d1-3bc8-4a73-9340-596e540a6d9c",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 360.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

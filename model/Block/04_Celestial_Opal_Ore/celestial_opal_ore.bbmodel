@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "celestial_opal_ore",
+  "geometry_name": "geometry.celestial_opal_ore",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "block_base",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            64,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "69b553b5-e1b6-4748-93ed-ca212b9bd99c"
+    },
+    {
+      "name": "opal_crystal_n",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        5.0,
+        5.0,
+        -1.5
+      ],
+      "to": [
+        11.0,
+        11.0,
+        0.4
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        0.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "55689c61-e081-434d-9cbc-c63b0d3d4e6d",
+      "rotation": [
+        -5.0,
+        10.0,
+        8.0
+      ]
+    },
+    {
+      "name": "opal_crystal_top",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6.0,
+        15.2,
+        6.0
+      ],
+      "to": [
+        12.0,
+        18.0,
+        12.0
+      ],
+      "origin": [
+        9.0,
+        16.5,
+        9.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            32,
+            48,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            32,
+            48,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            32,
+            48,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            32,
+            48,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            32,
+            48,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            32,
+            48,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "f009d312-e723-480a-ad99-8f8172d40478",
+      "rotation": [
+        8.0,
+        -10.0,
+        0.0
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "8503df98-9e55-4022-8cf6-123a1d3bb1d0",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "69b553b5-e1b6-4748-93ed-ca212b9bd99c",
+        "55689c61-e081-434d-9cbc-c63b0d3d4e6d",
+        "f009d312-e723-480a-ad99-8f8172d40478"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\OPAL_HEAVEN\\1_MINERAIS_CELESTES\\04_Celestial_Opal_Ore\\celestial_opal_ore.png",
+      "name": "celestial_opal_ore.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "1b020aba-7d14-4dd4-a493-b6f2c1824697",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABvklEQVR4nOXZvUoDQRQF4LOHAUvtooViLQgW/mBhp6BvYGNjKTYiCuILCBa+gbWdZawCYqe1YKkEhAgKggkEkZWJLESTbDaZzc6a80FIWHbmcocke+dOEIZhiD6VK++ovL5jfmaq7/GThVH4jG/sh/rnF1y5zOEzPiGOEEeII8QZ5Ex59jjxvSPXR8O3ANb0xR66edw8QxoMcsrMFRrv1f2i7n9AdcDJ53oBskg+1wuQFUIcIc7gn1u6fAbsK4Ha4ULLNWO3hK5c5kgj/tX2Ytd71s9v8fL20XLd2P20qzTmiIz1UOQ0x12b+Pk1L5fqie6PmLhmQhoNh7jxbRsiDye9xW/6+sclb/2dp9xLQ8S1aRE3Po343ZLvNAchjhBHiCPEEeIMhoAtcmQXoNamvI3Yyi+qIzo9RglxhDhCHCHOJNmOum5Z48b7jh/c3T/1fTw+DILS+JbXBVjd3fEZHo06YKV46iX4zcZB4o7OoAook/VJTCdJOjoDfwpUPSUfyTr5XwugmLwlXwcQ4ghxhDhCHCGOEEeII8QR4ghxhDhCHCGOEEeII8QR4ghxhDhCHCGOEEeII8QR4gL14/FvksC7sZ8uHV8AAAAASUVORK5CYII="
+    }
+  ],
+  "animations": []
+}

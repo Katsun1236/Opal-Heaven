@@ -1,0 +1,98 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.faction_heart.heartbeat": {
+      "uuid": "c7456fc7-725c-4acd-8ce6-bf0c8f21d711",
+      "name": "animation.faction_heart.heartbeat",
+      "loop": "loop",
+      "length": 2.0,
+      "animators": {
+        "bfe02f7e-f278-41ba-8766-28c0270662c8": {
+          "name": "floating_opal_heart",
+          "type": "bone",
+          "rotation": [
+            {
+              "time": 0.0,
+              "channel": "rotation",
+              "data_points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              ]
+            },
+            {
+              "time": 2.0,
+              "channel": "rotation",
+              "data_points": [
+                {
+                  "x": 0,
+                  "y": 30,
+                  "z": 0
+                }
+              ]
+            }
+          ],
+          "scale": [
+            {
+              "time": 0.0,
+              "channel": "scale",
+              "data_points": [
+                {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                }
+              ]
+            },
+            {
+              "time": 0.3,
+              "channel": "scale",
+              "data_points": [
+                {
+                  "x": 1.05,
+                  "y": 1.05,
+                  "z": 1.05
+                }
+              ]
+            },
+            {
+              "time": 0.6,
+              "channel": "scale",
+              "data_points": [
+                {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                }
+              ]
+            },
+            {
+              "time": 1.3,
+              "channel": "scale",
+              "data_points": [
+                {
+                  "x": 1.04,
+                  "y": 1.04,
+                  "z": 1.04
+                }
+              ]
+            },
+            {
+              "time": 2.0,
+              "channel": "scale",
+              "data_points": [
+                {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

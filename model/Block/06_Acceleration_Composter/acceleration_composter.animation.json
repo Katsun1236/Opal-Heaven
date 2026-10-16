@@ -1,0 +1,69 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.composter.churn_gears": {
+      "uuid": "1478aa8b-4208-45fb-8954-eb04ded0f52b",
+      "name": "animation.composter.churn_gears",
+      "loop": "loop",
+      "length": 1.0,
+      "animators": {
+        "36547a5c-488f-492d-8c99-7f70bdec5cb0": {
+          "name": "cog_gear_upper",
+          "type": "bone",
+          "rotation": [
+            {
+              "time": 0.0,
+              "channel": "rotation",
+              "data_points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              ]
+            },
+            {
+              "time": 1.0,
+              "channel": "rotation",
+              "data_points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                }
+              ]
+            }
+          ]
+        },
+        "26ca43d3-2b89-47eb-8a01-c669f249fac0": {
+          "name": "cog_gear_lower",
+          "type": "bone",
+          "rotation": [
+            {
+              "time": 0.0,
+              "channel": "rotation",
+              "data_points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              ]
+            },
+            {
+              "time": 1.0,
+              "channel": "rotation",
+              "data_points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "z": -360
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

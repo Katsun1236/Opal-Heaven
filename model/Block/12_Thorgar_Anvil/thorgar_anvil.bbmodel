@@ -1,0 +1,617 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "thorgar_anvil",
+  "geometry_name": "geometry.thorgar_anvil",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "wood_log_base",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "to": [
+        15.0,
+        5.0,
+        15.0
+      ],
+      "origin": [
+        8.0,
+        2.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "233a1d4a-85ee-4652-8914-a59e3152085e"
+    },
+    {
+      "name": "iron_band",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0.5,
+        2.0,
+        0.5
+      ],
+      "to": [
+        15.5,
+        3.8,
+        15.5
+      ],
+      "origin": [
+        8.0,
+        2.9,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "496c5496-947a-4417-876c-b179a5111548"
+    },
+    {
+      "name": "anvil_foot",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        2.5,
+        5.0,
+        3.5
+      ],
+      "to": [
+        13.5,
+        8.0,
+        12.5
+      ],
+      "origin": [
+        8.0,
+        6.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "6b86ee4a-106c-42fe-852c-85f5c0f2c4e5"
+    },
+    {
+      "name": "anvil_waist",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        4.5,
+        8.0,
+        5.0
+      ],
+      "to": [
+        11.5,
+        11.0,
+        11.0
+      ],
+      "origin": [
+        8.0,
+        9.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "8e6842eb-9b9b-4162-b963-a90c6238cff6"
+    },
+    {
+      "name": "anvil_face",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        1.0,
+        11.0,
+        3.5
+      ],
+      "to": [
+        15.0,
+        16.0,
+        12.5
+      ],
+      "origin": [
+        8.0,
+        13.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            32,
+            64
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "23fdea93-b824-4cc3-b6c8-8ae35cd2fe6c"
+    },
+    {
+      "name": "anvil_horn",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        -4.0,
+        12.0,
+        5.5
+      ],
+      "to": [
+        1.0,
+        15.5,
+        10.5
+      ],
+      "origin": [
+        -1.5,
+        13.75,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "a55c174a-7f56-4349-a28b-093e59063620"
+    },
+    {
+      "name": "anvil_heel",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        15.0,
+        12.0,
+        5.5
+      ],
+      "to": [
+        18.5,
+        15.5,
+        10.5
+      ],
+      "origin": [
+        16.75,
+        13.75,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "4cbd971d-45c6-4e6d-9551-661dda72c336"
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        0.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "8a78fc03-98b7-447a-a70c-6757b22e1bdf",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "233a1d4a-85ee-4652-8914-a59e3152085e",
+        "496c5496-947a-4417-876c-b179a5111548",
+        "6b86ee4a-106c-42fe-852c-85f5c0f2c4e5",
+        "8e6842eb-9b9b-4162-b963-a90c6238cff6",
+        "23fdea93-b824-4cc3-b6c8-8ae35cd2fe6c",
+        "a55c174a-7f56-4349-a28b-093e59063620",
+        "4cbd971d-45c6-4e6d-9551-661dda72c336"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\OPAL_HEAVEN\\2_MACHINERIE_ET_UTILITAIRES\\12_Thorgar_Anvil\\thorgar_anvil.png",
+      "name": "thorgar_anvil.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "531e69bf-9a1c-48e8-8b1c-40e0215a3da9",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABW0lEQVR4nO3aoUoEYRTF8f8chk0bVxCDVRSbaTH5EBabWgyCxTcQDGYVDLpBMfgEGpUNBjWIrsW0oAgmYfvIgGMwaPuucL5fmnbuvenAN0VVVdXeyQURdra32J+5I1LZLN87OkwWuryy+p3XH7Y4Hc2y1H4gpSaz2D0+r+ph3t9eGRufSDZAnVdLvfhPaj5SLh+R9+cBXAlzwlwZPcDty8j7ABvdlvcB+sE9QPwDEV2gyRTmhDlhTpgrowfIPaCbewC5B7RzDwgjzAlzwlwZPUDuAd3cA8g9oJ17QBhhTs1bXUqp8/48QO/rbTCV1Hm/KSan56vIAaY+riPjKer/A24Gw5DwtfVNOp0OUa6vLinr5Q96Z0R6ergPyxbmhDlhTpgT5oQ5YU6YE+aEOWFOmBPmhDlhTpgT5oQ5YU6YE+aEOWFOmBPmhDlhTpgT5oq5hcXQ/wOeB4+R8XwCydNxEuVIOpEAAAAASUVORK5CYII="
+    }
+  ],
+  "animations": []
+}

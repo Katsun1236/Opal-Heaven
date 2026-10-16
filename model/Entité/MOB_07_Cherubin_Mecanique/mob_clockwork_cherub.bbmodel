@@ -1,0 +1,4271 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": true
+  },
+  "name": "mob_clockwork_cherub",
+  "geometry_name": "geometry.mob_clockwork_cherub",
+  "visible_box": [
+    32,
+    48,
+    32
+  ],
+  "resolution": {
+    "width": 256,
+    "height": 256
+  },
+  "elements": [
+    {
+      "name": "orb_core",
+      "uuid": "ad052c11-55f5-4c19-8755-bcc4bde1eb22",
+      "from": [
+        -3.5,
+        7.5,
+        -3.5
+      ],
+      "to": [
+        3.5,
+        14.5,
+        3.5
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "marble",
+      "size": [
+        7.0,
+        7.0,
+        7.0
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            20,
+            8,
+            27,
+            15
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            34,
+            8,
+            41,
+            15
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            13,
+            8,
+            20,
+            15
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            27,
+            8,
+            34,
+            15
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            20,
+            1,
+            27,
+            8
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            27,
+            1,
+            34,
+            8
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        13,
+        1
+      ]
+    },
+    {
+      "name": "equator_gold",
+      "uuid": "04c9d858-c66c-401a-8bbc-a919e816bd96",
+      "from": [
+        -3.8,
+        10.5,
+        -3.8
+      ],
+      "to": [
+        3.8,
+        11.5,
+        3.8
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        7.6,
+        1.0,
+        7.6
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            115,
+            9,
+            123,
+            10
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            131,
+            9,
+            139,
+            10
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            107,
+            9,
+            115,
+            10
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            123,
+            9,
+            131,
+            10
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            115,
+            1,
+            123,
+            9
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            123,
+            1,
+            131,
+            9
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        107,
+        1
+      ]
+    },
+    {
+      "name": "meridian_gold",
+      "uuid": "56098a37-0f97-430d-abba-3cf9f506ba51",
+      "from": [
+        -3.8,
+        7.2,
+        -1
+      ],
+      "to": [
+        3.8,
+        14.8,
+        1
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        7.6,
+        7.6,
+        2
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            88,
+            3,
+            96,
+            11
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            98,
+            3,
+            106,
+            11
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            86,
+            3,
+            88,
+            11
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            96,
+            3,
+            98,
+            11
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            88,
+            1,
+            96,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            96,
+            1,
+            104,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        86,
+        1
+      ]
+    },
+    {
+      "name": "lens_mount",
+      "uuid": "a4767702-ca00-4879-890d-161c58d33dc3",
+      "from": [
+        -2.5,
+        8.5,
+        -5.2
+      ],
+      "to": [
+        2.5,
+        13.5,
+        -3.5
+      ],
+      "origin": [
+        0,
+        11,
+        -4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        5.0,
+        5.0,
+        1.7
+      ],
+      "bone_name": "lens",
+      "faces": {
+        "north": {
+          "uv": [
+            141,
+            3,
+            146,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            148,
+            3,
+            153,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            139,
+            3,
+            141,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            146,
+            3,
+            148,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            141,
+            1,
+            146,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            146,
+            1,
+            151,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        139,
+        1
+      ]
+    },
+    {
+      "name": "lens_barrel",
+      "uuid": "e55914ff-4435-4663-85d8-be2954d3f86a",
+      "from": [
+        -1.8,
+        9.2,
+        -6.5
+      ],
+      "to": [
+        1.8,
+        12.8,
+        -5.0
+      ],
+      "origin": [
+        0,
+        11,
+        -4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "dark_iron",
+      "size": [
+        3.6,
+        3.6,
+        1.5
+      ],
+      "bone_name": "lens",
+      "faces": {
+        "north": {
+          "uv": [
+            156,
+            3,
+            160,
+            7
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            162,
+            3,
+            166,
+            7
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            154,
+            3,
+            156,
+            7
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            160,
+            3,
+            162,
+            7
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            156,
+            1,
+            160,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            160,
+            1,
+            164,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        154,
+        1
+      ]
+    },
+    {
+      "name": "lens_glass",
+      "uuid": "16450dbc-dd2a-4963-9056-7ba36c225d7b",
+      "from": [
+        -1.2,
+        9.8,
+        -7.0
+      ],
+      "to": [
+        1.2,
+        12.2,
+        -6.3
+      ],
+      "origin": [
+        0,
+        11,
+        -4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_cyan",
+      "size": [
+        2.4,
+        2.4,
+        0.7
+      ],
+      "bone_name": "lens",
+      "faces": {
+        "north": {
+          "uv": [
+            232,
+            2,
+            234,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            235,
+            2,
+            237,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            231,
+            2,
+            232,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            234,
+            2,
+            235,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            232,
+            1,
+            234,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            234,
+            1,
+            236,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        231,
+        1
+      ]
+    },
+    {
+      "name": "ring_in_n",
+      "uuid": "5bf6c6d3-0a76-48c9-8f96-0554f5bbf720",
+      "from": [
+        -4.8,
+        10.5,
+        -4.8
+      ],
+      "to": [
+        4.8,
+        11.5,
+        -4.2
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        9.6,
+        1.0,
+        0.6
+      ],
+      "bone_name": "halo_inner",
+      "faces": {
+        "north": {
+          "uv": [
+            202,
+            18,
+            212,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            213,
+            18,
+            223,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            201,
+            18,
+            202,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            212,
+            18,
+            213,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            202,
+            17,
+            212,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            212,
+            17,
+            222,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        201,
+        17
+      ]
+    },
+    {
+      "name": "ring_in_s",
+      "uuid": "083e7106-604c-4bd4-a5de-229fa8c355cc",
+      "from": [
+        -4.8,
+        10.5,
+        4.2
+      ],
+      "to": [
+        4.8,
+        11.5,
+        4.8
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        9.6,
+        1.0,
+        0.6
+      ],
+      "bone_name": "halo_inner",
+      "faces": {
+        "north": {
+          "uv": [
+            224,
+            18,
+            234,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            235,
+            18,
+            245,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            223,
+            18,
+            224,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            234,
+            18,
+            235,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            224,
+            17,
+            234,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            234,
+            17,
+            244,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        223,
+        17
+      ]
+    },
+    {
+      "name": "ring_in_e",
+      "uuid": "9029ae6e-e054-44c8-bcc5-26d29b72d5d4",
+      "from": [
+        4.2,
+        10.5,
+        -4.8
+      ],
+      "to": [
+        4.8,
+        11.5,
+        4.8
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        0.6,
+        1.0,
+        9.6
+      ],
+      "bone_name": "halo_inner",
+      "faces": {
+        "north": {
+          "uv": [
+            52,
+            11,
+            53,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            63,
+            11,
+            64,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            42,
+            11,
+            52,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            53,
+            11,
+            63,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            52,
+            1,
+            53,
+            11
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            53,
+            1,
+            54,
+            11
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        42,
+        1
+      ]
+    },
+    {
+      "name": "ring_in_w",
+      "uuid": "f2581d24-9bec-4c43-8fd8-1e65cacf2284",
+      "from": [
+        -4.8,
+        10.5,
+        -4.8
+      ],
+      "to": [
+        -4.2,
+        11.5,
+        4.8
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        0.6,
+        1.0,
+        9.6
+      ],
+      "bone_name": "halo_inner",
+      "faces": {
+        "north": {
+          "uv": [
+            74,
+            11,
+            75,
+            12
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            85,
+            11,
+            86,
+            12
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            64,
+            11,
+            74,
+            12
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            75,
+            11,
+            85,
+            12
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            74,
+            1,
+            75,
+            11
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            75,
+            1,
+            76,
+            11
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        64,
+        1
+      ]
+    },
+    {
+      "name": "ring_out_top",
+      "uuid": "0dddc159-043b-4b98-b3b9-f3743eac76d5",
+      "from": [
+        -5.8,
+        16.5,
+        -0.6
+      ],
+      "to": [
+        5.8,
+        17.5,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        11.6,
+        1.0,
+        1.2
+      ],
+      "bone_name": "halo_outer",
+      "faces": {
+        "north": {
+          "uv": [
+            124,
+            18,
+            136,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            137,
+            18,
+            149,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            123,
+            18,
+            124,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            136,
+            18,
+            137,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            124,
+            17,
+            136,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            136,
+            17,
+            148,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        123,
+        17
+      ]
+    },
+    {
+      "name": "ring_out_bot",
+      "uuid": "ff06129b-d128-4ca0-9a2e-08f5a500f43f",
+      "from": [
+        -5.8,
+        4.5,
+        -0.6
+      ],
+      "to": [
+        5.8,
+        5.5,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        11.6,
+        1.0,
+        1.2
+      ],
+      "bone_name": "halo_outer",
+      "faces": {
+        "north": {
+          "uv": [
+            151,
+            18,
+            163,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            164,
+            18,
+            176,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            150,
+            18,
+            151,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            163,
+            18,
+            164,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            151,
+            17,
+            163,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            163,
+            17,
+            175,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        150,
+        17
+      ]
+    },
+    {
+      "name": "ring_out_l",
+      "uuid": "82d302f4-e56a-4f8e-a813-c93ee911fd6d",
+      "from": [
+        -6.2,
+        4.5,
+        -0.6
+      ],
+      "to": [
+        -5.2,
+        17.5,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.0,
+        13.0,
+        1.2
+      ],
+      "bone_name": "halo_outer",
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            2,
+            3,
+            15
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            4,
+            2,
+            5,
+            15
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            2,
+            2,
+            15
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            3,
+            2,
+            4,
+            15
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            2,
+            1,
+            3,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            3,
+            1,
+            4,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ring_out_r",
+      "uuid": "5dbbbc88-d833-4532-b6f3-271de7a23807",
+      "from": [
+        5.2,
+        4.5,
+        -0.6
+      ],
+      "to": [
+        6.2,
+        17.5,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.0,
+        13.0,
+        1.2
+      ],
+      "bone_name": "halo_outer",
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            2,
+            9,
+            15
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            10,
+            2,
+            11,
+            15
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            7,
+            2,
+            8,
+            15
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            9,
+            2,
+            10,
+            15
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            8,
+            1,
+            9,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            9,
+            1,
+            10,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        7,
+        1
+      ]
+    },
+    {
+      "name": "ring_out_orb_top",
+      "uuid": "7abaf3e6-71d1-4d1c-82d7-7e34664174dc",
+      "from": [
+        -1,
+        17.5,
+        -1
+      ],
+      "to": [
+        1,
+        19.5,
+        1
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "glow_cyan",
+      "size": [
+        2,
+        2.0,
+        2
+      ],
+      "bone_name": "halo_outer",
+      "faces": {
+        "north": {
+          "uv": [
+            241,
+            3,
+            243,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            245,
+            3,
+            247,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            239,
+            3,
+            241,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            243,
+            3,
+            245,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            241,
+            1,
+            243,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            243,
+            1,
+            245,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        239,
+        1
+      ]
+    },
+    {
+      "name": "wing_tl_joint",
+      "uuid": "69bd24d9-d66e-4ce7-9ae5-c736b3931514",
+      "from": [
+        -5,
+        11.5,
+        0.5
+      ],
+      "to": [
+        -3,
+        13.5,
+        2.5
+      ],
+      "origin": [
+        -3.5,
+        12,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        2,
+        2.0,
+        2.0
+      ],
+      "bone_name": "wing_tl",
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            19,
+            5,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            7,
+            19,
+            9,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            1,
+            19,
+            3,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            5,
+            19,
+            7,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            3,
+            17,
+            5,
+            19
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            5,
+            17,
+            7,
+            19
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        1,
+        17
+      ]
+    },
+    {
+      "name": "wing_tl_feather1",
+      "uuid": "70dde26f-80cc-48c9-8311-29889809028c",
+      "from": [
+        -10,
+        12.5,
+        1.5
+      ],
+      "to": [
+        -4.5,
+        15.5,
+        2.5
+      ],
+      "origin": [
+        -3.5,
+        12,
+        1
+      ],
+      "rotation": [
+        0,
+        -20,
+        -25
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        5.5,
+        3.0,
+        1.0
+      ],
+      "bone_name": "wing_tl",
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            18,
+            17,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            18,
+            18,
+            24,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            10,
+            18,
+            11,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            17,
+            18,
+            18,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            11,
+            17,
+            17,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            17,
+            17,
+            23,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        10,
+        17
+      ]
+    },
+    {
+      "name": "wing_tl_feather2",
+      "uuid": "c956a507-3077-45c5-ba89-04b1a4049de5",
+      "from": [
+        -14,
+        14,
+        1.8
+      ],
+      "to": [
+        -8.5,
+        17.5,
+        2.8
+      ],
+      "origin": [
+        -3.5,
+        12,
+        1
+      ],
+      "rotation": [
+        0,
+        -20,
+        -35
+      ],
+      "cube_type": "glow_cyan",
+      "size": [
+        5.5,
+        3.5,
+        1.0
+      ],
+      "bone_name": "wing_tl",
+      "faces": {
+        "north": {
+          "uv": [
+            167,
+            2,
+            173,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            174,
+            2,
+            180,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            166,
+            2,
+            167,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            173,
+            2,
+            174,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            167,
+            1,
+            173,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            173,
+            1,
+            179,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        166,
+        1
+      ]
+    },
+    {
+      "name": "wing_tr_joint",
+      "uuid": "ab54b5e1-e85c-4d97-8dd9-0df1c8513ea8",
+      "from": [
+        3,
+        11.5,
+        0.5
+      ],
+      "to": [
+        5,
+        13.5,
+        2.5
+      ],
+      "origin": [
+        3.5,
+        12,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        2,
+        2.0,
+        2.0
+      ],
+      "bone_name": "wing_tr",
+      "faces": {
+        "north": {
+          "uv": [
+            26,
+            19,
+            28,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            30,
+            19,
+            32,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            24,
+            19,
+            26,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            28,
+            19,
+            30,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            26,
+            17,
+            28,
+            19
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            28,
+            17,
+            30,
+            19
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        24,
+        17
+      ]
+    },
+    {
+      "name": "wing_tr_feather1",
+      "uuid": "84c4fd83-34e1-4e80-a3e9-94ec0694bb97",
+      "from": [
+        4.5,
+        12.5,
+        1.5
+      ],
+      "to": [
+        10,
+        15.5,
+        2.5
+      ],
+      "origin": [
+        3.5,
+        12,
+        1
+      ],
+      "rotation": [
+        0,
+        20,
+        25
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        5.5,
+        3.0,
+        1.0
+      ],
+      "bone_name": "wing_tr",
+      "faces": {
+        "north": {
+          "uv": [
+            34,
+            18,
+            40,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            41,
+            18,
+            47,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            33,
+            18,
+            34,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            40,
+            18,
+            41,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            34,
+            17,
+            40,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            40,
+            17,
+            46,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        33,
+        17
+      ]
+    },
+    {
+      "name": "wing_tr_feather2",
+      "uuid": "68a0a32e-42db-4bb0-ad99-d3e56719814a",
+      "from": [
+        8.5,
+        14,
+        1.8
+      ],
+      "to": [
+        14,
+        17.5,
+        2.8
+      ],
+      "origin": [
+        3.5,
+        12,
+        1
+      ],
+      "rotation": [
+        0,
+        20,
+        35
+      ],
+      "cube_type": "glow_cyan",
+      "size": [
+        5.5,
+        3.5,
+        1.0
+      ],
+      "bone_name": "wing_tr",
+      "faces": {
+        "north": {
+          "uv": [
+            181,
+            2,
+            187,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            188,
+            2,
+            194,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            180,
+            2,
+            181,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            187,
+            2,
+            188,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            181,
+            1,
+            187,
+            2
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            187,
+            1,
+            193,
+            2
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        180,
+        1
+      ]
+    },
+    {
+      "name": "wing_bl_joint",
+      "uuid": "d3360a5c-55ef-4284-92fe-39039a018f62",
+      "from": [
+        -4.5,
+        8.5,
+        0.5
+      ],
+      "to": [
+        -2.5,
+        10.5,
+        2.5
+      ],
+      "origin": [
+        -3,
+        9,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "bone_name": "wing_bl",
+      "faces": {
+        "north": {
+          "uv": [
+            49,
+            19,
+            51,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            53,
+            19,
+            55,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            47,
+            19,
+            49,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            51,
+            19,
+            53,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            49,
+            17,
+            51,
+            19
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            51,
+            17,
+            53,
+            19
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        47,
+        17
+      ]
+    },
+    {
+      "name": "wing_bl_feather",
+      "uuid": "e2c348c3-a024-45c9-8cf0-fd5744b99a7a",
+      "from": [
+        -9,
+        6.5,
+        1.5
+      ],
+      "to": [
+        -4,
+        9.5,
+        2.5
+      ],
+      "origin": [
+        -3,
+        9,
+        1
+      ],
+      "rotation": [
+        0,
+        -15,
+        20
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        5,
+        3.0,
+        1.0
+      ],
+      "bone_name": "wing_bl",
+      "faces": {
+        "north": {
+          "uv": [
+            57,
+            18,
+            62,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            63,
+            18,
+            68,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            56,
+            18,
+            57,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            62,
+            18,
+            63,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            57,
+            17,
+            62,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            62,
+            17,
+            67,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        56,
+        17
+      ]
+    },
+    {
+      "name": "wing_br_joint",
+      "uuid": "45c08b24-40c5-4314-9ad8-b12b5183b501",
+      "from": [
+        2.5,
+        8.5,
+        0.5
+      ],
+      "to": [
+        4.5,
+        10.5,
+        2.5
+      ],
+      "origin": [
+        3,
+        9,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "bone_name": "wing_br",
+      "faces": {
+        "north": {
+          "uv": [
+            71,
+            19,
+            73,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            75,
+            19,
+            77,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            69,
+            19,
+            71,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            73,
+            19,
+            75,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            71,
+            17,
+            73,
+            19
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            73,
+            17,
+            75,
+            19
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        69,
+        17
+      ]
+    },
+    {
+      "name": "wing_br_feather",
+      "uuid": "47392772-9a7a-44c2-bc00-f0d7a6bb1298",
+      "from": [
+        4,
+        6.5,
+        1.5
+      ],
+      "to": [
+        9,
+        9.5,
+        2.5
+      ],
+      "origin": [
+        3,
+        9,
+        1
+      ],
+      "rotation": [
+        0,
+        15,
+        -20
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        5,
+        3.0,
+        1.0
+      ],
+      "bone_name": "wing_br",
+      "faces": {
+        "north": {
+          "uv": [
+            79,
+            18,
+            84,
+            21
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            85,
+            18,
+            90,
+            21
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            78,
+            18,
+            79,
+            21
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            84,
+            18,
+            85,
+            21
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            79,
+            17,
+            84,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            84,
+            17,
+            89,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        78,
+        17
+      ]
+    },
+    {
+      "name": "pendulum_rod",
+      "uuid": "2c3db5ad-8c6b-45fb-ab65-4e60ebe95e0d",
+      "from": [
+        -0.8,
+        4.5,
+        -0.8
+      ],
+      "to": [
+        0.8,
+        7.5,
+        0.8
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "dark_iron",
+      "size": [
+        1.6,
+        3.0,
+        1.6
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            196,
+            3,
+            198,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            200,
+            3,
+            202,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            194,
+            3,
+            196,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            198,
+            3,
+            200,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            196,
+            1,
+            198,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            198,
+            1,
+            200,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        194,
+        1
+      ]
+    },
+    {
+      "name": "pendulum_bob",
+      "uuid": "56389e24-9718-405e-b040-33c8f66051bc",
+      "from": [
+        -1.5,
+        2.5,
+        -1.5
+      ],
+      "to": [
+        1.5,
+        4.5,
+        1.5
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        3.0,
+        2.0,
+        3.0
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            205,
+            4,
+            208,
+            6
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            211,
+            4,
+            214,
+            6
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            202,
+            4,
+            205,
+            6
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            208,
+            4,
+            211,
+            6
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            205,
+            1,
+            208,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            208,
+            1,
+            211,
+            4
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        202,
+        1
+      ]
+    },
+    {
+      "name": "compass_pin_1",
+      "uuid": "2e4c02e7-80c1-42e0-a61a-59185deb877b",
+      "from": [
+        -2.5,
+        3.5,
+        -0.5
+      ],
+      "to": [
+        -1.5,
+        6.0,
+        0.5
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        30
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.0,
+        2.5,
+        1.0
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            92,
+            18,
+            93,
+            20
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            94,
+            18,
+            95,
+            20
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            91,
+            18,
+            92,
+            20
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            93,
+            18,
+            94,
+            20
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            92,
+            17,
+            93,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            93,
+            17,
+            94,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        91,
+        17
+      ]
+    },
+    {
+      "name": "compass_pin_2",
+      "uuid": "90c4382a-f477-452b-a0bb-b33367ad373d",
+      "from": [
+        1.5,
+        3.5,
+        -0.5
+      ],
+      "to": [
+        2.5,
+        6.0,
+        0.5
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        -30
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.0,
+        2.5,
+        1.0
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            97,
+            18,
+            98,
+            20
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            99,
+            18,
+            100,
+            20
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            96,
+            18,
+            97,
+            20
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            98,
+            18,
+            99,
+            20
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            97,
+            17,
+            98,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            98,
+            17,
+            99,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        96,
+        17
+      ]
+    },
+    {
+      "name": "cog_l",
+      "uuid": "bb8e0539-6cbf-481a-8f8e-fa00b8574d7e",
+      "from": [
+        -4.2,
+        9.8,
+        -1.2
+      ],
+      "to": [
+        -3.4,
+        12.2,
+        1.2
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "dark_iron",
+      "size": [
+        0.8,
+        2.4,
+        2.4
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            217,
+            3,
+            218,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            220,
+            3,
+            221,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            215,
+            3,
+            217,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            218,
+            3,
+            220,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            217,
+            1,
+            218,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            218,
+            1,
+            219,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        215,
+        1
+      ]
+    },
+    {
+      "name": "cog_tooth_l1",
+      "uuid": "80c7fe33-8277-469b-8841-27d73138782e",
+      "from": [
+        -4.4,
+        12.2,
+        -0.6
+      ],
+      "to": [
+        -3.2,
+        13.4,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            178,
+            18,
+            179,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            180,
+            18,
+            181,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            177,
+            18,
+            178,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            179,
+            18,
+            180,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            178,
+            17,
+            179,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            179,
+            17,
+            180,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        177,
+        17
+      ]
+    },
+    {
+      "name": "cog_tooth_l2",
+      "uuid": "c73b072c-b51c-4ee3-8194-53102ecca8f6",
+      "from": [
+        -4.4,
+        8.6,
+        -0.6
+      ],
+      "to": [
+        -3.2,
+        9.8,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            184,
+            18,
+            185,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            186,
+            18,
+            187,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            183,
+            18,
+            184,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            185,
+            18,
+            186,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            184,
+            17,
+            185,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            185,
+            17,
+            186,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        183,
+        17
+      ]
+    },
+    {
+      "name": "cog_r",
+      "uuid": "b9a5029c-cd48-4913-8a5e-69f658066d92",
+      "from": [
+        3.4,
+        9.8,
+        -1.2
+      ],
+      "to": [
+        4.2,
+        12.2,
+        1.2
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "dark_iron",
+      "size": [
+        0.8,
+        2.4,
+        2.4
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            225,
+            3,
+            226,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            228,
+            3,
+            229,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            223,
+            3,
+            225,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            226,
+            3,
+            228,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            225,
+            1,
+            226,
+            3
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            226,
+            1,
+            227,
+            3
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        223,
+        1
+      ]
+    },
+    {
+      "name": "cog_tooth_r1",
+      "uuid": "200af4fd-9728-4a90-8d7c-1f156143aa01",
+      "from": [
+        3.2,
+        12.2,
+        -0.6
+      ],
+      "to": [
+        4.4,
+        13.4,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            190,
+            18,
+            191,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            192,
+            18,
+            193,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            189,
+            18,
+            190,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            191,
+            18,
+            192,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            190,
+            17,
+            191,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            191,
+            17,
+            192,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        189,
+        17
+      ]
+    },
+    {
+      "name": "cog_tooth_r2",
+      "uuid": "4878ed8c-b0fc-4290-bfcb-da6814122ee5",
+      "from": [
+        3.2,
+        8.6,
+        -0.6
+      ],
+      "to": [
+        4.4,
+        9.8,
+        0.6
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            196,
+            18,
+            197,
+            19
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            198,
+            18,
+            199,
+            19
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            195,
+            18,
+            196,
+            19
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            197,
+            18,
+            198,
+            19
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            196,
+            17,
+            197,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            197,
+            17,
+            198,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        195,
+        17
+      ]
+    },
+    {
+      "name": "windup_shaft",
+      "uuid": "d7587116-b1b6-4ec0-b845-ea2a0c7a45d6",
+      "from": [
+        -0.6,
+        10.4,
+        3.5
+      ],
+      "to": [
+        0.6,
+        11.6,
+        5.5
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.2,
+        1.2,
+        2.0
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            103,
+            19,
+            104,
+            20
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            106,
+            19,
+            107,
+            20
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            101,
+            19,
+            103,
+            20
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            104,
+            19,
+            106,
+            20
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            103,
+            17,
+            104,
+            19
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            104,
+            17,
+            105,
+            19
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        101,
+        17
+      ]
+    },
+    {
+      "name": "windup_loop_l",
+      "uuid": "05c36119-4c6d-4d06-9678-b2b72c0e456b",
+      "from": [
+        -2.2,
+        9.8,
+        5.2
+      ],
+      "to": [
+        -0.4,
+        12.2,
+        6.0
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.8,
+        2.4,
+        0.8
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            110,
+            18,
+            112,
+            20
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            113,
+            18,
+            115,
+            20
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            109,
+            18,
+            110,
+            20
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            112,
+            18,
+            113,
+            20
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            110,
+            17,
+            112,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            112,
+            17,
+            114,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        109,
+        17
+      ]
+    },
+    {
+      "name": "windup_loop_r",
+      "uuid": "d2f6b639-de0a-4f53-b1ff-fc53a1a1a106",
+      "from": [
+        0.4,
+        9.8,
+        5.2
+      ],
+      "to": [
+        2.2,
+        12.2,
+        6.0
+      ],
+      "origin": [
+        0,
+        11,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "cube_type": "gold_brass",
+      "size": [
+        1.8,
+        2.4,
+        0.8
+      ],
+      "bone_name": "chassis",
+      "faces": {
+        "north": {
+          "uv": [
+            117,
+            18,
+            119,
+            20
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            120,
+            18,
+            122,
+            20
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            116,
+            18,
+            117,
+            20
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            119,
+            18,
+            120,
+            20
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            117,
+            17,
+            119,
+            18
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            119,
+            17,
+            121,
+            18
+          ],
+          "texture": 0
+        }
+      },
+      "uv_offset": [
+        116,
+        17
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "color": 0,
+      "uuid": "48ba63ac-3e50-4ec2-bd74-ed5c9660c3ec",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        {
+          "name": "chassis",
+          "origin": [
+            0,
+            11,
+            0
+          ],
+          "color": 0,
+          "uuid": "4877813b-c10d-406d-bb69-9f7ae7330fe4",
+          "export": true,
+          "isOpen": true,
+          "locked": false,
+          "visibility": true,
+          "children": [
+            "ad052c11-55f5-4c19-8755-bcc4bde1eb22",
+            "04c9d858-c66c-401a-8bbc-a919e816bd96",
+            "56098a37-0f97-430d-abba-3cf9f506ba51",
+            "2c3db5ad-8c6b-45fb-ab65-4e60ebe95e0d",
+            "56389e24-9718-405e-b040-33c8f66051bc",
+            "2e4c02e7-80c1-42e0-a61a-59185deb877b",
+            "90c4382a-f477-452b-a0bb-b33367ad373d",
+            "bb8e0539-6cbf-481a-8f8e-fa00b8574d7e",
+            "80c7fe33-8277-469b-8841-27d73138782e",
+            "c73b072c-b51c-4ee3-8194-53102ecca8f6",
+            "b9a5029c-cd48-4913-8a5e-69f658066d92",
+            "200af4fd-9728-4a90-8d7c-1f156143aa01",
+            "4878ed8c-b0fc-4290-bfcb-da6814122ee5",
+            "d7587116-b1b6-4ec0-b845-ea2a0c7a45d6",
+            "05c36119-4c6d-4d06-9678-b2b72c0e456b",
+            "d2f6b639-de0a-4f53-b1ff-fc53a1a1a106",
+            {
+              "name": "lens",
+              "origin": [
+                0,
+                11,
+                -4
+              ],
+              "color": 0,
+              "uuid": "0eb52a1b-e44e-466a-81cb-6a87c185cf5d",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "a4767702-ca00-4879-890d-161c58d33dc3",
+                "e55914ff-4435-4663-85d8-be2954d3f86a",
+                "16450dbc-dd2a-4963-9056-7ba36c225d7b"
+              ]
+            },
+            {
+              "name": "halo_inner",
+              "origin": [
+                0,
+                11,
+                0
+              ],
+              "color": 0,
+              "uuid": "049fd04c-dd97-4d38-b628-f0e9a18a1cbf",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "5bf6c6d3-0a76-48c9-8f96-0554f5bbf720",
+                "083e7106-604c-4bd4-a5de-229fa8c355cc",
+                "9029ae6e-e054-44c8-bcc5-26d29b72d5d4",
+                "f2581d24-9bec-4c43-8fd8-1e65cacf2284"
+              ]
+            },
+            {
+              "name": "halo_outer",
+              "origin": [
+                0,
+                11,
+                0
+              ],
+              "color": 0,
+              "uuid": "fb1d1c54-c8a0-4038-90fd-fe37cf735fa2",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "0dddc159-043b-4b98-b3b9-f3743eac76d5",
+                "ff06129b-d128-4ca0-9a2e-08f5a500f43f",
+                "82d302f4-e56a-4f8e-a813-c93ee911fd6d",
+                "5dbbbc88-d833-4532-b6f3-271de7a23807",
+                "7abaf3e6-71d1-4d1c-82d7-7e34664174dc"
+              ]
+            },
+            {
+              "name": "wing_tl",
+              "origin": [
+                -3.5,
+                12,
+                1
+              ],
+              "color": 0,
+              "uuid": "b93167b4-7ce0-43fc-8220-92c8277999ba",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "69bd24d9-d66e-4ce7-9ae5-c736b3931514",
+                "70dde26f-80cc-48c9-8311-29889809028c",
+                "c956a507-3077-45c5-ba89-04b1a4049de5"
+              ]
+            },
+            {
+              "name": "wing_tr",
+              "origin": [
+                3.5,
+                12,
+                1
+              ],
+              "color": 0,
+              "uuid": "4e8676a0-2a57-4411-be7c-cbb9230d77eb",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "ab54b5e1-e85c-4d97-8dd9-0df1c8513ea8",
+                "84c4fd83-34e1-4e80-a3e9-94ec0694bb97",
+                "68a0a32e-42db-4bb0-ad99-d3e56719814a"
+              ]
+            },
+            {
+              "name": "wing_bl",
+              "origin": [
+                -3,
+                9,
+                1
+              ],
+              "color": 0,
+              "uuid": "a7a9a2e7-5925-4745-96b5-f21125a447a5",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "d3360a5c-55ef-4284-92fe-39039a018f62",
+                "e2c348c3-a024-45c9-8cf0-fd5744b99a7a"
+              ]
+            },
+            {
+              "name": "wing_br",
+              "origin": [
+                3,
+                9,
+                1
+              ],
+              "color": 0,
+              "uuid": "c6d53c80-e354-4a43-875c-ccb1a226148a",
+              "export": true,
+              "isOpen": true,
+              "locked": false,
+              "visibility": true,
+              "children": [
+                "45c08b24-40c5-4314-9ad8-b12b5183b501",
+                "47392772-9a7a-44c2-bc00-f0d7a6bb1298"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "mob_clockwork_cherub.png",
+      "name": "mob_clockwork_cherub.png",
+      "folder": "block",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "ea85f3f9-2c1f-4d54-ac05-6d0a43a68821",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAE90lEQVR4nO3cT2gcVRwA4Le2NCG24MWSm0UqFIoHL6KIIHryrvSuB6GKBQ9CRRBBDPQgKCKelB4Eq714EOtBLyIGBEVEKCjS3pLqoWCVNCUdeWlenJ3Mm9mdzNZN8n0QZve9eb+ZffP+bGZ2JgRgzxqkF8XnB4uFs6vhlU9WN9Oa0nOKoige/vp6bd53j8+EXN7iE7MjxW/d/reHirgcPPJXL/G2GzeVq3P+3Gp46sSB0JT/9DvXB9O2rbpjXHds645ptWy1XLnMQ1+tZD9PnVS2a7m6Oqw73mmdcp021V9b22nKr36WpjpNdTlOX9pf3oHTp2biX5F2JJfeJNfB2/J6c7UIccCamrhXm9viwtv5OrlvfjCV26o7jqMe2+p6uXKx4TdNGHV5qbN0KbeYOs1GHTYe61I9pzptrL+2tpPJr9bB+uvyvm5I+V361/oAcOGzG+GBI3eEHy/dXF8muXS2NxuXxcG1Mc6JA8W43wQmpTrTlKW0cl7qkLHB5spWy5VnvK6TSZe8onK80nGJE19clie/d8/d6qzzdw3CodnspoZipkm0HKstv7q/1X2v1mlapvRRvgmsDwD0Lw6eUdvAOep606BppmmbhXL525m9+nShchzipFd+n/va/8JzM5uvy+vEAbscsxqvus26/LYOXK27LnVpAIAQwm9LN4eWSXp/dKODRss/rW3pxNX06MkzK40duC2/TR/nzQwATKW+TgqPvL2wNxkA2JUdmgkOAF0v9TXlNcXUeEaTTk7VaTthNQrHYffpNADczrOz/OeLl2ezVxaurRTh0WP7stX1zcW1cHQ+f6Ixll96b65oKj8NVyLo1/7dOAtud6brI27upFJ1Vh51vT5OGsGOHQCaZr/qLBgvqbStX153EnHnT/6jszL1dswAYPaD/k3/r0+AyX4DiP9/1v0vmksHAAB2qqEz1WtFMXSGe99gMJS/fG04P/ro7Afh8qXftwS+58i94aXnnx1MY+y6uNWYk4pb93yF7LMYGu4Tj2XiMt1GWo3XljeK81/eCL8ujX5rfbwltvxbgdu9rXGeZ9ElPfT0Gcr7Pqm4na4C/Pn3reWbr7+6ZcVqZyh768wbuawiNf5pi52JuxlzEnHrnq/Q+MyFzH3i1dtIN5ZD8ery4iXM5cvjncuJd6eNc6fipy/OFLER/h/bimXjj5nSJdi+0/v8DHHfD84OwiTijjMIDNo6YJr53v/w4+LY8fu35P3w/WKYm7sz5PJOnXwmTFvsXNyYHjtq1/poixsbUvn5CrGB5dLqbhMtN8jybavpdTleXV5jZbEnrTeK2JjjMjXci7/8HMrvH3vw+OD0awu1neLuw4fDH1euhFxe7BDTFjsXN6bHjtq1Ptri1n4QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAkPUvo+XDq4ujN1wAAAAASUVORK5CYII="
+    }
+  ],
+  "animations": [
+    {
+      "uuid": "f1514d09-ab0a-44e4-b87e-8e76070a5827",
+      "name": "hover_spin",
+      "loop": "loop",
+      "length": 2.0,
+      "snapping": 24,
+      "animators": {
+        "4877813b-c10d-406d-bb69-9f7ae7330fe4": {
+          "name": "chassis",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "position",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "96dc33f2-5900-4af3-9b97-eb48bd0551d5",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "74a141ac-b658-4e71-a8ef-b95b5aa2f2d2",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 2.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "2ad67361-0eb4-43b9-a7a0-9c7e88e1269f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "049fd04c-dd97-4d38-b628-f0e9a18a1cbf": {
+          "name": "halo_inner",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "70c7539b-c029-483e-8af5-7269a6d03daa",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "6a221e63-1882-49c9-9cbd-7a3a499dfe5f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 180.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "4588f956-5f4d-400a-9a93-c131c8778eda",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 360.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "fb1d1c54-c8a0-4038-90fd-fe37cf735fa2": {
+          "name": "halo_outer",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "a355efb1-17b5-4315-8e86-0b92283ad381",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "5607d906-9092-4501-9742-cb47b869baba",
+              "data_points": [
+                {
+                  "x": 180.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "91853a51-0663-4fea-9996-f498643cb667",
+              "data_points": [
+                {
+                  "x": 360.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "b93167b4-7ce0-43fc-8220-92c8277999ba": {
+          "name": "wing_tl",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "4376b0f0-f03e-4a5a-a7f2-47adf961fe1d",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "1666d462-ea37-4394-8954-d9ba1debd60c",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": -25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "049b8904-630d-4a28-ae1f-4d1ac47b3b0c",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "8e30bff8-a8f1-4aed-a0f4-7cae76dba1cc",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": -25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "294aa376-a193-42fe-8d2c-283d28865628",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 25.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "4e8676a0-2a57-4411-be7c-cbb9230d77eb": {
+          "name": "wing_tr",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "14c34019-ada5-471c-a1d8-3753f8e0915f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": -25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "378f1597-1ff2-4602-aa6a-6bc4ad34918f",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "f43b430c-e43a-40db-8900-340eeef99f4e",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": -25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "fd2abb8b-c74e-4ece-8c8a-8abb4b859f88",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 25.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 2.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "29a1962d-6abb-4b35-bf96-d3faf2a5db55",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": -25.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "2c25ba3b-747e-4b7d-aaa3-1f94a1c94267",
+      "name": "scan_target",
+      "loop": "once",
+      "length": 1.5,
+      "snapping": 24,
+      "animators": {
+        "0eb52a1b-e44e-466a-81cb-6a87c185cf5d": {
+          "name": "lens",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "position",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "9f4812af-f5a8-4464-b14b-d7f0c8e7b84a",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 0.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "fbe91c5c-3193-4111-994b-124a07187f26",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -2.5
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "cf0710c7-7944-4407-ad3f-a1314abdc817",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -2.5
+                }
+              ]
+            },
+            {
+              "channel": "position",
+              "time": 1.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "8f4624b2-3685-4c16-839b-c69c6ad2d77e",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "4877813b-c10d-406d-bb69-9f7ae7330fe4": {
+          "name": "chassis",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "82e00099-db44-460b-ad48-93c7d106835b",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.7,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "a53e746f-fbed-4808-be0d-b4a8c3c938f8",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 30.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.5,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "3dc6b446-3fcc-4bc8-ad2e-cb968173df03",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "bbdb40e4-db05-42c4-8920-ccaeb604498e",
+      "name": "holy_discharge",
+      "loop": "once",
+      "length": 1.2,
+      "snapping": 24,
+      "animators": {
+        "fb1d1c54-c8a0-4038-90fd-fe37cf735fa2": {
+          "name": "halo_outer",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "64249b54-90a4-4332-8d3e-7ed2cdb350ac",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "90bb1055-d34d-4a68-ba7f-82e59ff36c3b",
+              "data_points": [
+                {
+                  "x": 60.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.8,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "bdfc6a9a-9cea-4cb3-9d6e-bc031f85c5c3",
+              "data_points": [
+                {
+                  "x": -30.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "8f9a26cd-ffb5-4fac-a36f-9be394bec758",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "b93167b4-7ce0-43fc-8220-92c8277999ba": {
+          "name": "wing_tl",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "ccb99af9-d5e9-44f0-8b06-e72766e39ef1",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "97f47f3c-b6fe-460f-afbb-cac03fe2f962",
+              "data_points": [
+                {
+                  "x": -50.0,
+                  "y": 45.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "86a710bb-1e50-4978-8721-f9ffc49b5efa",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "4e8676a0-2a57-4411-be7c-cbb9230d77eb": {
+          "name": "wing_tr",
+          "type": "bone",
+          "keyframes": [
+            {
+              "channel": "rotation",
+              "time": 0,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "05f0cf7a-1788-4cff-8c66-3ea1e663c5c1",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 0.4,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "928a3947-92a3-4492-a16d-d8062104ed79",
+              "data_points": [
+                {
+                  "x": -50.0,
+                  "y": -45.0,
+                  "z": 0.0
+                }
+              ]
+            },
+            {
+              "channel": "rotation",
+              "time": 1.2,
+              "color": -1,
+              "interpolation": "catmullrom",
+              "uuid": "598e775a-39f6-4b1e-8ab7-3fe23df61b3a",
+              "data_points": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

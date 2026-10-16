@@ -1,0 +1,708 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "fortified_stone",
+  "geometry_name": "geometry.fortified_stone",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "stone_block",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "d8a1bd6c-4bcc-4daa-9607-0b022829c80e"
+    },
+    {
+      "name": "corner_nw",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        -0.2,
+        12.0,
+        -0.2
+      ],
+      "to": [
+        4.0,
+        16.2,
+        4.0
+      ],
+      "origin": [
+        2.0,
+        14.0,
+        2.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "3dd7be91-3ace-4a6a-9e9f-987b78904a66"
+    },
+    {
+      "name": "corner_ne",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        12.0,
+        12.0,
+        -0.2
+      ],
+      "to": [
+        16.2,
+        16.2,
+        4.0
+      ],
+      "origin": [
+        14.0,
+        14.0,
+        2.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "8a30dbbe-6504-4955-b7cc-9def460472cd"
+    },
+    {
+      "name": "corner_sw",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        -0.2,
+        0.0,
+        -0.2
+      ],
+      "to": [
+        4.0,
+        4.2,
+        4.0
+      ],
+      "origin": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "df5239b6-970f-49f2-8c87-a8ae033d37fe"
+    },
+    {
+      "name": "corner_se",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        12.0,
+        0.0,
+        -0.2
+      ],
+      "to": [
+        16.2,
+        4.2,
+        4.0
+      ],
+      "origin": [
+        14.0,
+        2.0,
+        2.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "84d4de54-da8a-4662-9eff-df821aecda32"
+    },
+    {
+      "name": "brace_cross_1",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        1.0,
+        1.0,
+        -0.6
+      ],
+      "to": [
+        15.0,
+        15.0,
+        0.4
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        0.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            64,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "1a16ac69-ce3e-45ea-ad2b-8961a1c9023f",
+      "rotation": [
+        0.0,
+        0.0,
+        45.0
+      ]
+    },
+    {
+      "name": "brace_cross_2",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        1.0,
+        1.0,
+        -0.6
+      ],
+      "to": [
+        15.0,
+        15.0,
+        0.4
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        0.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            64,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "f85bdf69-e354-4b41-ab24-ddd0709e243b",
+      "rotation": [
+        0.0,
+        0.0,
+        -45.0
+      ]
+    },
+    {
+      "name": "center_bolt",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6.5,
+        6.5,
+        -0.9
+      ],
+      "to": [
+        9.5,
+        9.5,
+        0.6
+      ],
+      "origin": [
+        8.0,
+        8.0,
+        0.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "3b1a7908-36ad-4802-90b7-b1154b73a3cb"
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "e5e13947-68b5-4680-a139-90bf822fe177",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "d8a1bd6c-4bcc-4daa-9607-0b022829c80e",
+        "3dd7be91-3ace-4a6a-9e9f-987b78904a66",
+        "8a30dbbe-6504-4955-b7cc-9def460472cd",
+        "df5239b6-970f-49f2-8c87-a8ae033d37fe",
+        "84d4de54-da8a-4662-9eff-df821aecda32",
+        "1a16ac69-ce3e-45ea-ad2b-8961a1c9023f",
+        "f85bdf69-e354-4b41-ab24-ddd0709e243b",
+        "3b1a7908-36ad-4802-90b7-b1154b73a3cb"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\OPAL_HEAVEN\\3_FORTIFICATIONS_ET_PIEGES\\10_Fortified_Stone\\fortified_stone.png",
+      "name": "fortified_stone.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "20a0c730-52f4-4213-ad54-fc2767969752",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABQ0lEQVR4nOXZoU4DURCF4b9/loRgimhCgsAXiW2woKCKh+BBcASHBAwvACgkKDSB8AqIikoSBGRFKwvZXbhNzqfW3Dl3N2tmprd/dPxFQ0+PD3x+TNndGzc+P31/5fz6nhKuLi+o6oe3l+fWxZrWmL383e0N/+XgcDzPkyVQX2YymRTJkyUxGAyK5Ek4CSfhJJyEk3ASTsJJOAkn4aq6JW2rixqlVHU/31YXNUqpFg0zuhh4LDq/DH9O9dthRtuhSRdDl78g4SSchJNwEk7CSTgJJ+EknCyBeldXKq/X39heuB2um5mV1fXGYT+dPzk9m+/q/nM9NtsN9tb6m43X410Y7oxKxtPbGo6KfoDSJJyEk3ASTsJJOAkn4SSchJNwEk7CSTgJJ+EknISTcBJOwkk4CSfhJJyEk3ASTsJJOEtfoLRvSUFeUhd7UVYAAAAASUVORK5CYII="
+    }
+  ],
+  "animations": []
+}

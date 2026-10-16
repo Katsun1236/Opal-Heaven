@@ -1,0 +1,556 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "bedrock",
+    "box_uv": false
+  },
+  "name": "stellar_amethyst",
+  "geometry_name": "geometry.stellar_amethyst",
+  "resolution": {
+    "width": 64,
+    "height": 64
+  },
+  "elements": [
+    {
+      "name": "bedrock_base",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "to": [
+        15.0,
+        3.0,
+        15.0
+      ],
+      "origin": [
+        8.0,
+        1.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "8cdb6872-f2ea-4bdc-b94f-a851648be912"
+    },
+    {
+      "name": "crystal_center",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6.0,
+        3.0,
+        6.0
+      ],
+      "to": [
+        10.0,
+        16.0,
+        10.0
+      ],
+      "origin": [
+        8.0,
+        9.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "5ecc35bd-c2b3-466a-9885-e7c9e465dd46"
+    },
+    {
+      "name": "crystal_north",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6.0,
+        3.0,
+        2.0
+      ],
+      "to": [
+        10.0,
+        12.0,
+        6.0
+      ],
+      "origin": [
+        8.0,
+        7.5,
+        4.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "a6ff5177-e005-4adf-88ee-528b914f8bc4",
+      "rotation": [
+        -12.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "crystal_south",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        6.0,
+        3.0,
+        10.0
+      ],
+      "to": [
+        10.0,
+        11.0,
+        14.0
+      ],
+      "origin": [
+        8.0,
+        7.0,
+        12.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            32,
+            0,
+            48,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "e4343ce3-15c2-4637-b5cd-cf78c7bc0d28",
+      "rotation": [
+        14.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "crystal_west",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        2.0,
+        3.0,
+        6.0
+      ],
+      "to": [
+        6.0,
+        13.0,
+        10.0
+      ],
+      "origin": [
+        4.0,
+        8.0,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "15862e34-cc02-4220-86c6-ccc5b4fc2ee0",
+      "rotation": [
+        0.0,
+        0.0,
+        12.0
+      ]
+    },
+    {
+      "name": "crystal_east",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        10.0,
+        3.0,
+        6.0
+      ],
+      "to": [
+        14.0,
+        10.0,
+        10.0
+      ],
+      "origin": [
+        12.0,
+        6.5,
+        8.0
+      ],
+      "color": 0,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            32,
+            16,
+            48
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "cad9ee76-4c15-4669-90d0-09bff7351fc1",
+      "rotation": [
+        0.0,
+        0.0,
+        -14.0
+      ]
+    }
+  ],
+  "outliner": [
+    {
+      "name": "root",
+      "origin": [
+        8.0,
+        0.0,
+        8.0
+      ],
+      "color": 0,
+      "uuid": "5b2219c0-4df2-4b68-9cbe-93c0c53358eb",
+      "export": true,
+      "isOpen": true,
+      "locked": false,
+      "visibility": true,
+      "children": [
+        "8cdb6872-f2ea-4bdc-b94f-a851648be912",
+        "5ecc35bd-c2b3-466a-9885-e7c9e465dd46",
+        "a6ff5177-e005-4adf-88ee-528b914f8bc4",
+        "e4343ce3-15c2-4637-b5cd-cf78c7bc0d28",
+        "15862e34-cc02-4220-86c6-ccc5b4fc2ee0",
+        "cad9ee76-4c15-4669-90d0-09bff7351fc1"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "c:\\Users\\basti\\OneDrive\\Bureau\\blockbench IA\\MES_CREATIONS\\OPAL_HEAVEN\\1_MINERAIS_CELESTES\\05_Stellar_Amethyst\\stellar_amethyst.png",
+      "name": "stellar_amethyst.png",
+      "folder": "block",
+      "namespace": "",
+      "id": 0,
+      "particle": false,
+      "render_mode": "default",
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "69f70347-3de3-48fe-b5e6-5856e7cd75c1",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABTUlEQVR4nOXboUoEURSH8c+/12zRaBBBEIvBZhAMIugDCEbZuskmBl9BsChGX8LnMJlEsIpRNCizYrAssjPuHfh+4c6Uey7nMDBzDszMxvreJxN6fLrn/eON1ZXNiffvL1xRU2mWl9fn1oHaxBgc71LD9c3ddwH6YPt0dnQ923qZ6rmhR6adfK8KUCP5XhWgliAX5IJckAtyQS7IBbkgV5qWtK0uYtRSmn6+rS5i1FLGDTO6GHiM29+HJ6f8dZjRdmjSxdDlPwS5IBfkglyQC3JBLsgFuSAX5MpfGpK2TUsfmp5W7fB7y3a3z+1y2Vk8x6w0y9FwUOXw24trais/N4cnc6PrcO0B7VtgKEv+VwGMyTf03wFBLsgFuSAX5IJckAtyQS7IBbkgF+SCXJALckEuyAW5IBfkglyQC3JBbuZg6XLi3+e7MF+Wax7PFyj+WBN8LWxIAAAAAElFTkSuQmCC"
+    }
+  ],
+  "animations": []
+}
