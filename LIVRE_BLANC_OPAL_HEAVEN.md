@@ -18,10 +18,10 @@
   * [Chapitre 6 : L'Ordre des Abysses (Minage & Industrie) & Arbres des 3 Spécialisations](#chapitre-6--lordre-des-abysses-minage--industrie--arbres-des-3-spécialisations)
   * [Chapitre 7 : L'Ordre de la Terre (Agriculture & Génétique) & Arbres des 3 Spécialisations](#chapitre-7--lordre-de-la-terre-agriculture--génétique--arbres-des-3-spécialisations)
   * [Chapitre 8 : Le Répertoire Exhaustif des 54 Méthodes Économiques](#chapitre-8--le-répertoire-exhaustif-des-54-méthodes-économiques)
-* [TOME III : LA CARTOGRAPHIE CÉLESTE, LES 40 BIOMES & LES DONJONS](#tome-iii--la-cartographie-céleste-les-40-biomes--les-donjons)
-  * [Chapitre 9 : L'Architecture Multi-Mondes Dédiée](#chapitre-9--larchitecture-multi-mondes-dédiée)
+* [TOME III : LA CARTOGRAPHIE CÉLESTE, LES 40 BIOMES & LES BOSS DE LA WARZONE](#tome-iii--la-cartographie-céleste-les-40-biomes--les-boss-de-la-warzone)
+  * [Chapitre 9 : L'Architecture des 4 Mondes Dédiés (Concentration 100% Warzone)](#chapitre-9--larchitecture-des-4-mondes-dédiés-concentration-100-warzone)
   * [Chapitre 10 : Le Registre Intégral des 40 Biomes Moddés à Auras](#chapitre-10--le-registre-intégral-des-40-biomes-moddés-à-auras)
-  * [Chapitre 11 : Les Donjons Instanciés PvE & Les 3 Grands Boss](#chapitre-11--les-donjons-instanciés-pve--les-3-grands-boss)
+  * [Chapitre 11 : Les Boss Mondiaux de la Warzone (PvPvE Ouvert & Sanctuaires Contestés)](#chapitre-11--les-boss-mondiaux-de-la-warzone-pvpve-ouvert--sanctuaires-contestés)
 * [TOME IV : L'ÉCONOMIE D'AIRAIN, BOURSE & GRAND LIVRE D'ARTISANAT](#tome-iv--léconomie-dairain-bourse--grand-livre-dartisanat)
   * [Chapitre 12 : L'Écosystème Monétaire à 3 Devises & Barème des Prix PNJ](#chapitre-12--lécosystème-monétaire-à-3-devises--barème-des-prix-pnj)
   * [Chapitre 13 : L'Hôtel des Ventes (`/ah`) & Ordres d'Achat Boursiers](#chapitre-13--lhôtel-des-ventes-ah--ordres-dachat-boursiers)
@@ -288,7 +288,7 @@ Pour qu'aucun joueur ne se sente restreint, Opal Heaven intègre **54 méthodes 
    11. Tournois d'Arène Hebdo    29. Vente Pierres Fortifiées  47. Vente Bœufs Caparaçonnés
    12. Escorte Marchand Zephyr   30. Dalles d'Obsidienne Dense 48. Sève d'Arbre Primordial
    13. Paris Légaux de Duels     31. Orbes de Désenchantement  49. Vente Ronces Défensives
-   14. Éliminations Boss Donjon  32. Contrats Minage PNJ       50. Pépinière Arbres Rares
+   14. Éliminations Boss Warzone 32. Contrats Minage PNJ       50. Pépinière Arbres Rares
    15. Vente Armures T4 Pillées  33. Fourniture Chantiers Guilde51. Confection Festins Alchi
    16. Sécurisation Faille Sang  34. Recyclage Armes Brisées   52. Huiles Fertiles Rares
    17. Garde du Corps Minier     35. Location Foreuse Runique  53. Lait Purificateur Doré
@@ -303,31 +303,31 @@ Pour qu'aucun joueur ne se sente restreint, Opal Heaven intègre **54 méthodes 
 
 ---
 
-# TOME III : LA CARTOGRAPHIE CÉLESTE, LES 40 BIOMES & LES DONJONS
+# TOME III : LA CARTOGRAPHIE CÉLESTE, LES 40 BIOMES & LES BOSS DE LA WARZONE
 
-## Chapitre 9 : L'Architecture Multi-Mondes Dédiée
+## Chapitre 9 : L'Architecture des 4 Mondes Dédiés (Concentration 100% Warzone)
 
-Pour assurer un débit constant de 20 TPS même avec 300 joueurs actifs et empêcher la dégradation des territoires de factions par des carrières géantes, Opal Heaven opère sur un réseau de **5 mondes compartimentés**.
+Pour maximiser l'intensité du PvP, éliminer la dispersion des joueurs dans des instances privées ("safe-farming") et garantir un débit parfait de 20 TPS avec plus de 300 joueurs connectés, Opal Heaven centralise **100% de ses affrontements majeurs en monde ouvert au sein d'une Warzone souveraine**.
 
 ```
-                   CARTE DU RÉSEAU DES 5 MONDES CÉLESTES
-                                [ HUB CÉLESTE ]
+                   CARTE DU RÉSEAU DES 4 MONDES D'OPAL HEAVEN
+                                 [ HUB CÉLESTE ]
                             (Sanctuaire Paisible 0 PvP)
                                        │
-      ┌──────────────────┬─────────────┴─────────────┬──────────────────┐
-      ▼                  ▼                           ▼                  ▼
-[ OVERWORLD FACTION ] [ WARZONE ACTIVE ]      [ MONDE MINAGE ]   [ ROYAUME DONJONS ]
-10 000 x 10 000       1 500 x 1 500           5 000 x 5 000      Instances PvE
-40 Biomes Moddés      PvP Hardcore Non-Stop   Reset Mensuel Net  Cryptes Privatisées
-Bases Permanentes     KOTH, Totem & Airdrops  Ressources Brutes  Groupes de 1 à 4
+            ┌──────────────────────────┼──────────────────────────┐
+            ▼                          ▼                          ▼
+  [ OVERWORLD FACTION ]      [ WARZONE SOUVERAINE ]       [ MONDE MINAGE ]
+  10 000 x 10 000 blocs      2 000 x 2 000 blocs          5 000 x 5 000 blocs
+  40 Biomes Moddés           PvP / PvPvE Non-Stop         Reset Mensuel Net
+  Bases, Claims & Guerres    KOTH, Totems, Airdrops       Gisements Bruts Neufs
+                             & 3 Boss Mondiaux Contestés  (Zéro dégradation Overworld)
 ```
 
-### Spécifications & Rôles des 5 Mondes :
+### Spécifications & Rôles des 4 Mondes :
 1. **Le Hub Céleste (`hub`) :** Sanctuaire flottant dans le vide astral. Dégâts désactivés, faim gelée, inventaires protégés. Regroupe l'ensemble des PNJ vivants, la Banque de Cassandra, la Grande Bourse, les mannequins d'entraînement de parade et les Portails Stellaires.
-2. **L'Overworld de Faction (`opal_main`) :** Carte pérenne de $10\,000 \times 10\,000$ blocs générée avec les 40 biomes moddés exclusifs. C'est le monde sacré des bases, des claims, des fermes industrielles et de la guerre de territoire. Aucun reset de terrain n'y intervient pendant toute la saison de 6 mois.
-3. **La Warzone Sanglante (`warzone`) :** Arène circulaire de $1\,500 \times 1\,500$ blocs ceinturant le Cratère de l'Opale. Perte de stuff intégrale, claims impossibles, théâtre quotidien du KOTH, du Totem de Faction et des Airdrops célestes.
-4. **Le Monde Minage & Ressources (`mining_world`) :** Dimension de $5\,000 \times 5\,000$ blocs dédiée à l'extraction brute de masse. **Ce monde est intégralement régénéré le 1er de chaque mois à 04h00 du matin.** Cela garantit des filons neufs permanents et évite que l'Overworld de faction ne ressemble à un champ de cratères gruyère.
-5. **Le Sanctuaire des Donjons (`dungeon_realm`) :** Dimension instanciée hébergeant les donjons PvE scellés. Chaque groupe de 1 à 4 joueurs dispose de sa propre salle isolée sans risque d'intrusion extérieure.
+2. **L'Overworld de Faction (`opal_main`) :** Carte pérenne de $10\,000 \times 10\,000$ blocs générée avec les 40 biomes moddés exclusifs. C'est le monde sacré des forteresses, des claims, des fermes industrielles et de la guerre de territoire. Aucun reset de terrain n'y intervient pendant toute la saison de 6 mois.
+3. **La Warzone Souveraine (`warzone`) :** L'épicentre absolu du serveur ($2\,000 \times 2\,000$ blocs). Aucun claim possible, perte intégrale du stuff à la mort. **C'est ici et nulle part ailleurs que se déroulent tous les combats majeurs :** KOTHs quotidiens, Totems de guerre, Airdrops toutes les 2h, et **les 3 Sanctuaires de Boss Mondiaux (Seigneur Sanglant, Golem de Basalte, Reine des Ronces)** qui s'affrontent en plein champ de bataille contesté par toutes les factions en PvPvE ouvert.
+4. **Le Monde Minage & Ressources (`mining_world`) :** Dimension de $5\,000 \times 5\,000$ blocs dédiée à l'extraction brute de masse. **Ce monde est intégralement régénéré le 1er de chaque mois à 04h00 du matin.** Cela garantit des gisements de minerais neufs permanents et évite que l'Overworld de faction ne ressemble à un champ de cratères gruyère.
 
 ---
 
@@ -385,44 +385,58 @@ Chaque biome d'Opal Heaven possède une identité visuelle saisissante et diffus
 
 ---
 
-## Chapitre 11 : Les Donjons Instanciés PvE & Les 3 Grands Boss
+## Chapitre 11 : Les Boss Mondiaux de la Warzone (PvPvE Ouvert & Sanctuaires Contestés)
 
-Accessibles via des **Clés de Donjon** forgées à base de Fragments Célestes, les donjons accueillent des escouades de 1 à 4 joueurs dans une course contre la montre de 20 minutes chrono.
+En cohérence avec le choix fondamental de concentrer **100% de la rivalité en Warzone**, Opal Heaven bannit les donjons instanciés en circuit fermé. Les 3 Grands Boss du jeu ne sont pas enfermés dans des donjons sécurisés : **ils règnent au grand jour dans des sanctuaires ouverts de la Warzone, créant des batailles PvPvE épiques où les factions s'affrontent tout en combattant le boss.**
 
 ```
-                   STRUCTURE SÉQUENTIELLE D'UN RUN DE DONJON
-    [ INSERTION DE CLÉ ] ──► [ SALLE 1 : L'ARÈNE D'ÉLITE ]
-                                    3 Vagues de monstres renforcés
-                                    Rupture de posture requise
-                                             │
-                                             ▼
-    [ ARÈNE DU BOSS ] ◄── [ SALLE 2 : L'ÉPREUVE DES AGILITÉS ]
-    Patterns complexes          Parcours de dalles mobiles
-    Parades synchronisées       Pièges de flammes & précipice
+                 DYNAMIQUE D'UN COMBAT DE BOSS EN WARZONE (PvPvE)
+   ┌────────────────────────────────────────────────────────────────────────┐
+   │                           LE BOSS MONDIAL                              │
+   │           Attaques de zone, patterns martiaux & jauge de posture       │
+   └───────────────────▲────────────────────────────────▲───────────────────┘
+                       │                                │
+            Frappe le boss                      Attaque en traître
+                       │                                │
+          ┌────────────┴────────────┐      ┌────────────┴────────────┐
+          │  FACTION ASSAILLANTE A  │ ◄──► │   FACTION RIVALE B      │
+          │  (Tente d'abattre le    │ PvP  │   (Tente d'éliminer la  │
+          │   boss & sécuriser drop)│ Total│    faction A & voler)   │
+          └─────────────────────────┘      └─────────────────────────┘
 ```
 
-### Les 3 Grands Donjons de Saison :
+### A. Les 3 Sanctuaires Ouverts de Boss en Warzone :
 
-#### 1. La Crypte du Seigneur Sanglant (Donjon Martiale - Tier 1)
-* **Boss :** `opal:boss_vampire_lord` (**500 HP**).
+#### 1. La Fosse Sanglante du Seigneur Vampire (Sud de la Warzone)
+* **Boss :** `opal:boss_vampire_lord` (**1 200 HP** - barre de boss globale visible par toute la Warzone).
+* **Sanctuaire :** Amphithéâtre d'obsidienne ouvert à ciel ouvert, cerné de piliers de sang. Aucun claim, aucune protection.
 * **Patterns de Combat :**
-  * *Balayage Mortel ($360^\circ$) :* Toutes les 6 secondes, le boss arme sa faux pendant 15 ticks. **Doit impérativement être paré au sneak.** En cas d'échec, le joueur perd 8 cœurs et le boss régénère $10\%$ de sa santé.
-  * *Dash d'Ombre :* Se téléporte instantanément dans le dos du joueur le plus éloigné.
-* **Stratégie Recommandée :** Former un cercle, un Bretteur attire l'aggro en parade parfaite pendant que les alliés frappent dans le dos.
+  * *Balayage Mortel ($360^\circ$) :* Toutes les 6 secondes, le boss arme sa faux pendant 15 ticks. **Doit être paré au sneak.** En cas d'échec, le boss vole 8 cœurs à tous les joueurs touchés et régénère $10\%$ de sa vie.
+  * *Dash d'Ombre :* Se téléporte instantanément derrière le joueur ayant infligé le plus de dégâts récents.
+* **Intérêt PvP :** Si une faction adverse surgit pendant le combat, le Seigneur Sanglant frappe indifféremment tous les joueurs présents : le champ de bataille devient une mêlée chaotique à trois fronts !
 
-#### 2. Le Cœur de la Forge Tectonique (Donjon Industriel - Tier 2)
-* **Boss :** `opal:boss_basalt_golem` (**800 HP**).
+#### 2. La Fonderie Magmatique du Golem de Basalte (Nord de la Warzone)
+* **Boss :** `opal:boss_basalt_golem` (**2 000 HP**).
+* **Sanctuaire :** Cratère de roche en fusion parsemé de ponts de basalte étroits au-dessus de lacs de lave.
 * **Patterns de Combat :**
-  * *Écrasement Tectonique (Ground Slam) :* Lève ses poings massifs pendant 1.5s (télégraphie visuelle de lave incandescente), puis frappe le sol : onde sismique brisant la posture de quiconque ne saute pas au moment précis de l'impact.
-  * *Éruption Magmatique :* Des geysers de lave jaillissent sous les joueurs immobiles depuis plus de 2 secondes.
-* **Stratégie Recommandée :** Rester constamment en mouvement de saut synchronisé (Jump Timing) et détruire ses jointures de titane.
+  * *Écrasement Tectonique (Ground Slam) :* Lève ses deux bras au-dessus de sa tête pendant 1.5s (télégraphie visuelle de lave incandescente), puis percute le sol : onde sismique brisant la posture de quiconque ne saute pas au moment précis de l'impact et projetant les joueurs dans la lave.
+  * *Éruption Magmatique :* Fait jaillir des geysers de flammes sous les joueurs immobiles depuis plus de 2 secondes.
 
-#### 3. La Canopée de l'Arbre Primordial (Donjon Sylvestre - Tier 3)
-* **Boss :** `opal:boss_bramble_queen` (**650 HP**).
+#### 3. Le Bosquet Vénéneux de la Reine des Ronces (Ouest de la Warzone)
+* **Boss :** `opal:boss_bramble_queen` (**1 500 HP**).
+* **Sanctuaire :** Jungle de racines primordiales géantes et ronces toxiques ralentissant les mouvements.
 * **Patterns de Combat :**
-  * *Prisons Végétales :* Enracine 2 joueurs sur place dans des buissons d'épines. Les autres joueurs doivent briser les ronces à la hache en moins de 4 secondes avant qu'elles n'explosent.
-  * *Barrage d'Épines Perforantes :* Tire 16 épines téléguidées esquivables uniquement derrière les piliers d'écorce de l'arène.
-* **Récompenses Uniques :** Plans de craft d'Armures T5 d'Opale Pure, Graines de Gemmes Légendaires et Titre de Héros de Donjon.
+  * *Prisons de Ronces :* Enracine plusieurs joueurs sur place dans des sarments épineux. Les coéquipiers doivent briser les ronces à la hache en moins de 4 secondes avant qu'elles n'explosent.
+  * *Salve d'Épines Téléguidées :* Projette 24 épines perforantes dans toutes les directions.
+
+### B. Mécaniques d'Apparition & Le Coffre Céleste Contesté :
+* **Déclenchement des Boss :**
+  1. *Spawns Mondiaux Programmés :* Mercredi à 21h00, Vendredi à 21h30 et Dimanche à 16h00 (annoncés par un broadcast sonore d'alerte dans tout le serveur 15 minutes à l'avance).
+  2. *Invocation Manuelle par Autel :* Une faction peut invoquer un boss à tout moment en déposant un **Orbe d'Invocation Céleste** sur l'Autel du Sanctuaire. L'activation déclenche un faisceau lumineux géant vers le ciel et alerte immédiatement toutes les factions ennemies !
+* **Le Coffre Céleste Contesté (Anti-Ninja Loot) :**
+  * À la mort d'un Boss de Warzone, **aucun objet n'est directement déposé dans l'inventaire**.
+  * Un **Coffre Céleste Scellé** apparaît au centre de l'arène avec un **compte à rebours de déverrouillage de 30 secondes**.
+  * Les factions doivent sécuriser la zone et s'entretuer pour être la seule faction debout à l'ouverture du coffre et s'emparer des plans d'armure T5, gemmes d'Opale et orbes de prestige.
 
 ---
 
@@ -513,7 +527,7 @@ Chaque recette moddée d'Opal Heaven est confectionnée dans la table d'artisana
 1. **Tier 1 — Set de Cuir Céleste & Fer :** Cuir traité + lingots de fer sur l'établi. Armure d'onboarding, 100% de vitesse.
 2. **Tier 2 — Set de Quartz & Cobalt :** 24 lingots de Cobalt + blocs de quartz taillés. Résistance au recul $+20\%$, vitesse $-3\%$.
 3. **Tier 3 — Set de Titane Tellurique :** 24 lingots de Titane affinés à la Fonderie. Réduit la montée de posture lors d'une parade de $-15\%$, vitesse $-5\%$.
-4. **Tier 4 — Set de Rubis d'Aetherite :** 24 cristaux d'Aetherite + 4 cœurs de feu de donjon. Confère $+10\%$ de vol de vie en mêlée, vitesse $-2\%$.
+4. **Tier 4 — Set de Rubis d'Aetherite :** 24 cristaux d'Aetherite + 4 Cœurs Magmatiques du Golem de Warzone. Confère $+10\%$ de vol de vie en mêlée, vitesse $-2\%$.
 5. **Tier 5 — Armure Divine d'Opale Pure :** 24 Gemmes d'Opale Céleste forgées sur l'Enclume de Thorgar avec un Sceau Céleste. Réduit les cooldowns de toutes les compétences de $-15\%$ et confère Vitesse $+2\%$.
 
 ### B. Les 4 Bâtons d'Action Tactiques :
@@ -556,7 +570,14 @@ Chaque recette moddée d'Opal Heaven est confectionnée dans la table d'artisana
 ### C. Coffres de Largage d'Airdrops Célestes en Warzone :
 * **Airdrop Commun (Plafond 60% des largages) :** 32 Lingots de fer, 16 Cobalt, 2 Pommes d'or, 1 Bâton de vitesse (2 charges), 2 500 Or.
 * **Airdrop Épique (30% des largages) :** 16 Lingots de Titane, 4 Cristaux d'Aetherite, 1 Pièce d'armure T3, 1 Bâton de Guérison, 1 Sceau de Sauvegarde, 8 000 Or.
-* **Airdrop Légendaire (10% des largages) :** 1 Arme T4 en Aetherite enchantée, 2 Gemmes d'Opale Céleste, 1 Parchemin de Garde d'Airain (100%), 1 Clé de Donjon Primordiale, 25 000 Or.
+* **Airdrop Légendaire (10% des largages) :** 1 Arme T4 en Aetherite enchantée, 2 Gemmes d'Opale Céleste, 1 Parchemin de Garde d'Airain (100%), 1 Orbe d'Invocation du Seigneur Sanglant, 25 000 Or.
+
+
+### D. Butin des 3 Boss Mondiaux de Warzone (Coffre Céleste Contesté) :
+À la mort du boss, un **Coffre Céleste Scellé** apparaît au sol avec un compte à rebours de 30 secondes. La faction victorieuse qui contrôle la zone ouvre le coffre contenant :
+* **Le Seigneur Sanglant (Sud Warzone) :** 100% 12 Marques de Sang, 50% Lingot d'Aetherite, 25% Grande Faux du Néant T4, 15% Plan de Plastron T5 d'Opale Pure, 15 000 Or de guilde.
+* **Le Golem de Basalte (Nord Warzone) :** 100% 4 Cœurs Magmatiques de Warzone, 40% Marteau de Béliers Tectonique, 20% Foreuse Tellurique 3x3, 15% Plan de Casque T5 d'Opale Pure, 20 000 Or de guilde.
+* **La Reine des Ronces (Ouest Warzone) :** 100% 16 Ronces Vénéneuses Défensives, 40% Graine d'Opale Céleste Légendaire, 25% Arc à Frappe Foudroyante, 15% Plan de Bottes T5 d'Opale Pure, 18 000 Or de guilde.
 
 ---
 
@@ -764,7 +785,7 @@ Chaque PNJ du Hub propose une interaction vivante en FormUI avec choix narratifs
 
 ## Chapitre 23 : Le Système de Quêtes & Contrats d'Ordre (`/quests`)
 
-* **La Voie Initiatique (10 Chapitres Narrés) :** Du serment initial jusqu'à la conquête de la Warzone et l'achèvement d'un Donjon Instancié de Tier 1.
+* **La Voie Initiatique (10 Chapitres Narrés) :** Du serment initial jusqu'à la conquête de la Warzone et la participation à la chute d'un Boss Mondial de Warzone.
 * **Contrats Quotidiens d'Ordre (Daily Bounties - 3 par jour) :**
   * *Sang :* 5 kills en Warzone, 5 parades parfaites, capture d'un KOTH.
   * *Abysses :* 128 blocs de minerais moddés, fusion de 16 lingots de titane, vente de 10k Or à l'HDV.
@@ -985,7 +1006,7 @@ Toutes les entités exploitent des skins HD 128x128 et des géométries Blockben
 14. `opal:aether_falcon` : Rapace céleste volant en cercle au-dessus de son maître et révélant les ennemis cachés à 24 blocs.
 15. `opal:celestial_steed` : Destrier ailé en armure d'opale, vitesse $0.45$, saut de 4.5 blocs, immunité aux chutes.
 
-### D. Boss de Donjons & Monstres d'Élite (5 Entités) :
+### D. Boss Mondiaux de Warzone & Monstres d'Élite (5 Entités) :
 16. `opal:boss_vampire_lord` : Humanoïde émacié de $2.4\text{m}$ en armure pourpre brandissant une grande faux en cristal de sang (500 HP).
 17. `opal:boss_basalt_golem` : Mastodonte de $3.8\text{m}$ fait de blocs de basalte zébrés de failles de lave incandescente (800 HP).
 18. `opal:boss_bramble_queen` : Entité sylvestre éthérée entourée de sarments vivants invoquant des prisons d'épines (650 HP).
